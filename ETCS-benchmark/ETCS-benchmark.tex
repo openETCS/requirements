@@ -1,0 +1,176 @@
+\documentclass{template/openetcs_article}
+\usepackage[utf8x]{inputenc}
+\usepackage{color}
+\usepackage{lipsum,url}
+\graphicspath{{./template/}{.}{./images/}}
+\begin{document}
+\frontmatter
+\project{openETCS}
+
+\newcommand{\FIXME}[1]{\textbf{FIXME: #1}}
+
+%Please do not change anything above this line
+%============================
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{OETCS/WP2/D01}
+
+%define your workpackage here
+\wp{Work-Package 2: ``Requirements''}
+
+%set a title here
+\title{SRS subset for modelling tool benchmarking}
+
+%set a subtitle here
+%\subtitle{Revision}
+
+%set the date of the report here
+\date{November 2012}
+%\date{\today}
+
+%define a list of authors and their affiliation here
+
+% alphabetical order
+\author{David Mentré}
+
+\affiliation{Mitsubishi Electric R\&D Centre Europe}
+
+\author{Stanislas Pinte}
+
+\affiliation{ERTMS Solution}
+
+\author{Guillaume Pottier}
+
+\affiliation{SNCF}
+
+\author{WP2 participants}
+
+\affiliation{OpenETCS}
+
+% define the coverart
+\coverart[width=350pt]{chart}
+
+%define the type of report
+\reporttype{Requirements}
+
+
+\begin{abstract}
+%define an abstract here
+
+This document defines the subset of SRS SUBSET-026 that should be used
+to evaluate modelling tools.
+
+\end{abstract}
+
+%=============================
+%Do not change the next three lines
+\maketitle
+\tableofcontents
+%\listoffiguresandtables
+\newpage
+%=============================
+
+% The actual document starts below this line
+%=============================
+
+
+%Start here
+
+
+
+
+
+% Makes Marginpars easier to read
+\setlength{\marginparwidth}{1in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\scriptsize #1]%
+{\raggedright\scriptsize #1}}
+
+\newcommand{\oldtext}[1]{{Old: \scriptsize #1}}
+
+\newenvironment{inoutput}
+{\vspace{2mm}
+\noindent
+\begin{tabular}{|r|p{.68\linewidth}|l|}
+\hline}
+{
+\hline
+\end{tabular}}
+
+\section{Introduction}
+
+One goal of openETCS is to make a model of the ERTMS/ETCS System
+Requirement Specification (SRS). Several tools are possible to make
+this model. In order to evaluate them, we need to define a subset of
+the SRS that would be modelled by each tool, therefore allowing to
+compare the tools on the same basis.
+
+This document defines this subset of SRS.
+
+\section{SRS Subset definition}
+
+The following paragraphs of UNISIG SUBSET-026 v3.3.0 should be used
+in the benchmarking model in order to evaluate a tool:
+
+\begin{description}
+\item [§3.5.3 Establishing a communication session]
+
+  Rationale: Sample of the communication part.
+
+\item [§3.6.3.2 Location, Continuous Profile Data and Non-Continuous
+  Profile Data]
+
+  Rationale: example of complex generic data structure.
+
+\item [§3.8.3 Structure of Movement Authority and §3.8.5 Update of
+  Movement Authority]
+
+  Rationale: example of complex procedure, with complex data.
+
+\item [§3.11.3 Static Speed Profile and §3.11.12 Gradients]
+
+  Rationale: example of data structure, referring to §3.6.3.2 and used
+  by §3.13.4.
+
+\item [§3.13 ??] \FIXME{We should find a representative subset of
+  §3.13. Guillaume proposes §3.13.4 (Acceleration / Deceleration due
+  to gradients). Stanislas and David think this is not enough.}
+
+\item [§4.6.2 (Transitions Table) and §4.6.3 (Transitions Condition
+  Table)] Only transitions:
+  \begin{enumerate}
+  \item from SB to SH
+  \item from SB to FS
+  \item from SB to IS
+  \end{enumerate}
+
+  Rationale: Having transitions at different priority level is
+  important to look at priority issues and exclusion issues at the
+  same priority level.
+
+\item [§4.8.3.2 From National System X (through STM interface)]
+
+  Rationale: Model a small table.
+
+\item [§5.9 Procedure On-Sight] \FIXME{§5.6 also proposed by
+  Guillaume}
+
+ Rationale: Procedure sample.
+
+\item [§8.7.2 Movement Authority message] This includes reference to
+  Packet 15 (§7.4.2.4). \FIXME{Maybe reference one optional packet}
+
+  Rationale: That would be a perfect use case for tools able to model
+  things down to bit level.
+\end{description}
+
+
+
+\end{document}
+Local Variables:
+ispell-local-dictionary: "english"
+End:
+
+% LocalWords:  SRS ERTMS ETCS
+*)
