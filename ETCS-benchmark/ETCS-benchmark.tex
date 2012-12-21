@@ -7,7 +7,7 @@
 \frontmatter
 \project{openETCS}
 
-\newcommand{\FIXME}[1]{\marginpar{FIXME}\textbf{FIXME: #1}}
+\newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 
 %Please do not change anything above this line
 %============================
@@ -151,12 +151,14 @@ in the benchmarking model in order to evaluate a tool:
 
 \item [§4.8.3.2 From National System X (through STM interface)]
 
-  Rationale: Model a small table.
+  Rationale: Model a small table. \FIXME{Isn't such a table redundant
+    with §4.6.2?}
 
 \item [§5.9 Procedure On-Sight] \FIXME{§5.6 also proposed by
   Guillaume}
 
- Rationale: Procedure sample.
+ Rationale: Procedure sample, contains a timer. Procedure not too long
+ compared to Start of Mission.
 
 \item [§8.7.2 Movement Authority message] This includes reference to
   Packet 15 (§7.4.2.4). \FIXME{Maybe reference one optional packet}
@@ -164,6 +166,11 @@ in the benchmarking model in order to evaluate a tool:
   Rationale: That would be a perfect use case for tools able to model
   things down to bit level.
 \end{description}
+
+\section{Other open questions}
+
+\FIXME{Should we model an API? E.g. Odometer? Which reference
+  document?}
 
 \end{document}
 Local Variables:
