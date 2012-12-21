@@ -110,28 +110,18 @@ This document defines this subset of SRS.
 
 \section{SRS Subset definition}
 
-The following paragraphs of UNISIG SUBSET-026 v3.3.0 should be used
-in the benchmarking model in order to evaluate a tool:
+The following paragraphs of UNISIG \emph{SUBSET-026 v3.3.0} should be
+used in the benchmarking model in order to evaluate a tool. This
+subset is divided into two subsets: a high priority subset that should
+be modeled first and a lower priority subset that should be modeled if
+time permits.
+
+\subsection{High priority items}
 
 \begin{description}
 \item [§3.5.3 Establishing a communication session]
 
   Rationale: Sample of the communication part.
-
-\item [§3.6.3.2 Location, Continuous Profile Data and Non-Continuous
-  Profile Data]
-
-  Rationale: example of complex generic data structure.
-
-\item [§3.8.3 Structure of Movement Authority and §3.8.5 Update of
-  Movement Authority]
-
-  Rationale: example of complex procedure, with complex data.
-
-\item [§3.11.3 Static Speed Profile and §3.11.12 Gradients]
-
-  Rationale: example of data structure, referring to §3.6.3.2 and used
-  by §3.13.4.
 
 \item [§3.13 ??] \FIXME{We should find a representative subset of
   §3.13. Guillaume proposes §3.13.4 (Acceleration / Deceleration due
@@ -149,16 +139,35 @@ in the benchmarking model in order to evaluate a tool:
   important to look at priority issues and exclusion issues at the
   same priority level.
 
+\item [§5.9 Procedure On-Sight]
+
+ Rationale: Procedure sample, contains a timer. Procedure not too long
+ compared to Start of Mission.
+
+\end{description}
+
+\subsection{Lower priority items}
+
+\begin{description}
+\item [§3.6.3.2 Location, Continuous Profile Data and Non-Continuous
+  Profile Data]
+
+  Rationale: example of complex generic data structure.
+
+\item [§3.8.3 Structure of Movement Authority and §3.8.5 Update of
+  Movement Authority]
+
+  Rationale: example of complex procedure, with complex data.
+
+\item [§3.11.3 Static Speed Profile and §3.11.12 Gradients]
+
+  Rationale: example of data structure, referring to §3.6.3.2 and used
+  by §3.13.4.
+
 \item [§4.8.3.2 From National System X (through STM interface)]
 
   Rationale: Model a small table. \FIXME{Isn't such a table redundant
     with §4.6.2?}
-
-\item [§5.9 Procedure On-Sight] \FIXME{§5.6 also proposed by
-  Guillaume}
-
- Rationale: Procedure sample, contains a timer. Procedure not too long
- compared to Start of Mission.
 
 \item [§8.7.2 Movement Authority message] This includes reference to
   Packet 15 (§7.4.2.4). \FIXME{Maybe reference one optional packet}
@@ -177,5 +186,5 @@ Local Variables:
 ispell-local-dictionary: "english"
 End:
 
-% LocalWords:  SRS ERTMS ETCS
+% LocalWords:  SRS ERTMS ETCS UNISIG
 *)
