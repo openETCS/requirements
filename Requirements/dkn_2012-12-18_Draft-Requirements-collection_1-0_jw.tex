@@ -1,0 +1,88 @@
+\documentclass{./template/openetcs2}
+\usepackage{color}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{verbatim,url,lipsum,enumitem}
+\usepackage{natbib}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{rotfloat}
+\bibpunct{[}{]}{;}{a}{,}{,}
+\parskip 10pt
+\graphicspath{{./template/}{.}{./images/}}
+
+\begin{document}
+
+
+\frontmatter
+\project{openETCS}
+
+%Please do not change anything above this line
+%============================
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{openETCS/WP2/D2.6}
+
+%define your workpackage here
+\wp{Work-Package 2: "Requirements for Open Proofs"}
+
+%set a title here
+\title{Draft - List of Requirements for formal software development}
+
+%set a subtitle here
+\subtitle{}
+
+%set the date of the report here
+\date{December 2012}
+
+%define a list of authors and their affiliation here
+\author{Jan Welte \and Hansj\"org Manz}
+
+\affiliation{Technische Universit\"at Braunschweig\\
+  Institute for Traffic Safety and Automation Engineering\\
+  Langer Kamp 8\\
+  38106 Braunschweig, Germany\\
+  eMail: openetcs@iva.ing.tu-bs.de}
+
+% define the coverart
+\coverart[width=350pt]{chart}
+
+%define the type of report
+\reporttype{Draft}
+
+
+\begin{abstract}
+%define an abstract here
+\input{Abstract-requirements}	
+\end{abstract}
+
+%=============================
+%Do not change the next three lines
+\maketitle
+\tableofcontents
+%\listoffiguresandtables
+%=============================
+
+% The actual document starts below this line
+%=============================
+\mainmatter
+\input{Introduction}
+
+\input{requirements}
+
+
+
+
+
+
+
+
+
+%===================================================
+%Do NOT change anything below this line
+
+\end{document}
