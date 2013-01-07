@@ -1,0 +1,97 @@
+\chapter{Requirements}
+
+\label{chap: requirements}
+
+
+
+\section{Means of Description}
+
+The VDI/VDE 3681 guideline provides a list of characteristics to classify means of description. This includes the following seven characteristics which could be used to group the requirements:
+
+\vspace{-10pt}
+\begin{itemize}[topsep=2pt, partopsep=2pt,itemsep=2pt,parsep=2pt]
+  \item Formal basis
+  \item Representation
+  \item Description of structure
+  \item Description of behaviour
+  \item Explicit time representation
+  \item Synchronisation
+  \item Tool support
+\end{itemize}
+
+Additionally the following two aspects are relevant for means of descriptions:
+
+\vspace{-10pt}
+\begin{itemize}[topsep=2pt, partopsep=2pt,itemsep=2pt,parsep=2pt]
+  \item Required expertise
+  \item Level of standardisation
+\end{itemize}
+
+Table /ref{tab:reqMoD} list the requirements that have been named during the interviews. Thereby the requirements are structured according to VDI/VDE 3681 characteristics. 
+
+\begin{table}[htp]
+
+\caption{Collection of Requirements for Means of Description}
+\label{tab:reqMoD}
+
+
+
+\begin{tabular}{|m{4cm}|m{5.5cm}|m{2.5cm}|m{1cm}|}
+\hline
+\textbf{Characteristic} & \textbf{Property} & \textbf{Measurement} & \textbf{Value} \\ \hline
+\multirow{3}{*}{Formal basis} &  Support formal proof & & \\ \cline{2-4}
+				& Support model execution (especially for high level models) & &  \\ \hline
+\multirow{1}{*}{Representation} & Support graphical modelling & & \\ \hline
+\multirow{1}{*}{Description of structure} &  Capturing structure of all ETCS specifications & & \\ \hline
+\multirow{1}{*}{Description of behaviour} &  Capturing behaviour of all ETCS specifications& &  \\ \hline
+\multirow{1}{*}{Explicit time representation} & & & \\ \hline
+\multirow{1}{*}{Synchronisation} &  & & \\ \hline
+\multirow{2}{*}{Tool support} & Support specification of test cases & & \\ \cline{2-4}
+				& Support model execution (especially for high level models)& &  \\ \hline
+\multirow{1}{*}{Required expertise} & Understandable for domain experts, costumers and other relevant groups (communication with modelling experts) & & \\ \hline
+\multirow{1}{*}{Level of standardisation} & Well documented (better standardised) & & \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section{Methodology}
+
+The main requirements for the methodologies are provided by the EN 50128. The Open Proof approach in general only requires a combination of formal methods and model-based development as basis for verification and validation through formal proofs and testing.
+
+The following requirements have been named during the interviews:
+\vspace{-10pt}
+\begin{itemize}
+\item Conform to CENELEC standards
+\item Easy to apply in practice
+\item Clear traceability of changes and their influences
+\item Provide mainly automatic theorem proving and model checking
+\end{itemize}
+
+\section{Tools}
+
+As presented during the CENELEC workshop in Paris the ISO/IEC 9126 classifies software quality by six characteristics.  These have been used in table \ref{tab:reqtools} to make a first grouping of all requirements for tools presented during the interviews. 
+
+\begin{table}[htp]
+
+\caption{Collection of Requirements for Tools}
+\label{tab:reqtools}
+
+\begin{tabular}{|m{4cm}|m{5.5cm}|m{2.5cm}|m{1cm}|}
+\hline
+\textbf{Characteristic} & \textbf{Property} & \textbf{Measurement} & \textbf{Value} \\ \hline
+\multirow{3}{*}{Functionality} &  Compatible with existing configuration management systems & & \\ \cline{2-4}
+				& Allow automatic generation of textual documents from models & & \\ \cline{2-4}
+				& Automatic link generation between glossary and models & & \\ \hline
+\multirow{2}{*}{Reliability} & Robustness & & \\ \cline{2-4}
+				& Validated & & \\ \hline
+\multirow{2}{*}{Usability} & Visualisation for good usability & & \\  \cline{2-4}
+				& Allow multi user work (avoidance of conflicts) & & \\ \hline
+\multirow{1}{*}{Efficiency} & Good performance on standard systems & &  \\ \hline
+\multirow{1}{*}{Maintainability} & High level support and easy maintenance & & \\ \hline
+\multirow{4}{*}{Portability} &  Downwards compatible & & \\ \cline{2-4}
+				& Independent of operating system & &  \\ \cline{2-4}
+				& Open interfaces for data (import and export data) & &\\ \cline{2-4}
+				& Integration in tool chain (data exchange and visual interface) & & \\ \hline
+
+\end{tabular}
+\end{table}
