@@ -37,7 +37,7 @@ R-docname-X-1.1.1 This is a subsubrequirement
 Before issuing the document (for example for version 3), we run the script v_req.py 3 mydoc.tex mydoc-3.tex
 This automatically transforms the document into:
 
-\reqfixed{3}{1}This is a requirement}
+\reqfixed{3}{1}{This is a requirement}
 
 \subreqfixed{3}{1}{1}{This is a subrequirement}
 
