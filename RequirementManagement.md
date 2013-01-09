@@ -53,3 +53,6 @@ R-docname-3-1.1.1 This is a subsubrequirement
 
 Now if it is necessary to add or to modify a requirement, we use the \req{} macro that generate a new number without
 collision.
+
+As for the requirements incoming from documents external to the projects, if they are properly and unambiguously
+named, the name will be used directly. This includes in particular requirements from SUBSET-26.
