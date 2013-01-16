@@ -123,9 +123,41 @@ time permits.
 
   Rationale: Sample of the communication part.
 
-\item [§3.13 ??] \FIXME{We should find a representative subset of
-  §3.13. Guillaume proposes §3.13.4 (Acceleration / Deceleration due
-  to gradients). Stanislas and David think this is not enough.}
+\item [§3.13.4 (Acceleration / Deceleration due to gradients)]
+
+\item[§3.13.6.2 Emergency brake] and more particularly:
+  \begin{itemize}
+  \item[§3.13.6.2.1.3] (calculation of A\_safe, function of V and d,
+    depending on the gradient profile, braking models of the train,
+    several correction factors etc; this is the basis of the EBD
+    curve, see Figure 38)
+  \end{itemize}
+
+\item[§3.13.7 Determination of Most Restrictive Speed Profile (MRSP)]
+  Combine for example several TSR and LX restrictions
+
+\item[§3.13.8.3 Emergency Brake Deceleration curves (EBD)]
+
+\item[§3.13.9.3.3.9 Computation of d\_FLOI, using d\_SBI2\_MREBDT]
+  (MREBDT: Most Restrictive Target amongst the EBD based targets)
+
+\item[§3.13.9.4 Release speed supervision limits] and more
+  particularly:
+  \begin{itemize}
+  \item[§3.13.9.4.7] (computation of different release speed
+    supervision limits)
+
+  \item[§3.13.9.4.8] (computation of the most restrictive value at the
+    Trip location related to the EOA, amongst several EBI supervision
+    limits)
+
+    \item[§3.13.9.4.8.2] (iterative computation of the release speed)
+
+    \item[§3.13.9.4.9] (using of the most restrictive MRSP value
+      instead of the release speed)
+  \end{itemize}
+
+\item[§3.13.10.4.2 Calculation of the MRDT (Most Restrictive Displayed Target)]
 
 \item [§4.6.2 (Transitions Table) and §4.6.3 (Transitions Condition
   Table)] Only transitions:
