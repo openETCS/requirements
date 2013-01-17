@@ -1,0 +1,11 @@
+digraph Trans {
+ SB [shape=box];
+ SB -> IS;
+ SH -> IS;
+ FS -> IS;
+ SB -> SH;
+ SB -> FS;
+ SH -> SB;
+ FS -> SB;
+ FS -> SH 
+}
