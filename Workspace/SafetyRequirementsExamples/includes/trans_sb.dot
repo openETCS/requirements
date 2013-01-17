@@ -1,0 +1,6 @@
+digraph FromSB {
+ SB [shape=box];
+ SB -> IS;
+ SB -> SH;
+ SB -> FS
+}

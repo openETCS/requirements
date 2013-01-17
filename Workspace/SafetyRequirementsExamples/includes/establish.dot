@@ -1,0 +1,10 @@
+digraph EstablishCom {
+	NoCom [shape=box];
+	NoCom -> Trying;
+	Trying -> NoCom;
+	Trying -> Trying;
+	Trying -> Setup;
+	Setup -> NoCom;
+	Setup -> Established;
+	Established-> NoCom;
+}
