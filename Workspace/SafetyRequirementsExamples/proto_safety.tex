@@ -141,14 +141,16 @@ summarized into the SUBSET-91 document, which is a mandatory part of the ERTMS d
 
 \begin{figure}
   \centering
-  \fbox{\includegraphics[scale=0.70]{fault_tree1.pdf}}
+  {For IPR reason, the figure was removed. \\
+  The reader shoud refer to SUBSET-88-2 Part 1, Appendix B, p. 2}
   \caption{Core Hazard Fault Tree (SUBSET-88)}
   \label{fig:ch_fault_tree}
 \end{figure}
 
 \begin{figure}
   \centering
-  \fbox{\includegraphics[scale=0.70]{fault_tree2.pdf}}
+  {For IPR reason, the figure was removed. \\
+  The reader shoud refer to SUBSET-88-2 Part 1, Appendix B, p. 8}
   \caption{Incorrect Mode Fault Tree (SUBSET-88)}
   \label{fig:mode_fault_tree}
 \end{figure}
@@ -171,38 +173,10 @@ sub-system.
 
 %\begin{sidewaysfigure}
 \begin{figure}
-\begin{sideways}
-{\small
-\begin{tabular}{|p{1.7cm}|p{2cm}|p{2cm}|p{5cm}|p{1cm}|p{2cm}|p{2cm}|}
-\hline
-Fault Tree Base Event & Fault Tree Base Event Description & Affected ETCS Functions or Data &
-Explanation & Mode & Criticality & Mitigating Conditions \\
-\hline
-KERNEL-3 & Failure of radio message correctness check & Provision of Data to onboard (MA etc.) &
-Radio message correctness check is a protective function against the receipt of inconsistent messages &
-All (except NP, SF, IS) & Safety Related & \\
-\hline
-KERNEL-4 & Radio sequencing checking failure & Provision of Data to onboard (MA etc) &
-Radio sequencing check is a protective function & All (except NP, SF, IS) & Safety Related & 
-This function is an inherent protective function of ETCS Message acknowledgement \\
-\hline
-KERNEL-5 & Radio link supervision function failure &  Provision of Data to
-onboard (MA etc) & Radio link supervision is a protective function against
-receiving the latest valid message later than a specified time.
-Failure to correctly manage a communication session could result in the loss of
-communications and a failure to receive more restrictive route information.
-Driver could switch to a lower level (1, STM) & FS, OS & Safety Related & 
-This function is an inherent protective function of ETCS (Linking reaction,T\_NV\-CONTACT) \\
-\hline
-KERNEL-6 & Manage communication session failure & Provision of Data to onboard (MA etc) & 
-Failure to correctly manage a communication session results in the loss of communications and a 
-failure to receive more restrictive route information. Driver could switch to a lower 
-level (1, STM)  & FS, OS & Safety Related & \\
-\hline
-\end{tabular}
-}
-\end{sideways}
-\caption{Kernel Dread Events (as in SUBSET-88 or SUBSET-91)}
+  \centering
+  {For IPR reason, the figure was removed. \\
+  The reader shoud refer to SUBSET-88-2 Part 2, p. 23-24}
+  \caption{Kernel Dread Events (as in SUBSET-88 or SUBSET-91)}
 \label{tab:kernel_evt}
 \end{figure}
 %\end{sidewaysfigure}
@@ -246,7 +220,8 @@ which should consider (at a system-level) the impact of the loss of messages.
 
 \begin{figure}
   \centering
-  \fbox{\includegraphics[scale=0.70]{fmea1.pdf}}
+  {For IPR reason, the figure was removed. \\
+  The reader shoud refer to SUBSET-81-2, p. 15}
   \caption{Part of the FMEA for Transmission System (SUBSET-81)}
   \label{fig:fmea}
 \end{figure}
