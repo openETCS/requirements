@@ -118,7 +118,7 @@ DLR; CEDEX?; Multitel?; Mitsubishi E.; Innovalia?; SQS? \\
 D2.3.2 & Set of requirements on API & ALSTOM & SIEMENS; ALSTOM & 
 ERSA?; SNCF; Fraunhofer;Innovalia?; SQS? \\
 \hline
-D2.3.3 &  Set of requirements on tools & CEA & SYSTEREL; CEA & 
+D2.3.3 &  Set of requirements on tools & CEA & SYSTEREL; CEA; Siemens & 
 SNCF; ERSA?; EclipseSource; Atos Origin?; ERTMS Solution?; CEDEX?; DLR; 
 Multitel?; Mitsubishi E.; Innovalia?; SQS? \\
 \hline
@@ -178,7 +178,7 @@ The purpose of the formalization is:
 \begin{itemize}
 \item to enhance the understanding of modelled subset;
 \item to allow formal analysis of the modelled subset;
-\item to be able to animate the model for testing an analyzing purpose;
+\item to be able to animate the model for testing and analyzing purpose;
 \item to provide information on the completeness and soundness of the SUBSET-26;
 \item to be used as a reference formal specification for the implementation of an OBU 
 (by the OpenETCS project team and by industrial actors);
@@ -187,6 +187,18 @@ The purpose of the formalization is:
 
 In order to conduct this formalization, a part of the tool chain and methodology defined (see Goal 2) 
 will be used.
+
+The formalization of the complete SUBSET-26 needs a strategy to perform the whole task step by step. This strategy shall 
+\begin{itemize}
+\item determine the procedure of how the natural language SUBSET-26 specification can be formalized (via nonambious dictionary, definition of variables, inputs, outputs, ...) 
+\item determine which kinds of abstraction layers are required for the formalization
+\item divide the whole functionality of SUBSET-26 into separate components with minimized interdependencies, that allow to be implemented and tested separately by different contributors;
+\item define how these components are to be integrated subsequently in an interative way to complete the SUBSET-26 functionality;
+\item define how these (integrated) components can be simulated, tested and executed;
+\item \dots
+\end{itemize}
+
+
 
 The output of this goal is a formal specification, understandable by many tools (SCADE, 
 Simulink, B tools, OpenETCS tool chain…) that can be given to all railway actors, and 
@@ -197,6 +209,7 @@ natural language specification.
 
 \subsection{Goal 2: Definition of a tool chain and process/methodologies for developing 
 on onboard software that can fulfill the EN 50128 requirements}
+\marginpar{tool chain and process/methodolgies should be splitted into 2 separate goals}
 
 These tools/methodologies must be certifiable, but will not be certified as part of the project.
 
@@ -211,6 +224,7 @@ onboard software:
 The full safety process needed for the OpenETCS to be \emph{certifiable} according to CENELEC 50126
 and 50128 shall be described in details. This safety plan will detail precisely which activities 
 are required or not, why, and the choices that are made that allows to claim that safety is guaranteed.
+The process has to ensure that toolchain, formalized SUBSET-26 specification and models are certifiable according to these standards while emerging from an open soure environment. 
 
 Because the full design, development, validation and safety analysis process for a SIL4 OBU
 is a huge task far beyond the project possibilities, the full safety activities will not be conducted
@@ -358,11 +372,13 @@ the QA Plan.}
   \caption{Architecture}
   \label{fig:architecture}
 \end{figure}
+\marginpar{The figure does not reflect the architecture of the following text. Update required!}
 
 In order to avoid ambiguities, we will define the following.
 \begin{description}
 \item[Runtime model.] This is the abstract layer required to ``run'' the formal model. It shall provide
 ``hardcoded'' in the formalism part or all of the following (but not restricted to):
+\marginpar{What does this hardcoded mean?}
 \begin{itemize}
 \item memory management,
 \item execution of state machines (or of the chosen formal objects), 
@@ -427,7 +443,9 @@ be implemented in the high level model. It will be considered that low level com
 taken into account (= emulated) by the RTM/API.
 \end{justif}
 
+\req{The RTM/API shall provide an API for logging, tracing, debugging and diagnosis purposes.}
 
+\req{The RTM/API shall provide an automatization interface to enable to be controlled from the tools of the tool chain.}
 
 \subsubsection{Model and Architecture}
 \textbf{This chapter has to be completed by the leaders of D2.3.1 and D2.3.2}
@@ -620,8 +638,9 @@ for the model.}
 \req{The tool chain shall allow to generate test cases for the model.}
 \begin{issue}
 Is it really necessary? If we have formal proofs on the models, the tests should stay at a 
-functional level. Therefore generated test cases should not be interesting in this context.
+functional level. Therefore generated test cases should not be interesting in this context. 
 \end{issue}
+\marginpar{The tool chain should provide model based testing. For that, generating test cases from test models will be required}
 
 \begin{issue}
 TBD requirements on the prover. Should it verify De Bruijn's criterion\,\footnote{\emph{I.e.}
