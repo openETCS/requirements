@@ -93,7 +93,7 @@ It is meant to evolve after the initial release in order to provide the full req
 % Start here
 \section{Introduction}
 The purpose of this document is to enumerate the meta-requirements of the projects: \emph{i.e.} 
-the requirements on the modeling, processes, toolchain. The purpose of this document is 
+the requirements on the modeling, processes, toolchain, validation and verification. The purpose of this document is 
 not to provide the system and safety requirements that will specify the model/software 
 developed in the OpenETCS project.
 
@@ -104,7 +104,7 @@ In the meantime, one can refer to the standard, or to AeBT and TUBS presentation
 
 This document is initiated as a preliminary requirement list, and will evolve during the project 
 to be completed with all the requirements on the methodology
-modelling, process, tool chain, and safety proof. The table herebelow suls up the area of responsibility
+modelling, process, tool chain, and safety proof. The table herebelow sums up the area of responsibility
 of the contributors of WP2 on these requirements.
 
 \small
@@ -143,6 +143,7 @@ processing systems –- Safety related electronic systems for signalling}
 \item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
 \item SUBSET-091 2.5.0 --- \emph{Safety Requirements for the Technical Interoperability
 of ETCS in Levels 1 \& 2}
+\item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
 \end{itemize}
 
 \section{Conventions}
@@ -234,9 +235,11 @@ These safety properties:
 \item will be used as reference proof obligations for the subsequent activies.
 \end{itemize}
 
-\begin{issue}
-Is it realistic to expect such properties on the whole model? 
-\end{issue}
+%\begin{issue}
+%Is it realistic to expect such properties on the whole model? 
+%\end{issue}
+
+However this safety analysis is out of the scope of the OpenETCS project. SUBSET-088 2.3.0 and SUBSET-091 2.5.0 will provide elements of safety analysis. 
 
 \subsection{Goal 5: Provide a subset of the safety case}
 Selected part of the safety process shall be applied (either by applying the full process on a small
@@ -330,7 +333,7 @@ of OpenETCS project, or why it is not needed.} in the QA Plan.
 \req{All software in the scope of the project shall comply the EN 50128 standard.}
 \subreq{A QA Plan shall be issued and complied with.}
 \subreq{The QA Plan shall describe the management of versions, OpenETCS baselines, 
-connexion with ERTMS baselines, requirements\dots}
+connexion with ERTMS baselines, project life cycle, maintenance and evolution plan, organisation and roles}
 \subreq{A Verification plan shall be issued and complied with.}
 \subreq{A Validation Plan shall be issued and complied with.}
 \subreq{The techniques applied to the software will be compliant regarding the SIL.}
@@ -487,6 +490,9 @@ as long as the other subsystem (RBC, communication layer\dots) fulfill their own
 
 \req{A safety plan shall be provided and complied with.}
 \req{The Functional Architecture shall identify the Vital and Non Vital functions.}
+\begin{comment}
+MPD : Identification of Vital and non vital  can be donne only if the safety  analysers have provided safety properties and have allocated them to  functions.
+\end{comment}
 \req{The subsystem shall be compatible with the THR required in the SUBSET-091.}
 \req{The safety analysis shall consider the Dread Event of the SUBSET-091, restricted to the
 scope of the subsystem.}
@@ -527,7 +533,7 @@ of clarity I preferred to keep them near other language requirements.
 \req{The model formalism shall be easily understandable by the domain experts.}
 \req{The safety properties should be provided in a declarative, simple and formal language.}
 \req{The formal model shall be understandable by or exportable to many tools
-(SCADE, Simulink, B tools, OpenETCS tool chain\dots}
+(SCADE, Simulink, B tools, OpenETCS tool chain\dots)}
 
 
 
