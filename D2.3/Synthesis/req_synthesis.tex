@@ -441,7 +441,7 @@ taken into account (= emulated) by the RTM/API.
 \req{The model shall comply all OBU ETCS mandatory requirements, in the 
 functional perimeter provided by the Functional Architecture.}
 
-\subreq{The model shall comply the OBU part of SUBSET-026 version 3.3.0 or higher version.}
+\subreq{The model shall comply the OBU part of SUBSET-26-3.3.0.}
 
 \subreq{The reference ETCS baseline shall be modified only by project decision, according
 to the QA Plan.}
@@ -455,8 +455,6 @@ few as possible “design choices”.}
 \subreq{Each interpretation, ambiguity and inconsistency of the SRS shall be indicated precisely.}
 \subreq{Each SRS requirement not formalized in the model (\emph{e.g.} allocated to RBC)
 should be traced and justified.}
-\subreq{Each missing SRS requirement, needed in the model (\emph{e.g.} any gap in the specification)
-should be clearly identified and justified.}
 
 \req{When the boundary of the formalized subsystem corresponds to a FIS or FFFIS, the Functional 
 Architecture shall try to comply to it even when it is not mandatory.}
@@ -522,7 +520,7 @@ their will not be “verification testing”, but only “validation testing”
 
 If we use a formal method with automatic code generation, there is no need of unit testing. 
 There would be only the need of validation (functional) tests (\emph{e.g.} Subset 076) and 
-integration tests at the model level. Unit testing shall still be necessary at the code generator level.
+integration tests.
 
 \todo{Verification that the refinements of system design to software code is coherent?}\\
 
@@ -549,7 +547,7 @@ of clarity I preferred to keep them near other language requirements.
 \subreq{Arithmetics,}
 \subreq{Braking curves,}
 \subreq{Logical statements.}
-\subreq{ERTMS Messages and fields.}
+\subreq{Messages, Packets and Fields.}
 
 \begin{comment}
 This requirement does not state that all these objects need to be \emph{first order objects} of
@@ -562,12 +560,6 @@ proved that they are sound, and that the code generation for these objects is al
 \req{The formal model shall be executable.}
 \subreq{The formal model shall be executable in debug mode (step-by-step), allowing
 inspection of states, variables and I/O.}
-\subreq{The formal model shall support going back in time during a test, i.e. after having reached a certain step, to go backwards.}
-\subreq{The formal model shall support what-if analysis, i.e. to change the value of any model variable during the execution of a test in order to measure its impact.}
-\subreq{The formal model shall be self-explainable, i.e. shall be able to output its complete calculation tree
-for complex functions, calling each other}
-\subreq{The formal model shall support vizualization of the model elements activated during each step of a test}
-\subreq{The formal model shall support importing and executing the Subset-076 test sequences}
 \subreq{The environment shall be emulated by high level construction of the inputs.}
 
 \req{The formal model should have a meta-model.}
@@ -614,13 +606,6 @@ participant on a configuration item, at each step of the project lifecycle.}
 \subreq{In particular, version management shall allow to track version of the safety properties 
 together with the model.}
 
-\req{The tool chain shall include support for the following graphical user interface facilities:}
-\subreq{model syntax highlighting and auto-completion, for the parts of the model that are text-based}
-\subreq{graphical representation of Subset-026 braking curves}	
-\subreq{tree-based display of model elements}
-\subreq{model animation and debugging}
-\subreq{perspective management: offer in a single graphical user interface several interconnected views for SRS, model and tests.}
-
 \req{The tool chain shall be platform independent, i.e. be portable accross windows, linux, mac, etc.}
 
 \req{The tool chain shall allow traceability between:}
@@ -629,12 +614,7 @@ together with the model.}
 \subreq{the model and the tests, and vice-versa}
 \subreq{the documentation and the model}
 \req{The tool chain shall allow traceability between the different layers of model and safety 
-properties.}
-
-\req{The tool chain shall provide the following reporting facilities:}
-\subreq{detailed implementation metrics}
-\subreq{detailed traceability reports}
-\subreq{detailed model errors and warnings list}
+properties.}	
 
 \req{The tools used in the tool chain shall be able to cooperate, \emph{i.e.} the outputs of one 
 tool will be suitable to be used as the inputs of the other tool.}
