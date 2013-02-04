@@ -30,7 +30,8 @@
 
 \author{Sylvain Baro}
 \affiliation{SNCF}
-  
+\author{Stanislas Pinte}
+\affiliation{ERTMS Solutions}
   
 % define the coverart
 \coverart[width=350pt]{chart}
@@ -104,7 +105,7 @@ In the meantime, one can refer to the standard, or to AeBT and TUBS presentation
 
 This document is initiated as a preliminary requirement list, and will evolve during the project 
 to be completed with all the requirements on the methodology
-modelling, process, tool chain, and safety proof. The table herebelow suls up the area of responsibility
+modelling, process, tool chain, and safety proof. The table herebelow sums up the area of responsibility
 of the contributors of WP2 on these requirements.
 
 \small
@@ -118,9 +119,9 @@ DLR; CEDEX?; Multitel?; Mitsubishi E.; Innovalia?; SQS? \\
 D2.3.2 & Set of requirements on API & ALSTOM & SIEMENS; ALSTOM & 
 ERSA?; SNCF; Fraunhofer;Innovalia?; SQS? \\
 \hline
-D2.3.3 &  Set of requirements on tools & CEA & SYSTEREL; CEA & 
-SNCF; ERSA?; EclipseSource; Atos Origin?; ERTMS Solution?; CEDEX?; DLR; 
-Multitel?; Mitsubishi E.; Innovalia?; SQS? \\
+D2.3.3 &  Set of requirements on tools & ERTMS Solutions & SYSTEREL; CEA & 
+\todo{STAN CONFIRM ACCORDING TO EFFORT- SNCF}; ERSA?; EclipseSource; ERTMS Solution; DLR; 
+Mitsubishi E.; Innovalia?; SQS? \\
 \hline
 D2.3.4 & Set of requirements on V\&V & SNCF & SNCF; AEbT; ALSTOM; SIEMENS; DB; DLR & 
 CEDEX?; Multitel?; Innovalia?; SQS? \\ 
@@ -179,21 +180,26 @@ The purpose of the formalization is:
 \item to enhance the understanding of modelled subset;
 \item to allow formal analysis of the modelled subset;
 \item to be able to animate the model for testing an analyzing purpose;
-\item to provide information on the completeness and soundness of the SUBSET-26;
+\item to provide information on the completeness and soundness of the SUBSET-026; 
+\item to point and document any contradiction or inconsistency of the SUBSET-026; 
 \item to be used as a reference formal specification for the implementation of an OBU 
 (by the OpenETCS project team and by industrial actors);
+\item to be transformed in a later phase to lower-level source code, for the purpose of 
+being executed or interpreted in an EVC subsystem;
 \item \dots
 \end{itemize}
 
-In order to conduct this formalization, a part of the tool chain and methodology defined (see Goal 2) 
-will be used.
+In order to conduct this formalization, the tool chain and methodology defined (see Goal 2) 
+shall be used.
 
-The output of this goal is a formal specification, understandable by many tools (SCADE, 
-Simulink, B tools, OpenETCS tool chain…) that can be given to all railway actors, and 
+The output of this goal is a formal specification that can be given to all railway actors, and 
 if possible associated to SRS documents in the ERA database.
 
 The final goal is that industrial actors work with this formal specification instead of 
 natural language specification.
+
+This formal specifications must be certifiable, but will not be certified as part of the project. 
+\todo{STAN CONFIRM WITH SYLVAIN/PROJECT}
 
 \subsection{Goal 2: Definition of a tool chain and process/methodologies for developing 
 on onboard software that can fulfill the EN 50128 requirements}
@@ -253,7 +259,7 @@ Promote this work to push it to become a \emph{de facto} standard for the indust
 (like \emph{e.g.} the AUTOSAR standard in the automotive world).
 
 \section{Project outline}
-In order to pursue this goals, the development cycle for the project may be presented as follow. 
+In order to pursue these goals, the development cycle for the project may be presented as follow. 
 
 \textbf{Please note that this is just an outline of the activities, not the project plan, nor the 
 Q\&A, nor the Validation plan. Also note that the activities needed for the toolchain are not
@@ -269,7 +275,7 @@ The next step is the creation of the formal model itself. Because this model is 
 be validated as itself, thus the first ``closing branch'' of the V.
 
 From the model can be derived some ``abstract'' code. The word ``abstract'' is used to emphasize that 
-this code is not necessarily capable of running of a full SIL4 platform. This code can be validated 
+this code is not necessarily capable of running inside a full SIL4 platform. This code can be validated 
 in the second ``closing branch'', possibly using some of the work done in the first branch. 
 
 A project demonstrator may be derived from this code (or may be the ``abstract'' code itself).
@@ -277,7 +283,7 @@ A project demonstrator may be derived from this code (or may be the ``abstract''
 The third ``closing branch'' corresponds to the production of code capable of running on a 
 given SIL4 platform, and the associated validation activities. This is not part of the project.
 
-The yellow boxes corresponds to activities that should be covered completely in order to produce 
+The yellow boxes correspond	 to activities that should be covered completely in order to produce 
 a certifiable product, but of which only a subset will be conducted in order to demonstrate the 
 capabilities of the product.
 
@@ -335,7 +341,7 @@ connexion with ERTMS baselines, requirements\dots}
 \subreq{A Validation Plan shall be issued and complied with.}
 \subreq{The techniques applied to the software will be compliant regarding the SIL.}
 \subreq{All the output documents required by the EN~50126, EN~50128 and EN~50129 for 
-each step of the lifecycle shall be issued, or their lack of shall be justified.}
+each step of the lifecycle shall be issued, or their lack of shall be justified. A documentation plan shall be issued, and include the full list of documents.}
 \subreq{The tools used shall be developed in order to be certifiable according to EN 50128.}
 
 \begin{comment}
@@ -432,21 +438,21 @@ taken into account (= emulated) by the RTM/API.
 \subsubsection{Model and Architecture}
 \textbf{This chapter has to be completed by the leaders of D2.3.1 and D2.3.2}
 
-\req{The model shall comply all OBU ETCS mandatory requirements for level upto 2, in the 
+\req{The model shall comply all OBU ETCS mandatory requirements, in the 
 functional perimeter provided by the Functional Architecture.}
+
 \subreq{The model shall comply the OBU part of SUBSET-26-3.3.0.}
-
-
 
 \subreq{The reference ETCS baseline shall be modified only by project decision, according
 to the QA Plan.}
 \subreq{All divergences against the chosen baseline shall be documented and tracked, according
 to the QA Plan.}
 
-\req{The model shall be consistent with the SRS level and shall yield as
+\req{The model shall be as close as possible (in terms of level of abstraction) to the Subset-026 and shall yield as
 few as possible “design choices”.}
-\subreq{Traceability with the SRS shall be provided. }
-\subreq{Each interpretation of the SRS shall be indicated precisely.}
+
+\subreq{Complete bidirectional traceability between the model and the SRS shall be provided. }
+\subreq{Each interpretation, ambiguity and inconsistency of the SRS shall be indicated precisely.}
 \subreq{Each SRS requirement not formalized in the model (\emph{e.g.} allocated to RBC)
 should be traced and justified.}
 
@@ -456,11 +462,15 @@ Architecture shall try to comply to it even when it is not mandatory.}
 \req{The Functional Architecture shall split the KERNEL into independent functions.}
 \begin{issue}
 Should we stick to the SUBSET-026-4.5.2 function list?
+STAN: Is this really needed at the model level? Is this really possible? A lot of the functions are going to relate to each other. 
+For instance the braking curves depend on the MA processing that depends on location principles, etc.
+According to our experience of modelling 33\% of Subset-026, it is impossible to split the kernel in independent functions. 
+The only possible separation is in different namespaces, where fonctions are grouped (like BTM, ODO, Radio session, Speed supervision, ...)
+However, one possible thing would be to track the dependencies between each namespace.
 \end{issue}
 
-
-\req{The Functional Architecture shall identify a subset of these functions that will be modeled.}
-\req{The Functional Architecture shall allow a universal method of adding function (modularity).}
+\req{The Functional Architecture shall allow a universal method of adding functions, removing functions and overwriting functions (modularity and 
+model extensibility). For instance, the model should allow the disabling of the SH mode.}
 
 \todo{Design, Evolution, Validation, Transformation}
 
@@ -472,7 +482,7 @@ Should we stick to the SUBSET-026-4.5.2 function list?
 \begin{justif}
 Side to side with the model (which should be a dynamic model), should lay a set of  
 static safety properties on the model. The higher level properties will be provided 
-by the WP2 (equivalent to a preliminary hazard analysis) from the SUBSET-91 document, 
+by the WP2 (equivalent to a preliminary hazard analysis) from the SUBSET-91 document.
 
 They will be refined by the safety analysis process (WP4) into properties of the same 
 level than the model. The process of doing so shall be described in the Safety Plan.
@@ -509,7 +519,7 @@ their will not be “verification testing”, but only “validation testing”
 (\emph{i.e.} functional tests).
 
 If we use a formal method with automatic code generation, there is no need of unit testing. 
-There would be only the need of validation (functional) tests (\emph{e.g.} Subset 076), and 
+There would be only the need of validation (functional) tests (\emph{e.g.} Subset 076) and 
 integration tests.
 
 \todo{Verification that the refinements of system design to software code is coherent?}\\
@@ -526,10 +536,9 @@ of clarity I preferred to keep them near other language requirements.
 
 \req{The model formalism shall be easily understandable by the domain experts.}
 \req{The safety properties should be provided in a declarative, simple and formal language.}
-\req{The formal model shall be understandable by or exportable to many tools
-(SCADE, Simulink, B tools, OpenETCS tool chain\dots}
 
-
+\req{The formal model shall be transformable to others tools
+(SCADE, Simulink, B tools, OpenETCS tool chain \todo{STAN is this a requirement on the language?} \dots}
 
 \req{Formal specifications should be able to formalize:}
 \subreq{State machines,}
@@ -538,6 +547,7 @@ of clarity I preferred to keep them near other language requirements.
 \subreq{Arithmetics,}
 \subreq{Braking curves,}
 \subreq{Logical statements.}
+\subreq{Messages, Packets and Fields.}
 
 \begin{comment}
 This requirement does not state that all these objects need to be \emph{first order objects} of
@@ -552,37 +562,43 @@ proved that they are sound, and that the code generation for these objects is al
 inspection of states, variables and I/O.}
 \subreq{The environment shall be emulated by high level construction of the inputs.}
 
+\req{The formal model should have a meta-model.}
+\req{The formal model should have a meta-meta-model.}
+
 \begin{justif}
 ``High level'' means that it will not be necessary to define bitwise the inputs at each cycle.
-On the contrary, some motorization will be available to define the behavior of the inputs.
+On the contrary, some automation will be available to define the behavior of the inputs.
 \end{justif}
 
 \req{It shall be possible to assert logical properties on the model (\emph{i.e. invariants}).}
 \subreq{It shall be able to check the conformance of these properties at runtime.}
 \subreq{It shall be able to prove the conformance of the model to these properties.}
 
-
-
 \section{Tool chain}
 \textbf{This chapter has to be completed by the leader of D2.3.2}
 
-\req{The tool chain shall be composed only of Open Source components.}
+\req{The tool chain shall be composed only of Open Source components licensed under a license compatible with the EUPL license.}
 \subreq{Closed source components may be used, but only if their use is not mandatory in the process, 
 or if an open source counterpart is provided.}
 
-\req{The tool chain shall be sufficiently robust to allow large software management.}
+\req{The tool chain shall be sufficiently robust to the management of the complete model, covering 100\% of the Subset-026.\footnote{As a reference, the Subset-026 includes roughly 3200 requirements applicable to the OBU.}}
 \subreq{It shall allow modularity at any level (proof, model, software).}
+\subreq{It shall support meta-model evolution.}
+\subreq{It shall allow model-level refactoring, for instance rename model elements and move model elements.}
 \subreq{It shall allow the management of documentation within the same tool.}
 \subreq{It shall allow distributed software development.}
 \subreq{It shall include an \emph{issue-tracking system}, in order to allow change management and 
 errors/bugs management.}
+\subreq{It shall offer suitable code-generation interface and services.}
 \subreq{It shall allow to document/track the differences between the model and the ERTMS reference.}
+\subreq{It shall support management of subsequent Subset-026 versions, as well as differences tracking between Subset-026 versions.}
 \begin{justif}
 In case where errors are found in the specification, or reducting choices are to be made in the 
 model (\emph{e.g.} in case of non-determinism).
 \end{justif}
 \subreq{It shall allow concurrent version development, or be compatible with tools allowing
 concurrent version development.}
+\subreq{The version management tools shall use model-based version control, instead of text-based version control.\footnote{As explained in Towards software configuration management for unified models, \cite{Kogel:2008:TSC:1370152.1370158} "Traditional SCM systems operating on the abstraction of a filesystem and managing change at the granularity of textual lines are not adequate for these requirements. We propose a novel approach to SCM for unified models combining product versioning, operation-based deltas and change packages. To demonstrate feasibility we have implemented our approach in Sysiphus a suite of tools for collaborating over Software Engineering artifacts represented in a unified model."}}
 \subreq{In particular, it shall be made easy\;\footnote{Especially in the case of a graphical language.}
 to track the differences between two releases of a model and to manage conflicts.}
 \subreq{In particular it shall allow to track the roles and responsabilities of each 
@@ -590,15 +606,21 @@ participant on a configuration item, at each step of the project lifecycle.}
 \subreq{In particular, version management shall allow to track version of the safety properties 
 together with the model.}
 
-\req{The tool chain shall allow traceability between the documentation (in particular the specification) 
-and the models and safety properties.}
+\req{The tool chain shall be platform independent, i.e. be portable accross windows, linux, mac, etc.}
+
+\req{The tool chain shall allow traceability between:}
+\subreq{the Subset-026 and the model, and vice-versa}
+\subreq{the Subset-026 and the tests, and vice-versa}
+\subreq{the model and the tests, and vice-versa}
+\subreq{the documentation and the model}
 \req{The tool chain shall allow traceability between the different layers of model and safety 
-properties.}
+properties.}	
 
 \req{The tools used in the tool chain shall be able to cooperate, \emph{i.e.} the outputs of one 
 tool will be suitable to be used as the inputs of the other tool.}
 
 \req{The tool chain shall conform to 50128 requirements, for the corresponding SIL and tool class.}
+\subreq{Each tool in the tool chain shall be classified among T1, T2 and T3}
 \subreq{For T2 and T3 tools\,\footnote{T2: Tools contributing to the test or verification of the code 
 or design 
 \emph{e.g.} static analyzers, test generators\dots)\\ T3: tools contributing directly or indirectly
@@ -613,14 +635,18 @@ of the output w.r.t. their specification and the inputs shall be provided.}
 \subsubreq{\dots for data transformation,}
 \subsubreq{\dots for software transformation (\emph{e.g.} translation, compilation\dots).}
 
-\req{The tool chain shall allow to write and store \emph{test cases} and \emph{use cases}
-for the model.}
-\subreq{Version management will allow to map test cases version to model versions.}
+\req{The tool chain shall allow to write, store and execute\emph{test cases} for the model.}
 
 \req{The tool chain shall allow to generate test cases for the model.}
 \begin{issue}
 Is it really necessary? If we have formal proofs on the models, the tests should stay at a 
 functional level. Therefore generated test cases should not be interesting in this context.
+STAN: I confirm: if the test cases are generated based on the model, then any error
+in the model shall cause the generation of incorrect test cases, and shall therefore not be detected. 
+It is a real added value to have two independent parts in the model: one model part, and one test part, 
+with the test part including test cases for all functions in the model. As these tests make up a
+second implementation of the model, they enable a high-quality error detection in the model, 
+also ensuring non-regression for the model. 
 \end{issue}
 
 \begin{issue}
@@ -630,18 +656,12 @@ Should at least the proof tree be exportable and checkable in another tool? (if 
 tree itself is mandatory).
 \end{issue}
 
-
-\todo{Editors: Tree-Based, Form-Based, Text-Based, Graphical?}\\
-\todo{Code Generation}\\
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Bibliography
 \nocite{*}
 \bibliographystyle{unsrt}
-\bibliography{erdc}
-
-
+\bibliography{req_synthesis}
 
 % \begin{thebibliography}{9}
 

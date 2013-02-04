@@ -131,21 +131,31 @@ time permits.
     depending on the gradient profile, braking models of the train,
     several correction factors etc; this is the basis of the EBD
     curve, see Figure 38)
+		
+		Rationale:  handling of functions providing deceleration value for a particular braking model (and thus handling of data structures allowing to represent a braking model, for example A\_brake\_emergency), a gradient profile, a set of track conditions, adhesion factors etc; graphical representation of such functions.
   \end{itemize}
 
 \item[§3.13.7 Determination of Most Restrictive Speed Profile (MRSP)]
   Combine for example several TSR and LX restrictions
+	
+	Rationale: handling of step functions; combining several step functions in order to determine the most restrictive speed profile; graphical representation of such functions.
 
 \item[§3.13.8.3 Emergency Brake Deceleration curves (EBD)]
 
+Rationale: computation of a deceleration curve by combining a step function and a function like A\_safe; graphical representation of the curve.
+
 \item[§3.13.9.3.3.9 Computation of d\_FLOI, using d\_SBI2\_MREBDT]
   (MREBDT: Most Restrictive Target amongst the EBD based targets)
+	
+	Rationale: computation of the most restrictive target from a set of targets by comparing the SBI2 supervision limits associated to each target for a given speed; determination of the supervision limit function which location is the closest to that target.
 
 \item[§3.13.9.4 Release speed supervision limits] and more
   particularly:
   \begin{itemize}
   \item[§3.13.9.4.7] (computation of different release speed
     supervision limits)
+		
+		Rationale: computation of supervision limits from an EBD (or SBD) curve.
 
   \item[§3.13.9.4.8] (computation of the most restrictive value at the
     Trip location related to the EOA, amongst several EBI supervision
@@ -153,8 +163,13 @@ time permits.
 
     \item[§3.13.9.4.8.2] (iterative computation of the release speed)
 
+		Rationale: ensure the model can handle such algorithms.
+
     \item[§3.13.9.4.9] (using of the most restrictive MRSP value
       instead of the release speed)
+			
+			Rationale: determination of the most restrictive value of a step function on a given interval; re-evaluation of the interval’s bounds according to the obtained result.
+			
   \end{itemize}
 
 \item[§3.13.10.4.2 Calculation of the MRDT (Most Restrictive Displayed Target)]
