@@ -229,7 +229,7 @@ which should consider (at a system-level) the impact of the loss of messages.
 \subsection{Model of the function}
 The (simplified) proposed model for the function is provided Fig. \ref{fig:establish_tab} and 
 \ref{fig:establish}. The transitions and actions are the following. It is not useful here to detail
-more the actions and formalism.
+more the actions and formalism. In the following, the state ``EstabChecked'' corresponds to the full establishment of the communication (communcation is established and version is checked).
 
 \begin{figure}
 \centering
@@ -244,11 +244,13 @@ Trying & Trying & No connexion setup & Req. setup of connexion to RBC\_ID \\
 \hline
 Trying & Setup & Connexion setup & Send Initiation Msg \\
 \hline
-Setup & NoCom & Received System\_Version(RBC\_ID,V) and not compat(V)  & Disconnect\\
+Setup & Established & Received System\_Version(RBC\_ID,V)  & V\_Com := V  \\
 \hline
-Setup & Established & Received System\_Version(RBC\_ID,V) and compat(V) & 
-		Send Estab. report; V\_Com := V  \\
+Established & NoCom & not compatible(V\_Com)  & Send Incompatible\_Version Msg; Inform Driver; Terminate (3.5.5) \\
 \hline
+Established & EstabChecked & compatible(V\_Com) & Send Estab. report \\
+\hline
+
 \dots & \dots & \dots & \dots  \\
 \hline
 \end{tabular}
@@ -270,6 +272,9 @@ If we try to infer some safety properties from this state machine, in a \emph{bo
 (rather than the \emph{top-down} way presented in Sect. \ref{safety_top}) we can identify 
 a few possible failures. A process to be used in order to find out these events could be
 to build a system FMECA starting from the formal model.
+
+Note: In the following, we use the verb ``to establish'' in the usual meaning, and in the meaning of the chapter title of the SRS. But if we refer to the requirements of the SRS, it should be ``established and version checked'' because the version check comes after the establishment. Nevertheless, for the sake of clarity I will use ``establish'' in its general use, which corresponds to the state EstabChecked.
+
 \begin{itemize}
 \item Not being able to establish a communication while required;
 \item Establishing a communication while not required;
@@ -292,7 +297,7 @@ confirm this).
 Assuming these are all the safety event we have to cover, we could therefore provide the following 
 property in order to cover them. This property is somehow redundant with the model, but it is restricted
 to the bare safety need.
-$$State = Established \Rightarrow compat(V\_Com)\wedge RBC\_ID = RBC\_Com$$
+$$State = EstabChecked \Rightarrow compat(V\_Com)\wedge RBC\_ID = RBC\_Com$$
 
 \subsection{Filling the gaps\dots}
 \label{gaps}

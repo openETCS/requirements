@@ -4,7 +4,8 @@ digraph EstablishCom {
 	Trying -> NoCom;
 	Trying -> Trying;
 	Trying -> Setup;
-	Setup -> NoCom;
+	Setup;
 	Setup -> Established;
 	Established-> NoCom;
+	Established-> EstabChecked;
 }
