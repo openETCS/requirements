@@ -28,17 +28,17 @@ The folders should be organized the following way in the requirement repository
 
 
 The documents in progress should be found in Requirements/D2.x. After approval, the approved version is copied in the
-Reference subtree. In this reference subtree, the subfolders will follow this pattern:
-   * Reference :
+Releases subtree. In this reference subtree, the subfolders will follow this pattern:
+   * Releases :
       * D2.x : xxx
-         * 01-00
+         * 01.00.00
             * doc.tex
             * doc.pdf
             * doc.xxx
-            * Review Sheet D2.x 01-00.xls
-         * V02/00
+            * Review Sheet D2.x 01.00.00.xls
+         * 02.00.00
             * doc.tex
             * doc.pdf
             * doc.xxx
-            * Review Sheet D2.x 02-00.xls
+            * Review Sheet D2.x 02.00.00.xls
  
