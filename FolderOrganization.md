@@ -15,7 +15,7 @@ The folders should be organized the following way in the requirement repository
     * MinutesOfMeetings : Self explanatory
     * Workspace : All temporary documentation that does not fit anywhere
     * Tools : Self explanatory
-    * Reference : Delivered reference versions of documents
+    * Releases : Delivered reference versions of documents
        * D2.1 --- State of the art : report on existing methodologies 
        * D2.2 --- State of the art : report on CENELEC 
        * D2.3 --- Definition of the overall process for the formal description of ETCS and the rail system it works on
