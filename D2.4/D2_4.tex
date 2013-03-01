@@ -1,0 +1,188 @@
+\documentclass{template/openetcs_article}
+% Use the option "nocc" if the document is not licensed under Creative Commons
+%\documentclass[nocc]{template/openetcs_article} 
+\usepackage{rotating,url,color}
+\graphicspath{{./template/}{.}{./images/}}
+\begin{document}
+\frontmatter
+\project{openETCS}
+
+%Please do not change anything above this line
+%============================
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{OETCS/WP2/D2.4.0~--~00/00}
+
+%define your workpackage here
+\wp{Work-Package 2: ``Definition''}
+
+%set a title here
+\title{OpenETCS methods}
+
+%set a subtitle here
+\subtitle{ Definition of the methods used to perform the formal description}
+
+%set the date of the report here
+\date{February 2013}
+
+%define a list of authors and their affiliation here
+
+\author{Marielle Petit-Doche}
+\affiliation{Systerel}
+  
+  
+% define the coverart
+\coverart[width=350pt]{chart}
+
+%define the type of report
+\reporttype{Definition}
+
+
+\begin{abstract}
+This document give a description of the process to be applied in the OpenETCS project. It gives a description of the activities to specify and design a critical system in a first part. The second part presents an abstract description of the case study issued from subset 26.
+
+
+Detailed process in regards of state of the art results and Cenelec standard requirements  (detailed design plan)
+- For each step  of the process defined in T.2.2.1 :
+           - objectives of the step
+           - Input/output
+           - proposed techniques
+- rules on languages and tools
+
+\end{abstract}
+
+%=============================
+%Do not change the next three lines
+\maketitle
+\tableofcontents
+\listoffiguresandtables
+\newpage
+%=============================
+
+% The actual document starts below this line
+%=============================
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%              My macros (=> Sylvain Baro)               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tbd}{\colorbox{cyan}{\%\%To Be Defined\%\%}}
+\newcommand{\tbc}{\colorbox{cyan}{\%\%To Be Confirmed\%\%}}
+\newcommand{\todo}[1]{\colorbox{cyan}{\%\%{#1}\%\%}}
+\newlength{\origindent}
+
+\newenvironment{issue}{
+	\begin{quote}
+	\begin{itshape}Open Issue. 
+}{
+	\end{itshape}
+	\end{quote}
+}
+
+\newenvironment{comment}{
+	\begin{quote}
+	\begin{itshape}Comment. 
+}{
+	\end{itshape}
+	\end{quote}
+}
+
+\newenvironment{justif}{
+	\begin{quote}
+	\begin{itshape}Justification. 
+}{
+	\end{itshape}
+	\end{quote}
+}
+\input{req}
+
+\def\reqt{R-WP2/D2.3.0}
+% Start here
+\section{Introduction}
+
+The purpose of this document is to describe, for the OpenETCS project, the activties of specification and design. However the activities of verification and validation are not in the scope of this document and will be described in WP4/D4.x.x.
+
+These activities shall follow the requirements of EN 50126 and EN 50128 and reflect usual activities for the development of railway critical systems (see D2.1.0  and D2.2.0).
+
+This document  contents two parts :
+\begin{itemize}
+\item the description of the process to applied in the OpenETCS project
+\item the abstract description and the limit of the case study 
+\end{itemize}
+
+\section{Reference documents}
+\begin{itemize}
+\item CENELEC EN 50126-1 --- 01/2000 --- \emph{Railways applications –- The specification and 
+demonstration of Reliability, Availability, Maintenability and Safety (RAMS) –- Part 1: 
+Basic requirements and generic process}
+\item CENELEC EN 50128 --- 10/2011 --- \emph{Railway applications -- Communication, signalling and 
+processing systems -- Software for railway control and protection systems}
+\item CENELEC EN 50129 --- 05/2003 --- \emph{Railway applications –- Communication, signalling and 
+processing systems –- Safety related electronic systems for signalling}
+\item FPP --- \emph{Project Outline Full Project Proposal Annex OpenETCS} -- v2.2
+\item SUBSET-026 3.3.0 --- \emph{System Requirement Specification}
+\item SUBSET-076-x 2.3.y --- Test related ERTMS documentation
+\item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
+\item SUBSET-091 2.5.0 --- \emph{Safety Requirements for the Technical Interoperability
+of ETCS in Levels 1 \& 2}
+\item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
+\end{itemize}
+
+\section{Conventions}
+The requirements are prefixed by “R-zz-x-y”, and are written in a roman typeface, where ``R'' 
+stands for ``Requirement'', ``zz'' identifies the source document,``x'' 
+is the version number and``y'' is the identifier of the requirement. All the text 
+written in italics is not a requirement: it may be a note, an open issue, an 
+explanation of the requirements, or an example.
+
+The placeholder “\todo{xxx}” is used to indicates that a paragraph or section is not finished, 
+to be defined or to be confirmed.
+
+\section{Glossary}
+\begin{description}
+\item[API] Application Programming Interface
+\item[FME(C)A] Failure Mode Effect (and Criticity) Analysis
+\item[I/O] Input/Output
+\item[OBU] OnBoard Unit
+\item[QA] Quality Analysis
+\item[RBC] Radio Block Center
+\item[RTM] RunTime Model
+\item[SIL] Safety Integrity Level
+\item[THR] Tolerable Hazard Rate
+\item[V\&V] Verification \& Validation
+\end{description}
+
+\input{formal_intro.tex}
+
+\input{formal_design.tex}
+
+\input{formal_vnv.tex}
+
+\input{openETCS_meth.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Bibliography
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{erdc}
+
+
+
+% \begin{thebibliography}{9}
+
+% \bibitem{lamport94}
+  % Leslie Lamport,
+  % \emph{\LaTeX: A Document Preparation System}.
+  % Addison Wesley, Massachusetts,
+  % 2nd Edition,
+  % 1994.
+
+% \end{thebibliography}
+
+%===================================================
+%Do NOT change anything below this line
+
+\end{document}
