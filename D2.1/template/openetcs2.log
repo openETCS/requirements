@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdftex 2012.11.27)  27 NOV 2012 17:05
+entering extended mode
+**O:/Projektordner/03_Arbeitsunterlagen/Bearbeitung/WP2/Task2-1-1/Zwischenberic
+hte/Latex-doc/template/openetcs2.cls
+
+(O:/Projektordner/03_Arbeitsunterlagen/Bearbeitung/WP2/Task2-1-1/Zwischenberich
+te/Latex-doc/template/openetcs2.cls
+! Undefined control sequence.
+l.55 \NeedsTeXFormat
+                    {LaTeX2e}
+? 
+! Emergency stop.
+l.55 \NeedsTeXFormat
+                    {LaTeX2e}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

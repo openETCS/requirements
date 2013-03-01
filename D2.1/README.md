@@ -1,3 +1,4 @@
-D2.1 - State of the art : report on existing methodologies
+methodology-report
+==================
 
-At the moment, the document is in https://github.com/openETCS/methodology-report
+part of WP2
