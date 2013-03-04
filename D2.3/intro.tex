@@ -1,0 +1,124 @@
+
+\section{Introduction}
+
+The purpose of this document is to describe, for the OpenETCS project, the activities of specification and design. However the activities of safety, verification and validation are not in the scope of this document and will be described in WP4.
+
+These activities shall follow the requirements of EN 50126 and EN 50128 and reflect usual activities for the development of railway critical systems (see D2.1.0  and D2.2.0).
+\subsection{Motivation}
+
+This document describes the process to  be applied  during the OpenETCS project to achieve the following goals of the OpenETCS project :
+
+\paragraph{A formal reference specification for the ETCS requirements and architecture}
+The first goal of the project is to propose a formalization of a subset of the on-board subsystem,
+as defined in the SUBSET-26. 
+
+The purpose of the formalization is:
+\begin{itemize}
+\item to enhance the understanding of modelled subset;
+\item to allow formal analysis of the modelled subset;
+\item to be able to animate the model for testing an analyzing purpose;
+\item to provide information on the completeness and soundness of the SUBSET-26;
+\item to be used as a reference formal specification for the implementation of an OBU 
+(by the OpenETCS project team and by industrial actors);
+\item \dots
+\end{itemize}
+
+
+The output of this goal is a formal specification, understandable by many tools (SCADE, 
+Simulink, B tools, OpenETCS tool chain…) that can be given to all railway actors, and 
+if possible associated to SRS documents in the ERA database.
+The final goal is that industrial actors work with this formal specification instead of 
+natural language specification.
+
+
+\paragraph{Definition of a tool chain and process/methodologies for developing 
+on onboard software that can fulfill the EN 50128 requirements}
+
+
+The process and the associated tools, shall provide a certifiable product. For this purpose all the step of the process and the choice of methods and tools shall be justifyed to ensure a safe approach to build a system.
+
+The full safety process needed for the OpenETCS to be \emph{certifiable} according to CENELEC 50126
+and 50128 shall be described in details. This safety plan will detail precisely which activities 
+are required or not, why, and the choices that are made that allows to claim that safety is guaranteed.
+
+
+\paragraph{Building an implementation of the subset of an onboard ETCS using the system model and the 
+tool chain}
+
+It is the demonstration that all the work done in the OpenETCS project is coherent, and that
+the tool chain is operational.
+
+The output is the result of an implementation for the ETCS requirements and architecture which can be used by the industrial as references.
+
+\paragraph{Define the safety properties at the model level}
+In order to comply the CENELEC standards, it is necessary to conduct safety activities 
+to identify errors and anomalies in the process. One important step for this is to define safety 
+properties which are on the same level than the formal model.
+
+These safety properties:
+\begin{itemize}
+\item will be used for the validation of the model itself;
+\item will be used as reference proof obligations for the subsequent activies.
+\end{itemize}
+
+Because the full design, development, validation and safety analysis process for a SIL4 OBU
+is a huge task far beyond the project possibilities, the full safety activities will not be conducted
+on the whole subsystem (see below). Nevertheless the safety process description shall be complete 
+according to CENELEC requirements.
+
+However this safety analysis is out of the scope of the OpenETCS project. SUBSET-088 2.3.0 and SUBSET-091 2.5.0 will provide elements of safety analysis. 
+
+\subsection{Contents of this document}
+
+As the Quality Plan D1.3.1 focusses in means to apply during the OpenETCS project (as for example opensource approaches or Scrum organization)  the aim of this document is to define the main step of the OpenETCS necessary to produce a certifiable system according to CENELEC standard.
+
+Then this document  focusses :
+\begin{itemize}
+\item on the description of the mandatory step of a lifecycle to design a critical system according to CENELEC standard
+\item on the abstract description of the system to design during the OpenETCS project
+\end{itemize}
+
+\section{Reference documents}
+\begin{itemize}
+\item CENELEC EN 50126-1 --- 01/2000 --- \emph{Railways applications –- The specification and 
+demonstration of Reliability, Availability, Maintenability and Safety (RAMS) –- Part 1: 
+Basic requirements and generic process}
+\item CENELEC EN 50128 --- 10/2011 --- \emph{Railway applications -- Communication, signalling and 
+processing systems -- Software for railway control and protection systems}
+\item CENELEC EN 50129 --- 05/2003 --- \emph{Railway applications –- Communication, signalling and 
+processing systems –- Safety related electronic systems for signalling}
+\item FPP --- \emph{Project Outline Full Project Proposal Annex OpenETCS} -- v2.2
+\item SUBSET-026 3.3.0 --- \emph{System Requirement Specification}
+\item SUBSET-076-x 2.3.y --- Test related ERTMS documentation
+\item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
+\item SUBSET-091 2.5.0 --- \emph{Safety Requirements for the Technical Interoperability
+of ETCS in Levels 1 \& 2}
+\item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
+\item Project Quality Assurance Plan -- D1.3.1
+\end{itemize}
+
+\section{Conventions}
+The requirements are prefixed by “R-zz-x-y”, and are written in a roman typeface, where ``R'' 
+stands for ``Requirement'', ``zz'' identifies the source document,``x'' 
+is the version number and``y'' is the identifier of the requirement. All the text 
+written in italics is not a requirement: it may be a note, an open issue, an 
+explanation of the requirements, or an example.
+
+The placeholder “\todo{xxx}” is used to indicates that a paragraph or section is not finished, 
+to be defined or to be confirmed.
+
+\section{Glossary}
+\begin{description}
+\item[API] Application Programming Interface
+\item[FME(C)A] Failure Mode Effect (and Criticity) Analysis
+\item[I/O] Input/Output
+\item[OBU] OnBoard Unit
+\item[QA] Quality Analysis
+\item[RBC] Radio Block Center
+\item[RTM] RunTime Model
+\item[SIL] Safety Integrity Level
+\item[THR] Tolerable Hazard Rate
+\item[V\&V] Verification \& Validation
+\end{description}
+
+

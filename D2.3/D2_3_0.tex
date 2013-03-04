@@ -31,6 +31,8 @@
 \author{Marielle Petit-Doche}
 \affiliation{Systerel}
   
+\author{Matthias Güdemann}
+\affiliation{Systerel}
   
 % define the coverart
 \coverart[width=350pt]{chart}
@@ -90,59 +92,10 @@ This document give a description of the process to be applied in the OpenETCS pr
 
 \def\reqt{R-WP2/D2.3.0}
 % Start here
-\section{Introduction}
 
-The purpose of this document is to describe, for the OpenETCS project, the activities of specification and design. However the activities of verification and validation are not in the scope of this document and will be described in \todo{WP4/D4.x.x}.
 
-These activities shall follow the requirements of EN 50126 and EN 50128 and reflect usual activities for the development of railway critical systems (see D2.1.0  and D2.2.0).
+\input{intro.tex}
 
-This document  contents two parts :
-\begin{itemize}
-\item the description of the process to applied in the OpenETCS project
-\item the abstract description and the limit of the case study 
-\end{itemize}
-
-\section{Reference documents}
-\begin{itemize}
-\item CENELEC EN 50126-1 --- 01/2000 --- \emph{Railways applications –- The specification and 
-demonstration of Reliability, Availability, Maintenability and Safety (RAMS) –- Part 1: 
-Basic requirements and generic process}
-\item CENELEC EN 50128 --- 10/2011 --- \emph{Railway applications -- Communication, signalling and 
-processing systems -- Software for railway control and protection systems}
-\item CENELEC EN 50129 --- 05/2003 --- \emph{Railway applications –- Communication, signalling and 
-processing systems –- Safety related electronic systems for signalling}
-\item FPP --- \emph{Project Outline Full Project Proposal Annex OpenETCS} -- v2.2
-\item SUBSET-026 3.3.0 --- \emph{System Requirement Specification}
-\item SUBSET-076-x 2.3.y --- Test related ERTMS documentation
-\item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
-\item SUBSET-091 2.5.0 --- \emph{Safety Requirements for the Technical Interoperability
-of ETCS in Levels 1 \& 2}
-\item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
-\end{itemize}
-
-\section{Conventions}
-The requirements are prefixed by “R-zz-x-y”, and are written in a roman typeface, where ``R'' 
-stands for ``Requirement'', ``zz'' identifies the source document,``x'' 
-is the version number and``y'' is the identifier of the requirement. All the text 
-written in italics is not a requirement: it may be a note, an open issue, an 
-explanation of the requirements, or an example.
-
-The placeholder “\todo{xxx}” is used to indicates that a paragraph or section is not finished, 
-to be defined or to be confirmed.
-
-\section{Glossary}
-\begin{description}
-\item[API] Application Programming Interface
-\item[FME(C)A] Failure Mode Effect (and Criticity) Analysis
-\item[I/O] Input/Output
-\item[OBU] OnBoard Unit
-\item[QA] Quality Analysis
-\item[RBC] Radio Block Center
-\item[RTM] RunTime Model
-\item[SIL] Safety Integrity Level
-\item[THR] Tolerable Hazard Rate
-\item[V\&V] Verification \& Validation
-\end{description}
 
 \input{process_def.tex}
 
@@ -157,6 +110,7 @@ to be defined or to be confirmed.
 \nocite{*}
 \bibliographystyle{unsrt}
 \bibliography{erdc}
+\bibliography{process}
 
 
 
