@@ -32,7 +32,7 @@ openETCS project ]
 %   \let\@listi\@listI}
 \normalsize
 
-% Original fonts (� tester sur miktex)
+% Original fonts (? tester sur miktex)
 %\usepackage{mathgifg}
 %\usepackage{courier}
 
