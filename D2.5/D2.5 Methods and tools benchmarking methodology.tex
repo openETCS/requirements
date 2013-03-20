@@ -52,13 +52,11 @@
 %define the type of report
 \reporttype{Requirements}
 
-
 \begin{abstract}
 %define an abstract here
 This document is the deliverable of the WP2 D2.5 task, it defines the subset of SRS SUBSET-026 that should be used
 to evaluate formal modelling tools.
 \end{abstract}
-
 
 %=============================
 %Do not change the next three lines
@@ -72,7 +70,7 @@ Work Package &  WP2  \\
 Deliverable ID or doc. ref. & D2.5\\
 \hline
 Document title & Methods and tools benchmarking methodology \\
-Document version & 00.01.00 \\
+Document version & 01.00.00 \\
 Document authors (org.)  & Guillaume Pottier (SNCF) \\
 \hline
 \end{tabular}
@@ -83,7 +81,7 @@ Document authors (org.)  & Guillaume Pottier (SNCF) \\
 \hline
 Last version reviewed & 00.00.00 \\
 \hline
-Main reviewers &  David Mentre, Stanislas Pinte, Guillaume Pottier \\
+Main reviewers &  David Mentre, Stanislas Pinte, Marielle Petit-Doche, Guillaume Pottier \\
 \hline
 \end{tabular}
 
@@ -107,7 +105,7 @@ Version &  Date & Author(s) & Justification  \\
 \hline  
 00.00.00 & 14/12/12 & D. Mentre &  Document creation  \\
 \hline  
-00.01.00 & 08/03/13 & G. Pottier &  Request for comment to some partners, version for review  \\
+01.00.00 & 15/03/13 & G. Pottier &  Final version  \\
 \hline
 \end{tabular}
 
@@ -127,7 +125,7 @@ Version &  Date & Author(s) & Justification  \\
 
 \chapter{Introduction}
 
-The purpose of this document is to define the methodology for the methods and tools benchmarking activities.
+The purpose of this document is to define the methodology for the methods and tools benchmarking activities. 
 
 WP2 D2.1 has shown that several methods and tools are available to make the formal model of the On Board Unit in WP3. In order to evaluate them in WP7, WP2.D2.5 need to define a representative part of the SUBSET-026 that would be modelled by each candidate, therefore allowing comparing the tools on the same basis.
 
@@ -140,7 +138,7 @@ A formal model is composed of two different aspects:
 For the modelisation aspect, the idea is to cover all the different means of description needed for SUBSET-026 in order to highlight the strong points and weak points of a potential language/semantic.
 Moreover, there is the need of having a sufficient and self content part of a functionality for the proof aspect in order to verify the proof capability of the method/tool.
 
-This document is initiated as a preliminary version. The final version is planned for the end of May 2013.
+This document defines only which functionnalities and safety requirements should be modelled for the benchmark. The criterias for the evaluation of methods and tools are not gathered in this document. For this, refer to others WP2 deliverables. 
 
 \chapter{Reference documents}
 \begin{description}
@@ -148,7 +146,6 @@ This document is initiated as a preliminary version. The final version is planne
 \item [SUBSET-058 3.0.0] --- \emph{STM Application layer}
 \item [SUBSET-091 3.2.0] --- \emph{Safety Requirements for the Technical Interoperability of ETCS in Levels 1 \& 2}
 \end{description}
-
 
 \chapter{Glossary}
 \begin{description}
@@ -171,7 +168,6 @@ This document is initiated as a preliminary version. The final version is planne
 \item[TSR] Tempory Speed Restriction
 \item[WP] Work Package
 \end{description}
-
 
 \chapter{Content of the benchmarking}
 
@@ -238,7 +234,6 @@ SUBSET-026 defines the format and content of messages for ERTMS/ETCS functions. 
 \item [\emph{Low priority} \S8.7.2 Movement Authority message] This includes reference to Packet 15 (\S7.4.2.4). That would be a perfect use case for tools able to model things down to bit level.
 \end{description}
 
-
 \section{Proof aspect}
 From the previous list, only \S3.5.3 (Establishing a communication session), \S4.6.2 (Transitions Table) and \S5.9 (Procedure On-Sight) would be considered in this section. The others are not sufficiently self content.
 
@@ -288,7 +283,6 @@ The result is three safety requirements.
 \label{fig:FTA_of_kernel_19}
 \end{figure}
 
-
 \chapter{Methodology of the benchmarking and role of WP7}
 
 WP2 is in charge of the definition of the benchmark (this document).
@@ -296,7 +290,6 @@ WP2 is in charge of the definition of the benchmark (this document).
 WP7 is in charge of the realisation of the benchmark. The evaluation matrix will be created by WP7, based on the deliverables of WP2. 
 
 The evaluation shall be done by independant persons from those who has done the modelisation and from the provider of the means or tools.
-
 
 \nocite{*}
 
