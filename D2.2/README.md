@@ -1,3 +1,3 @@
-D2.2 folder - State of the art : report on CENELEC
+D2.2 folder - State of the art : report on CENELEC Standard
 
 
