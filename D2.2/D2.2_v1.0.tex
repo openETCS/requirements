@@ -23,10 +23,10 @@
 \title{openETCS D2.2: Report on CENELEC standards}
 
 %set a subtitle here
-\subtitle{Set of requirements to be fulfilled according to the CENELEC standard EN 50128:2011}
+\subtitle{Set of requirements to be fulfilled according to the CENELEC standards}
 
 %set the date of the report here
-\date{February 2013}
+\date{April 2013}
 
 %define a list of authors and their affiliation here
 \author{Merlin Pokam \and Norbert Sch\"afer}
@@ -45,7 +45,7 @@
 
 
 \begin{abstract}
-This report gathers requirements coming from the standards that have to be fulfilled, in order to prove that the openETCS application software and tools are fit for theirs intended purposes and respond correctly to safety issues that have been derived from the ERTMS System Safety Requirements Specification.
+This report gathers requirements coming from the CENELEC standards for the railway sector particularly the CENELEC standard EN 50128:2011, that have to be fulfilled within the project openETCS, in order to prove that the openETCS application software and tools are fit for theirs intended purposes and respond correctly to safety issues that have been derived from the ERTMS System safety requirements specification and the risk analysis performed at the system level.
 \end{abstract}
 
 %=============================
@@ -97,7 +97,9 @@ Approved by &  &  & \\
 \hline  
 00.01.00 & 20/03/13 & Merlin Pokam &  Updated, version for review  \\
 \hline
-00.01.00 & 04/04/13 & Merlin Pokam &  The version of the report has been updated from "Preliminary" to "Intermediate" , version for review  \\
+00.01.01 & 04/04/13 & Merlin Pokam &  The version of the report has been updated from "Preliminary" to "Intermediate" , version for review  \\
+\hline
+00.01.02 & 08/04/13 & Merlin Pokam &  Updated, version for review  \\
 \hline
 \end{tabular}
 
@@ -202,9 +204,9 @@ Approved by &  &  & \\
 
 
 \section{openETCS tools chain}
-The openETCS tools chain covers the entire software development process of the ETCS OBU,
-starting from a conventional natural language specification over a formalization of the system
-description for the modeling with verification steps, through to tool based code generation
+Tools chain, that covers the entire software development process of the ETCS OBU,
+starting from a conventional natural language specification over a formalization of the ETCS OBU system
+description for the modeling with verification steps, through to code generation
 and automatic generation of documents, see Figure \ref{fig:openETCS1}.
 \\
 
@@ -294,6 +296,7 @@ A detailed description of the project openETCS is given in the Project Outline F
 Proposal, see \cite{FPP13}.
 
 \section{Main goals and deliverables}
+\label{goals}
 The objective of the openETCS project is to provide a usable open source application software; including tools, documentations and the safety case for all ETCS OBU. That means, are made available as FLOSS under a "General Public License" (e.g. EUPL: European Union Public License).
 \\
 According to the project co-operation agreement \cite{PCA12}, the main goals and deliverables of the openETCS project are:
@@ -307,7 +310,9 @@ According to the project co-operation agreement \cite{PCA12}, the main goals and
 \chapter{Purpose and creation of this report}
 
 \section{Purpose of this report}
-Due to the particularity of this project and taking into account the goals of this project, it should be clarified in advance which requirements shall be fulfilled in order to be compliant with the CENELEC standard EN 50128:2011. The work was carried out and coordinated by AEbt and the result is this report. Hence, this report elicits requirements that must be fulfilled in order to prove, that the openETCS project deliverables are fit for theirs intended purpose and responds correctly to safety issues that was derived from the ERTMS System Safety Requirements Specification.
+Due to the particularity of the openETCS project and taking into account its goals, it should
+be specify in advance which requirements shall be fulfilled in order to be compliant with the
+CENELEC standards, particularly the CENELEC standard EN 50128:2011. This work was carried out and coordinated by AEbt and the result is this report. Therefore, this report lists requirements that must be fulfilled in order to prove, that the openETCS project deliverables (as described in section \ref{goals}) are fit for theirs intended purpose and responds correctly to safety issues that was derived from the ERTMS system safety requirements specification.
 
 \section{Creation of this report}
 \label{report}
@@ -325,87 +330,13 @@ This work was also carried out through interviews with experts. The experts inte
 
 This section describes the result of the performed work.
 
-\section{Safety requirements to be fulfilled according to EN 50128:2011}
+\section{Safety requirements to be fulfilled according to the CENELEC standards}
 
+\subsection{Safety requirements to be fulfilled according to the CENELEC standard EN 50128:2011}
 Safety requirements according to the CENELEC standard EN 50128:2011 that shall be fulfilled by the openETCS tools chain and the openETCS application software, are recorded in annex \ref{annexA} and \ref{annexC}.
 
 
-\section{Security requirements to be fulfilled}
-
-Security Requirements are not described in the standard EN 50128:2011, nevertheless due to the nature of this project and based on interviews performed with software and signalling experts, we recommend to take into account the recommendations described in sections \ref{DPatterns}, \ref{CPatterns} and \ref{Backdoor}.\\
-Sections \ref{DPatterns1}, \ref{CPatterns1} and \ref{Backdoor1} give a brief description on familiar security patterns. A detailed description on all existing security patterns is given in \cite{SECU-doc}.
-
-\subsection{Secure Design Patterns}
-\label{DPatterns1}
-During the design of the openETCS application software, software security can be enhanced through the implementation of secure design patterns. 
-Three of the most techniques used are listed below:
-\begin{enumerate}
-  \item Distrustful decomposition
-  \item Privilege separation
-  \item Clear sensitive information
-\end{enumerate}
-
-\subsubsection{Distrustful decomposition}
-The intent of the Distrustful Decomposition secure design pattern is to move separate functions into mutually untrusting programs, thereby reducing:
-\begin{itemize}
-  \item the attack surface of the individual programs that make up the system
-  \item the functionality and data exposed to an attacker if one of the mutually untrusting programs is compromised
-\end{itemize}
-
-\subsubsection{Privilege separation}
-The intent of the Privilege separation is to reduce the amount of code that runs with special privilege without affecting or limiting the functionality of the program. The Privilege separation is a more specific instance of the distrustful decomposition.
-
-\subsubsection{Clear sensitive information}
-The use of this pattern ensures that sensitive information is cleared from reusable resources before the resource may be reused. It is possible that sensitive information stored in a reusable resource may be accessed by an unauthorized user or adversary if the sensitive information is not cleared before freeing the reusable resource.
-
-
-\subsection{Secure coding Patterns}
-\label{CPatterns1}
-During the implementation of the openETCS application software and tool chain, software security can be augmented by avoiding a number of common software security vulnerabilities. 
-The following software security vulnerabilities shall be avoided:
-\begin{enumerate}
-  \item Buffer overflow
-  \item Pointer shenanigans
-  \item Dynamic memory allocation flaws
-  \item Tainted data
-\end{enumerate}
-
-\subsubsection{Buffer overflow}
-Buffer overflow can lead to more serious consequences, such as stack smashing, code injection, or even arc injection by which an attacker changes the control flow of the program by modifying the return address on stack. In arc injection, an attacker doesn't even have to inject any code, and he can jump to an arbitrary function in existing code, or bypass validity checks or assertions \cite{Kalinsky09}.
-
-\subsubsection{Pointer shenanigans}
-If an attacker can modify a data pointer, then the attacker can point to wherever he likes and write whatever he likes. If an attacker can overwrite a function pointer, the attacker is well on his way to executing his code on the processor \cite{Kalinsky09}.
-
-\subsubsection{Dynamic memory allocation flaws}
-The use of dynamic memory allocation shall be forbidden within the openETCS project. It is so easy to write defective code for dynamic memory allocation, so that attackers are eager to search out these defects \cite{Kalinsky09}.
-
-\subsubsection{Tainted data}
-Data entering an embedded system from the outside world must not be trusted. Instead, it must be "sanitized" before use \cite{Kalinsky09}.
-A useful technique for data sanitization is called "white listing". It involves describing all possible valid values for a given piece of data and then writing code that only accepts those values. All unexpected values are viewed as "tainted" and are not used.
-
-\subsection{Backdoor}
-\label{Backdoor1}
-A backdoor can be created by each person who has access to the software source code, but it is also possible to create a backdoor without modifying the software source code, or even modifying it after compilation. This can be done by rewriting the compiler so that it recognizes code during compilation that triggers inclusion of a backdoor in the compiled output. When the compromised compiler finds such code, it compiles it as normal, but also inserts a backdoor. This attack was first outlined by Ken Thompson in his paper "Reflections on Trusting Trust" \cite{Ken84}.
-A useful technique against back doors is the so called "Diverse Double-Compiling"-technic see \cite{Wheeler09}. 
-
-
-\section{Recommendation for the openETCS project}
-
-\subsection{Regarding Secure design Patterns}
-\label{DPatterns}
-The architecture and design specification of the openETCS application software shall implement the requirements described in section \ref{DPatterns}.
-
-\subsection{Regarding Secure coding Patterns}
-\label{CPatterns}
-Since the software code of the openETCS application software will be automatically generated using tools,  tools used or developed shall avoid the software security vulnerabilities described in section \ref{CPatterns}.
-
-\subsection{Regarding Backdoors}
-\label{Backdoor}
-Experiences from the past have shown that open source software are better positioned against backdoors than proprietary software. For this reason, it is clear from the report of the European Parliament, that: "Calls on the Commission and Member States to promote software projects whose source text is made public (open-source software), as this is the only way of guaranteeing that no backdoors are built into programmes" see \cite{EUParl}.
-Since openETCS is an open source software project and according to \cite{EUParl}, no requirement regarding backdoor issues need to be considered.
-
-
-\section{Requirements regarding Hardware, operating system and the bus system}
+\subsection{Safety requirements to be fulfilled according to related CENELEC standards}
 When developing software, it is mandatory to prove that the actual behavior of the software, when executed, will be consistent with the behavioral semantics of the software. 
 Behavior is observable in: 
 \begin{itemize}\itemsep=0pt
@@ -414,34 +345,86 @@ Behavior is observable in:
   \item The causal domain.
 \end{itemize}
 
-All of these behavioral aspects depend on both the OS and the underlying HW \cite{BraPeFe12}:
+All of these behavioral aspects depend on both the OS and the underlying HW. For example:
 \begin{itemize}\itemsep=0pt
-  \item Data transformations fail if, for example, the word length of the HW registers is inappropriate for the calculations involved.,
-  \item Expected reactions miss their deadlines if, for example, the OS scheduler does not allocate appropriate amounts of CPU time to the task processing the input,
+  \item Data transformations fail if, the word length of the HW registers is inappropriate for the calculations involved,
+  \item Expected reactions miss their deadlines if, the OS scheduler does not allocate appropriate amounts of CPU time to the task processing the input,
   \item Events occur in the wrong order if the OS does not provide adequate mechanisms for critical section management.
 \end{itemize}
 
 As a consequence the openETCS application software can only be validated and certified in relation to certain OS and HW capabilities.
-We therefore expect that the EVC code generated from the openETCS models will reference the interface of some OS application program interface (API) providing the services necessary to ensure the proper behavior of the software to be executed. Moreover, a list of hardware capabilities to be fulfilled has to be specified. 
-We propose to elaborate specification documents about OS and HW capabilities required. 
 
-The OS specification document should specify:
-\begin{itemize}\itemsep=0pt
-  \item the API required by the openETCS application software (Since the openETCS application software shall be SIL4 compliant, the required API shall also be SIL4 compliant according to EN 50128, see \cite{EN50128}),
-  \item the scheduling capabilities (e.g., reaction to interrupts, partitioning in the time domain),
-  \item the communication interfaces supported (It is expected that the System in which the openETCS application software will be implemented, will exchange safety-related signals with its environment, therefore, a risk analysis on the basis of EN 50126 and EN 50129 shall be performed to determine the SIL (Software-SIL) of the communication interface. However, it should be noted that the communication interfaces shall fulfill the requirements of EN 50159, see \cite{EN50159}).
+Concerning the HW, it shall fulfill the requirements for safety-related hardware as defined in the CENELEC standard EN 50129 (see \cite{EN50129}) according to the required safety integrity levels resulting from the risk analysis. In other words, that means, before applying the EN 50129, a hazard analysis and risk assessment processes as defined in EN 50126 (see \cite{EN50126})shall be performed, in order to specify the System Safety Requirements.
+It is expected that the System in which the openETCS application software will be implemented, will exchange safety-related data with its environment, therefore, additional requirements for safety-related data communication as defined in EN 50159 (see \cite{EN50159}) shall also be fulfilled
+
+Concerning the OS, We propose to elaborate specification documents about OS capabilities required.
+we expect that the EVC code generated from the openETCS models will reference the interface of some OS application program interface (API) providing the services necessary to ensure the proper behavior of the software to be executed. Therefore, The API to be developed within the openETCS project shall be compliant with the requirements of EN 50128 (see \cite{EN50128}) according to the required software safety integrity levels resulting from the risk analysis.
+Instead of specifying OS-API properties from scratch we suggest to adopt the well known OS-API speciﬁcation from the ARINC 653 standard (see \cite{ARINC}) for which OS-API have been developed and applied successfully for safety-critical tasks in the avionic domain.
+
+
+\section{Security requirements to be fulfilled}
+Security Requirements are not clearly described in the CENELEC standards, nevertheless due to the nature of the openETCS project and based on interviews performed with software and signalling experts, we recommend to take into account the recommendations described in sections \ref{DPatterns}, \ref{CPatterns} and \ref{Backdoor}.\\
+Sections \ref{DPatterns1}, \ref{CPatterns1} and \ref{Backdoor1} give a brief description on familiar security patterns. A detailed description on all existing security patterns is given in \cite{SECU-doc}.
+\subsection{Secure Design Patterns}
+\label{DPatterns1}
+During the design of the openETCS application software and tools, security can be enhanced through the implementation of secure design patterns. 
+Three of the most used techniques are listed below:
+\begin{enumerate}
+  \item Distrustful decomposition
+  \item Privilege separation
+  \item Clear sensitive information
+\end{enumerate}
+\subsubsection{Distrustful decomposition}
+The intent of the Distrustful Decomposition secure design pattern is to move separate functions into mutually untrusting programs, thereby reducing:
+\begin{itemize}
+  \item the attack surface of the individual programs that make up the system
+  \item the functionality and data exposed to an attacker if one of the mutually untrusting programs is compromised
 \end{itemize}
+\subsubsection{Privilege separation}
+The intent of the Privilege separation is to reduce the amount of code that runs with special privilege without affecting or limiting the functionality of the program. The Privilege separation is a more specific instance of the distrustful decomposition.
+\subsubsection{Clear sensitive information}
+The use of this pattern ensures that sensitive information is cleared from reusable resources before the resource may be reused. It is possible that sensitive information stored in a reusable resource may be accessed by an unauthorized user or adversary if the sensitive information is not cleared before freeing the reusable resource.
 
-Instead of specifying OS properties from scratch we suggest to adopt the well known OS specification from the ARINC 653 standard see \cite{ARINC} for which OS have been developed and are applied successfully for safety-critical tasks in the avionic domain.
 
-The HW specification should include:
-\begin{itemize}\itemsep=0pt
-  \item The required HW architecture (Since the openETCS application software shall be SIL4 compliant, the required HW shall also be SIL4 compliant according to EN 50129, see \cite{EN50129}),
-  \item The required HW interfaces and their performance characteristics,
-  \item The CPU architecture (number of cores, word length etc.),
-  \item Partitioning requirements (the need of a memory management unit),
-  \item Existence of real time clocks.
-\end{itemize}
+\subsection{Secure coding Patterns}
+\label{CPatterns1}
+During the implementation of the openETCS application software and tools, software security can be augmented by avoiding a number of common software security vulnerabilities. 
+The following software security vulnerabilities shall be avoided:
+\begin{enumerate}
+  \item Buffer overflow
+  \item Pointer shenanigans
+  \item Dynamic memory allocation flaws
+  \item Tainted data
+\end{enumerate}
+\subsubsection{Buffer overflow}
+Buffer overflow can lead to more serious consequences, such as stack smashing, code injection, or even arc injection by which an attacker changes the control flow of the program by modifying the return address on stack. In arc injection, an attacker doesn't even have to inject any code, and he can jump to an arbitrary function in existing code, or bypass validity checks or assertions \cite{Kalinsky09}.
+\subsubsection{Pointer shenanigans}
+If an attacker can modify a data pointer, then the attacker can point to wherever he likes and write whatever he likes. If an attacker can overwrite a function pointer, the attacker is well on his way to executing his code on the processor \cite{Kalinsky09}.
+\subsubsection{Dynamic memory allocation flaws}
+The use of dynamic memory allocation shall be forbidden within the openETCS project. It is so easy to write defective code for dynamic memory allocation, so that attackers are eager to search out these defects \cite{Kalinsky09}.
+\subsubsection{Tainted data}
+Data entering an embedded system from the outside world must not be trusted. Instead, it must be "sanitized" before use \cite{Kalinsky09}.
+A useful technique for data sanitization is called "white listing". It involves describing all possible valid values for a given piece of data and then writing code that only accepts those values. All unexpected values are viewed as "tainted" and are not used.
+
+\subsection{Backdoor}
+\label{Backdoor1}
+A backdoor can be created by each person who has access to the software source code, but it is also possible to create a backdoor without modifying the software source code, or even modifying it after compilation. This can be done by rewriting the compiler so that it recognizes code during compilation that triggers inclusion of a backdoor in the compiled output. When the compromised compiler finds such code, it compiles it as normal, but also inserts a backdoor. This attack was first outlined by Ken Thompson in his paper "Reflections on Trusting Trust" see \cite{Ken84}.
+
+
+
+\subsection{Recommendations for security requirements}
+\subsubsection{Regarding Secure design Patterns}
+\label{DPatterns}
+The architecture and design specification of the openETCS application software and tools shall implement the requirements described in section \ref{DPatterns1}.
+\subsubsection{Regarding Secure coding Patterns}
+\label{CPatterns}
+Since the software code of the openETCS application software will be automatically generated using tools,  tools used or developed shall avoid the software security vulnerabilities described in section \ref{CPatterns1}.
+\subsubsection{Regarding Backdoors}
+\label{Backdoor}
+A useful technique against back doors is the so called "Diverse Double-Compiling"-technic see \cite{Wheeler09}.
+But, experiences from the past have shown that open source software are better positioned against backdoors than proprietary software. For this reason, it is clear from the report of the European Parliament, that: "Calls on the Commission and Member States to promote software projects whose source text is made public (open-source software), as this is the only way of guaranteeing that no backdoors are built into programmes" see \cite{EUParl}.
+Since openETCS is an open source software project and according to \cite{EUParl}, no requirement regarding backdoor issues need to be considered.
+
 
 
 \section{Is "open proofs" suitable for safety railway applications?}
@@ -544,20 +527,20 @@ Unfortunately, formal methods have not spread in the whole railway signalling in
 Another barrier is that, the certification bodies might not be familiar with FM as most of the systems they certify follow a test-based approach. For systems whose justification relies on such formal argument, the certification body might require additional information to be convinced. Typically, one should foresee some specific training-level information in the certification process. Once acquired, new system can easily follow the same path. For example siemens has gone through this process with the B-method, and it is now accepted by the certification bodies, so that the next projects have become easier to certify. 
 
 \textbf{In summary:} The EN 50128:2011 highly recommend formal methods but do not really describe how to manage a formal development. It is therefore difficult to prove that the development process comply with the standards. Certification authorities have to be convinced about this issue. 
-As formal methods are less widespread and certification authorities are less familiar with them as compared to the classical development methods, there is more work to be done in comparison with other methods, especially the first time, and despite the fact that better argument could be provided. However the investment might be worth the effort as shown by the Siemens case for B. 
+As formal methods are less widespread and certification authorities are less familiar with them as compared to the classical development methods, there is more work to be done in comparison with other methods, especially the first time, and despite the fact that better argument could be provided. However the investment might be worth the effort as shown by the Siemens case for B-method. 
 
 
 \chapter{Summary}
-As task leader of the task D2.2 (according to \cite{FPP13}), AEbt has coordinated all the work. Basis, were the procedures listed in the section \ref{report} of this report. The result is a first set of requirements, which shall be fulfilled in order to assess tools of the openETCS tools chain as T1, T2 or T3 support tools according to EN 50128:2011. 
+As task leader of the task D2.2 (according to \cite{FPP13}), AEbt has coordinated all the work. Basis, were the procedures listed in the section \ref{report} of this report. The result is a set of requirements, which shall be fulfilled in order to assess tools of the openETCS tools chain as T1, T2 or T3 support tools according to EN 50128:2011. 
 Regarding the openETCS application software, it was assumed during the creation of this document, that the whole or part of the software will be SIL4 compliant according to EN 50128:2011.
 
-Requirements in appendix \ref{annexA} and \ref{annexC} with suggested implementation are general requirements that any SIL4 Software for railway applications and tools shall fulfill. For specific projects, there can still be minor deviations, which may have to be agreed with a software assessor.
+Requirements in appendix \ref{annexA} and \ref{annexC} with suggested implementations are general requirements that any SIL4 Software for railway applications and tools shall fulfill. For specific projects, there can still be minor deviations, which may have to be agreed with a software assessor.
 
-Based on the performed assessment and interviews, we are of the opinion that "open proofs" is suitable for safety railway applications, when the process applied to develop, test, deploy and maintain the software or tools fulfills all the requirements of the CENELEC standard EN 50128:2011 as well as security requirements.
+Based on the performed assessment and interviews, we are of the opinion that "open proofs" is suitable for safety railway applications, when the process applied to develop, test, deploy and maintain the software and tools fulfills all the requirements of the CENELEC standard EN 50128:2011 as well as some security requirements.
 
-In this report reference was made to other standard; which however have not been addressed, see CENELEC EN 50159:2010 \cite{EN50159} and ARINC \cite{ARINC}.
-Related to the standard ARINC \cite{ARINC}, an analysis shall be performed, in order to show, how it can be helpful for the openETCS project. Regarding the standard EN 50159:2010 \cite{EN50159}, we also recommend to perform an analysis, in order to find out which requirements from this standard and based on the allocated software SIL to the communication interface shall be implemented.
-
+In this report reference was made to other CENELEC standards (see  EN 50126 \cite{EN50126}, EN 50129 \cite{EN50129}, EN 50159 \cite{EN50159} and ARINC \cite{ARINC}); which however have not been detailed.
+Related to the standard ARINC, an analysis shall be performed, in order to show how it can be helpful for the openETCS project.
+Regarding the other CENELEC standards  Since these standards (particularly EN 50126 and EN 50129) define the process of specifying the safety functions allocated to software, we recommend to include them in an earlier phase of the project already.
 
 
 
@@ -585,13 +568,13 @@ Since some of the tools of the openETCS tools chain not really need to be T3 com
   \item Section \ref{T3}, gathers requirements for tool in class T3.
 \end{itemize}
 
-\subsection{How to read the tables used in this section}
+\subsection{How to read the tables used in this appendix}
 Tables used in this appendix consist of three columns.
 \begin{itemize}\itemsep=0pt
   \item \textbf{Column 1} lists the requirements comming from the CENELEC standard EN 50128:2011. But since the standard is protected by copyright, only the requirements identification numbers are recorded there. The same requirements identification numbers (subclause) as defined in the EN 50128:2011 have been used. The textual requirement should therefore be read in the standard using the requirements identification number recorded in column 1 as reference.\\
 In order to simplify the readability, some of the requirements have been grouped, especially when they address the same subject; only few were left out, because they were not relevant for the purpose.
   \item \textbf{column 2} describes how the various requirements can be fulfilled. Everywhere where possible, recommendations were formulated.
-  \item \textbf{column 3} lists documents that shall be created or provided, in order to provide the evidence.
+  \item \textbf{column 3} gives a suggestion of documents that shall be created or provided, in order to provide the evidence.
 \end{itemize}
 
 
@@ -738,7 +721,7 @@ According to EN 50128:2011, the evidence may be based on one of the following to
 %\linebreak
 & \textbf{Recommendation:} \linebreak
 \linebreak
-\textbf{For Tool in class T3, we highly recommend to develop them according to the requirements described in annex \ref{annexB}.}\\ 
+\textbf{For Tool in class T3, we recommend to develop them according to the requirements described in annex \ref{annexB}.}\\ 
 \hline
 6.7.4.5 & Provide or create a tool validation report as evidence for the safety integrity of tool in class T3 (refer to 6.7.4.4) .
 \linebreak
@@ -764,7 +747,7 @@ The validation report as mentioned in 6.7.4.4 shall address the following topic:
 
 \section{Introduction}
 This appendix describes the development process for tools in class T3.\\
-The process described in this appendix is only a suggestion, because the standard CENELEC EN 50128:2011 describes several ways to prove the safety integrity of a T3 tool. The process described in this appendix may be a complex development process, but it offers the advantage that the assessment process is structured and less complex.\\
+The process described in this appendix is only a recommendation, because the standard CENELEC EN 50128:2011 describes several ways to prove the safety integrity of a T3 tool. The process described in this appendix might be a complex one, but it offers the advantage that the assessment process is structured and less complex.\\
 The process described in this appendix is a mapping of the development process for SIL4 software according to the CENELEC standard EN 50128:2011.
 
 
@@ -782,7 +765,7 @@ The process described in this appendix is a mapping of the development process f
 %\caption{Terms and definitions}
 \endfoot
 
-4.1 & specify the capabilities and boundary conditions to be fulfilled by the operating system and hardware. 
+4.1 & specify the capabilities and boundary conditions to be fulfilled by the operating system and hardware (if not available). 
 & Boundary conditions for the operating system and hardware.\\ 
 \hline
 \end{longtable}}
@@ -816,8 +799,8 @@ The objective of this subclause is to ensure that all personnel who have respons
 \end{itemize}
 & Quality assurance plan for the tool development process\\ 
 \hline
-5.1.2.4 to 5.1.2.8 & Create an assessment plan for the tools. (only when required).
-& Assessment Plan for the tool development process\\ 
+5.1.2.4 to 5.1.2.8 & An assessment plan for the tools shall be created. 
+& Assessment Plan for tools\\ 
 \hline
 \end{longtable}}
 
@@ -883,7 +866,7 @@ The objective of this subclause is to structure the development of tools into de
 %\caption{Terms and definitions}
 \endfoot
 
-5.3.2.1 and 5.3.2.3 & Select a lifecycle model for the development of tools.
+5.3.2.1 and 5.3.2.3 & Select a lifecycle model for the development process of tools.
 & The selected lifeycle model shall be described in the \textbf{tool quality assurance plan}.\\ 
 \hline
 5.3.2.2 & See requirement 5.3.2.14 & See requirement 5.3.2.14\\ 
@@ -942,7 +925,7 @@ The created Checklist shall be referenced in the tool quality assurance plan.\\
 \linebreak
 \linebreak
 NOTE\linebreak
-The Evidence may be based on the following topic:
+The Evidence may be based on the following topics:
 \begin{itemize}\itemsep=0pt
   \item top-down design methods,
   \item modularity,
@@ -1175,7 +1158,7 @@ This subclause refers to tools that will be used for the development of T3 tools
 6.7.4.4 and 6.7.4.5 & For tools used to generate the source code of T3 tools, we suggest to provide a validation report as evidence for the safety integrity of these tools.
 \linebreak
 \linebreak
-NOTE \linebreak
+NOTE 1\linebreak
 The validation report shall address the following topic:
 \begin{itemize}\itemsep=0pt
   \item a description of the validation activities;
@@ -1187,7 +1170,7 @@ The validation report shall address the following topic:
   \item discrepancies between expected and actual results.
 \end{itemize}
 %\linebreak
-NOTE \linebreak
+NOTE 2\linebreak
 The evidence may also be based on one of the following topic:
 \begin{enumerate}\itemsep=0pt
   \item a suitable combination of history of successful use in similar environments and for similar applications6 (within the organisation or other organisations).
@@ -1226,13 +1209,20 @@ The objective of this subclause is to describe a complete set of requirements fo
 %\caption{Terms and definitions}
 \endfoot
 
-7.2.4.1 to 7.2.4.14 and 8.4.8.2 & Create a requirements specification for tools for the tools to be developed.
+7.2.4.1 to 7.2.4.14 and 8.4.8.2 & Create a requirements specification for the tools to be developed.
 \begin{itemize}\itemsep=0pt
   \item The requirements specification shall implement requirements from 7.2.4.2 to 7.2.4.15 and 8.4.8.2,
   \item Requirements 7.2.4.10 and 7.2.4.11 are not relevant for tools. 
 \end{itemize}
+
 NOTE: \linebreak
-The traceability of requirements at this stage back to all input documents is mandatory. (refer to 6.5.4.15)
+The traceability of requirements at this stage back to all input documents is mandatory.
+\begin{itemize}\itemsep=0pt
+  \item System Requirements Specification,
+  \item System Safety Requirements Specification,
+  \item System Architecture Description,
+  \item External Interface Specifications (e.g. Software/Software Interface Specification, Software/Hardware Interface Specification).
+\end{itemize}
 & - Requirements specification for tools.
 
 - Traceability proof\\ 
@@ -1242,10 +1232,10 @@ The traceability of requirements at this stage back to all input documents is ma
 The selected techniques shall be suitable for software SIL4.
 & Record the selected techniques in the tool quality assurance plan.\\ 
 \hline
-7.2.4.16, 7.2.4.17 and 7.2.4.19 & Create an overall Test Specification for testing tools (refer to 6.1.4.4)
+7.2.4.16, 7.2.4.17 and 7.2.4.19 & Create an overall Test Specification for testing the tools to be developed, (refer to 6.1.4.4).
 
 The created overall test specification shall also implement the requirements of 7.2.4.19.
-& Overall Test Specification for tools\\ 
+& Overall Test Specification for the tools\\ 
 \hline
 7.2.4.18 & Select techniques from Table A.7 of EN 50128:201 to specify the overall test specification.
 
@@ -1285,7 +1275,7 @@ The objective of this subclause is to develop an abstract architecture of the to
   \item Requirement 7.3.4.4 is not relevant for tools. 
 \end{itemize}
 NOTE: \linebreak
-The traceability of requirements at this stage back to \ref{req-pha} is mandatory. (refer to 6.5.4.15)
+The traceability of requirements at this stage back to \ref{req-pha} is mandatory. 
 & - Architecture specification for tools.
 
 - Traceability proof\\
@@ -1386,7 +1376,7 @@ The objective of this subclause is to develop an detailed architecture of the to
 %\caption{Terms and definitions}
 \endfoot
 
-7.4.4.1 to 7.4.4.5 & Create a component design Specification for the tools. 
+7.4.4.1 to 7.4.4.5 & Create a component design Specification for the tools to be developed. 
 
 The created component design specification shall implement requirements from 7.4.4.1 to 7.4.4.6
 & Components design specification for tools\\ 
@@ -1543,7 +1533,7 @@ The release note shall be written according to requirements 7.7.4.12, 8.4.8.8, 9
 
 
 \section{Development of application data or algorithms (Clause 8 according to EN 50128:2011)}
-Tools for application data or algorithms are T3 tools and shall be developed according to the requirements described in clauses \ref{clause5}, \ref{clause6}, \ref{clause7} and \ref{clause9}.
+Tools to configurea system are T3 tools and shall be developed according to the requirements described in clauses \ref{clause5}, \ref{clause6}, \ref{clause7} and \ref{clause9}.
 \linebreak
 \linebreak
 
@@ -1632,7 +1622,7 @@ Tables used in this appendix consist of three columns.
   \item \textbf{Column 1} lists the requirements comming from the CENELEC standard EN 50128:2011. But since the standard is protected by copyright, only the requirements identification numbers are recorded there. The same requirements identification numbers (subclause) as defined in the EN 50128:2011 have been used. The textual requirement should therefore be read in the standard using the requirements identification number recorded in column 1 as reference.\\
 In order to simplify the readability, some of the requirements have been grouped, especially when they address the same subject; only few were left out, because they were not relevant for the purpose.
   \item \textbf{column 2} describes how the various requirements can be fulfilled. Everywhere where possible, recommendations were formulated.
-  \item \textbf{column 3} lists documents that shall be created or provided, in order to provide the evidence.
+  \item \textbf{column 3} gives a suggestion of documents that shall be created or provided, in order to provide the evidence.
 \end{itemize}
 
 
@@ -1654,7 +1644,7 @@ In order to simplify the readability, some of the requirements have been grouped
 \linebreak
 \linebreak
 NOTE:\linebreak 
-A software can be assessed without specifying the capabilities and boundary conditions to be fulfilled by the operating system and hardware. 
+A software can not be assessed without specifying the capabilities and boundary conditions to be fulfilled by the operating system and hardware. 
 
 Regarding the openETCS application software, we therefore recommend to perform a safety analysis, in order to specify the boundary conditions for both: operating system and hardware.
 & Boundary conditions for the operating system and hardware.\\ 
