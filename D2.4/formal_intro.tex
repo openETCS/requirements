@@ -2,10 +2,35 @@
 
 \section{Short introduction on formal approaches to  design and validate critical systems}
 
-\subsection{What is a formal approach ?}
-semi-formal, formal, syntax, semantics,...
+\subsection{What is a formal approach?}
 
-\subsection{When formal approaches are recommended according to CENELEC standard ?}
+A \emph{formal} approach is a way to describe system or software
+that builds upon (i) rigorous syntax and (ii) rigorous semantics.
+
+The \emph{syntax} defines how the system or software is described. It
+is usually made through a grammar and a set of additional
+constraints. It can be textual or graphical.
+
+The \emph{semantics} roughly describes how the system or software
+evolves along time. It is defined using a mathematical model, i.e. use
+of mathematical objects attached to each element of the syntax and
+mathematical rules that define how those objects evolve. The
+mathematical models used can be very different from a formal approach
+to another one. For example B~Method uses the Generalized
+Substitutions, SCADE relies on the Synchronous language Lustre, etc.
+
+A \emph{semi-formal} approach is one where the syntax is precisely
+defined but the semantics is not precisely defined, usually through
+some English text. Typical semi-formal approaches are Matlab language
+or SysML/UML formalisms.
+
+A semi-formal approach can become formal if its semantics is
+rigorously defined through a mathematical model.
+
+\subsection{When formal approaches are recommended according to CENELEC standard?}
+
+The use of formal approaches is \emph{Highly Recommended} for SIL3 and
+SIL4 software according to CENELEC EN 50128:2011.
 
 \subsection{Which constraints are required on the use of formal  approaches ?}
 
