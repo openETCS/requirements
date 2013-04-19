@@ -1,22 +1,62 @@
 
-\section{Formal approaches for VnV of a critical system}
+\section{Formal approaches for V\&V of a critical system}
 
-\begin{comment}
-This section will describe how formal methods are involved in the VnV of critical system in particular how they ensure the proof of safety properties.
-\end{comment}
+The various approaches previously presented can be used to check
+various kind of properties:
+\begin{itemize}
+\item safety properties: ensure the system is safe;
+\item functional properties: ensure the system works as expected
+  regarding its functional behavior;
+\item non-functional properties: ensure the system works has expected
+  regarding its speed, capacity, ...
+\end{itemize}
+
+Due to the cost and complexity of formal analysis, use of formal
+methods in the railway domain is usually focused on ensuring only
+safety properties. We only consider them is the remaining of this
+section.
+
 
 \subsection{Formal approaches for verification}
 
-\begin{comment}
-completitude, consistence,  static checking, type checking,...
-\end{comment}
+Ensuring safety properties using formal methods starts in a similar
+way to classical approaches. A safety analysis will produce the
+properties that should be ensured to guarantee safe operation of the
+system.
 
+Usually such safety properties are high level properties (e.g. ``two
+trains do not collide''). In order to be amenable to formal
+verification, they should be translated into properties related to the
+system state (e.g. ``there exists two free blocks between any occupied
+blocks'', ...). Several system-related safety properties can be
+associated to a single high-level safety property.
 
-\subsection{Formal methods for validation}
+Then those properties are checked to be valid, i.e. in any system
+state a safety property is always true. This can be done with the
+various approaches presented previously.
 
-\begin{comment}
-automatic test generation, simulation or animation, low level model validation against unit test activities,...
-\end{comment}
+If Correct by Construction approach is used, some traditional
+verification activities like unit or integration tests can be avoided
+because they are ensured by the formal approaches.
+
+\subsection{Validation of formal approaches}
+
+Proving that a safety property is always valid on a system model does
+not ensure the property is valid in the real life. Discrepancies can
+occur between the system model and the real system. Moreover, errors
+can occur during the formalization of the high-level safety property
+into a set of system-related properties.
+
+Therefore a validation activity is needed. Validation checks that
+formalization of properties is correct, as well as all related
+assumptions.
+
+This is done using non formal techniques:
+\begin{itemize}
+\item Review;
+\item Simulation and animation;
+\item Test.
+\end{itemize}
 
 \subsection{Formal methods for safety}
 
