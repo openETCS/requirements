@@ -1,24 +1,127 @@
-
-
-
 \section{Formal approaches for the design and development of a system}
 
+Very roughly, from an engineering point of view three kinds of formal
+methods can be used for the design and development of a system:
+\begin{itemize}
+\item Pre/Post-condition approach;
+\item Model checking of concurrent and synchronous languages;
+\item Static analysis of software code.
+\end{itemize}
 
-\begin{comment}
-This section will describe how formal methods are involved in the design of critical system.
-\end{comment}
+\subsection{Contract based approach}
+
+Contract based approaches are based on software (or model)
+annotation. The software is usually considered state based, i.e. made
+of a state stored in a set of typed variables.  Software is divided in
+a set of operations (aka procedures, functions, methods, ...). To each
+operation is associated a pre-condition, i.e. a set of conditions that
+should be guaranteed at operation entrance by the caller of the
+operation. To each operation is also associated a post-condition, that
+the operation should fulfill, provided the pre-condition is
+assumed. In other words, the called operation should ensure the
+post-condition. The pre and post-conditions are usually expressed
+using first order logic (and, or, implication, for all and exists
+quantifiers, etc.).
+
+In the contract based approach, if all the pre and post-conditions are
+fulfilled for all possible execution, then we can guarantee that all
+the operations work well together.
+
+Those kind of approaches are known to be scalable, at the price of
+sometimes a lot of manual work to properly annotate the software or
+prove the annotations are correct.
+
+Example of such approaches are B~Method, Event-B, GNATprove/SPARK on
+Ada language or Frama-C on C language.
+
+\subsection{Model checking of concurrent and synchronous languages}
+
+In this approach, a model is based using various textual or graphical
+formalisms: state based model (like State Machines), data flow
+equations or Petri Nets.
+
+In a second step, a property is formalized over this model, usually
+using temporal logic. A temporal logic is usually a first order logic
+augmented with operators expressing the relationship between events:
+in the next event, a property is true until another property is true,
+etc.
+
+Then, model checking techniques (symbolic model checking, exhaustive
+state enumeration, ...) are applied to check that the expressed
+property is valid over the model, for all possible executions.
+
+Compared to previous contract based approach, model checking allows to
+verify more complex properties along the life time of the system. For
+example, one can express that ``something good'' will occur in the
+future after a certain event.
+
+However model checking suffers from state explosion problem: if the
+model is not properly designed, it can have too many states and make
+the exhaustive verification impossible.
+
+Example of such approaches are SCADE or Petri Nets.
+
+\subsection{Static analysis of software code}
+
+Static analysis techniques are inspired by abstract interpretation
+techniques proposed by Cousot and Cousot in 1977. The main idea is to
+transform the domain of concrete program variables into a simpler,
+abstract domain. Then the analysis is done, for all possible execution
+paths, within this abstract domain. And finally the result of the
+analysis is put back on the original concrete variables.
+
+Constructing an abstract interpretation is done using specific
+mathematical approaches (mainly Galoi connections) that ensure that
+the result of the analysis is sound: if an issue is found by the
+analysis in the abstract domain, it exists in the concrete domains of
+the variables, i.e. in the real program.
+
+On the contrary, completeness of the approach is difficult to ensure:
+due to abstraction, the analysis can make some approximation. In such
+case the result of the analysis is meaningless: the analysis cannot
+tell if a verified property is valid or not.
+
+The main advantage of static analysis is that it works on actual,
+concrete software code, with minimal annotations. It thus integrates
+quite easily with existing development process, along testing phase
+for example. And it is highly automated, requesting minimal user
+intervention.
+
+The drawback of this approach is that it is restricted to certain kind
+of properties (overflow, underflow, out-of-bound accesses, division by
+zero). Moreover it does not apply well to all kind of programs.
+
+
+Example of tool applying such approach are Polyspace, Astrée or
+Frama-C (with Value analysis plug-in).
+
+
+%% \subsection{What means are involved behind a formal approach ?}
+
+%% \subsubsection{Model edition}
+
+%% \subsubsection{Mathematical analyses}
+%% static checking, proof, model-checking, ...
+
+%% \subsubsection{Simulation and code generation}
 
 
 
-\subsection{System level model}
+%% \begin{comment}
+%% This section will describe how formal methods are involved in the design of critical system.
+%% \end{comment}
 
-\subsection{Software level model}
 
-\subsection{Functional architecture}
 
-\subsection{Safety properties expression}
+%% \subsection{System level model}
 
-\req{The model-level safety properties shall be written in a formal language.}
+%% \subsection{Software level model}
+
+%% \subsection{Functional architecture}
+
+%% \subsection{Safety properties expression}
+
+%% \req{The model-level safety properties shall be written in a formal language.}
 
 
 
