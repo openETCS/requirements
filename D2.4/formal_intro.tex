@@ -2,49 +2,76 @@
 
 \section{Short introduction on formal approaches to  design and validate critical systems}
 
-\subsection{What is a formal approach ?}
-semi-formal, formal, syntax, semantics,...
+\subsection{What is a formal approach?}
 
-\subsection{When formal approaches are recommended according to CENELEC standard ?}
+A \emph{formal} approach is a way to describe system or software
+that builds upon (i) rigorous syntax and (ii) rigorous semantics.
 
-\subsection{Which constraints are required on the use of formal  approaches ?}
+The \emph{syntax} defines how the system or software is described. It
+is usually made through a grammar and a set of additional
+constraints. It can be textual or graphical.
 
+The \emph{semantics} roughly describes how the system or software
+evolves along time. It is defined using a mathematical model, i.e. use
+of mathematical objects attached to each element of the syntax and
+mathematical rules that define how those objects evolve. The
+mathematical models used can be very different from a formal approach
+to another one. For example B~Method uses the Generalized
+Substitutions, SCADE relies on the Synchronous language Lustre, etc.
 
-\subreq{The techniques applied to the software will be compliant regarding the SIL.}
+A \emph{semi-formal} approach is one where the syntax is precisely
+defined but the semantics is not precisely defined, usually through
+some English text. Typical semi-formal approaches are Matlab language
+or SysML/UML formalisms.
 
+A semi-formal approach can become formal if its semantics is
+rigorously defined through a mathematical model.
 
-\subreq{The tools used shall be developed in order to be certifiable according to EN 50128.}
+\subsection{When formal approaches are recommended according to CENELEC standard?}
 
-\begin{comment}
-No requirement on the way of doing this. \emph{E.g.} to have a certified 
-(certifiable?) code generator, two generators and comparison of the result, one
- generation and one verification chain\dots
- \end{comment}
- 
-\subsection{Which are the benefits to use formal approaches ? }
+The use of formal approaches is \emph{Highly Recommended} for SIL3 and
+SIL4 software according to CENELEC EN 50128:2011.
 
+\subsection{Which constraints are required on the use of formal approaches?}
 
-\begin{comment}
-From D.2.5 :
+Each formal approach has some restriction on the kind of software or
+system it can be applied on. Moreover, each formal approach is
+specialized in the verification of some kind of property. Therefore a
+formal approach should be chosen in accordance to verification
+objectives.
 
-The purpose of the formalization is:
-\begin{itemize}
-\item to enhance the understanding of modelled subset;
-\item to allow formal analysis of the modelled subset;
-\item to be able to animate the model for testing an analyzing purpose;
-\item to provide information on the completeness and soundness of the SUBSET-26;
-\item to be used as a reference formal specification for the implementation of an OBU 
-(by the OpenETCS project team and by industrial actors);
-\item \dots
-\end{itemize}
-\end{comment}
+Moreover, using a formal approach can impact the overall system
+building process. For example software developed using the B~Method
+follow a specific process and imposes a very specific architecture,
+very different from designing C software. In the same way, use of
+formal approach can impose specific resource needs at different phases
+of project lifetime. For example, more work on the requirement
+analysis and formalization phase.
 
-\subsection{What means are involved behind a formal approach ?}
+Last but not least, as a formal approach brings its benefits only
+inside a given boundary, the process should be designed to keep those
+benefits outside those boundaries. For example, code compilation of a
+verified source code should be done in such a way as to ensure that
+the verified properties are kept in the compiled code.
 
-\subsubsection{Model edition}
+\subsection{Which are the benefits to use formal approaches?}
 
-\subsubsection{Mathematical analyses}
-static checking, proof, model-checking, ...
+Several benefits are expected from the use of formal approaches.
 
-\subsubsection{Simulation and code generation}
+The first benefit is to enhance the understanding of the formalized
+system or software. By using a non ambiguous notation, the designer is
+forced to clarify his mind. Very often, several design issues or
+defects are found at this step.
 
+The second benefit is to enable the verification of some properties in
+an exhaustive way. Therefore avoidance of certain kinds of bugs can be
+guaranteed. Of course, such guarantee can only be obtained if the
+formal method is used along some specific way and on a well delimited
+part of the software and system (for example one cannot guarantee
+properties on variables outside program boundary).
+
+The third benefit is to allow Correct by Construction software or
+system building. By verification properties along the construction
+cycle of a system or software, one can ensure that some formalized
+requirements are fulfilled in the final software. For example, one can
+ensure that some variables stay in well defined boundaries.

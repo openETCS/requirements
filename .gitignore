@@ -3,6 +3,8 @@
 *~
 *.toc
 *.aux
+*.lof
+*.lot
 
 D2.3/Synthesis/.DS_Store
 
