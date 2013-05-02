@@ -1,0 +1,177 @@
+\documentclass{template/openetcs_article}
+% Use the option "nocc" if the document is not licensed under Creative Commons
+%\documentclass[nocc]{template/openetcs_article} 
+\usepackage{rotating,url,color}
+\graphicspath{{./template/}{.}{./images/}}
+\begin{document}
+\frontmatter
+\project{openETCS}
+
+%Please do not change anything above this line
+%============================
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{OETCS/WP2/D2.3.0~--~00/00}
+
+%define your workpackage here
+\wp{Work-Package 2: ``Definition''}
+
+%set a title here
+\title{OpenETCS process}
+
+%set a subtitle here
+\subtitle{Definition of the overall process for the formal description of ETCS and the rail system it works in}
+
+%set the date of the report here
+\date{February 2013}
+
+%define a list of authors and their affiliation here
+
+\author{Marielle Petit-Doche}
+\affiliation{Systerel}
+  
+\author{Matthias Güdemann}
+\affiliation{Systerel}
+  
+% define the coverart
+\coverart[width=350pt]{chart}
+
+%define the type of report
+\reporttype{Definition}
+
+
+\begin{abstract}
+This document give a description of the process to be applied in the OpenETCS project. It gives a description of the activities to specify and design a critical system in a first part. The second part presents an abstract description of the case study issued from subset 26.
+\end{abstract}
+
+%=============================
+%Do not change the next three lines
+\maketitle
+\tableofcontents
+\listoffiguresandtables
+\newpage
+%=============================
+
+
+\begin{tabular}{|p{4.4cm}|p{8.7cm}|}
+\hline
+\multicolumn{2}{|c|}{Document information} \\
+\hline
+Work Package &  WP2  \\
+Deliverable ID or doc. ref. & D2.3\\
+\hline
+Document title & Definition of the overall process for the formal description of ETCS and the rail system it works in \\
+Document version & 00.00 \\
+Document authors (org.)  & Marielle Petit-Doche (Systerel) Matthias Güdemann (Systerel) \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{4.4cm}|p{8.7cm}|}
+\hline
+\multicolumn{2}{|c|}{Review information} \\
+\hline
+Last version reviewed & 00.00.00 \\
+\hline
+Main reviewers &  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{2.2cm}|p{4cm}|p{4cm}|p{2cm}|}
+\hline
+\multicolumn{4}{|c|}{Approbation} \\
+\hline
+  &  Name & Role & Date   \\
+\hline  
+Written by    &  Marielle Petit-Doche & WP2-D2.3 Sub-Task Leader  & \\
+\hline
+Approved by & Gilles Dalmas & WP2 leader & \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{3cm}|p{5cm}|}
+\hline
+\multicolumn{4}{|c|}{Document evolution} \\
+\hline
+Version &  Date & Author(s) & Justification  \\
+\hline  
+00.00.00 & 01/03/2013 & M. Petit-Doche &  Document creation  \\
+\hline  
+\end{tabular}
+
+% The actual document starts below this line
+%=============================
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%              My macros (=> Sylvain Baro)               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tbd}{\colorbox{cyan}{\%\%To Be Defined\%\%}}
+\newcommand{\tbc}{\colorbox{cyan}{\%\%To Be Confirmed\%\%}}
+\newcommand{\todo}[1]{\colorbox{cyan}{\%\%{#1}\%\%}}
+\newlength{\origindent}
+
+\newenvironment{issue}{
+	\begin{quote}
+	\begin{itshape}Open Issue. 
+}{
+	\end{itshape}
+	\end{quote}
+}
+
+\newenvironment{comment}{
+	\begin{quote}
+	\begin{itshape}Comment. 
+}{
+	\end{itshape}
+	\end{quote}
+}
+
+\newenvironment{justif}{
+	\begin{quote}
+	\begin{itshape}Justification. 
+}{
+	\end{itshape}
+	\end{quote}
+}
+\input{req}
+
+\def\reqt{R-WP2/D2.3.0}
+% Start here
+
+
+\input{intro.tex}
+
+
+\input{process_def.tex}
+
+
+\input{Obu_descr.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Bibliography
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{erdc}
+\bibliography{process}
+
+
+
+% \begin{thebibliography}{9}
+
+% \bibitem{lamport94}
+  % Leslie Lamport,
+  % \emph{\LaTeX: A Document Preparation System}.
+  % Addison Wesley, Massachusetts,
+  % 2nd Edition,
+  % 1994.
+
+% \end{thebibliography}
+
+%===================================================
+%Do NOT change anything below this line
+
+\end{document}
