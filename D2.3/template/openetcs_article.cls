@@ -3,7 +3,8 @@
 
 
 
-%% For openETCS ITEA2 Project 
+%% For openETCS ITEA2 Project
+
 
 
 %
@@ -11,6 +12,8 @@
 \ProvidesClass{openetcs}
 [2012/10/11 v0.1 Typesetting Technical Information Article of
 openETCS project ]
+%% David Mentres FIXME macro
+\newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 \newcommand{\IsLicensedUnderCC}[1]{#1}
 \DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -174,7 +177,7 @@ openETCS project ]
 \def\reporttype#1{\gdef\@reporttype{#1}}
 \reporttype{}
 \def\distribution#1{\gdef\@distribution{#1}}
-\distribution{This work is licensed under a Creative Commons
+\distribution{This work is licensed under the European Union Public Licence (EUPL v.1.1) and a Creative Commons
   Attribution-ShareAlike 3.0 Unported License.\\ \includegraphics[width=40pt]{ccbysabig.png}}
 \def\preparedfor#1{\gdef\@preparedfor{#1}}
 \preparedfor{ITEA2 openETCS consortium\\ Europa}
@@ -194,12 +197,12 @@ openETCS project ]
       \parsep16\p@ \topsep\z@
       \let\fullwidthdisplay\relax
     }%
-    \item[\hskip\labelsep\bfseries Abstract:]% 
-}{% 
+    \item[\hskip\labelsep\bfseries Abstract:]%
+}{%
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
-\textbf{This work is licensed under a Creative Commons
+\textbf{This work is licensed under the European Union Public Licence (EUPL v.1.1) and a Creative Commons
   Attribution-ShareAlike 3.0 -- (cc by-sa 3.0)}
 
 THE WORK IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC
@@ -213,7 +216,8 @@ LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
 THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH
 TERMS AND CONDITIONS.
 
-\url{http://creativecommons.org/licenses/by-sa/3.0/}
+\url{http://creativecommons.org/licenses/by-sa/3.0/}\\
+\url{http://joinup.ec.europa.eu/software/page/eupl/licence-eupl}
 }
 \newenvironment{@coverlist}{\begin{list}{}{%
       \leftmargin40\p@\rightmargin-85\p@%
@@ -250,7 +254,7 @@ TERMS AND CONDITIONS.
      \hfill\parbox{145\p@}{\centering
        \includegraphics[width=145\p@]{itea}\\
        {\bfseries
-         ITEA2 Project\\2012 -- 2015}}\\
+         ITEA2 Project\\Call 6 11025\\2012 -- 2015}}\\
        \par
      \vspace{0.5cm}%
      {\@wpfont\@wp\par}%
@@ -274,7 +278,7 @@ TERMS AND CONDITIONS.
    This page is intentionally left blank
    \thispagestyle{empty}\hbox{}\newpage
   \setcounter{page}{1}%
-  \vspace*{-1.5in}%
+  \vspace*{-0.5in}%
   \vspace*{-\topmargin}%
   \begin{@titlelist}%
     \sffamily\fontseries{k}\selectfont
@@ -501,18 +505,18 @@ TERMS AND CONDITIONS.
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{toc}}}
 \renewcommand\listoffigures{%
-  \chapter{\listfigurename}%
+  \specialchapter{\listfigurename}%
   \def\numberline##1{Figure ##1. }%
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{lof}}}
 \renewcommand\listoftables{%
-  \chapter{\listtablename}%
+  \specialchapter{\listtablename}%
   \def\numberline##1{Table ##1. }%
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{lot}}}
 \def\listfiguretablename{Figures and Tables}
 \newcommand\listoffiguresandtables{%
-  \chapter{\listfiguretablename}
+  \specialchapter{\listfiguretablename}
   {\sffamily\bfseries\normalsize Figures\par}%
   \vspace*{10pt}%
   \def\numberline##1{Figure ##1. }%

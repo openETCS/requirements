@@ -2,13 +2,13 @@
 %% A LaTeX class based on:
 
 %% LaTeX Style For Technical Information Reports of the
-%%	       Engineer Research and Development Center
-%%		      US Army Corps of Engineers
-%%			   2009/07/22 v1.1
+%%             Engineer Research and Development Center
+%%                    US Army Corps of Engineers
+%%                         2009/07/22 v1.1
 %% Copyright 2008, Boris Veytsman
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either
-%% version 1.3 of this license or (at your option) any 
+%% version 1.3 of this license or (at your option) any
 %% later version.
 
 %% For openETCS ITEA2 Project (To Do: Verify consistency with cc-by-sa
@@ -22,17 +22,17 @@
 %% The original source files were:
 %%
 %% erdc.dtx  (with options: `class')
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from erdc.cls.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file erdc.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -52,6 +52,7 @@
 %%   Right bracket \]     Circumflex    \^     Underscore    \_
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{openetcs}
 [2012/08/03 v0.1 Typesetting Technical Information Reports of
@@ -64,6 +65,9 @@ openETCS project based on ERDC class v1.1]
 % \DeclareOption{10pt}{\erdc@size@warning{\CurrentOption}}%
 % \DeclareOption{11pt}{\erdc@size@warning{\CurrentOption}}%
 % \DeclareOption{12pt}{\erdc@size@warning{\CurrentOption}}%
+
+%% David Mentres FIXME macro
+\newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 \newcommand{\IsLicensedUnderCC}[1]{#1}
 \DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
@@ -230,7 +234,7 @@ openETCS project based on ERDC class v1.1]
 \def\reporttype#1{\gdef\@reporttype{#1}}
 \reporttype{}
 \def\distribution#1{\gdef\@distribution{#1}}
-\distribution{This work is licensed under a Creative Commons
+\distribution{This work is licensed under  the European Union Public Licence (EUPL v.1.1) a Creative Commons
   Attribution-ShareAlike 3.0 Unported License.\\ \includegraphics[width=40pt]{ccbysabig.png}}
 \def\preparedfor#1{\gdef\@preparedfor{#1}}
 \preparedfor{ITEA2 openETCS consortium\\ Europa}
@@ -250,12 +254,12 @@ openETCS project based on ERDC class v1.1]
       \parsep16\p@ \topsep\z@
       \let\fullwidthdisplay\relax
     }%
-    \item[\hskip\labelsep\bfseries Abstract:]% 
-}{% 
+    \item[\hskip\labelsep\bfseries Abstract:]%
+}{%
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
-\textbf{This work is licensed under a Creative Commons
+\textbf{This work is licensed under the European Union Public Licence (EUPL v.1.1) and a Creative Commons
   Attribution-ShareAlike 3.0 -- (cc by-sa 3.0)}
 
 THE WORK IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC
@@ -269,7 +273,8 @@ LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
 THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH
 TERMS AND CONDITIONS.
 
-\url{http://creativecommons.org/licenses/by-sa/3.0/}
+\url{http://creativecommons.org/licenses/by-sa/3.0/}\\
+\url{http://joinup.ec.europa.eu/software/page/eupl/licence-eupl}
 }
 \newenvironment{@coverlist}{\begin{list}{}{%
       \leftmargin40\p@\rightmargin-85\p@%
@@ -306,7 +311,7 @@ TERMS AND CONDITIONS.
      \hfill\parbox{145\p@}{\centering
        \includegraphics[width=145\p@]{itea}\\
        {\bfseries
-         ITEA2 Project\\2012 -- 2015}}\\
+         ITEA2 Project\\Call 6 11025\\2012 -- 2015}}\\
        \par
      \vspace{0.5cm}%
      {\@wpfont\@wp\par}%
@@ -330,7 +335,7 @@ TERMS AND CONDITIONS.
    This page is intentionally left blank
    \thispagestyle{empty}\hbox{}\newpage
   \setcounter{page}{1}%
-  \vspace*{-1.5in}%
+  \vspace*{-0.5in}%
   \vspace*{-\topmargin}%
   \begin{@titlelist}%
     \sffamily\fontseries{k}\selectfont
