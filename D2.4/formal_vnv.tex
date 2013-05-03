@@ -24,20 +24,24 @@ way to classical approaches. A safety analysis will produce the
 properties that should be ensured to guarantee safe operation of the
 system.
 
-Usually such safety properties are high level properties (e.g. ``two
-trains do not collide''). In order to be amenable to formal
-verification, they should be translated into properties related to the
-system state (e.g. ``there exists two free blocks between any occupied
-blocks'', ...). Several system-related safety properties can be
-associated to a single high-level safety property.
+Usually such safety properties are high level properties (e.g., ``two
+trains do not collide''). In order to be amenable to formal verification,
+they should be partitioned into properties related to the system state
+(e.g., ``there exists two free blocks between any occupied blocks'', ...)
+and properties for specific system parts. Several system-related safety
+properties can be associated to a single high-level safety property. In
+general it should be verified that as a whole the partial properties
+imply the high level properties.
 
-Then those properties are checked to be valid, i.e. in any system
+Then those properties are checked to be valid, i.e., in any system
 state a safety property is always true. This can be done with the
 various approaches presented previously.
 
-If Correct by Construction approach is used, some traditional
-verification activities like unit or integration tests can be avoided
-because they are ensured by the formal approaches.
+If a Correct by Construction or refinement based approach is used, some
+traditional verification activities like unit or integration tests can be
+avoided because they are ensured by the formal approaches. In this case
+the high level property is refined side by side with the system model,
+iteratively proving the correctness of the refinement steps.
 
 \subsection{Validation of formal approaches}
 

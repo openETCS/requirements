@@ -1,5 +1,6 @@
 \section{Formal approaches for the design and development of a system}
 
+
 Very roughly, from an engineering point of view three kinds of formal
 methods can be used for the design and development of a system:
 \begin{itemize}
@@ -9,36 +10,37 @@ methods can be used for the design and development of a system:
 \end{itemize}
 
 \subsection{Contract based approach}
+\label{sec:contr-based-appr}
 
 Contract based approaches are based on software (or model)
-annotation. The software is usually considered state based, i.e. made
-of a state stored in a set of typed variables.  Software is divided in
-a set of operations (aka procedures, functions, methods, ...). To each
-operation is associated a pre-condition, i.e. a set of conditions that
+annotation. The software is usually considered state based, i.e. made of
+a state stored in a set of typed variables.  Software is divided in a
+set of operations (aka procedures, functions, methods, \ldots). To each
+operation a pre-condition is associated, i.e., a set of conditions that
 should be guaranteed at operation entrance by the caller of the
-operation. To each operation is also associated a post-condition, that
-the operation should fulfill, provided the pre-condition is
+operation. To each operation there is also a post-condition associated
+that the operation should fulfill, provided the pre-condition is
 assumed. In other words, the called operation should ensure the
-post-condition. The pre and post-conditions are usually expressed
-using first order logic (and, or, implication, for all and exists
-quantifiers, etc.).
+post-condition. The pre and post-conditions are usually expressed using
+first order logic (and, or, implication, for all and exists quantifiers,
+\ldots).
 
 In the contract based approach, if all the pre and post-conditions are
-fulfilled for all possible execution, then we can guarantee that all
+fulfilled for all possible executions, then we can guarantee that all
 the operations work well together.
 
 Those kind of approaches are known to be scalable, at the price of
 sometimes a lot of manual work to properly annotate the software or
 prove the annotations are correct.
 
-Example of such approaches are B~Method, Event-B, GNATprove/SPARK on
+Examples of such approaches are B~Method, Event-B, GNATprove/SPARK on
 Ada language or Frama-C on C language.
 
 \subsection{Model checking of concurrent and synchronous languages}
 
-In this approach, a model is based using various textual or graphical
-formalisms: state based model (like State Machines), data flow
-equations or Petri Nets.
+In this approach, models are based on various textual or graphical
+formalisms: state based model (like State Machines), data flow equations
+or Petri Nets.
 
 In a second step, a property is formalized over this model, usually
 using temporal logic. A temporal logic is usually a first order logic
@@ -55,12 +57,15 @@ verify more complex properties along the life time of the system. For
 example, one can express that ``something good'' will occur in the
 future after a certain event.
 
-However model checking suffers from state explosion problem: if the
-model is not properly designed, it can have too many states and make
-the exhaustive verification impossible.
+On the other hand, model checking requires a finite state space. In
+general systems represent an infinite state space and therefore a finite
+abstraction must be derived for model checking. However model checking
+suffers from state explosion problem: if the model is not properly
+designed, it can have too many states and make the exhaustive
+verification impossible.
 
-Example of such approaches and tools are SCADE, Petri Nets, NuSMV,
-UPPAAL or SPIN.
+Example of such approaches and tools are Design Verifier (used in
+SCADE), Petri Nets, NuSMV, UPPAAL or SPIN.
 
 \subsection{Static analysis of software code}
 
@@ -72,14 +77,14 @@ paths, within this abstract domain. And finally the result of the
 analysis is put back on the original concrete variables.
 
 Constructing an abstract interpretation is done using specific
-mathematical approaches (mainly Galoi connections) that ensure that
+mathematical approaches (mainly Galois connections) that ensure that
 the result of the analysis is sound: if an issue is found by the
 analysis in the abstract domain, it exists in the concrete domains of
-the variables, i.e. in the real program.
+the variables, i.e., in the real program.
 
 On the contrary, completeness of the approach is difficult to ensure:
 due to abstraction, the analysis can make some approximation. In such
-case the result of the analysis is meaningless: the analysis cannot
+cases the result of the analysis is meaningless: the analysis cannot
 tell if a verified property is valid or not.
 
 The main advantage of static analysis is that it works on actual,

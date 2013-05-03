@@ -12,22 +12,22 @@ is usually made through a grammar and a set of additional
 constraints. It can be textual or graphical.
 
 The \emph{semantics} roughly describes how the system or software
-evolves along time. It is defined using a mathematical model, i.e. use
+evolves along time. It is defined using a mathematical model, i.e., use
 of mathematical objects attached to each element of the syntax and
 mathematical rules that define how those objects evolve. The
-mathematical models used can be very different from a formal approach
-to another one. For example B~Method uses the Generalized
+mathematical models used can be very different from one formal approach
+to another one. For example the B~Method uses the Generalized
 Substitutions, SCADE relies on the Synchronous language Lustre, etc.
 
 A \emph{semi-formal} approach is one where the syntax is precisely
-defined but the semantics is not precisely defined, usually through
-some English text. Typical semi-formal approaches are Matlab language
-or SysML/UML formalisms.
+defined but the semantics is not precisely defined, usually through some
+English text. Typical semi-formal approaches are the Matlab language or
+the SysML/UML formalisms.
 
 A semi-formal approach can become formal if its semantics is
 rigorously defined through a mathematical model.
 
-\subsection{When formal approaches are recommended according to CENELEC standard?}
+\subsection{When are formal approaches recommended according to CENELEC standard?}
 
 The use of formal approaches is \emph{Highly Recommended} for SIL3 and
 SIL4 software according to CENELEC EN 50128:2011.
@@ -35,23 +35,23 @@ SIL4 software according to CENELEC EN 50128:2011.
 \subsection{Which constraints are required on the use of formal approaches?}
 
 Each formal approach has some restriction on the kind of software or
-system it can be applied on. Moreover, each formal approach is
+system it can be applied to. Moreover, each formal approach is
 specialized in the verification of some kind of property. Therefore a
-formal approach should be chosen in accordance to verification
+formal approach should be chosen in accordance to the verification
 objectives.
 
-Moreover, using a formal approach can impact the overall system
-building process. For example software developed using the B~Method
-follow a specific process and imposes a very specific architecture,
-very different from designing C software. In the same way, use of
-formal approach can impose specific resource needs at different phases
-of project lifetime. For example, more work on the requirement
-analysis and formalization phase.
+Moreover, using a formal approach can impact the overall system building
+process. For example software developed using the B~Method follows a
+specific process and imposes a very specific architecture, very different
+from designing C software. In the same way, the usage of a formal
+approach can impose specific resource needs at different phases of the
+project lifetime. For example, more work on the requirement analysis and
+formalization phase.
 
-Last but not least, as a formal approach brings its benefits only
-inside a given boundary, the process should be designed to keep those
-benefits outside those boundaries. For example, code compilation of a
-verified source code should be done in such a way as to ensure that
+Last but not least, as a formal approach brings its benefits only inside
+a given boundary, the development process should be designed to transfer
+these benefits beyond those boundaries. For example, code compilation of
+a verified source code should be done in such a way as to ensure that
 the verified properties are kept in the compiled code.
 
 \subsection{Which are the benefits to use formal approaches?}
@@ -60,8 +60,9 @@ Several benefits are expected from the use of formal approaches.
 
 The first benefit is to enhance the understanding of the formalized
 system or software. By using a non ambiguous notation, the designer is
-forced to clarify his mind. Very often, several design issues or
-defects are found at this step.
+forced to clarify his mind. Very often, several design issues or defects
+are found at this step, and in general, fixing errors at this step is
+much less costly than in later development phases.
 
 The second benefit is to enable the verification of some properties in
 an exhaustive way. Therefore avoidance of certain kinds of bugs can be
@@ -71,7 +72,59 @@ part of the software and system (for example one cannot guarantee
 properties on variables outside program boundary).
 
 The third benefit is to allow Correct by Construction software or
-system building. By verification properties along the construction
+system building. By verifying properties along the construction
 cycle of a system or software, one can ensure that some formalized
 requirements are fulfilled in the final software. For example, one can
 ensure that some variables stay in well defined boundaries.
+
+\subsection{How to use formal approaches?}
+
+In the design and development of a system using an approach based on
+formal methods, there are two orthogonal aspects to consider: at which
+stage (or stages) in the development cycle the formal approach will be
+used and how it will be used, i.e., choice of approach, technical
+realization.
+
+In the development cycle, there are two main stages where a formal
+approach can be applied:
+
+\begin{itemize}
+\item Design Support
+\item Implementation Verification
+\end{itemize}
+
+\subsubsection{Design Support}
+\label{sec:design-support}
+
+In the Design and Architecture Phase, a formal approach can support the
+system design and architecture design. In this phase, systematic errors
+can be detected which can be very difficult and costly or even impossible
+to fix later.
+
+In combination with a refinement based correct by construction approach,
+it is possible to have high level properties on the whole system which
+are refined to sub-properties on the different parts of the system
+architecture while designing the system. An example of such an approach
+is the Event-B method.
+
+\subsubsection{Implementation Verification}
+\label{sec:impl-verif}
+
+In the later phases of the development process, formal approaches can
+deal with formal reasoning over the actual functional system source
+code. Depending on the method, this code can be generated from a formal
+model, derived via a refinement based approach or written manually,
+annotated with formal properties.
+
+Code generation from a higher level model is in particular interesting,
+if the generator is qualified and code generation can reduce the required
+testing of code. A refinement based approach will iteratively add detail
+to a high level description until a detail level is reached which can be
+implemented in programming languages, here often translation, i.e.,
+side-by-side creation of refined model and source code is used. And
+finally it is possible to manually write code which is annotated with
+properties that can be verfied formally (see also
+Section~\ref{sec:contr-based-appr}. An example for a code generation
+based approach is SCADE, the B~method is based on refinement and formal
+proof and Frama-C, GNATprove / SPARK are based on source code annotation.
+

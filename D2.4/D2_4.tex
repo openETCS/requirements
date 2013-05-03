@@ -12,7 +12,7 @@
 % The document metadata is defined below
 
 %assign a report number here
-\reportnum{OETCS/WP2/D2.4.0~--~00/00}
+\reportnum{OETCS/WP2/D2.4~--~00.01}
 
 %define your workpackage here
 \wp{Work-Package 2: ``Definition''}
@@ -21,10 +21,11 @@
 \title{OpenETCS methods}
 
 %set a subtitle here
-\subtitle{ Definition of the methods used to perform the formal description}
+\subtitle{ Definition of the methods used to perform the formal description \\
+Intermediate version}
 
 %set the date of the report here
-\date{February 2013}
+\date{May 2013}
 
 %define a list of authors and their affiliation here
 
@@ -35,6 +36,10 @@
 \author{David Mentré}
 \affiliation{Mitsubishi Electric R\&D Centre Europe}
 
+\author{Mathias Güdemann}
+\affiliation{Systerel}
+
+
 % define the coverart
 \coverart[width=350pt]{chart}
 
@@ -43,15 +48,8 @@
 
 
 \begin{abstract}
-This document give a description of the process to be applied in the OpenETCS project. It gives a description of the activities to specify and design a critical system in a first part. The second part presents an abstract description of the case study issued from subset 26.
-
-
-Detailed process in regards of state of the art results and Cenelec standard requirements  (detailed design plan)
-- For each step  of the process defined in T.2.2.1 :
-           - objectives of the step
-           - Input/output
-           - proposed techniques
-- rules on languages and tools
+This document give first an introduction to formal  methods.
+In a second part, it proposes the method to  fllow during the openETCs project according to the methodology selection.
 
 \end{abstract}
 
@@ -62,6 +60,56 @@ Detailed process in regards of state of the art results and Cenelec standard req
 \listoffiguresandtables
 \newpage
 %=============================
+
+\begin{tabular}{|p{4.4cm}|p{8.7cm}|}
+\hline
+\multicolumn{2}{|c|}{Document information} \\
+\hline
+Work Package &  WP2  \\
+Deliverable ID or doc. ref. & D2.4\\
+\hline
+Document title & Definition of the methods used to perform the formal description \\
+Document version & 00.01 \\
+Document authors (org.)  & Marielle Petit-Doche (Systerel)  \\
+  & David Mentré (Mitsubishi Electric R\&D Centre Europe)  \\
+  & Mathias Güdemann (Systerel)  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{4.4cm}|p{8.7cm}|}
+\hline
+\multicolumn{2}{|c|}{Review information} \\
+\hline
+Last version reviewed & 00.01 \\
+\hline
+Main reviewers &  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{2.2cm}|p{4cm}|p{4cm}|p{2cm}|}
+\hline
+\multicolumn{4}{|c|}{Approbation} \\
+\hline
+  &  Name & Role & Date   \\
+\hline  
+Written by    &  Marielle Petit-Doche & T2.4 Sub-Task Leader  & may 2013 \\
+& David Mentré & & \\
+& Matthias Güdemann & & \\
+\hline
+Approved by & Gilles Dalmas & WP2 leader & \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{3cm}|p{5cm}|}
+\hline
+\multicolumn{4}{|c|}{Document evolution} \\
+\hline
+Version &  Date & Author(s) & Justification  \\
+\hline  
+00.01 & 03/05/2013 & M. Petit-Doche &  Incorporation of section on formal methods written by David Mentré \\
+\hline  
+
+\end{tabular}
 
 % The actual document starts below this line
 %=============================
@@ -102,61 +150,10 @@ Detailed process in regards of state of the art results and Cenelec standard req
 
 \def\reqt{R-WP2/D2.3.0}
 % Start here
-\section{Introduction}
 
-The purpose of this document is to describe, for the OpenETCS project, the means and methods used to perform the formal description.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-However the benchmark activities are not yet achieved in WP7, such the definition of the methods can not yet be done.
-
-For the intermediate version of the document, we propose a description of the benefits of formal methods in the design, development, verification and validation of critical systems.
-
-\begin{issue}
-Is the detailed description of the formal methods to used during the openETCS project necessary ?
-If yes, can we postpone the final version of the document after the choice of the methods ? How the document can then be compatible with the deliverable of WP7 ?
-
-Otherwise what is expected from this document ?
-\end{issue}
-\section{Reference documents}
-\begin{itemize}
-\item CENELEC EN 50126-1 --- 01/2000 --- \emph{Railways applications –- The specification and 
-demonstration of Reliability, Availability, Maintenability and Safety (RAMS) –- Part 1: 
-Basic requirements and generic process}
-\item CENELEC EN 50128 --- 10/2011 --- \emph{Railway applications -- Communication, signalling and 
-processing systems -- Software for railway control and protection systems}
-\item CENELEC EN 50129 --- 05/2003 --- \emph{Railway applications –- Communication, signalling and 
-processing systems –- Safety related electronic systems for signalling}
-\item FPP --- \emph{Project Outline Full Project Proposal Annex OpenETCS} -- v2.2
-\item SUBSET-026 3.3.0 --- \emph{System Requirement Specification}
-\item SUBSET-076-x 2.3.y --- Test related ERTMS documentation
-\item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
-\item SUBSET-091 2.5.0 --- \emph{Safety Requirements for the Technical Interoperability
-of ETCS in Levels 1 \& 2}
-\item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
-\end{itemize}
-
-\section{Conventions}
-The requirements are prefixed by “R-zz-x-y”, and are written in a roman typeface, where ``R'' 
-stands for ``Requirement'', ``zz'' identifies the source document,``x'' 
-is the version number and``y'' is the identifier of the requirement. All the text 
-written in italics is not a requirement: it may be a note, an open issue, an 
-explanation of the requirements, or an example.
-
-The placeholder “\todo{xxx}” is used to indicates that a paragraph or section is not finished, 
-to be defined or to be confirmed.
-
-\section{Glossary}
-\begin{description}
-\item[API] Application Programming Interface
-\item[FME(C)A] Failure Mode Effect (and Criticity) Analysis
-\item[I/O] Input/Output
-\item[OBU] OnBoard Unit
-\item[QA] Quality Analysis
-\item[RBC] Radio Block Center
-\item[RTM] RunTime Model
-\item[SIL] Safety Integrity Level
-\item[THR] Tolerable Hazard Rate
-\item[V\&V] Verification \& Validation
-\end{description}
+\input{intro.tex}
 
 \input{formal_intro.tex}
 
