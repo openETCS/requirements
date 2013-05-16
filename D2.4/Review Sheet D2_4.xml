@@ -406,9 +406,9 @@
     <Cell ss:Index="5" ss:StyleID="s84"><Data ss:Type="String">Main Issues: main/open issues on the document after review</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Jan Welte</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">TU Braunschweig (TU-BS)</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
    </Row>
    <Row>
     <Cell ss:StyleID="s82"/>
@@ -567,8 +567,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>17</ActiveRow>
-     <RangeSelection>R18C1:R18C3</RangeSelection>
+     <ActiveRow>19</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -696,21 +695,42 @@
     <Cell ss:StyleID="s98"><Data ss:Type="String">Min</Data></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">In my opinion, we should introduce precise definitions of &quot;verification&quot; and &quot;validation&quot;. My proposal, to be as consistent as possible with the wording of the standards, is to use &quot;verification&quot; for the activity which checks whether the output of a design step meets its objectives, usually that the output of the step implements/refines the input. &quot;validation&quot; checks whether the outcome of the whole process meets the initial requirements. It might be advisable to generalize this latter to checks which span more than one design step, e.g. check whether a formal model captures the initial requirements (in its design context, thus taking descriptions of neighboring components into account. Cf. the document on &quot;Evaluation Criteria for Verification and Validation Tools&quot;.</Data></Cell>
    </Row>
-   <Row ss:Index="16" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s86"/>
+   <Row ss:Height="114.75">
+    <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">jw</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">min</Data></Cell>
+    <Cell><Data ss:Type="String">As I have presented in D2.1 (page 2f.) we have a slightly extended definition of formal, which names 3 parts: first we name (i) completely defined set of symbols, the other two are the same as yours (ii) rigorous (in our definition mathematically defined to be unambiguous, complete and consistent) syntax, (iii) rigorous (in our definition mathematically defined to be unambiguous, complete and consistent) semantics; since I see no conflict with your description, we should probably add the set ob symbols, too.</Data></Cell>
+   </Row>
+   <Row ss:Height="38.25">
+    <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">jw</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">Q</Data></Cell>
+    <Cell><Data ss:Type="String">Since &quot;Correct by Construction&quot; is used as a concept name it should be shortly explained and at all point be writen in the same way (capital letter)</Data></Cell>
+   </Row>
+   <Row ss:Height="38.25">
+    <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">jw</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">Q</Data></Cell>
+    <Cell><Data ss:Type="String">For logical reasons the methods named in the itemization t the beginning of chapter 5 should be identical with the section headlines</Data></Cell>
+   </Row>
+   <Row ss:Height="102" ss:StyleID="s103">
+    <Cell ss:StyleID="s85" ss:Formula="=R[-1]C+1"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">&quot;… three kinds of formal methods can be used for the design and development of a system&quot; I understand your point, but the formulation sounds like these are the only &quot;formal design methods&quot; which can be used. From my point of view these are more the different verification (and validation) methods, which can be applied using different formal means of description for design and development. (granted this isn't a good formulation, too)</Data></Cell>
     <Cell ss:StyleID="s86"/>
     <Cell ss:StyleID="s82"/>
    </Row>
-   <Row ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s86"/>
+   <Row ss:Height="51" ss:StyleID="s103">
+    <Cell ss:StyleID="s85" ss:Formula="=R[-1]C+1"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Definition what is a formal method and whats a formal approach is not clear in the document. Both terms get mixed. Using only the term fromal approach (as mainly down) and reffering to methods using formal means of description.</Data></Cell>
     <Cell ss:StyleID="s86"/>
     <Cell ss:StyleID="s82"/>
    </Row>
@@ -783,11 +803,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>7</TopRowVisible>
+   <TopRowVisible>9</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>12</ActiveRow>
+     <ActiveRow>16</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1091,7 +1112,9 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>2</ActiveRow>
+     <ActiveRow>3</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+     <RangeSelection>R4C2:R4C3</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
