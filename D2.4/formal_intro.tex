@@ -7,17 +7,23 @@
 A \emph{formal} approach is a way to describe system or software
 that builds upon (i) rigorous syntax and (ii) rigorous semantics.
 
-The \emph{syntax} defines how the system or software is described. It
-is usually made through a grammar and a set of additional
-constraints. It can be textual or graphical.
+The \emph{syntax} defines how the system or software description is
+built and valid. It is usually made through a grammar and a set of
+additional constraints. It can be textual or graphical.
 
-The \emph{semantics} roughly describes how the system or software
-evolves along time. It is defined using a mathematical model, i.e., use
-of mathematical objects attached to each element of the syntax and
-mathematical rules that define how those objects evolve. The
-mathematical models used can be very different from one formal approach
-to another one. For example the B~Method uses the Generalized
-Substitutions, SCADE relies on the Synchronous language Lustre, etc.
+The \emph{semantics} gives a meaning to each object found in the
+system or software description. This meaning is given using a
+mathematical model, i.e., use of mathematical objects attached to each
+element of the syntax and mathematical rules that define how those
+objects interacts with other objects. The mathematical models used can
+be very different from one formal approach to another one. For example
+the B~Method uses the Generalized Substitutions, SCADE relies on the
+Synchronous language Lustre, etc. One should notice that being able to
+compile or run a language is not enough to give it some semantics, as
+this semantics is hidden within the execution/compilation steps. An
+explicit document should be provided. This document can be informal
+(e.g. the B-Book) or formal (BiCoq formalization of B~Method in Coq
+formal language).
 
 A \emph{semi-formal} approach is one where the syntax is precisely
 defined but the semantics is not precisely defined, usually through some
@@ -77,6 +83,12 @@ cycle of a system or software, one can ensure that some formalized
 requirements are fulfilled in the final software. For example, one can
 ensure that some variables stay in well defined boundaries.
 
+The fourth benefit is the ability to easily extend the formalized
+system or software, by updating the formal description. After such an
+update, applying the formal verification allows to know precisely
+which parts are no longer valid and focus development effort on them,
+without the need to re-verify parts not impacted by the change.
+
 \subsection{How to use formal approaches?}
 
 In the design and development of a system using an approach based on
@@ -85,13 +97,24 @@ stage (or stages) in the development cycle the formal approach will be
 used and how it will be used, i.e., choice of approach, technical
 realization.
 
-In the development cycle, there are two main stages where a formal
+In the development cycle, there are three main stages where a formal
 approach can be applied:
 
 \begin{itemize}
+\item Formalization of Requirements
 \item Design Support
 \item Implementation Verification
 \end{itemize}
+
+\subsubsection{Formalization of Requirements}
+\label{sec:formalization-of-req}
+
+In the System Development Phase and Software Requirements Phase, a
+formal approach applied to initial requirements can bring
+clarifications, by enforcing a non-ambiguous meaning for all
+parties. In case making such a formalization of requirements is
+difficult, it usually triggers further clarification efforts between
+involved parties.
 
 \subsubsection{Design Support}
 \label{sec:design-support}
@@ -123,7 +146,7 @@ to a high level description until a detail level is reached which can be
 implemented in programming languages, here often translation, i.e.,
 side-by-side creation of refined model and source code is used. And
 finally it is possible to manually write code which is annotated with
-properties that can be verfied formally (see also
+properties that can be verified formally (see also
 Section~\ref{sec:contr-based-appr}. An example for a code generation
 based approach is SCADE, the B~method is based on refinement and formal
 proof and Frama-C, GNATprove / SPARK are based on source code annotation.
