@@ -320,7 +320,7 @@
    </Row>
    <Row>
     <Cell ss:StyleID="s71"><Data ss:Type="String">Document version</Data></Cell>
-    <Cell ss:StyleID="s72"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">00.01</Data></Cell>
     <Cell ss:StyleID="s73"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
@@ -534,8 +534,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>16</ActiveRow>
-     <RangeSelection>R17C1:R17C3</RangeSelection>
+     <ActiveRow>6</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -594,6 +594,8 @@
     <Cell><Data ss:Type="String">4.1</Data></Cell>
     <Cell><Data ss:Type="String">Min</Data></Cell>
     <Cell><Data ss:Type="String">This is just quibbling, but I don't think that the syntax defines how the system is described. The syntax only defines how the description is built and valid. IMHO this is the semantics that defines what means the description (therefore how the system is described). The semantics can be informal (AND means &quot;the usual and&quot;), or formal (via truth table, or boolean and, or product in Z/2Z...)</Data></Cell>
+    <Cell><Data ss:Type="String">Agree, bad wording. Rephrased as follow: &quot;The syntax defines how the system or software description is built and valid.&quot;</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
    <Row ss:Height="89.25">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">2</Data></Cell>
@@ -601,34 +603,44 @@
     <Cell><Data ss:Type="String">4.1</Data></Cell>
     <Cell><Data ss:Type="String">Min</Data></Cell>
     <Cell><Data ss:Type="String">Again, just quibbling... but the semantics does not &quot;describe how the system evolves along time&quot;: it maps some objects (numbers, values, operators) on some other objects. The semantics must be preserved through the evaluation of the operators (or it is pretty useless), but it can be completely static (a type system is a semantics ; we can give a semantics to a declarative language such as propositional calculus).</Data></Cell>
+    <Cell><Data ss:Type="String">Agree, bad wording. Rephrased for semantics: &quot;The semantics gives a meaning to each object found in the system or software description. This&#10;meaning is given using a mathematical model, i.e., use of mathematical objects attached to&#10;each element of the syntax and mathematical rules that define how those objects interacts with&#10;other objects.&quot;</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:Height="89.25">
+   <Row ss:Height="102">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">3</Data></Cell>
     <Cell><Data ss:Type="String">SBA</Data></Cell>
     <Cell><Data ss:Type="String">4.1</Data></Cell>
     <Cell><Data ss:Type="String">Maj</Data></Cell>
     <Cell><Data ss:Type="String">I think it should be clarified here if being able to compile/run is sufficient to claim being formal, or not. After all, any programming language is formal, and have a semantics (could be the machine code, or the execution trace). &#10;&#10;It is important to be clear on this topic, because the subject has already being raised, and I bet that it will be raised again.</Data></Cell>
+    <Cell><Data ss:Type="String">OK. Added following paragraph &quot;One should notice that being able to compile or&#10;run a language is not enough to give it some semantics, as this semantics is hidden within the&#10;execution/compilation steps. An explicit document should be provided. This document can be&#10;informal (e.g. the B-Book) or formal (BiCoq formalization of B Method in Coq formal language).&quot;</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:Height="89.25">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">4</Data></Cell>
     <Cell><Data ss:Type="String">BH</Data></Cell>
     <Cell><Data ss:Type="String">7/§4.4</Data></Cell>
     <Cell><Data ss:Type="String">Maj</Data></Cell>
     <Cell><Data ss:Type="String">We see the benefit of easy extensions in the requirements as another advantage. The model can be extended as well and most of the Formal Methods should be available by inheritance. Please, add a section on this.</Data></Cell>
+    <Cell><Data ss:Type="String">OK. Added following paragraph &quot;The fourth benefit is the ability to easily extend the formalized system or software, by updating&#10;the formal description. After such an update, applying the formal verification allows to know&#10;precisely which parts are no longer valid and focus development e ort on them, without the need&#10;to re-verify parts not impacted by the change.&quot;</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="114.75">
+   <Row ss:Height="102">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">5</Data></Cell>
     <Cell><Data ss:Type="String">BH</Data></Cell>
     <Cell><Data ss:Type="String">7/§4.5 , bullets</Data></Cell>
     <Cell><Data ss:Type="String">Maj</Data></Cell>
     <Cell><Data ss:Type="String">The &quot;Specification of Requirements&quot; (as we intend to do) is another step in the cycle worth mentioning as a first bullet.</Data></Cell>
+    <Cell><Data ss:Type="String">OK. Added bullet &quot;Formalization of Requirements&quot; and following paragraph: &quot;In the System Development Phase and Software Requirements Phase, a&#10;formal approach applied to initial requirements can bring&#10;clarifications, by enforcing a non-ambiguous meaning for all&#10;parties. In case making such a formalization of requirements is&#10;difficult, it usually triggers further clarification efforts between&#10;involved parties.&quot;</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:Height="76.5">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">6</Data></Cell>
     <Cell><Data ss:Type="String">BH</Data></Cell>
     <Cell><Data ss:Type="String">General</Data></Cell>
     <Cell><Data ss:Type="String">Maj</Data></Cell>
     <Cell><Data ss:Type="String">We miss the classification of our investigated tools in the document. You should indicate e.g.,  in which phase the tool can be used and the method supported by the tool. Some tools are missing in your investigation, e.g., ERTMS Solutions, Papyrus,. This level of information should be available now after having had the workshops.</Data></Cell>
+    <Cell><Data ss:Type="String">Is it the purpose of this document?</Data></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="76.5"/>
    <Row ss:AutoFitHeight="0" ss:Height="38.25" ss:Span="1"/>
@@ -719,11 +731,12 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
+   <TopRowVisible>1</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>5</ActiveRow>
-     <RangeSelection>R6C1:R9C1</RangeSelection>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
