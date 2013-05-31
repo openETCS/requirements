@@ -1,6 +1,6 @@
 % Requirements for openETCS --- WP2
-% Author: Sylvain Baro (SNCF)
-% Version 1.1.0
+% Author: Sylvain Baro (SNCF), Jan Welte TUBs
+% Version 2.0.0
 
 
 \documentclass{template/openetcs_article}
@@ -17,7 +17,7 @@
 % The document metadata is defined below
 
 %assign a report number here
-\reportnum{OETCS/WP2/D2.6~--~1.1.0}
+\reportnum{OETCS/WP2/D2.6-9~--~2.0.0}
 
 %define your workpackage here
 \wp{Work-Package 2: ``Requirements''}
@@ -29,7 +29,7 @@
 %\subtitle{A template for short document. Adapted from report template.}
 
 %set the date of the report here
-\date{April 2013}
+\date{May 2013}
 
 %define a list of authors and their affiliation here
 
@@ -39,10 +39,10 @@
 \affiliation{TU-BS}  
   
 % define the coverart
-\coverart[width=350pt]{chart}
+\coverart[width=350pt]{openETCS_EUPL} 
 
 %define the type of report
-\reporttype{Requirements}
+\reporttype{Requirements Document}
 
 
 %
@@ -63,11 +63,11 @@ This document provides the list of higher level requirements for the openETCS pr
 \multicolumn{2}{|c|}{Document information} \\
 \hline
 Work Package &  WP2  \\
-Deliverable ID or doc. ref. & D2.6\\
+Deliverable ID or doc. ref. & D2.6-9\\
 \hline
 Document title & Requirements for openETCS \\
-Document version & 1.1.0 \\
-Document authors (org.)  & Sylvain Baro (SNCF) \\
+Document version & 2.0.0 \\
+Document authors (org.)  & Sylvain Baro (SNCF), Jan Welte (TUBs) \\
 \hline
 \end{tabular}
 
@@ -75,9 +75,10 @@ Document authors (org.)  & Sylvain Baro (SNCF) \\
 \hline
 \multicolumn{2}{|c|}{Review information} \\
 \hline
-Last version reviewed & 0.1.0 \\
+Last version reviewed & 1.1.0 \\
 \hline
-Main reviewers & St\'ephane Callet, Cyril Cornu, David Mentre, Marielle Petit-Doche, Stanislas Pinte, Merlin Pokam, Guillaume Pottier, Uwe Steinke\\
+Main reviewers & Marielle Petit-Doche,  Merlin Pokam, Guillaume Pottier, Uwe Steinke, Klaus-R\"udiger Hase, Bernd Hekele,
+Hardi Hungar, Marc Behrens, Cyril Cornu, Fr\'ederique Vall\'ee \\
 \hline
 \end{tabular}
 
@@ -87,7 +88,7 @@ Main reviewers & St\'ephane Callet, Cyril Cornu, David Mentre, Marielle Petit-Do
 \hline
   &  Name & Role & Date   \\
 \hline  
-Written by    &  Sylvain Baro &   & \\
+Written by    &  Sylvain Baro & System Eng.  & \\
 \hline
 Approved by & Gilles Dalmas & WP2 leader & \\
 \hline
@@ -106,6 +107,8 @@ Version &  Date & Author(s) & Justification  \\
 1.0.0 & 05/03/13 & S. Baro &  Version after first review. Req. version is 1. \\
 \hline
 1.1.0 & 19/04/13 & S.~Baro, J.~Welte &  Update after workshop on safety and tools. Updated req. version is X.\\
+\hline
+2.0.0 & 31/05/13 & S.~Baro  &  Final version after review. Updated req. version is 2.\\
 \hline
 \end{tabular}
 
@@ -175,9 +178,21 @@ project shall be written according to what is required in the standards (see Sec
 then reviewed. Once this task is done, the plans will be the reference for the project.
 In the meantime, one can refer to the standards, or to the D2.2 document.
 
-This document was initiated as a preliminary requirement list, and is now evolving during the project 
-to be completed with all the requirements on the methodology
-modelling, process, tool chain, and safety proof.
+The present document corresponds to the WP2 deliverables D2.6 to D2.9, with the following mapping.
+
+\begin{tabular}{|lll|}
+\hline
+Deliverable & Title & Chapters \\
+\hline
+D2.6 & Requirements for the model & \ref{sysarchi}, \ref{models}, \ref{language} \\
+\hline
+D2.7 & Requirements for the API & \ref{RTMAPI} \\
+\hline
+D2.8 & Requirements for tools & \ref{language}, \ref{toolchain} \\
+\hline
+D2.9 & Requirements for V\&V & \ref{safety}, \ref{vnv}\\
+\hline
+\end{tabular}
 
 \section{Reference documents}
 \subsection{Standards \& ERA documents}
@@ -192,8 +207,8 @@ processing systems -- Software for railway control and protection systems}
 processing systems –- Safety related electronic systems for signalling}
 \item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
 \item SUBSET-026 3.3.0 --- \emph{System Requirement Specification}
-\item SUBSET-076-x 2.3.y --- Test related ERTMS documentation
-\item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
+\item SUBSET-076-x (not yet released for baseline 3) --- Test related ERTMS documentation
+\item SUBSET-088 (not yet released for baseline 3) --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
 \item SUBSET-091 3.2.0 --- \emph{Safety Requirements for the Technical Interoperability
 of ETCS in Levels 1 \& 2}
 \end{itemize}
@@ -210,9 +225,6 @@ stands for ``Requirement'', ``zz'' identifies the source document,``x''
 is the version number and``y'' is the identifier of the requirement. All the text 
 written in italics is not a requirement: it may be a note, an open issue, an 
 explanation of the requirements, or an example.
-
-The placeholder “\todo{xxx}” is used to indicates that a paragraph or section is not finished, 
-to be defined or to be confirmed.
 
 \section{Glossary}
 \begin{description}
@@ -236,7 +248,7 @@ to be defined or to be confirmed.
 The following goals for the projects were considered for the writing of this document. Please note that 
 they are \emph{not} listed by order of priority, but in an arbitrary order.
 
-\subsection{Goal 1: Formalization of the SRS into a high level, executable, semi-formal and formal model}
+\subsection{Goal 1: Formalization of the SRS into a high level, simulable, semi-formal and formal model}
 The first goal of the project is to propose a formalization of a subset of the on-board subsystem,
 as defined in the SUBSET-026, for the chosen reference baseline. 
 
@@ -254,12 +266,12 @@ The purpose of the formalization is:
 In order to conduct this formalization, a part of the tool chain and methodology defined (see Goal 2) 
 will be used.
 
-There will be two models created to satisfy this goal. One semi-formal executable (but not in real time)
+There will be two models created to satisfy this goal. One semi-formal simulable (but not in real time)
 model, for which we aim to model all the requirements considered in the scope by the system design, covering as
 much features as possible of the Onboard Unit.
 
-On some parts of the system, this model will be completed with a strictly formal model. This will allow to improve
-the understanding of the system, and will provide elements for verification and validation using formal proof. 
+On chosen parts of the system, this model will be completed with a strictly formal model. This will allow to improve
+the understanding of the system, and will provide complementary elements for the verification and validation using formal proof. 
 
 This will also allow to demonstrate the feasibility of the process using both semi-formal and formal modelization 
 and the capabilities of analysis on the formal model using formal methods. 
@@ -328,16 +340,16 @@ as a ``double-V''. The smaller V corresponds to the development and validation o
 
 It starts by the SRS which is not part of the project (SUBSET-026), then outlines the boundaries and 
 the applicable requirements from the SUBSET-026 that will be used in the model. This outline 
-is provided in the Subsystem Requirement Specification (SSRS). This document describe the subsystem that 
+is provided in the Subsystem Requirement Specification (SSRS). This document describes the subsystem that 
 will be modelled. It describes the architecture of the subsystem (functions and their I/O) and the 
 requirements allocated to these functions. If necessary, the requirements are rewritten in order to 
-address the I/O and to correspond to the allocation. This document also provide the Vital/Non Vital 
+address the I/O and to correspond to the allocation. This document also provides the Vital/Non Vital 
 classification of the requirements and data stream. The architecture part is described in a 
 semi-formal language, and the requirements are described in natural language.
 
-The next step is the creation of the model itself, from the SSRS. Because this model is executable, 
+The next step is the creation of the model itself, from the SSRS. Because this model is simulable, 
 it can be validated as itself, thus the first ``closing branch'' of the V. This model will be 
-semi-formal, and aim to cover the full SSRS requirements. This semi-formal model will be sidekicked with 
+semi-formal, and aims to cover the full SSRS requirements. This semi-formal model will be sidekicked with 
 a formal model for some of the functions of the model.
 
 The first ``closing branch'' corresponds to the validation of the subsystem, using the semi-formal model
@@ -347,7 +359,7 @@ The second ``closing branch'' corresponds to the production of real time code ca
 onboard computer. This code shall be derived from the semi-formal model (possibly with an intermediate
 SW model between). There are two possibilities for the generation of code:
 \begin{itemize}
-\item a SIL0 \emph{demonstrator} or \emph{simulator},
+\item a \emph{demonstrator} or \emph{simulator} (no SIL associated to this item),
 \item a SIL4 implementation of the model.
 \end{itemize}
 
@@ -374,7 +386,7 @@ OpenETCS but doing them completely is unrealistic considering the resources of t
 Fig. \ref{fig:safety_process} shows activities that are needed for the safety analyses. It should 
 be considered in parallel of the descending branch of the V, but has been put on a separate diagram for
 the sake of clarity. These activities will be conducted on a subset of the model.
-The validation tasks corresponds to the safety validation of the model w.r.t. 
+The validation tasks correspond to the safety validation of the model w.r.t. 
 the safety properties.
 
 A subset of high level safety properties are provided, 
@@ -383,6 +395,7 @@ descending branch of the V. These properties are then used for the safety analys
 
 \section{Requirements}
 \subsection{Runtime Model \& API}
+\label{RTMAPI}
 The framework needs to provide a list of properties and functions. If we take the parallel of the Java environment, 
 some of these properties/functions will be provided by the \emph{abstract machine} properties, and some of them will 
 be provided by the API.
@@ -392,8 +405,8 @@ If we consider for example ``allocation of memory'', in Java usually it is just 
 we will find eventually that it leads to the runtime model too, but in the user point of view, it is
 definitely part of the API).
 
-What I consider is that at requirement level, we do not want to know which property will come from API and which will 
-come from the runtime model. We are only interested in the properties themselves.
+What is considered is that at requirement level, it is not useful to know which property will come from API and which will 
+come from the runtime model. It is only interesting to provide the properties themselves.
 
 In order to avoid ambiguities, we will define the following.
 \begin{description}
@@ -428,13 +441,13 @@ parts. Hence we will only state requirements on the RTM/API.
 
 
 
-\req{The RTM/API model shall provide an abstraction layer of the hardware architecture.}
-\subreq{The RTM/API shall abstract memory management.}
-\subreq{The RTM/API shall abstact the execution of states machine.}
-\subreq{The RTM/API shall allow communication and concurrence (if requested by the model formalism).}
-\subreq{The RTM/API shall allow read/write to a persistent data store.}
-\subreq{The RTM/API shall allow to state \emph{real time} constraints.}
-\subreq{The RTM/API shall provide emulation for a \emph{real time} clock.}
+\reqfixed{02}{043}{The RTM/API model shall provide an abstraction layer of the hardware architecture.}
+\subreqfixed{02}{043}{01}{The RTM/API shall abstract memory management.}
+\subreqfixed{02}{043}{02}{The RTM/API shall abstact the execution of states machine.}
+\subreqfixed{02}{043}{03}{The RTM/API shall allow communication and concurrence (if requested by the model formalism).}
+\subreqfixed{02}{043}{04}{The RTM/API shall allow read/write to a persistent data store.}
+\subreqfixed{02}{043}{05}{The RTM/API shall allow to state \emph{real time} constraints.}
+\subreqfixed{02}{043}{06}{The RTM/API shall provide emulation for a \emph{real time} clock.}
 
 \reqfixed{01}{004}{The RTM/API shall make possible to refine the software into final code able to run 
 on hardware complying the EN 50129 standard for the requested SIL.}
@@ -466,128 +479,130 @@ taken into account (= emulated) by the RTM/API.
 
 
 \subsection{System and Architecture}
-\req{The reference ETCS baseline shall be modified only by project decision.}
+\label{sysarchi}
+\reqfixed{02}{044}{The reference ETCS baseline shall be modified only by project decision.}
 
-\req{The SRS (SUBSET-026 for the reference baseline) shall be refined into a SSRS.}
-\subreq{The SSRS shall identify all functions, interfaces and parameters in addition to the ones covered by the SRS but 
+\reqfixed{02}{045}{The SRS (SUBSET-026 for the reference baseline) shall be refined into a SSRS.}
+\subreqfixed{02}{045}{01}{The SSRS shall identify all functions, interfaces and parameters in addition to the ones covered by the SRS but 
 which are requested at functional level in order to be compliant to the SRS.}
-\subreq{The SSRS shall provide a functional architecture of the OBU.}
-\subsubreq{The SSRS shall split the KERNEL into independent functions.}
-\subsubreq{The description of the architecture shall be semi-formal.}
-\subsubreq{This architecture shall provide the functions and the data streams between them.}
-\subsubreq{The SSRS shall describe which part of this architecture will be modelled.}
-\subsubreq{The SSRS shall provide the interfaces between the considered subsystem and its environment.}
-\subsubreq{The SSRS shall identify all functions, interfaces and parameters in addition to the ones covered by 
-the SRS but which are requested at functional level in order to be compliant to the SRS.}
-\subsubreq{When the boundary of the formalized subsystem corresponds to a FIS or FFFIS, the SSRS shall try to comply to it even when it is not mandatory.}
+\subreqfixed{02}{045}{02}{The SSRS shall provide a functional architecture of the OBU.}
+\subsubreqfixed{02}{045}{02}{01}{The SSRS shall split the KERNEL into independent functions.}
+\subsubreqfixed{02}{045}{02}{02}{The description of the architecture shall be semi-formal.}
+\subsubreqfixed{02}{045}{02}{03}{This architecture shall provide the functions and the data streams between them.}
+\subsubreqfixed{02}{045}{02}{04}{The SSRS shall describe which part of this architecture will be modelled.}
+\subsubreqfixed{02}{045}{02}{05}{The SSRS shall provide the interfaces between the considered subsystem and its environment.}
+\subsubreqfixed{02}{045}{02}{06}{When the boundary of the formalized subsystem corresponds to a FIS or FFFIS, the SSRS shall try to comply to it even when it is not mandatory.}
 
-\subreq{The SSRS shall allocate the requirements of the SRS to the functions and their I/O.}
-\subreq{The SSRS shall be compliant or shall allow compliance to the mandatory requirements from the other subsets of the TSI.}
-\subreq{Full traceability between the SRS and SSRS shall be provided.}
-\subsubreq{All interpretations, additions, omissions and design choices during the allocation have to be documented in one log and justified.}
-\subsubreq{The requirements allocated to other subsystemes (\emph{e.g.} RBC) shall be tracked.}
-\subsubreq{Lower level requirements refined from higher level requirements shall be tracked.}
+\subreqfixed{02}{045}{03}{The SSRS shall allocate the requirements of the SRS to the functions and their I/O.}
+\subreqfixed{02}{045}{04}{The SSRS shall be compliant or shall allow compliance to the mandatory requirements from the other subsets of the TSI.}
+\subreqfixed{02}{045}{05}{Traceability between the SRS and SSRS shall be provided.}
+\subsubreqfixed{02}{045}{05}{01}{All interpretations, additions, refinement, omissions and design choices during the allocation have to be documented in one log and justified.}
+\subsubreqfixed{02}{045}{05}{02}{The requirements allocated to other subsystemes (\emph{e.g.} RBC) shall be tracked.}
 
-\subreq{In case of divergence between an identified national behavior and the SRS behavior, it shall be discussed and decided whether or not
+\subreqfixed{02}{045}{06}{In case of divergence between an identified national behavior and the SRS behavior, it shall be discussed and decided whether or not
 the national behaviors are required in the SSRS.}
-\subsubreq{If it is the case, it shall be traced explicitly.}
-\subsubreq{If it is the case, it shall be possible by configuration to enforce pure compliance to the SRS.}
+\subsubreqfixed{02}{045}{06}{01}{If it is the case, it shall be traced explicitly.}
+\subsubreqfixed{02}{045}{06}{02}{If it is the case, it shall be possible by configuration to enforce pure compliance to the SRS.}
 
-\req{The SSRS shall identify the Vital and Non Vital functions, requirements, and data streams.}
+\reqfixed{02}{046}{The SSRS shall identify the Vital and Non Vital functions, requirements, and data streams.}
 
 \subsection{Model(s)}
-\req{The subsystem described in the SSRS shall be modelled into a Semi-Formal Model (SFM).}
-\subreq{The SFM shall be modelled in a semi-formal means of decription.}
-\subreq{The SFM shall be as consistent as possible with the SSRS level of abstraction.}
-\subsubreq{All the requirements of the SSRS shall be covered by the SFM.}
-\subsubreq{All safety requirements derived from the Hazard Log and allocated to the sub-system functionality shall be covered by the SFM}
-\subsubreq{Needed interpretations, additions and omissions shall be tracked and justified.}
-\subsubreq{If a deviation is needed, it shall be tracked and justified, and it will also be insulated as much as possible using 
+\label{models}
+\reqfixed{02}{047}{The subsystem described in the SSRS shall be modelled into a Semi-Formal Model (SFM).}
+\subreqfixed{02}{047}{01}{The SFM shall be modelled in a semi-formal means of decription.}
+\subreqfixed{02}{047}{02}{The SFM shall be as consistent as possible with the SSRS level of abstraction.}
+\subsubreqfixed{02}{047}{02}{01}{All the requirements of the SSRS shall be covered by the SFM.}
+\subsubreqfixed{02}{047}{02}{02}{All safety requirements derived from the Hazard Log and allocated to the sub-system functionality shall be covered by the SFM}
+\subsubreqfixed{02}{047}{02}{03}{Needed interpretations, refinement, additions and omissions shall be tracked and justified.}
+\subsubreqfixed{02}{047}{02}{04}{If a deviation is needed, it shall be tracked and justified, and it will also be insulated as much as possible using 
 proper modularity.}
-\subsubreq{Traceability between the SSRS and the SFM shall be provided.}
-\subsubreq{Exported requirements shall be tracked.}
-\subsubreq{Lower level functional requirements refined from higher level functional requirements shall be tracked.}
-\subsubreq{Lower level safety requirements refined from higher level safety requirements shall be tracked.}
+\subsubreqfixed{02}{047}{02}{05}{Traceability between the SSRS and the SFM shall be provided.}
+\subsubreqfixed{02}{047}{02}{06}{Exported requirements shall be tracked.}
+\subsubreqfixed{02}{047}{02}{07}{Lower level safety properties refined from higher level safety properties shall be tracked.}
 
-\req{The SFM design and level of description shall be executable.}
+\reqfixed{02}{048}{The SFM design and level of description shall be simulable.}
 
-\req{Some parts of the subsystem described in the SSRS shall be modelled into a Fully Formal Model (FFM).}
-\subreq{The FFM shall be modelled in a strictly formal mean of description\,\footnote{Nevertheless, we will use the 
+\reqfixed{02}{049}{Some parts of the subsystem described in the SSRS shall be modelled into a Fully Formal Model (FFM).}
+\subreqfixed{02}{049}{01}{The FFM shall be modelled in a strictly formal mean of description\,\footnote{Nevertheless, we will use the 
 wording ``Fully Formal Model'' in order to be allowed to use a different abbreviation than for ``Semi-Formal Model''.}.}
-\subreq{The FFM shall be modelled based on the SFM.}
-\subreq{The SFM shall be designed in order to make possible the modelling and the validation of the FFM.}
-\subreq{The transformation of the SFM into the FFM shall be as straightforward and automated as possible\,\footnote{%
+\subreqfixed{02}{049}{02}{The FFM shall be modelled based on the SFM.}
+\subreqfixed{02}{049}{03}{Traceability between the SFM and the FFM.}
+\subsubreqfixed{02}{049}{03}{01}{Needed interpretations, design choices, refinement, additions and omissions shall be tracked and justified.}
+\subreqfixed{02}{049}{04}{The SFM shall be designed in order to make possible the modelling and the validation of the FFM.}
+\subreqfixed{02}{049}{05}{The transformation of the SFM into the FFM shall be as straightforward and automated as possible\,\footnote{%
 Please note that the requirements on the FFM do not forbid a complete automation of the transformation, nor the identity
 of the FFM and SFM.}.}
 
-\req{The SFM design shall be modular and extensible.}
-\req{The FFM design shall be modular and extensible.}
-\subreq{The modular design of the FFM should represent a refinement of the modular SFM design.}
+\reqfixed{02}{050}{The SFM design shall be modular and extensible.}
+\reqfixed{02}{051}{The FFM design shall be modular and extensible.}
+\subreqfixed{02}{051}{01}{The modular design of the FFM should represent a refinement of the modular SFM design.}
 
-\req{Safety relevant function should be as much as possible insulated from Non Safety relevant functions.}
+\reqfixed{02}{052}{Safety relevant function should be as much as possible insulated from Non Safety relevant functions.}
 
 \subsection{Safety}
 \label{safety}
 Side to side with the models (SFM and FFM), should lay a set of  
 static safety properties on the model. The higher level properties will be provided 
 by the SUBSET-088 and SUBSET-091 documents, that we will consider here as a preliminary hazard analysis, 
-because it provides us the higher level dread events.
+because it provides us the higher level feared events.
 
-These dread events will be refined during a Sub System Hazard Analysis (SSHA) into events of the abstraction level of the sub system, 
+These feared events will be refined during a Sub System Hazard Analysis (SSHA) into events of the abstraction level of the sub system, 
 which will be collected in the Hazard Log. For all hazardous events named in the Hazard Log a risk analysis will be performed.
 Based on the analyses suitable risk control activities a determined and collected in the Hazard Log. All hazards and their 
 control activities are then refined into safety requirements/ properties\,\footnote{The document ``Safety properties for 
 OpenETCS through two examples'' provides a proposal on this subject.
 \url{https://github.com/openETCS/requirements/tree/master/WorkDocuments/SafetyRequirementsExamples}} which are transferred 
 to the respective backlogs for the different models and their verification and validation.
-The lower level Safety Properties/Dread Events shall address variables, state and interfaces used in the formal model.
+The lower level Safety Properties/Feared Events shall address variables, state and interfaces used in the formal model.
 
-Formal proof would then be used to prove that the OpenETCS model never enter a Dread State, 
+As much as possible, formal proof would then be used to prove that the OpenETCS model never enter a Feared State, 
 as long as the other subsystem (RBC, communication layer\dots) fulfill their own safety properties 
 (axiom describing the environment). The exact process shall be described in the Safety Plan.
  
 
 
-\req{A Safety Case Concept and Safety Plan shall be issued describing the safety activities
-for the model according to CENELEC EN~50126, EN~50128 and EN~50129.}
-\subreq{All the output documents required by the EN~50126, EN~50128 and EN~50129 for 
-each step of the lifecycle shall be described, or their lack of shall be justified.}
-\subreq{The safety activities described in this documents shall cover all the steps from the SRS to the SSRS, then to the SFM, 
-the FFM and the source code.}
+\reqfixed{02}{053}{A Safety Case Concept and Safety Plan shall be issued describing the safety activities for all the steps from the 
+SRS to the SSRS, then to the SFM, the FFM and the source code, according to CENELEC EN~50126, EN~50128 and EN~50129.}
+\subreqfixed{02}{053}{01}{All the output documents required by the EN~50126, EN~50128 and EN~50129 for 
+each step of the lifecycle shall be described, or their lack shall be justified.}
 
-\req{The safety activities shall at least be applied on a sample of the on-board functionalities and the respective safety 
+
+\reqfixed{02}{054}{The safety activities shall at least be applied on a sample of the on-board functionalities and the respective safety 
 requirements to demonstrated the suitability of the safety plan.}
 
-\req{The safety activities shall aim at a THR compatible with the SUBSET-091.}
+\reqfixed{02}{055}{The safety activities shall aim at a THR compatible with the SUBSET-091.}
 
-\req{The safety analysis shall consider as higher level Dread Events the events named in the SUBSET-091 in respect to the  
+\reqfixed{02}{056}{The safety analysis shall consider as higher level Feared Events the events named in the SUBSET-091 in respect to the  
  scope of the subsystem.}
-\subreq{Those Dread Events shall be refined to SRS and SSRS levels, then to the model level, and allocated to the functions to 
+\subreqfixed{02}{056}{01}{Those Feared Events shall be refined to SRS and SSRS levels, then to the model level, and allocated to the functions to 
 determine hazardous events.}
-\subreq{The refinement shall only be done for a sample part of the system.}
+\subreqfixed{02}{056}{02}{The refinement shall only be done for a sample part of the system.}
 
-\req{The model-level safety requirements shall be written in the same degree of formality as the corresponding model or higher.}
+\reqfixed{02}{057}{The model-level safety requirements shall be written in the same degree of formality as the corresponding model or higher.}
 
 
-\req{It shall be verified that the SFM, FFM and source code complies with all respective safety requirements:}
-\subreq{either by a real-time constraint\,\footnote{This real-time constraint is not guaranteed in the model itself, but can be expressed in the model using the RTM/API.};}
-\subreq{using test for the SFM;}
-\subreq{using formal proof for the part modelled in the FFM and for the sorce code;}
-\subreq{if a safety requirement/property can not be proven, testing covering all reasonable possible events shall be used.}
- 
+\reqfixed{02}{058}{It shall be verified that the SFM, FFM and source code complies with all respective safety requirements:}
+\subreqfixed{02}{058}{01}{either by a real-time constraint\,\footnote{This real-time constraint is not guaranteed in the model itself, but can be expressed in the model using the RTM/API.};}
+\subreqfixed{02}{058}{02}{using test for the SFM;}
+\subreqfixed{02}{058}{03}{using formal proof for the part modelled in the FFM and for the sorce code;}
+\subreqfixed{02}{058}{04}{if a safety requirement/property can not be proven, testing covering all reasonable possible events shall be used.}
+
+\reqfixed{02}{059}{The software safety activities will comply to the requirements of CENELEC 50128.}
+\reqfixed{02}{060}{The model safety activities will be adapted from the requirements of CENELEC 50128.}
 
 \subsection{Verification and Validation}
-The already provided requirements requires a safety plan compliant to the CENELEC EN~50126, 50128 and 50129.
+\label{vnv}
+The already provided requirements require a safety plan compliant to the CENELEC EN~50126, 50128 and 50129.
 This pulls a number of requirements on V\&V, including Verification and Validation plans. On the topic of 
 compliance to EN~50128, one shall also refer to the D2.2 document.
 
 
-\req{A Verification plan shall be issued and complied with.}
-\subreq{The verification plan shall provide a method to demonstrate the requirement covering over all development artifacts.}
-\subreq{The verification plan shall state all verification activities from the SUBSET 26 and all other relevant TSI documents to the source code.}
-\req{A Validation Plan shall be issued and complied with.}
-\subreq{The validation plan shall provide a method to validate all functional and safety requirement over all development artifacts.}
-\subreq{The validation plan shall state all validation activities from the SUBSET 26 and all other relevant TSI documents to the source code.}
+\reqfixed{02}{061}{A Verification plan shall be issued and complied with.}
+\subreqfixed{02}{061}{01}{The verification plan shall provide a method to demonstrate the requirements covering all the development artifacts.}
+\subreqfixed{02}{061}{02}{The verification plan shall state all verification activities required for each of these development artifacts.}
+\reqfixed{02}{062}{A Validation Plan shall be issued and complied with.}
+\subreqfixed{02}{062}{01}{The validation plan shall provide a method to validate all functional and safety requirements over all development artifacts.}
+\subreqfixed{02}{062}{02}{The validation plan shall state all validation activities required for each of these development artifacts.}
 
 \reqfixed{01}{021}{The test plan shall comply the mandatory documents of the SUBSET-076, restricted to the scope of 
 the OpenETCS project.}
@@ -597,44 +612,53 @@ be complete.
 \end{justif}
 
 
+\reqfixed{02}{063}{Each design artifact needs a reference artifact which it implements (\emph{e.g.} code to detailed model, SFM to SSRS model\dots)}
+\subreqfixed{02}{063}{01}{The implementation between them relation shall be specified in detail.}
+e.g. for state machine and a higher level state machine mapping of interfaces, states and transition is required.
+This includes additional invariants, input assumptions and further restrictions. This informaiton is the basis for verification activities.
+\subreqfixed{02}{063}{02}{The design of the artifacts shall be made such to allow verifiability as far as possible.}
+\reqfixed{02}{064}{The findings from the verification shall be traced, and will be adequately addressed (taken into consideration, or postponed or discarded with a justification).}
+
+
+
+
 \subsection{Language and formalism}
-\req{The description of the SFM shall be understandable by domain experts without specific training.}
-\subreq{The SFM shall provide graphical descriptions for components relations, process sequences and data flows.}
-\subreq{Process involving timing and scheduling aspects shall be visually demonstrated.}
+\label{language}
+\reqfixed{02}{065}{The description of the SFM shall be understandable by domain experts with a reasonable amount of specific training.}
+\subreqfixed{02}{065}{01}{The means of description of the SFM  shall provide simple graphical representation for component relations, 
+data-flow and system behavior (which cover process sequence and state evolution).}
+\subreqfixed{02}{065}{02}{The means of description of the SFM  shall provide visual simulation of the system behavior.}
 
-\req{The means of discription used to formalize safety properties shall be formal and declarative.}
-\subreq{The formalism shall be understandable by domain experts without specific training.}
-\subreq{The formalism shall be able to state:}
-\subsubreq{constraints,}
-\subsubreq{logical relations,}
-\subsubreq{timing relations.}
+\reqfixed{02}{066}{The means of discription used to formalize safety properties shall be formal and declarative.}
+\subreqfixed{02}{066}{01}{The formalism shall be understandable by domain experts without specific training.}
+\subreqfixed{02}{066}{02}{The formalism shall be able to state:}
+\subsubreqfixed{02}{066}{02}{01}{logical statements,}
+\subsubreqfixed{02}{066}{02}{02}{time constraints.}
 
-\req{All means of description used shall be standardized or at least documented in detailed.}
-\req{The means of descriptions used for SSRS, SFM and FFM modeling shall be open for the use with different tool \emph{via}:}
-\subreq{direct exchange of the model data file;}
-\subreq{or fully automated translation of the model data file.}
+\reqfixed{02}{067}{All means of description used shall be standardized or at least documented in detailed.}
+\reqfixed{02}{068}{The means of descriptions used for SSRS, SFM and FFM modeling shall be open for the use with different tool \emph{via}:}
+\subreqfixed{02}{068}{01}{direct exchange of the model data file;}
+\subreqfixed{02}{068}{02}{or fully automated translation of the model data file.}
  
 
-\req{The means of description for the SFM shall be able to formalize:}
-\subreq{State machines,}
-\subreq{Time-outs,}
-\subreq{Truth tables,}
-\subreq{Arithmetics,}
-\subreq{Braking curves,}
-\subreq{Logical statements,}
-\subreq{Messages and fields.}
+\reqfixed{02}{069}{The means of description for the SFM shall be able to formalize:}
+\subreqfixed{02}{069}{01}{State machines,}
+\subreqfixed{02}{069}{02}{Time-outs,}
+\subreqfixed{02}{069}{03}{Truth tables,}
+\subreqfixed{02}{069}{04}{Arithmetics,}
+\subreqfixed{02}{069}{05}{Braking curves,}
+\subreqfixed{02}{069}{06}{Logical statements,}
+\subreqfixed{02}{069}{07}{Messages and fields.}
 
 
-\req{The language for the FFM shall be able to formalize as much as possible of:}
-\subreq{State machines,}
-\subreq{Time-outs,}
-\subreq{Truth tables,}
-\subreq{Arithmetics,}
-\subreq{Braking curves,}
-\subreq{Logical statements,}
-\subreq{Messages and fields,}
-\subreq{Constraints,}
-\subreq{Logical relations.}
+\reqfixed{02}{070}{The language for the FFM shall be able to formalize as much as possible of:}
+\subreqfixed{02}{070}{01}{State machines,}
+\subreqfixed{02}{070}{02}{Time-outs,}
+\subreqfixed{02}{070}{03}{Truth tables,}
+\subreqfixed{02}{070}{04}{Arithmetics,}
+\subreqfixed{02}{070}{05}{Braking curves,}
+\subreqfixed{02}{070}{06}{Logical statements,}
+\subreqfixed{02}{070}{07}{Messages and fields.}
 
 
 \begin{comment}
@@ -645,78 +669,78 @@ It is to be noted that if (for example) braking curves are objects of the langua
 proved that they are sound, and that the code generation for these objects is also sound.
 \end{comment}
 
-\req{The mean of description of the SFM shall allow it to be executable.}
+\reqfixed{02}{071}{The mean of description of the SFM shall allow it to be simulable.}
 
 \begin{comment}
 This requirement is in the section ``language and formalism'' because in order for the model to 
-be executable, it has to be able to yield some algorithmic content and determinism (or a way 
+be simulable, it has to be able to yield some algorithmic content and determinism (or a way 
 of determining a non-deterministic model), which is indeed a property on the formal aspects
 of the model. In the other hand, it is also a requirement on the tool chain, hence there are also
 some requirements on this topic in Sect.~\ref{toolchain}.
 \end{comment}
 
-\req{It shall be possible to assert logical properties on the SFM and FFM (\emph{e.g.} invariants).}
-\subreq{It shall be possible to check the conformance of these properties at runtime on the SFM.}
-\subreq{It shall be possible to prove the conformance of the FFM to these properties.}
+\reqfixed{02}{072}{It shall be possible to assert logical properties on the SFM and FFM (\emph{e.g.} invariants).}
+\subreqfixed{02}{072}{01}{It shall be possible to check the conformance of these properties at runtime on the SFM.}
+\subreqfixed{02}{072}{02}{It shall be possible to prove the conformance of the FFM to these properties.}
 
-\reqfixed{01}{028}{The language and formalism should be evolutive.}
+\reqfixed{02}{073}{The language and formalism should be extensible.}
 
 
 \subsection{Tools chain}
 \label{toolchain}
 \subsubsection{Usage}
 
-\req{The tools chain shall be composed as far as possible of Open Source components licensed under a license compatible with the EUPL license.}
-\subreq{Closed source components may be used, but only if their use is not mandatory in the process, 
+\reqfixed{02}{074}{The tools chain shall be composed as far as possible of Open Source components licensed under a license compatible with the EUPL license.}
+\subreqfixed{02}{074}{01}{Closed source components may be used, but only if their use is not mandatory in the process, 
 or if an open source counterpart is provided.}
-\subreq{If a closed source component is used, it has to be displayed how an open source component has to be designed to replace the closed component later.}
+\subreqfixed{02}{074}{02}{If a closed source component is used, it has to be displayed how an open source component has to be designed to replace the closed component later.}
 
-\req{The tools chain shall be portable to common operating systems.}
-\subreq{The tool chain shall run stable on all main operating systems.}
-\subreq{The tool chain shall run with a good performance on all main operating systems.}
+\reqfixed{02}{075}{The tools chain shall be portable to common operating systems.}
+\subreqfixed{02}{075}{01}{The tool chain shall run stable on all main operating systems.}
+\subreqfixed{02}{075}{02}{The tool chain shall run with a good performance on all main operating systems.}
+\subreqfixed{02}{075}{03}{The tool chain shall run on at least one major open source operating system.}
 
-\req{The tools used in the tool chain shall be able to cooperate, \emph{i.e.} the outputs of one 
+\reqfixed{02}{076}{The tools used in the tool chain shall be able to cooperate, \emph{i.e.} the outputs of one 
 tool will be suitable to be used as the inputs of another tool.}
-\subreq{All possible input and output formats of a tool have to be documented.}
-\subreq{Open data formats shall be used for the tool cooperation.}
+\subreqfixed{02}{076}{01}{All possible input and output formats of a tool have to be documented.}
+\subreqfixed{02}{076}{02}{Open data formats shall be used for data exchange.}
 
 
 \reqfixed{01}{032}{If tools are required for configuration management, they will be considered as part of the tool chain.}
 
-\req{The tools chain shall allow to generate executable code from the model(s).}
+\reqfixed{02}{077}{The tools chain shall allow to generate executable code from the model(s).}
 
 \subsubsection{Information management}
-\req{The tools chain shall be sufficiently robust to allow large software management (at least covering the onboard 
-part of the SUBSET-026).}
-\subreq{It shall allow modularity at any level (proof, models, software).}
-\subreq{It shall allow the management of documentation.}
-\subreq{It shall allow distributed software development.}
-\subreq{It shall allow simultaneous multi user usage.}
-\subreq{It shall include an \emph{issue-tracking system}, in order to allow change management and 
+\reqfixed{02}{078}{The tools chain shall be sufficiently robust to allow large software management (at least covering the scope as identified by the SSRS).}
+\subreqfixed{02}{078}{01}{It shall allow modularity at any level (proof, models, software).}
+\subreqfixed{02}{078}{02}{It shall allow the management of documentation.}
+\subreqfixed{02}{078}{03}{It shall allow distributed software development.}
+\subreqfixed{02}{078}{04}{It shall allow simultaneous multi user usage.}
+\subreqfixed{02}{078}{05}{It shall include an \emph{issue-tracking system}, in order to allow change management and 
 errors/bugs management.}
-\subreq{It shall allow to document/track the differences between the models and the ERTMS reference.}
-\subreq{It shall support management of subsequent Subset-026 versions, as well as differences tracking between Subset-026 versions.}
-\subreq{It shall allow concurrent version development, or be compatible with tools allowing
+\subreqfixed{02}{078}{06}{It shall allow to document/track the differences between the models and the ERTMS reference.}
+\subreqfixed{02}{078}{07}{It shall support management of subsequent Subset-026 versions, as well as differences tracking between Subset-026 versions.}
+\subreqfixed{02}{078}{08}{It shall allow concurrent version development, or be compatible with tools allowing
 concurrent version development.}
-\subreq{The version management tools shall use model-based version control instead of text-based version control, when appropriate.}
-\subreq{In particular it shall allow to track the roles and responsibilities of each  participant on a configuration item, at each step of the project lifecycle.}
-\subreq{In particular, version management shall allow to track version of the safety properties 
+\subreqfixed{02}{078}{09}{The version management tools shall use model-based version control instead of text-based version control, when appropriate.}
+\subreqfixed{02}{078}{10}{In particular it shall allow to track the roles and responsibilities of each  participant on a configuration item, at each step of the project lifecycle.}
+\subreqfixed{02}{078}{11}{In particular, version management shall allow to track version of the safety properties 
 together with the models.}
 
 
-\reqfixed{01}{035}{The tool chain shall allow traceability between:}
-\subreqfixed{01}{035}{01}{the documentation/requirements and the models,}
-\subreqfixed{01}{035}{02}{the documentation/requirements and the tests,}
-\subreqfixed{01}{035}{03}{the models and the tests,}
-\subreqfixed{01}{035}{04}{the documentation/requirements and the models,}
-\subreqfixed{01}{035}{05}{the documentation/requirements and the safety properties/requirements,}
-\subreqfixed{01}{035}{06}{the models and the safety properties/requirements,}
-\subreqfixed{01}{035}{07}{the tests and the safety properties/requirements.}
-
-\req{The tools chain shall be compliant to EN 50128 for the corresponding tool level.}
+\reqfixed{02}{079}{The tool chain shall allow traceability between:}
+\subreqfixed{02}{079}{01}{the documentation/requirements and the models,}
+\subreqfixed{02}{079}{02}{the documentation/requirements and the tests,}
+\subreqfixed{02}{079}{03}{the models and the tests,}
+\subreqfixed{02}{079}{04}{each required level of implementation and the lower level (\emph{e.g.} higher level model \emph{vs} lower level model, 
+lower level model \emph{vs} source code\dots),}
+\subreqfixed{02}{079}{05}{the documentation/requirements and the models,}
+\subreqfixed{02}{079}{06}{the documentation/requirements and the safety properties/requirements,}
+\subreqfixed{02}{079}{07}{the models and the safety properties/requirements,}
+\subreqfixed{02}{079}{08}{the tests and the safety properties/requirements.}
 
 \subsubsection{Testing}
-\reqfixed{01}{036}{The SFM shall be executable in debug mode (step-by-step), allowing
+\reqfixed{01}{036}{The SFM shall be simulable in debug mode (step-by-step), allowing
 inspection of states, variables and I/O.}
 \reqfixed{01}{037}{The environment shall be emulated by high level construction of the inputs.}
 \begin{justif}
@@ -724,15 +748,24 @@ inspection of states, variables and I/O.}
 On the contrary, some automation will be available to define the behavior of the inputs.
 \end{justif}
 
+\reqfixed{02}{080}{The environment shall be emulated by construction of the inputs compliant to SUBSET-026.}
+\reqfixed{02}{081}{The tool chain shall allow time-based test cases.}
+
 \reqfixed{01}{038}{The tool chain shall allow to write, execute and store \emph{test cases} and \emph{use cases}
 for the SFM.}
-\req{Version management will allow to map test cases version to the SFM, the FFM and source code versions.}
-\req{The tool chain shall allow to generate test cases for the SFM, the FFM and source code from a test model.}
-\req{The tool chain shall allow to write, execute and store test sequences combining multiple test cases for the SFM, the FFM and source code.}
+\reqfixed{02}{082}{Version management will allow to map test cases version to the SFM, the FFM and source code versions.}
+\reqfixed{02}{083}{The tool chain shall allow to generate test cases for the SFM, the FFM and source code from a \emph{test model}.}
+\subreqfixed{02}{083}{01}{The \emph{test model} is independant from the tested model.}
+\begin{justif}
+The test model can be either a model of the environment, or a model of the same subsystem that is being tested, but in both cases
+this test model must be completely independant from the tested model.
+\end{justif}
+
+\reqfixed{02}{084}{The tool chain shall allow to write, execute and store test sequences combining multiple test cases for the SFM, the FFM and source code.}
 
 \subsubsection{Conformance to standards}
 
-\req{Each tool in the tool chain shall be classified among T1, T2 and T3 depending on its usage in the process.}
+\reqfixed{02}{085}{Each tool in the tool chain shall be classified among T1, T2 and T3 depending on its usage in the process.}
 \reqfixed{01}{042}{The tool chain shall conform to EN~50128 requirements, for the corresponding SIL and tool 
 class\,\footnote{Refer in particular to D2.2.}.}
 \subreqfixed{01}{042}{01}{For T2 and T3 tools\,\footnote{T2: Tools contributing to the test or verification of the code 
@@ -750,13 +783,14 @@ of the output w.r.t. their specification and the inputs shall be provided.}
 \subsubreqfixed{01}{042}{03}{02}{\dots for software transformation (\emph{e.g.} translation, compilation\dots).}
 
 \subsection{Demonstrator}
-\req{A demonstrator software will be built from the SFM.}
-\req{The demonstrator shall be non vital.}
-\req{The demonstrator shall be able to run in real time.}
-\req{The demonstrator shall comply to the standardized interfaces in order to be able to interface with other subsystems.}
-\req{The demonstrator shall be able to run on a SIL0 onboard computer.}
+\reqfixed{02}{086}{A demonstrator software will be built from the SFM.}
+\reqfixed{02}{087}{The demonstrator shall be non vital.}
+\reqfixed{02}{088}{The demonstrator shall be able to run in real time.}
+\reqfixed{02}{089}{The demonstrator shall comply to the standardized interfaces in order to be able to interface with other subsystems.}
+\reqfixed{02}{090}{The demonstrator shall be able to run on an onboard computer.}
 
 \docend
 
 \end{document}
-%LAST REQ USED = 42 % DO NOT MODIFY THIS LINE
+\end{document}
+%LAST REQ USED = 90 % DO NOT MODIFY THIS LINE

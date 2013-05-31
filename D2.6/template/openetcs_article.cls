@@ -3,7 +3,8 @@
 
 
 
-%% For openETCS ITEA2 Project 
+%% For openETCS ITEA2 Project
+
 
 
 %
@@ -11,6 +12,8 @@
 \ProvidesClass{openetcs}
 [2012/10/11 v0.1 Typesetting Technical Information Article of
 openETCS project ]
+%% David Mentres FIXME macro
+\newcommand{\FIXME}[1]{\marginpar{FIXME}\textsf{FIXME: #1}}
 \newcommand{\IsLicensedUnderCC}[1]{#1}
 \DeclareOption{nocc}{\renewcommand{\IsLicensedUnderCC}[1]{ }}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -43,7 +46,7 @@ openETCS project ]
 \def\@distributionfont{%
   \sffamily\fontseries{k}\fontsize{9pt}{11pt}\selectfont}
 \def\@eqtagfont{\sffamily\bfseries\footnotesize}
-\RequirePackage[a4paper, top=1in, bottom=0.7in,
+\RequirePackage[a4paper, top=1in, bottom=1.0in,
   left=1.25in, right=1.25in]{geometry}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{\baselineskip}
@@ -74,13 +77,14 @@ openETCS project ]
 \raggedbottom
 \RequirePackage{fancyhdr}
 \renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
 \fancyhfoffset{35pt}
 \pagestyle{fancy}
 \lhead{\textsf{\textbf{\footnotesize\@reportnum}}}
 \rhead{\textsf{\textbf{\footnotesize\thepage}}}
 \chead{}
 \lfoot{}
+%\cfoot{\scriptsize \textit{This work is licensed under the "openETCS Open License Terms" (oOLT).}}
 \cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black}\IsLicensedUnderCC{ - \includegraphics[width=3em]{ccbysa.png}}}
 \rfoot{}
 \newif\if@frontmatter
@@ -177,7 +181,7 @@ openETCS project ]
 \distribution{This work is licensed under a Creative Commons
   Attribution-ShareAlike 3.0 Unported License.\\ \includegraphics[width=40pt]{ccbysabig.png}}
 \def\preparedfor#1{\gdef\@preparedfor{#1}}
-\preparedfor{ITEA2 openETCS consortium\\ Europa}
+\preparedfor{openETCS@ITEA2 Project}
 \def\contractnum#1{\gdef\@contractnum{#1}}
 \contractnum{}
 \def\monitoredby#1{\gdef\@monitoredby{#1}}
@@ -194,8 +198,8 @@ openETCS project ]
       \parsep16\p@ \topsep\z@
       \let\fullwidthdisplay\relax
     }%
-    \item[\hskip\labelsep\bfseries Abstract:]% 
-}{% 
+    \item[\hskip\labelsep\bfseries Abstract:]%
+}{%
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
@@ -215,6 +219,8 @@ TERMS AND CONDITIONS.
 
 \url{http://creativecommons.org/licenses/by-sa/3.0/}
 }
+	  
+	  
 \newenvironment{@coverlist}{\begin{list}{}{%
       \leftmargin40\p@\rightmargin-85\p@%
       \topsep\z@\partopsep\z@\labelwidth\z@\labelsep\z@}\item{}}{%
@@ -250,7 +256,7 @@ TERMS AND CONDITIONS.
      \hfill\parbox{145\p@}{\centering
        \includegraphics[width=145\p@]{itea}\\
        {\bfseries
-         ITEA2 Project\\2012 -- 2015}}\\
+         ITEA2 Project\\Call 6 11025\\2012 -- 2015}}\\
        \par
      \vspace{0.5cm}%
      {\@wpfont\@wp\par}%
@@ -274,7 +280,7 @@ TERMS AND CONDITIONS.
    This page is intentionally left blank
    \thispagestyle{empty}\hbox{}\newpage
   \setcounter{page}{1}%
-  \vspace*{-1.5in}%
+  \vspace*{-0.5in}%
   \vspace*{-\topmargin}%
   \begin{@titlelist}%
     \sffamily\fontseries{k}\selectfont
@@ -299,7 +305,7 @@ TERMS AND CONDITIONS.
    \end{minipage}\rule[-2.7in]{\z@}{3.7in}\par
    \begin{minipage}{\textwidth}
      \@reporttype\par\vspace*{3\p@}%
-     {\IsLicensedUnderCC{\@distributionfont\@distribution\par}}%
+%     {\IsLicensedUnderCC{\@distributionfont\@distribution\par}}%
    \end{minipage}
  \end{@titlelist}%
   \vfill
@@ -501,18 +507,18 @@ TERMS AND CONDITIONS.
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{toc}}}
 \renewcommand\listoffigures{%
-  \chapter{\listfigurename}%
+  \specialchapter{\listfigurename}%
   \def\numberline##1{Figure ##1. }%
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{lof}}}
 \renewcommand\listoftables{%
-  \chapter{\listtablename}%
+  \specialchapter{\listtablename}%
   \def\numberline##1{Table ##1. }%
   {\parskip2.5\p@\footnotesize\sffamily\fontseries{k}\selectfont\raggedright
     \@starttoc{lot}}}
 \def\listfiguretablename{Figures and Tables}
 \newcommand\listoffiguresandtables{%
-  \chapter{\listfiguretablename}
+  \specialchapter{\listfiguretablename}
   {\sffamily\bfseries\normalsize Figures\par}%
   \vspace*{10pt}%
   \def\numberline##1{Figure ##1. }%
