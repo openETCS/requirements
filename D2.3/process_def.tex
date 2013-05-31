@@ -8,7 +8,7 @@
 
 To pursue the goals given in the introduction, the development cycle for the project is presented in this document.
 
-In order to minimise the number of different models and unused steps, the proposed process shall take into account the safety concepts from the early steps, i.e., the sub-system requirement specification (SSRS) and the semi-formal definition of the model instead of the SRS. Thus, these elements can be used in the safety process to deduce formal models as shown in figure \ref{fig:OETCSProcess}.
+In order to minimise the number of different models and to propose items which can be reused by railway actors after the end of the project, the proposed process shall take into account the safety concepts from the early steps, i.e., the sub-system requirement specification (SSRS) and the semi-formal definition of the model instead of the SRS. Thus, these elements can be used in the safety process to deduce formal models as shown in figure \ref{fig:OETCSProcess}.
 
 The two most important elements of the System life-cycle of EN 50129 and the Software development life-cycle model of EN
 50128 are the separation of the life-cycle into well-defined
@@ -31,7 +31,7 @@ Two main phases are defined :
 \item[System phase] to analyse the input documents and provide a model of the on
   board unit according to SUBSET-026 and the safety strategy:
 \begin{itemize}
-\item First, asystem analysis shall provide a \textit{Sub-System Requirement Specification} (SSRS) to define the scope of the system to  design and its structure, completed with an abstract \textit{Application Programming Interface} (API) to  give the main interfaces of the system and interaction between software and hardware items. \textit{Sub-System Hazard Analyses} (SSHA) allow the definition of safety properties.
+\item First, a system analysis shall provide a \textit{Sub-System Requirement Specification} (SSRS) to define the scope of the system to  design and its structure, completed with an abstract \textit{Application Programming Interface} (API) to  give the main interfaces of the system and interaction between software and hardware items. \textit{Sub-System Hazard Analyses} (SSHA) contains the safety analyses of the SSRS and  allows the definition of safety properties.
 \item Second, a model, at least semi-formal, is designed to describe sub-system
   architecture, main functions and to allocate sub-system requirements. This
   model can be completed with a formal model to focus on a subset of the
@@ -63,11 +63,11 @@ The proof that the process satisfies the requirements of the standard is out of 
 \label{sec:inputs}
 
 
-The main inputs of the OpenETCS project are the set of specifications provided by UNISIG as defined in annex A of CCS TSI. For the OpenETCS project, the initial reference is the baseline 3 (http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Current-Legal-Reference.aspx). This reference baseline shall be modified only by project decision (see R-WP2/D2.6-X-9).
-The main documents of this baseline for design activities are the \emph{System Requirement Specification} SUBSET-026~3.3.0 and the \textit{Functional Interface Specification}.
+The main inputs of the OpenETCS project are the set of specifications provided by UNISIG as defined in annex A of CCS TSI. For the OpenETCS project, the initial reference is the baseline 3 (\url{http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Current-Legal-Reference.aspx}). This reference baseline shall be modified only by project decision (see R-WP2/D2.6-X-9).
+The main documents of this baseline for design activities are the \emph{System Requirement Specification} SUBSET-026~3.3.0 and the \textit{Functional Interface Specification} SUBSET-034-3.0.0.
 
 These documents shall be completed with examples of national operating rules
-provided by the railway operators such as Deutsch Bahn and SNCF, and with
+provided by the railway operators such as Deutsche Bahn and SNCF, and with
 know-how of the historical ERTMS manufacturers.
 
 
@@ -97,12 +97,12 @@ Safety activities are necessary to define the safety requirements of the system 
 According to  design activities, two documents shall be produced during this phase :
 
 \begin{description}
-\item[Sub-System Requirement Specification (SSRS)] shall define the scope and the structure of the sub-system and  manage the requirement allocation (see R-WP2/D2.6-X-10).
+\item[Sub-System Requirement Specification (SSRS)] shall define the scope and the structure of the sub-system and  manage the requirement allocation on sub-systems and functions (see R-WP2/D2.6-X-10).
 \item[Application Programming Interface (API)] shall describe the interfaces of the sub-system.
 \end{description}
 
 
-According the CENELEC standards, these documents complete the input documents (SRS and FIS) to produce :
+According to the CENELEC standards, these documents complete the input documents (SRS and FIS) to produce :
 \begin{itemize}
 \item the \emph{System  Requirements Specification} which describes all requirements of the system
 \item the \emph{System Architecture Description
@@ -181,7 +181,7 @@ The aim of this phase is to provide a model of the sub-system from the SSRS:
 
 The main output of this step is a \textit{semi-formal model of the sub-system}  covering the architecture, interface description and requirement allocation of the SSRS.
 
-This semi-formal model can be completed with \textit{strictly formal models} to improve the understanding of the sub-system and to provide elements for verification and validation activities.
+This semi-formal model can be extended with \textit{strictly formal models} to improve the understanding of the sub-system and to provide elements for verification and validation activities.
 
 \subsubsection{Detailed Description}
 \label{sec:sys-dev-deta-descr}
@@ -192,7 +192,7 @@ In practice, all the requirements of SSRS (see R-WP2/D2.6-X-12.2.1) and of the s
 
 Traceability between semi-formal model and SSRS shall be provided (see R-WP2/D2.6-X-12.2.5): interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-X-12.2.3), as well as exported requirements  (see R-WP2/D2.6-X-12.2.6).
 
-This semi-formal model can be completed with strictly formal models to improve the understanding of some part of the sub-system (see R-WP2/D2.6-X-14) and to  provide elements for verification and validation activities especially concerning safety properties.
+This semi-formal model can be extended with strictly formal models to improve the understanding of some part of the sub-system (see R-WP2/D2.6-X-14) and to  provide elements for verification and validation activities especially concerning safety properties.
 
 To facilitate safety activities, the safety relevant function should be as much as possible insulated from non safety relevant functions (see R-WP2/D2.6-X-17).
 
@@ -222,9 +222,9 @@ The expressiveness of the language used to design the semi-formal and formal mod
 \end{itemize}
 
 
-In view of safety activities, the languages used for the models shall allow a declarative and formal expression of the safety properties (see R-WP2/D2.6-X-28), understandable by domain experts (see R-WP2/D2.6-X-28.1). The modelled safety properties shall be validated on the semi-formal model by test and on the strictly formal model by proof (see R-WP2/D2.6-X-23). Logical properties can be added to simplify the models but shall be validated just as the properties (see R-WP2/D2.6-X-34).
+In view of safety activities, the languages used for the models shall allow a declarative and formal expression of the safety properties (see R-WP2/D2.6-X-28), understandable by domain experts (see R-WP2/D2.6-X-28.1). The modelled safety properties shall be validated on the semi-formal model by test and on the strictly formal model by proof (see R-WP2/D2.6-X-23). Logical assertion can be added to simplify the models but shall be validated just as the properties or requirements (see R-WP2/D2.6-X-34).
 
-All means of description used shall be standardised or at least documented in detailed (see R-WP2/D2.6-X-29). 
+All means of description used shall be standardised or at least documented in detail (see R-WP2/D2.6-X-29). 
 
 According to  CENELEC standards, no specific constraints are given on the tools used during this modelling step: textual and graphical editors, with syntax checker, are needed to  produce documents and model. Tools classified as T1 according EN50128 can be used.
 
@@ -283,7 +283,7 @@ It shall provide all the elements to have testable requirements on a target plat
 
 The semi-formal model defined during the system phase shall be completed, keeping the same language or extending it to  cover specific software aspects.
 
-The model  shall be at least semi-formal, however, strictly  formal  methods can be suitable to such activities.
+The model  shall be at least semi-formal, however, strictly  formal  methods could be necessary for single activities.
 
 \subsubsection{Functional and safety branch}
 
@@ -311,9 +311,9 @@ From a design point of view, the outputs to produce in this phase are:
 \label{sec:sw-req-deta-descr}
 
 The first step of this phase is to give an explicit description of software requirements according to system requirements and safety properties.  Then, a software architecture shall be proposed according to software design choices detailed in  \textit{Software Architecture and Design}.
-Finally, each software component shall be modelled in details.
+Finally, each software component shall be modelled in detail.
 
-The method and process used to during this activities shall cover the constraints of sections 7.2, 7.3 and 7.4 of EN 50128 or justification shall be given.
+The method and process used during this activities shall cover the constraints of sections 7.2, 7.3 and 7.4 of EN 50128 or justification shall be given.
 
 
 However this model takes care of the following :
@@ -382,7 +382,7 @@ However, the description of how to  produce such a code in a safe way is part of
 \label{sec:code-means}
 
 Proposal shall include methods and tools covering criteria of § 7.5 and §6.7 of EN 50128.
-If an automatic generation of the code from the formal model is proposed, the tool in charge of this generation shall covered criteria of T3 tools.
+If an automatic generation of the code from the formal model is proposed, the tool in charge of this generation shall cover criteria of T3 tools.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

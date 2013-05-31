@@ -9,7 +9,7 @@
   <Author>Baro Sylvain</Author>
   <LastAuthor>Marielle Doche</LastAuthor>
   <Created>2013-02-25T10:47:19Z</Created>
-  <LastSaved>2013-05-16T09:43:57Z</LastSaved>
+  <LastSaved>2013-05-31T13:18:59Z</LastSaved>
   <Company>SNCF Master SEVEN</Company>
   <Version>14.00</Version>
  </DocumentProperties>
@@ -21,6 +21,7 @@
   <WindowWidth>15600</WindowWidth>
   <WindowTopX>480</WindowTopX>
   <WindowTopY>90</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -203,7 +204,7 @@
    <Interior ss:Color="#CCFFFF" ss:Pattern="Solid"/>
   </Style>
   <Style ss:ID="s85">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -213,6 +214,26 @@
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
   </Style>
   <Style ss:ID="s86">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s87">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s88">
    <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -222,57 +243,36 @@
    </Borders>
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s89">
+  <Style ss:ID="s91">
    <Borders/>
   </Style>
-  <Style ss:ID="s90">
+  <Style ss:ID="s92">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Borders/>
    <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
    <Interior/>
   </Style>
-  <Style ss:ID="s91">
-   <Borders/>
-   <Interior/>
-  </Style>
-  <Style ss:ID="s92">
-   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
-   <Borders/>
-   <Interior/>
-  </Style>
   <Style ss:ID="s93">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Borders/>
    <Interior/>
   </Style>
   <Style ss:ID="s94">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders/>
-   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
    <Interior/>
   </Style>
   <Style ss:ID="s95">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
-   <Borders>
-    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
-   </Borders>
-   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
-   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+   <Borders/>
+   <Interior/>
   </Style>
   <Style ss:ID="s96">
-   <Borders>
-    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
-    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
-   </Borders>
-   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
-   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
+   <Interior/>
   </Style>
   <Style ss:ID="s97">
-   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -283,6 +283,27 @@
    <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
   </Style>
   <Style ss:ID="s98">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s99">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s100">
    <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -293,7 +314,7 @@
    <Font ss:FontName="Arial" x:Family="Swiss"/>
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s99">
+  <Style ss:ID="s101">
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
     <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -303,10 +324,10 @@
    <Font ss:FontName="Arial" x:Family="Swiss"/>
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s103">
+  <Style ss:ID="s105">
    <Interior/>
   </Style>
-  <Style ss:ID="s105" ss:Parent="s62">
+  <Style ss:ID="s107" ss:Parent="s62">
    <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -317,7 +338,7 @@
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
    <Protection/>
   </Style>
-  <Style ss:ID="s107">
+  <Style ss:ID="s109">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -327,7 +348,7 @@
    </Borders>
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s108">
+  <Style ss:ID="s110">
    <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
    <Borders>
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
@@ -339,7 +360,18 @@
    <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
    <NumberFormat ss:Format="@"/>
   </Style>
-  <Style ss:ID="s109">
+  <Style ss:ID="s113">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s114">
    <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
   </Style>
  </Styles>
@@ -443,15 +475,15 @@
     <Cell ss:StyleID="s82"><Data ss:Type="String">TU Braunschweig (TU-BS)</Data></Cell>
     <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
    </Row>
-   <Row>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Merlin Pokam</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">AEbt Angewandte Eisenbahntechnik GmbH&#10;  </Data></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Marc Behrens</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">DLR</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">MB</Data></Cell>
    </Row>
    <Row>
     <Cell ss:StyleID="s82"/>
@@ -582,11 +614,10 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>24</ActiveRow>
+     <ActiveRow>21</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -594,476 +625,935 @@
   </WorksheetOptions>
  </Worksheet>
  <Worksheet ss:Name="Comments">
-  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="66" x:FullColumns="1"
+  <Names>
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=Comments!R3C1:R79C7"
+    ss:Hidden="1"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="79" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="60">
-   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="28.5"/>
+   <Column ss:StyleID="s87" ss:AutoFitWidth="0" ss:Width="28.5"/>
    <Column ss:StyleID="s82" ss:AutoFitWidth="0"/>
-   <Column ss:StyleID="s86" ss:AutoFitWidth="0" ss:Width="63.75"/>
+   <Column ss:StyleID="s88" ss:AutoFitWidth="0" ss:Width="63.75"/>
    <Column ss:StyleID="s82" ss:AutoFitWidth="0"/>
-   <Column ss:StyleID="s86" ss:AutoFitWidth="0" ss:Width="287.25"/>
-   <Column ss:StyleID="s86" ss:AutoFitWidth="0" ss:Width="331.5"/>
+   <Column ss:StyleID="s88" ss:AutoFitWidth="0" ss:Width="287.25"/>
+   <Column ss:StyleID="s88" ss:AutoFitWidth="0" ss:Width="331.5"/>
    <Column ss:StyleID="s82" ss:Width="73.5"/>
-   <Row ss:AutoFitHeight="0" ss:Height="20.25" ss:StyleID="s89">
-    <Cell ss:StyleID="s90"><Data ss:Type="String">Comments</Data></Cell>
-    <Cell ss:StyleID="s91"/>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s91"/>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s91"/>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="20.25" ss:StyleID="s89">
+   <Row ss:AutoFitHeight="0" ss:Height="20.25" ss:StyleID="s91">
+    <Cell ss:StyleID="s92"><Data ss:Type="String">Comments</Data></Cell>
     <Cell ss:StyleID="s93"/>
     <Cell ss:StyleID="s94"/>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s91"/>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s92"/>
-    <Cell ss:StyleID="s91"/>
+    <Cell ss:StyleID="s93"/>
+    <Cell ss:StyleID="s94"/>
+    <Cell ss:StyleID="s94"/>
+    <Cell ss:StyleID="s93"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="20.25" ss:StyleID="s91">
+    <Cell ss:StyleID="s95"/>
+    <Cell ss:StyleID="s96"/>
+    <Cell ss:StyleID="s94"/>
+    <Cell ss:StyleID="s93"/>
+    <Cell ss:StyleID="s94"/>
+    <Cell ss:StyleID="s94"/>
+    <Cell ss:StyleID="s93"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s95"><Data ss:Type="String">#</Data></Cell>
-    <Cell ss:StyleID="s96"><Data ss:Type="String">Reviewer</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Page/§/Req.</Data><Comment
+    <Cell ss:StyleID="s97"><Data ss:Type="String">#</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">Reviewer</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Page/§/Req.</Data><Comment
       ss:Author="Baro Sylvain"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
          html:Face="Tahoma" html:Size="9" html:Color="#000000">Baro Sylvain:</Font></B><Font
-        html:Face="Tahoma" html:Size="9" html:Color="#000000">&#10;Page number, paragraph number or requirement number depending of what is more appropriate in this document</Font></ss:Data></Comment></Cell>
-    <Cell ss:StyleID="s96"><Data ss:Type="String">Maj/Min/Q</Data><Comment
+        html:Face="Tahoma" html:Size="9" html:Color="#000000">&#10;Page number, paragraph number or requirement number depending of what is more appropriate in this document</Font></ss:Data></Comment><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">Maj/Min/Q</Data><Comment
       ss:Author="Baro Sylvain"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
          html:Face="Tahoma" html:Size="9" html:Color="#000000">Baro Sylvain:</Font></B><Font
-        html:Face="Tahoma" html:Size="9" html:Color="#000000">&#10;Major/Minor/Question</Font></ss:Data></Comment></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Comment</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Answer</Data></Cell>
-    <Cell ss:StyleID="s96"><Data ss:Type="String">OK/NOK/OPEN</Data><Comment
+        html:Face="Tahoma" html:Size="9" html:Color="#000000">&#10;Major/Minor/Question</Font></ss:Data></Comment><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Comment</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Answer</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">OK/NOK/OPEN</Data><Comment
       ss:Author="Baro Sylvain"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
          html:Face="Tahoma" html:Size="9" html:Color="#000000">Baro Sylvain:</Font></B><Font
-        html:Face="Tahoma" html:Size="9" html:Color="#000000">&#10;OPEN = Open issue, added on the dedicated sheet.&#10;</Font></ss:Data></Comment></Cell>
+        html:Face="Tahoma" html:Size="9" html:Color="#000000">&#10;OPEN = Open issue, added on the dedicated sheet.&#10;</Font></ss:Data></Comment><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">cover / all</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">The document template should be updated. The new template can be found on git in the ecosystem repository.</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">cover / all</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">The document template should be updated. The new template can be found on git in the ecosystem repository.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="30">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell><Data ss:Type="String">p 7, §1.1</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Height="68.25">
+    <Cell><Data ss:Type="Number">2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p 7, §1.1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell><ss:Data ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40"> <Font
-       html:Face="Calibri" html:Size="11">Maybe the list of tools/things included in the tool chain should be exhaustive</Font></ss:Data></Cell>
+       html:Face="Calibri" html:Size="11">Maybe the list of tools/things included in the tool chain should be exhaustive</Font></ss:Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">It is the role of this document to  identify when tools/things can be included in the toolchain, but it is the role of WP7 to  clearly identify the tools to  include in the toolchain. Thus it is not possible, at this stage, to  identify an exhaustive list of tools.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 7, §1.1</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">“can be used by the industrial as reference” -&gt; “can be used by the industry as reference”</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 7, §1.1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">“can be used by the industrial as reference” -&gt; “can be used by the industry as reference”</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">§2</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">Maybe bibtex should be used to reference documents</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">§2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maybe bibtex should be used to reference documents</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="114.75">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">§4</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;First, asystem&quot; -&gt; &quot;First, a system&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">§4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;First, asystem&quot; -&gt; &quot;First, a system&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 1, §4</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40">&quot;This model <U>can be</U><Font> completed with a formal model to focus on a subset of the functions or properties&quot;. Should this really be &quot;can be&quot; or rather &quot;will be&quot;? </Font></ss:Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 1, §4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40">&quot;This model <U>can be</U><Font> completed with a formal model to focus on a subset of the functions or properties&quot;. Should this really be &quot;can be&quot; or rather &quot;will be&quot;? </Font></ss:Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="76.5">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 2, §4.2</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">consider using the hyperref package to make links clickable</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 2, §4.2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">consider using the hyperref package to make links clickable</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 2, §4.2</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;Deutsch Bahn&quot; -&gt; &quot;Deutsche Bahn&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 2, §4.2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;Deutsch Bahn&quot; -&gt; &quot;Deutsche Bahn&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 15, §4.4.4</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;documented in detailed&quot; -&gt; &quot;documented in detail&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 15, §4.4.4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;documented in detailed&quot; -&gt; &quot;documented in detail&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 17, §4.5.3</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;shall be modelled in details.&quot; -&gt; &quot;shall be modelled in detail.&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 17, §4.5.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;shall be modelled in details.&quot; -&gt; &quot;shall be modelled in detail.&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 17, §4.5.4</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;The method and process used to during&quot; -&gt; &quot;The method and process used during&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 17, §4.5.4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;The method and process used to during&quot; -&gt; &quot;The method and process used during&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">PM</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">p 18, §4.6.3</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;shall covered criteria&quot; -&gt; &quot;shall cover the criteria&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">PM</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">p 18, §4.6.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;shall covered criteria&quot; -&gt; &quot;shall cover the criteria&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">general</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">The document tends to exclude safety aspects from the process. Exclusion is not the right approach. We have to provide a process which handles vital and non-vital cases. We will have some add-ons for safety-critical parts as on-top.</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">13</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">general</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">The document tends to exclude safety aspects from the process. Exclusion is not the right approach. We have to provide a process which handles vital and non-vital cases. We will have some add-ons for safety-critical parts as on-top.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">No safety aspects are not excluded, for example with classification of Safety/ Non Safety function, or traceability  to safety properties; However the Safety process is out of the scope of this document and is defined in the safety plan.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">NOK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">general</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">I would like to seee a proper definition of &quot;vital&quot;, &quot;non-vital&quot;, &quot;safety&quot;, &quot;formal&quot;, &quot;strictly formal&quot;, &quot;semi-formal&quot; in one oif the requirements documents. I believe the process would be a nice place.</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">14</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">general</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">I would like to seee a proper definition of &quot;vital&quot;, &quot;non-vital&quot;, &quot;safety&quot;, &quot;formal&quot;, &quot;strictly formal&quot;, &quot;semi-formal&quot; in one oif the requirements documents. I believe the process would be a nice place.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">p 6, line 8</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">Missing purpose: &quot;to give feedback to ERA/UNISIG&quot; in order to improve the standards to become un-ambigous and correct&quot;</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="81" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">15</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">p 6, line 8</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">Missing purpose: &quot;to give feedback to ERA/UNISIG&quot; in order to improve the standards to become un-ambigous and correct&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">This purpose is not clearly identified in FPP or in minutes of past meeting. Moreover, it is not directly in the scope of the process definition, but can be achieve by the most general goal &quot;A semi-formal reference specification for the ETCS requirements and architecture, completed by strictly formal models of sub-parts&quot;.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">NOK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">p 6, line 8</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">Missing purpose: &quot;to provide an executable reference implementation on a non-vital system&quot;</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="33" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">16</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">p 6, line 8</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">Missing purpose: &quot;to provide an executable reference implementation on a non-vital system&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">No, this purpose is covered by the last goal &quot;Provide an executable software package generated from  the specification of on-board ETCS&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">NOK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">p 11, line 8</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">The sentence &quot;This refence baseline… &quot; is not clear. The documents as such are out of scope of the project. Please, clarify.</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">17</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">p 11, line 8</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">The sentence &quot;This refence baseline… &quot; is not clear. The documents as such are out of scope of the project. Please, clarify.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">p 11, §4.3.1</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">Missing objective: &quot;message sequence charts showing the communication between functional blocks&quot;</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="75" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">18</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">p 11, §4.3.1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">Missing objective: &quot;message sequence charts showing the communication between functional blocks&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">Objective is to define the architecture of the system and interfaces (excepecially internal interfaces between function).  Message sequence charts is a candidate mean to  describe communications, not an objective. If it is the best solution according the other objectives (formal models,...)  is out of the scope of this document. </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">NOK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">p 11, §4.3.2</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">The term &quot;requirement allocation&quot; is not clear. Please, rephrase.</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">19</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">p 11, §4.3.2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">The term &quot;requirement allocation&quot; is not clear. Please, rephrase.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">&quot;requirement allocation on sub-systems and functions&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">p 12, bullets</Data></Cell>
-    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s86"><Data ss:Type="String">you limit our activity to train only - which is correct. However, in the interface with track we need to take those parts into scope which are necessary to understand the behaviour of the train. We should have this statement somewhere.</Data></Cell>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="70.5" ss:StyleID="s105">
+    <Cell ss:StyleID="s87"><Data ss:Type="Number">20</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">BH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">p 12, bullets</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">you limit our activity to train only - which is correct. However, in the interface with track we need to take those parts into scope which are necessary to understand the behaviour of the train. We should have this statement somewhere.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">The role of interface definition is to give sufficient information on interaction between train and other subsystems (in particular trackside)  to  succeed to  design the on-board unit. Allowing to understand the role of the whole a ERTMS system, shall be ensure by SRS and other TIS documents.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">NOK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p 12, 5th bullet</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">text is not consistent with the description in D2.6. Please, take description from requirements.</Data></Cell>
+    <Cell><Data ss:Type="Number">21</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p 12, 5th bullet</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">text is not consistent with the description in D2.6. Please, take description from requirements.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p12, line 20</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">Please, define the term &quot;safety tag&quot;</Data></Cell>
-   </Row>
-   <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p12, line 28</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">SSRS and API have to be structured documents.</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p12, § 4.3.4</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">I propose to make use of message sequence charts in the SSRS. In telecom they are part of the ETSI standards and they are close to formal. I did not see them so far in SRS.</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p13, line 5</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">natural language is not sufficient. We need structure language to reach our target</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p13, §4.4.2, 2ndpart</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">Please, replace &quot;can be completed&quot; by &quot;can be extended&quot;</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p13, §4.4.3</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">What is meant with &quot;subsystem hazard analysis&quot;? Please, specify&quot;</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p14, line 1</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">Please, replace &quot;can be completed with &quot; by &quot;can be extended by&quot;</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p14, §4.5.2, Outputs</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">We have no &quot;design choices&quot; in Baseline 3. Clear statement from ERA. Please, delete this part of the sentence.</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p15, Figure 3</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">In this picture, the Sil 4 shall  be shaded with &quot;out of scope of project&quot; (like done before in other figures).</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">BH</Data></Cell>
-    <Cell><Data ss:Type="String">p17, line 3</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">We have no &quot;design choices&quot; in Baseline 3. Clear statement from ERA. Please, delete this part of the sentence.</Data></Cell>
+    <Cell><Data ss:Type="Number">22</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p12, line 20</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Please, define the term &quot;safety tag&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="51">
-    <Cell ss:Index="2"><Data ss:Type="String">US</Data></Cell>
-    <Cell><Data ss:Type="String">Tab Review of this Sheet, &quot;Document version&quot;</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">The review object (the document) should be referenced unambiguously with an URL + hash value + version tag on github.</Data></Cell>
+    <Cell><Data ss:Type="Number">23</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p12, line 28</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SSRS and API have to be structured documents.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">What means &quot;structured documents &quot; ? SSRS and API  are textual  documents and are not simple models. Obviously, the documents shall be structured to  be used later and shall be completed by  semi-formal models.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="177">
+    <Cell><Data ss:Type="Number">24</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p12, § 4.3.4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">I propose to make use of message sequence charts in the SSRS. In telecom they are part of the ETSI standards and they are close to formal. I did not see them so far in SRS.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Message sequence charts is a old technic used for a long time in telecom but less in railway because less adapted to  the domain (they  allow to  describe well only  communication mechanisms, but not the other artifacts of railway complex systems). However, more recent semi-formal  approach (as UML, SysML, domain specific language,…)  take message sequence charts as one of  possible means of descirption in a toolkit to  specify  complex systems.&#10;Question if we have to use message sequence chart or not to  formalize communication exchanges is to  discuss during benchmark of methods, the question of this document is to  raise the need of means  (including communication description) to  provide semi-formal models to associated to  SSRS.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="88.5">
+    <Cell><Data ss:Type="Number">25</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p13, line 5</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">natural language is not sufficient. We need structure language to reach our target</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">The remark is not clear :  what means &quot;structure manguage&quot; ?&#10;In the document, &quot;natural language&quot; is associated only to requirement, which means that requirements, in the SSRS shall be at least in natural language. If we start to add a &quot;structure&quot; to  the requirement description, we start to  write a semi-formal  expression of the requirement which is a part of the next phase.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">26</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p13, §4.4.2, 2ndpart</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Please, replace &quot;can be completed&quot; by &quot;can be extended&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">27</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p13, §4.4.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">What is meant with &quot;subsystem hazard analysis&quot;? Please, specify&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">This is the main safety analysis activities at sub-system  level. This shall be described in the Safety process.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">28</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p14, line 1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Please, replace &quot;can be completed with &quot; by &quot;can be extended by&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="110.25">
+    <Cell><Data ss:Type="Number">29</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p14, §4.5.2, Outputs</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">We have no &quot;design choices&quot; in Baseline 3. Clear statement from ERA. Please, delete this part of the sentence.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Could you give explicitly the ERA statement ?&#10;We can imagine few design choices at system level for baseline 3 (but it has be said in different meetings tha know-how of the industrials are mainful to  design such a system), however as discussed in Charleroi meeting between experts in modeling railway sytems,  and as required by EN50128 § 7.3, some choices shall be done at software level for exemple the definition of the software architecture. These choices shall be documented.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">30</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p15, Figure 3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">In this picture, the Sil 4 shall  be shaded with &quot;out of scope of project&quot; (like done before in other figures).</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">31</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">BH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">p17, line 3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">We have no &quot;design choices&quot; in Baseline 3. Clear statement from ERA. Please, delete this part of the sentence.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">same as remark 29</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell><Data ss:Type="Number">32</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">US</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Tab Review of this Sheet, &quot;Document version&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">The review object (the document) should be referenced unambiguously with an URL + hash value + version tag on github.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="63.75">
-    <Cell ss:Index="2"><Data ss:Type="String">US</Data></Cell>
-    <Cell ss:StyleID="s105" ss:HRef="https://github.com/openETCS/requirements/tree/master/D2.3"><Data
-      ss:Type="String">https://github.com/openETCS/requirements/tree/master/D2.3</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">On https://github.com/openETCS/requirements/tree/master/D2.3 there are different document releases like D2_3, D2_3_0, D2_3_1. The obsolete ones should be deleted. </Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">US</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s107" ss:HRef="https://github.com/openETCS/requirements/tree/master/D2.3"><Data
+      ss:Type="String">https://github.com/openETCS/requirements/tree/master/D2.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">On https://github.com/openETCS/requirements/tree/master/D2.3 there are different document releases like D2_3, D2_3_0, D2_3_1. The obsolete ones should be deleted. </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">US</Data></Cell>
-    <Cell ss:Index="4"><Data ss:Type="String">-</Data></Cell>
-    <Cell><Data ss:Type="String">I don't have further review remarks. </Data></Cell>
+    <Cell><Data ss:Type="Number">34</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">US</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="4"><Data ss:Type="String">-</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">I don't have further review remarks. </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">1.1</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">Definition +of+ the safety case (...)</Data></Cell>
-   </Row>
-   <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">4.1</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">I don't understand &quot;unused steps&quot;</Data></Cell>
-   </Row>
-   <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">4.1</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">&quot;asystem&quot; =&gt; &quot;system&quot;</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">4.1</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">Role of the SSHA is also to be the safety analysis of the SSRS, isn't it ?</Data></Cell>
-   </Row>
-   <Row>
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">4.3.2</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">According +to+ the CENELEC (...)</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">4.3.4</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">It seems to lack the fact that the architecture in the SSRS should be written down in a semi-formal MoD. Is it on purpose?</Data></Cell>
+    <Cell><Data ss:Type="Number">35</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">1.1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Definition +of+ the safety case (...)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell><Data ss:Type="String">4.6.3</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">In the &quot;Means and tools&quot; paragraph: in this case, will the T3 code generator be part of the openETCS (full, partly, or not at all)?</Data></Cell>
+    <Cell><Data ss:Type="Number">36</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">4.1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">I don't understand &quot;unused steps&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Yes it is not clear: changed to: In order to minimise the number of different models and to propose items which can be reused by railway actors after the end of the project</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">37</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">4.1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">&quot;asystem&quot; =&gt; &quot;system&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell ss:Index="2"><Data ss:Type="String">SBA</Data></Cell>
-    <Cell ss:StyleID="s107"><Data ss:Type="Number">5</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell><Data ss:Type="String">I don't understand this paragraph. All seems to be already covered by 4.1 and 4.3.</Data></Cell>
+    <Cell><Data ss:Type="Number">38</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">4.1</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Role of the SSHA is also to be the safety analysis of the SSRS, isn't it ?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Yes, added</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">39</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">4.3.2</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">According +to+ the CENELEC (...)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">40</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">4.3.4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">It seems to lack the fact that the architecture in the SSRS should be written down in a semi-formal MoD. Is it on purpose?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">It is in the first sentence of this section, isn't it ?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell><Data ss:Type="Number">41</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">4.6.3</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">In the &quot;Means and tools&quot; paragraph: in this case, will the T3 code generator be part of the openETCS (full, partly, or not at all)?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">This is a good question, to link to remark 30  on figure 3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">42</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SBA</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">5</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">I don't understand this paragraph. All seems to be already covered by 4.1 and 4.3.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="165.75">
-    <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="String">SPI</Data></Cell>
-    <Cell><Data ss:Type="String">page 6</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s98"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40">&quot;The objective is to cover as much as possible of the functionality of the on-board&#10;unit described in SUBSET-026&quot;.&#10;-&gt; &quot;as much as possible&quot; should be replaced by &quot;100%&quot;. It is clearly stated in Charleroi meeting minutes that the SFM shall be complete: <I>&quot;Getting such an OpenETCS OBU reference result from SSRS, 100% semi-formal modelling of the SSRS,&#10;simulation and full validation of the Non-SIL executable code resulting from transforming this semi-formalmodel&#10;to source code with a no class-Tx tool and then compiling this source code with standard (no class Tx)&#10;compiler.&quot;&#10;See OETCS_Safety Workshop_130328-29_MoM_v1.0</I></ss:Data></Cell>
+    <Cell><Data ss:Type="Number">43</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SPI</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">page 6</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40">&quot;The objective is to cover as much as possible of the functionality of the on-board&#10;unit described in SUBSET-026&quot;.&#10;-&gt; &quot;as much as possible&quot; should be replaced by &quot;100%&quot;. It is clearly stated in Charleroi meeting minutes that the SFM shall be complete: <I>&quot;Getting such an OpenETCS OBU reference result from SSRS, 100% semi-formal modelling of the SSRS,&#10;simulation and full validation of the Non-SIL executable code resulting from transforming this semi-formalmodel&#10;to source code with a no class-Tx tool and then compiling this source code with standard (no class Tx)&#10;compiler.&quot;&#10;See OETCS_Safety Workshop_130328-29_MoM_v1.0</I></ss:Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">According to discussion of railway experts during the meeting in Charleroi (comments are not taken into account in the minutes), and during the meeting in Paris previously, it is not possible to engage in 100%.   </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="114.75">
-    <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="String">SPI</Data></Cell>
-    <Cell><Data ss:Type="String">Page 7</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;For the 2 first objectives, the semi-formal model shall take into account the safety constraints to&#10;apply to the design of a critical railway system.&quot;&#10;-&gt; The SFM shall only take into account the SSRS. It doesn't have to take into account the safety constraints applied to the design of critical railway systems.&#10;This is confirmed by table Table 1: OpenETCS safety Policy, from minutes of Charleroi Safety meeting.&#10;See OETCS_Safety Workshop_130328-29_MoM_v1.0</Data></Cell>
+    <Cell><Data ss:Type="Number">44</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SPI</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Page 7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;For the 2 first objectives, the semi-formal model shall take into account the safety constraints to&#10;apply to the design of a critical railway system.&quot;&#10;-&gt; The SFM shall only take into account the SSRS. It doesn't have to take into account the safety constraints applied to the design of critical railway systems.&#10;This is confirmed by table Table 1: OpenETCS safety Policy, from minutes of Charleroi Safety meeting.&#10;See OETCS_Safety Workshop_130328-29_MoM_v1.0</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">SSRS take into account some safety contraints, and SFM  shall take them into account to provide a safety software.&#10;This appear in Table 1  (second ligne)of the minutes SFM is defined at System Functionnal level , with safety verification</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="63.75">
-    <Cell><Data ss:Type="Number">3</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">SPI</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">Page 15</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">&quot;Tools classified as T1 according EN50128 can be used&quot;&#10;Table 1: OpenETCS safety Policy, from minutes of Charleroi Safety meeting, says that tools for SMF can be &lt;= T1, i.e. CENELEC is not even applicable for the SFM tools.&#10;See OETCS_Safety Workshop_130328-29_MoM_v1.0</Data></Cell>
+    <Cell><Data ss:Type="Number">45</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">SPI</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">Page 15</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">&quot;Tools classified as T1 according EN50128 can be used&quot;&#10;Table 1: OpenETCS safety Policy, from minutes of Charleroi Safety meeting, says that tools for SMF can be &lt;= T1, i.e. CENELEC is not even applicable for the SFM tools.&#10;See OETCS_Safety Workshop_130328-29_MoM_v1.0</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">T1 means : no contraints. There is no tools classified under T1.&#10;CENELEC shall be applicable if the SFM take into account tools for VnV, and as it is linked to the development of a SIL4 software.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="String">HH</Data></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">9 / 4.1</Data></Cell>
-    <Cell><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">The blue items in Fig. 2 are named as if they were artifacts, not activities (of course there is an activity to create an artifact).</Data></Cell>
+    <Cell><Data ss:Type="Number">46</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">HH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">9 / 4.1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">The blue items in Fig. 2 are named as if they were artifacts, not activities (of course there is an activity to create an artifact).</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="51">
-    <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="String">HH</Data></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">10-14 / 4</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Maj</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">The term &quot;subsystem&quot; seems to be used to denote the software to be developed (ideally completely, in reality only partly) by openETCS. If this is true, this should be stated prominently.</Data></Cell>
+    <Cell><Data ss:Type="Number">47</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">HH</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">10-14 / 4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">The term &quot;subsystem&quot; seems to be used to denote the software to be developed (ideally completely, in reality only partly) by openETCS. If this is true, this should be stated prominently.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row>
-    <Cell><Data ss:Type="Number">3</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">HH</Data></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">11 / 4.3.1</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Q</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">Are all the extra-functional aspects in the scope of openETCS?</Data></Cell>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell><Data ss:Type="Number">48</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">HH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">11 / 4.3.1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Q</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">Are all the extra-functional aspects in the scope of openETCS?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">It depends  what means &quot;extra-functional&quot; , safety is in the scope of the project but not in the one of this document, performance is in the scope of the project but not specify in SRS (maybe his can be deduce from SSHA…) ..</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="63.75">
-    <Cell><Data ss:Type="Number">4</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">HH</Data></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">12 / 4.3.3</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Min</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">The API describes the interface of the hardware which is used by the software, not how the software uses it. I.e., the API is the interface of a system component and does not describe the interaction of the components (which are software and hardware in this case). </Data></Cell>
+    <Cell><Data ss:Type="Number">49</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">HH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">12 / 4.3.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Min</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">The API describes the interface of the hardware which is used by the software, not how the software uses it. I.e., the API is the interface of a system component and does not describe the interaction of the components (which are software and hardware in this case). </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Interactions between software components is a part of the system architecture( thus a part of SSRS). API describes as said in 4.3.3 interactions between software and hardware.  But I not agree to say the link between them are directed.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="89.25">
-    <Cell><Data ss:Type="Number">5</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">HH</Data></Cell>
-    <Cell ss:StyleID="s108"><Data ss:Type="String">17 / 4.5.3</Data></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Q</Data></Cell>
-    <Cell ss:StyleID="s98"><Data ss:Type="String">Is it decided to produce a formal model for the safety-aware branch? Realistically, a full development will not include a formal model of everything (the full software), at least not in the next few years. openETCS could provide/explore some completely formal steps, but IMHO would be well advised to integrate them within a less ambitious but realisable overall approach. (We talk about a rather large software system.)</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">HH</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">17 / 4.5.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">Q</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">Is it decided to produce a formal model for the safety-aware branch? Realistically, a full development will not include a formal model of everything (the full software), at least not in the next few years. openETCS could provide/explore some completely formal steps, but IMHO would be well advised to integrate them within a less ambitious but realisable overall approach. (We talk about a rather large software system.)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">for the moment, for the safety branch, it is planned to focuss on subset of functions to develop in a formal way. This subset shall be defined later (after first SSRS version) and its aim is to show the feasibility of the proposed approach and toolchain.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">6</Data></Cell>
-    <Cell><Data ss:Type="String">min</Data></Cell>
-    <Cell><Data ss:Type="String">&quot;output is a model, at least semi-formal, understandable by many formal approaches&quot; - I'm not sure whether this is acutally possible, what does understandable means in this context</Data></Cell>
+    <Cell><Data ss:Type="Number">51</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">6</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">&quot;output is a model, at least semi-formal, understandable by many formal approaches&quot; - I'm not sure whether this is acutally possible, what does understandable means in this context</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="51">
-    <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">7</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">Section &quot;Provide an executable software package generated from the specification of on-board ETCS&quot; includes twice the fact that the model should be a reference, but for me the secound sentence is not really clear. </Data></Cell>
+    <Cell><Data ss:Type="Number">52</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Section &quot;Provide an executable software package generated from the specification of on-board ETCS&quot; includes twice the fact that the model should be a reference, but for me the secound sentence is not really clear. </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">3</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="String">8 (Figure 1)</Data></Cell>
-    <Cell><Data ss:Type="String">min</Data></Cell>
-    <Cell><Data ss:Type="String">Better executable  (not running )</Data></Cell>
+    <Cell><Data ss:Type="Number">53</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">8 (Figure 1)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Better executable  (not running )</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
-    <Cell><Data ss:Type="Number">4</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="String">8 (Figure 1)</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">Maybe better models on the same level and executable part on the same level do demonstrate the steps</Data></Cell>
+    <Cell><Data ss:Type="Number">54</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">8 (Figure 1)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maybe better models on the same level and executable part on the same level do demonstrate the steps</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">5</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">9</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">What is meant with &quot;unused steps&quot; in this context?</Data></Cell>
+    <Cell><Data ss:Type="Number">55</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">9</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">What is meant with &quot;unused steps&quot; in this context?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">cf remark 36</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">6</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">10</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">The pharagraph &quot;Software phase&quot; is difficult to understand</Data></Cell>
+    <Cell><Data ss:Type="Number">56</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">10</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">The pharagraph &quot;Software phase&quot; is difficult to understand</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell><Data ss:Type="Number">7</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="String">10 (Figure 2) &amp; headline section 4.4</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">Maybe better Sub-System design formalisation than Sub-System formal design (since it includes semi-formal and formal parts)</Data></Cell>
+    <Cell><Data ss:Type="Number">57</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">10 (Figure 2) &amp; headline section 4.4</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maybe better Sub-System design formalisation than Sub-System formal design (since it includes semi-formal and formal parts)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">8</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">11</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">&quot;a set of requirements&quot; - I think this is a set of specifications</Data></Cell>
+    <Cell><Data ss:Type="Number">58</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">11</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">&quot;a set of requirements&quot; - I think this is a set of specifications</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">9</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">11</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">According to …</Data></Cell>
+    <Cell><Data ss:Type="Number">59</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">11</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">According to …</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">10</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">14</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><Data ss:Type="String">As the for semi-formal model, …</Data></Cell>
+    <Cell><Data ss:Type="Number">60</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">14</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">As the for semi-formal model, …</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="51">
-    <Cell><Data ss:Type="Number">11</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">14</Data></Cell>
-    <Cell><Data ss:Type="String">Maj</Data></Cell>
-    <Cell><Data ss:Type="String">&quot;Logical properties can be added to simplify the models but shall be validated just as the properties (see R-WP2/D2.6-X-34).&quot; How is this meant. Are not logical properties part of the system model to describe certain relations in the system?</Data></Cell>
+    <Cell><Data ss:Type="Number">61</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">14</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">&quot;Logical properties can be added to simplify the models but shall be validated just as the properties (see R-WP2/D2.6-X-34).&quot; How is this meant. Are not logical properties part of the system model to describe certain relations in the system?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Logical properties =&gt; logical assertions</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.25">
-    <Cell><Data ss:Type="Number">12</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">16</Data></Cell>
-    <Cell><Data ss:Type="String">min</Data></Cell>
-    <Cell><Data ss:Type="String">&quot;… strictly formal methods can be suitable to such activities.&quot; sounds a bit vague, maybe we should write &quot;… strictly formal methods could be necessary for single activities.&quot;</Data></Cell>
+    <Cell><Data ss:Type="Number">62</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">16</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">&quot;… strictly formal methods can be suitable to such activities.&quot; sounds a bit vague, maybe we should write &quot;… strictly formal methods could be necessary for single activities.&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
-    <Cell><Data ss:Type="Number">13</Data></Cell>
-    <Cell><Data ss:Type="String">jw</Data></Cell>
-    <Cell><Data ss:Type="Number">17</Data></Cell>
-    <Cell><Data ss:Type="String">Q</Data></Cell>
-    <Cell><ss:Data ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40">The method and process used <S>to</S><Font> during …</Font></ss:Data></Cell>
+    <Cell><Data ss:Type="Number">63</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">jw</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">17</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><ss:Data ss:Type="String" xmlns="http://www.w3.org/TR/REC-html40">The method and process used <S>to</S><Font> during …</Font></ss:Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="153">
+    <Cell><Data ss:Type="Number">64</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String" x:Ticked="1">P5</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">For me i understand a process as a summation of:&#10;§ Lifecycle activities, &#10;§ Methods (Lifecycle &amp; Techniques), &#10;§ Quality assurances activities and &#10;§ Tools used&#10;&#10;- In Lifecycle activities, you only handle Requirement specification + Design, for me OK&#10;- Methods (Lifecycle &amp; Techniques), you say nothing about&#10;- Quality assurances activities, you say nothing about&#10;- Tools used, low described, for me OK&#10;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Methods is partly described (need of semi-formal or formal model or textual description)  but can not been defined before means and tool choice was made. Methods will be then described in D2.4 =&gt; indication added in § 1.2.&#10;Quality is part of WP1 as said in §1.2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="39.75">
+    <Cell><Data ss:Type="Number">65</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String" x:Ticked="1">P6</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">For me the reason why we need a semi-formal model is not describe enough</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">What is missing ?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="89.25">
+    <Cell><Data ss:Type="Number">66</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">P6</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String" x:Ticked="1">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">You wrote a semi-formal model will serve as input for many formal approaches like SCADE, B Tools.&#10;Question:&#10;Can a semi formal model be interpreted by formal tools without further improvement rep. formalisation of the semi formal model?&#10;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">67</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">P6</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">For me the reason why we need the formalize a sub part of the semi formal model is not describe enough</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">What is missing ?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="114.75">
+    <Cell><Data ss:Type="Number">68</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">P6</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">You wrote: &quot;The objective is to cover as much as possible of the functionality of the on-board&#10;unit described in SUBSET-026 and to show the capabilities of analyses of a complex system&#10;using formal approaches.&quot; &#10;&#10;Question&#10;It is the objective of the semi formal model or the formalized sub part of the semi formal model?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">69</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">P10</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">What are concrete the main input for the API?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">I do no understannd the remark</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="Number">70</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">MPO</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">P10</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">Maj</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">What are concrete the main functions of the API?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">I do no understannd the remark</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell><Data ss:Type="Number">71</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">8/ 2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">The 'SUBSET-076-x 2.3.y' is the test specification for the SUBSET-026 2.3.y. The test specification for the SUBSET-026 3.3.0 will be released at the end of 2013. Maybe it would be good to note that the Version of the Subset-076 fits to the version of Subset-026.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell><Data ss:Type="Number">72</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">10/ 4.1 System Phase</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Missing space: 'asystem' =&gt; a system</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+    <Cell><Data ss:Type="Number">73</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">10/ 4 ff</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">A short enumeration (numeric or alphanumeric code) of each process step to clearly identify each unique step would be of great value. This way the further documents can refer to the unique process identifier with no need to describe the process steps.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="25.5">
+    <Cell><Data ss:Type="Number">74</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">11/4.2</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">To which document(s) does 'Functional Interface Specification' refer?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Train Interface Specification Subset 34 =&gt; reference added</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell><Data ss:Type="Number">75</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">11/4.3.1</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Should, on the architecture level, functionalities which are not to be modelled within openETCS but to which an interface needs to be well defined be also identified?</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Interface shall be well defined (ie; What is exchanged how and when), but I do not think it is necessary to define in details the functionnality.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51">
+    <Cell><Data ss:Type="Number">76</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">13/4.4.3</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">The Traceability between the Strictly Formal and the Semi Formal model should be given as well as interpretations, additions and deliberate omissions of requirements shall be tracked and justified.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -1079,19 +1569,68 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <TopRowVisible>57</TopRowVisible>
+   <Zoom>70</Zoom>
+   <Selected/>
+   <TopRowVisible>48</TopRowVisible>
+   <SplitHorizontal>2805</SplitHorizontal>
+   <TopRowBottomPane>0</TopRowBottomPane>
+   <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>68</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+     <ActiveRow>4</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
+  <AutoFilter x:Range="R3C1:R79C7"
+   xmlns="urn:schemas-microsoft-com:office:excel">
+  </AutoFilter>
   <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>C7</Range>
+   <Range>R1C7:R69C7,R71C7:R72C7,R74C7:R75C7,R77C7:R1048576C7</Range>
+   <Condition>
+    <Qualifier>Equal</Qualifier>
+    <Value1>&quot;OK&quot;</Value1>
+    <Format Style='background:lime'/>
+   </Condition>
+   <Condition>
+    <Qualifier>Equal</Qualifier>
+    <Value1>&quot;NOK&quot;</Value1>
+    <Format Style='background:#FF6600'/>
+   </Condition>
+   <Condition>
+    <Qualifier>Equal</Qualifier>
+    <Value1>&quot;OPEN&quot;</Value1>
+    <Format Style='background:red'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R70C7</Range>
+   <Condition>
+    <Qualifier>Equal</Qualifier>
+    <Value1>&quot;OK&quot;</Value1>
+    <Format Style='background:lime'/>
+   </Condition>
+   <Condition>
+    <Qualifier>Equal</Qualifier>
+    <Value1>&quot;NOK&quot;</Value1>
+    <Format Style='background:#FF6600'/>
+   </Condition>
+   <Condition>
+    <Qualifier>Equal</Qualifier>
+    <Value1>&quot;OPEN&quot;</Value1>
+    <Format Style='background:red'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R73C7</Range>
    <Condition>
     <Qualifier>Equal</Qualifier>
     <Value1>&quot;OK&quot;</Value1>
@@ -1117,258 +1656,258 @@
    <Column ss:AutoFitWidth="0" ss:Width="330"/>
    <Column ss:AutoFitWidth="0" ss:Width="317.25"/>
    <Row ss:AutoFitHeight="0" ss:Height="20.25">
-    <Cell ss:StyleID="s109"><Data ss:Type="String">Main/Open Issues</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="String">Main/Open Issues</Data></Cell>
    </Row>
    <Row ss:Index="3">
-    <Cell ss:StyleID="s97"><Data ss:Type="String">#</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Title</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Description</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Proposal</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Status</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">#</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Title</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Proposal</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Status</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
    <Row>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
+    <Cell ss:StyleID="s88"/>
     <Cell ss:StyleID="s82"/>
    </Row>
   </Table>
