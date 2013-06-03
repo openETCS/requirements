@@ -34,7 +34,7 @@ Two main phases are defined :
 \item First, a system analysis shall provide a \textit{Sub-System Requirement Specification} (SSRS) to define the scope of the system to  design and its structure, completed with an abstract \textit{Application Programming Interface} (API) to  give the main interfaces of the system and interaction between software and hardware items. \textit{Sub-System Hazard Analyses} (SSHA) contains the safety analyses of the SSRS and  allows the definition of safety properties.
 \item Second, a model, at least semi-formal, is designed to describe sub-system
   architecture, main functions and to allocate sub-system requirements. This
-  model can be completed with a formal model to focus on a subset of the
+  model will be completed with a formal model to focus on a subset of the
   functions or properties.
 \end{itemize}
 \item[Software phase] to design the software and then generate applicative code
@@ -63,7 +63,7 @@ The proof that the process satisfies the requirements of the standard is out of 
 \label{sec:inputs}
 
 
-The main inputs of the OpenETCS project are the set of specifications provided by UNISIG as defined in annex A of CCS TSI. For the OpenETCS project, the initial reference is the baseline 3 (\url{http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Current-Legal-Reference.aspx}). This reference baseline shall be modified only by project decision (see R-WP2/D2.6-X-9).
+The main inputs of the OpenETCS project are the set of specifications provided by UNISIG as defined in annex A of CCS TSI. For the OpenETCS project, the initial reference is the baseline 3 (\url{http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Current-Legal-Reference.aspx}). This reference baseline shall be modified only by project decision during a PCC meeting (see R-WP2/D2.6-02-044).
 The main documents of this baseline for design activities are the \emph{System Requirement Specification} SUBSET-026~3.3.0 and the \textit{Functional Interface Specification} SUBSET-034-3.0.0.
 
 These documents shall be completed with examples of national operating rules
@@ -97,7 +97,7 @@ Safety activities are necessary to define the safety requirements of the system 
 According to  design activities, two documents shall be produced during this phase :
 
 \begin{description}
-\item[Sub-System Requirement Specification (SSRS)] shall define the scope and the structure of the sub-system and  manage the requirement allocation on sub-systems and functions (see R-WP2/D2.6-X-10).
+\item[Sub-System Requirement Specification (SSRS)] shall define the scope and the structure of the sub-system and  manage the requirement allocation on sub-systems and functions (see R-WP2/D2.6-02-45).
 \item[Application Programming Interface (API)] shall describe the interfaces of the sub-system.
 \end{description}
 
@@ -115,35 +115,35 @@ as well as the location of the boundary between the two
 
 The first part is the definition of the  \emph{Sub System Requirement Specification} (SSRS) which shall allow:
 \begin{itemize}
-\item to clearly define the scope of SUBSET-026 to take into account the design (only on-board functionalities are designed, track-side functionalities are out of the scope of the project) (see R-WP2/D2.6-X-10.2.4),
-\item to define the interfaces of the system: external interfaces and software/hardware interfaces (see R-WP2/D2.6-X-10.2.5, R-WP2/D2.6-X-10.2.6),
-\item to provide a functional architecture of the system with inputs and outputs of each function identified (see R-WP2/D2.6-X-10.2),
-\item to allocate SRS requirements to each function (see R-WP2/D2.6-X-10.3),
-\item to classify Safety versus Non-Safety items (functions, input/output, requirements, ...) from the safety analysis results (see R-WP2/D2.6-X-11),
+\item to clearly define the scope of SUBSET-026 to take into account the design (only on-board functionalities are designed, track-side functionalities are out of the scope of the project) (see R-WP2/D2.6-02-045.02.04),
+\item to define the interfaces of the system: external interfaces and software/hardware interfaces (see WP2/D2.6-02-045.01, R-WP2/D2.6-02-045.02.05, R-WP2/D2.6-02-045.02.06),
+\item to provide a functional architecture of the system with inputs and outputs of each function identified (see R-WP2/D2.6-02-045.02),
+\item to allocate SRS requirements to each function and data-flow (see R-WP2/D2.6-02-045.03),
+\item to classify Vital versus Non-Vital items (functions, input/output, requirements, ...) from the safety analysis results (see R-WP2/D2.6-02-046),
 \end{itemize}
 
-However, the SSRS shall be compliant with the input documents of TSI (SUBSET-026, FIS, ...) (see R-WP2/D2.6-X-10, R-WP2/D2.6-X-10.2.7 and R-WP2/D2.6-X-10.4)
+However, the SSRS shall be compliant with the input documents of TSI (SUBSET-026, FIS, ...) (see R-WP2/D2.6-02-045, R-WP2/D2.6-02-045.02.06 and R-WP2/D2.6-02-045.04)
 
-It shall also facilitate safety, design, verification, validation and maintenance activities: full traceability between SRS and SSRS shall be provided (see R-WP2/D2.6-X-10.5).
+It shall also facilitate safety, design, verification, validation and maintenance activities: full traceability between SRS and SSRS shall be provided (see R-WP2/D2.6-02-045.05).
 
-Detection of inconsistencies or ambiguities in the input documents shall be discussed and tracked (see R-WP2/D2.6-X-10.6).
+Detection of inconsistencies or ambiguities in the input documents shall be discussed and tracked (see R-WP2/D2.6-02-045.06).
 
 These tasks need some interactions with safety activities, for example to define safety tags on functions, requirements,...
 
 The second part is the definition of the \textit{Application Programming Interface} (API) : this document shall describe at an abstract level, how software and hardware parts of the sub-system are going to interact.
-In particular, it will define an abstract layer of the hardware architecture (see R-WP2/D2.6-X-1), and a set of requirements on how the software is going to be executed in real time.
+In particular, it will define an abstract layer of the hardware architecture (see R-WP2/D2.6-02-043), and a set of requirements on how the software is going to be executed in real time.
 
 \subsubsection{Means and tools}
 
 The SSRS and API shall be described as textual documents.
-However these documents shall be completed by a semi-formal model to describe the functional architecture of the on-board unit (see R-WP2/D2.6-X-10.2.2):
+However these documents shall be completed by a semi-formal model to describe the functional architecture of the on-board unit (see R-WP2/D2.6-02-045.02.02):
 
 \begin{itemize}
-\item to  define the scope of the application to design (see R-WP2/D2.6-X-10.2.4),
-\item to split the main function of the system into independent functions (see R-WP2/D2.6-X-10.2.1),
-\item to describe the data flow between functions (see R-WP2/D2.6-X-10.2.3),
-\item to describe the abstract interfaces of the sub-system and its environment, with respect to the existing input documents (see R-WP2/D2.6-X-10.2.5 and R-WP2/D2.6-X-10.2.6),
-\item to  support allocation of the requirements to  the functions and data (see R-WP2/D2.6-X-10.3).
+\item to  define the scope of the application to design (see R-WP2/D2.6-02-045.02.04),
+\item to split the main function of the system into independent functions (see R-WP2/D2.6-02-045.02.01),
+\item to describe the data flow between functions (see R-WP2/D2.6-02-045.02.03),
+\item to describe the abstract interfaces of the sub-system and its environment, with respect to the existing input documents (see R-WP2/D2.6-02-045.02.05 and R-WP2/D2.6-02-045.02.06),
+\item to  support allocation of the requirements to  the functions and data flow (see R-WP2/D2.6-02-045.03).
 \end{itemize}
 
 The requirements of the SRS are allocated to the
@@ -152,7 +152,7 @@ functions. They are also rewritten in order to match the objects named in
 the architecture (in particular internal and external I/O). The requirements are provided in natural language
 (even if the objects are unambiguously named).
 
-In view of verification activities, traceability between SSRS and SRS shall be provided (see R-WP2/D2.6-X-10.5). In practice, interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-X-10.5.1 and R-WP2/D2.6-X-10.5.3), as well as exported requirements  (see R-WP2/D2.6-X-10.5.2).
+In view of verification activities, traceability between SSRS and SRS shall be provided (see R-WP2/D2.6-02-045.05). In practice, interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-02-045.05.01), as well as requirements exported to other sub-systems (see R-WP2/D2.6-02-045.05.02).
 
 According to  CENELEC standards, no specific constraints are given on the tools used during this step: textual and graphical editors, with syntax checker, are needed to  produce documents and models. Tools classified as T1 according EN50128 can be used.
 
@@ -187,29 +187,29 @@ This semi-formal model can be extended with \textit{strictly formal models} to i
 \label{sec:sys-dev-deta-descr}
 
 
-To cover the OpenETCS project objective  of formal models, a semi-formal model of the system  specification is defined from  the SSRS (see R-WP2/D2.6-X-12). This model shall reflect the architecture defined in SSRS (see R-WP2/D2.6-X-10.2.2). Requirements of the sub-system can be refined in semi-formal means but the semi-formal model  shall be as consistent as possible with the SSRS level of abstraction (see R-WP2/D2.6-X-12.2), in particular choices concerning software architecture and design have not to be described at this level.
-In practice, all the requirements of SSRS (see R-WP2/D2.6-X-12.2.1) and of the sub-system Hazard analysis (see R-WP2/D2.6-X-12.2.2) shall be covered by the semi-formal model.
+To cover the OpenETCS project objective  of formal models, a semi-formal model of the system  specification is defined from  the SSRS (see R-WP2/D2.6-02-047). This model shall reflect the architecture defined in SSRS (see R-WP2/D2.6-02-045.02.02). Requirements of the sub-system can be refined in semi-formal means but the semi-formal model  shall be as consistent as possible with the SSRS level of abstraction (see R-WP2/D2.6-02-047.02), in particular choices concerning software architecture and design have not to be described at this level.
+In practice, all the requirements of SSRS (see R-WP2/D2.6-02-047.02.01) and of the sub-system Hazard analysis (see R-WP2/D2.6-02-047.02.02) shall be covered by the semi-formal model.
 
-Traceability between semi-formal model and SSRS shall be provided (see R-WP2/D2.6-X-12.2.5): interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-X-12.2.3), as well as exported requirements  (see R-WP2/D2.6-X-12.2.6).
+Traceability between semi-formal model and SSRS shall be provided (see R-WP2/D2.6-02-047.02.05): interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-02-047.02.03), as well as exported requirements  (see R-WP2/D2.6-02-047.02.06).
 
-This semi-formal model can be extended with strictly formal models to improve the understanding of some part of the sub-system (see R-WP2/D2.6-X-14) and to  provide elements for verification and validation activities especially concerning safety properties.
+This semi-formal model can be extended with strictly formal models to improve the understanding of some part of the sub-system (see R-WP2/D2.6-02-049) and to  provide elements for verification and validation activities especially concerning safety properties.
 
-To facilitate safety activities, the safety relevant function should be as much as possible insulated from non safety relevant functions (see R-WP2/D2.6-X-17).
+To facilitate safety activities, the safety relevant function should be as much as possible insulated from non safety relevant functions (see R-WP2/D2.6-02-052).
 
 
 \subsubsection{Means and tools}
 
-The means of description of the semi-formal model shall be understandable by domain experts (see R-WP2/D2.6-X-27), providing graphical  description (see R-WP2/D2.6-X-27.1).
+The means of description of the semi-formal model shall be understandable by domain experts (see R-WP2/D2.6-02-065), providing graphical  description (see R-WP2/D2.6-02-065.01).
 
-The semi-formal model shall reflect the functional architecture defined in SSRS. In particular the language used to  design the semi-formal model shall allow it to be modular and extensible (see R-WP2/D2.6-X-15).
+The semi-formal model shall reflect the functional architecture defined in SSRS. In particular the language used to  design the semi-formal model shall allow it to be modular and extensible (see R-WP2/D2.6-02-050).
 
-In view of validation activities, the means of description of the semi-formal model shall allow to execute or simulate it (see R-WP2/D2.6-X-33).
+In view of validation activities, the means of description of the semi-formal model shall allow to simulate it (see R-WP2/D2.6-02-048 and R-WP2/D2.6-02-071).
 
-Parts of the sub-system shall be modelled strictly formally (see R-WP2/D2.6-X-14). This formal model shall be derived from the semi-formal one (see R-WP2/D2.6-X-14.2), as straightforward and automated as possible (see R-WP2/D2.6-X-14.4). Thus, the semi-formal model shall be designed (language and structure) in order to allow the design and validation of the strictly formal model (see R-WP2/D2.6-X-14.3); and to be easily translatable to other languages (see R-WP2/D2.6-X-30).
-As for semi-formal model, the strictly formal model shall be modular and extensible (see R-WP2/D2.6-X-16) and shall refine the modular design of the semi-formal model (see R-WP2/D2.6-X-16.1).
+Parts of the sub-system shall be modelled strictly formally (see R-WP2/D2.6-02-049). This formal model shall be derived from the semi-formal one (see R-WP2/D2.6-02-049.02), as straightforward and automated as possible (see R-WP2/D2.6-02-049.05). Thus, the semi-formal model shall be designed (language and structure) in order to allow the design and validation of the strictly formal model (see R-WP2/D2.6-02-049.04); and to be easily translatable to other languages (see R-WP2/D2.6-02-068).
+As for semi-formal model, the strictly formal model shall be modular and extensible (see R-WP2/D2.6-02-051) and shall refine the modular design of the semi-formal model (see R-WP2/D2.6-02-051.01).
 
 
-The expressiveness of the language used to design the semi-formal and formal models shall allow formalisation of the classical objects used in the description of critical systems (see R-WP2/D2.6-X-31 and R-WP2/D2.6-X-32):
+The expressiveness of the language used to design the semi-formal and formal models shall allow formalisation of the classical objects used in the description of critical systems (see R-WP2/D2.6-02-069 and R-WP2/D2.6-02-070):
 
 \begin{itemize}
 \item state machines
@@ -222,9 +222,9 @@ The expressiveness of the language used to design the semi-formal and formal mod
 \end{itemize}
 
 
-In view of safety activities, the languages used for the models shall allow a declarative and formal expression of the safety properties (see R-WP2/D2.6-X-28), understandable by domain experts (see R-WP2/D2.6-X-28.1). The modelled safety properties shall be validated on the semi-formal model by test and on the strictly formal model by proof (see R-WP2/D2.6-X-23). Logical assertion can be added to simplify the models but shall be validated just as the properties or requirements (see R-WP2/D2.6-X-34).
+In view of safety activities, the languages used for the models shall allow a declarative and formal expression of the safety properties (see R-WP2/D2.6-02-066), understandable by domain experts (see R-WP2/D2.6-02-066.01). The modelled safety properties shall be validated on the semi-formal model by test and on the strictly formal model by proof (see R-WP2/D2.6-02-058). Logical assertion can be added to simplify the models but shall be validated just as the properties or requirements (see R-WP2/D2.6-02-072).
 
-All means of description used shall be standardised or at least documented in detail (see R-WP2/D2.6-X-29). 
+All means of description used shall be standardised or at least documented in detail (see R-WP2/D2.6-02-067). 
 
 According to  CENELEC standards, no specific constraints are given on the tools used during this modelling step: textual and graphical editors, with syntax checker, are needed to  produce documents and model. Tools classified as T1 according EN50128 can be used.
 
@@ -357,8 +357,8 @@ In this phase, software code is produced from the software models.
 \subsubsection{Demonstrator}
 \label{sec:demo-phase}
 
-A first executable code is produced from the software functional model (see R-WP2/D2.6-X-52). This executable code shall be non vital (see R-WP2/D2.6-X-53). However it shall be able to run in real time (see R-WP2/D2.6-X-54) on a on-board computer (see R-WP2/D2.6-X-56).
-Thus it shall comply to the standardised interfaces (see R-WP2/D2.6-X-55). 
+A first executable code is produced from the software functional model (see R-WP2/D2.6-02-086). This executable code shall be non vital (see R-WP2/D2.6-02-087). However it shall be able to run in real time (see R-WP2/D2.6-02-088) on a on-board computer (see R-WP2/D2.6-02-090).
+Thus it shall comply to the standardised interfaces (see R-WP2/D2.6-02-089). 
 
 There are no specific constraints on the means and tools to  produce this non SIL code.
 

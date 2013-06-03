@@ -9,7 +9,7 @@
   <Author>Baro Sylvain</Author>
   <LastAuthor>Marielle Doche</LastAuthor>
   <Created>2013-02-25T10:47:19Z</Created>
-  <LastSaved>2013-05-31T13:18:59Z</LastSaved>
+  <LastSaved>2013-06-03T17:23:28Z</LastSaved>
   <Company>SNCF Master SEVEN</Company>
   <Version>14.00</Version>
  </DocumentProperties>
@@ -750,6 +750,8 @@
     <Cell ss:StyleID="s100"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40">&quot;This model <U>can be</U><Font> completed with a formal model to focus on a subset of the functions or properties&quot;. Should this really be &quot;can be&quot; or rather &quot;will be&quot;? </Font></ss:Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="76.5">
     <Cell><Data ss:Type="Number">7</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -896,8 +898,10 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s88"><Data ss:Type="String">The sentence &quot;This refence baseline… &quot; is not clear. The documents as such are out of scope of the project. Please, clarify.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s88"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s82"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">added &quot;during a PCC meeting&quot;</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="75" ss:StyleID="s105">
     <Cell ss:StyleID="s87"><Data ss:Type="Number">18</Data><NamedCell
@@ -910,7 +914,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s88"><Data ss:Type="String">Missing objective: &quot;message sequence charts showing the communication between functional blocks&quot;</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s88"><Data ss:Type="String">Objective is to define the architecture of the system and interfaces (excepecially internal interfaces between function).  Message sequence charts is a candidate mean to  describe communications, not an objective. If it is the best solution according the other objectives (formal models,...)  is out of the scope of this document. </Data><NamedCell
+    <Cell ss:StyleID="s88"><Data ss:Type="String">Objective is to define the architecture of the system and interfaces (excepecially internal interfaces between function).  Message sequence charts is a candidate mean to  describe communications, not an objective.  It   is out of the scope of this document. to decide if it is the best solution according the other objectives (formal models,...)</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s82"><Data ss:Type="String">NOK</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -954,6 +958,8 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">text is not consistent with the description in D2.6. Please, take description from requirements.</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
@@ -1055,6 +1061,8 @@
     <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">In this picture, the Sil 4 shall  be shaded with &quot;out of scope of project&quot; (like done before in other figures).</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
     <Cell><Data ss:Type="Number">31</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1086,6 +1094,8 @@
     <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">On https://github.com/openETCS/requirements/tree/master/D2.3 there are different document releases like D2_3, D2_3_0, D2_3_1. The obsolete ones should be deleted. </Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">34</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1093,6 +1103,8 @@
     <Cell ss:Index="4"><Data ss:Type="String">-</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">I don't have further review remarks. </Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
@@ -1223,6 +1235,8 @@
     <Cell><Data ss:Type="String">Min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s100"><Data ss:Type="String">The blue items in Fig. 2 are named as if they were artifacts, not activities (of course there is an activity to create an artifact).</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="51">
     <Cell><Data ss:Type="Number">47</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1302,6 +1316,8 @@
     <Cell><Data ss:Type="String">min</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Better executable  (not running )</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="25.5">
     <Cell><Data ss:Type="Number">54</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1311,6 +1327,8 @@
     <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Maybe better models on the same level and executable part on the same level do demonstrate the steps</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">partial</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="Number">55</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1338,6 +1356,8 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Maybe better Sub-System design formalisation than Sub-System formal design (since it includes semi-formal and formal parts)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row>
@@ -1571,19 +1591,19 @@
    </Print>
    <Zoom>70</Zoom>
    <Selected/>
-   <TopRowVisible>48</TopRowVisible>
+   <TopRowVisible>15</TopRowVisible>
    <SplitHorizontal>2805</SplitHorizontal>
-   <TopRowBottomPane>0</TopRowBottomPane>
+   <TopRowBottomPane>65</TopRowBottomPane>
    <ActivePane>2</ActivePane>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>17</ActiveRow>
+     <ActiveRow>16</ActiveRow>
      <ActiveCol>4</ActiveCol>
     </Pane>
     <Pane>
      <Number>2</Number>
-     <ActiveRow>4</ActiveRow>
+     <ActiveRow>59</ActiveRow>
      <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
@@ -1594,43 +1614,7 @@
    xmlns="urn:schemas-microsoft-com:office:excel">
   </AutoFilter>
   <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R1C7:R69C7,R71C7:R72C7,R74C7:R75C7,R77C7:R1048576C7</Range>
-   <Condition>
-    <Qualifier>Equal</Qualifier>
-    <Value1>&quot;OK&quot;</Value1>
-    <Format Style='background:lime'/>
-   </Condition>
-   <Condition>
-    <Qualifier>Equal</Qualifier>
-    <Value1>&quot;NOK&quot;</Value1>
-    <Format Style='background:#FF6600'/>
-   </Condition>
-   <Condition>
-    <Qualifier>Equal</Qualifier>
-    <Value1>&quot;OPEN&quot;</Value1>
-    <Format Style='background:red'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R70C7</Range>
-   <Condition>
-    <Qualifier>Equal</Qualifier>
-    <Value1>&quot;OK&quot;</Value1>
-    <Format Style='background:lime'/>
-   </Condition>
-   <Condition>
-    <Qualifier>Equal</Qualifier>
-    <Value1>&quot;NOK&quot;</Value1>
-    <Format Style='background:#FF6600'/>
-   </Condition>
-   <Condition>
-    <Qualifier>Equal</Qualifier>
-    <Value1>&quot;OPEN&quot;</Value1>
-    <Format Style='background:red'/>
-   </Condition>
-  </ConditionalFormatting>
-  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
-   <Range>R73C7</Range>
+   <Range>R77C7:R1048576C7,R1C7:R75C7</Range>
    <Condition>
     <Qualifier>Equal</Qualifier>
     <Value1>&quot;OK&quot;</Value1>

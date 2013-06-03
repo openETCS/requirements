@@ -24,19 +24,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0409647"
-     inkscape:cx="575.20156"
-     inkscape:cy="585.95616"
+     inkscape:zoom="1.3355703"
+     inkscape:cx="420.78493"
+     inkscape:cy="351.22138"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-to-guides="true"
-     inkscape:window-width="1295"
-     inkscape:window-height="744"
-     inkscape:window-x="65"
-     inkscape:window-y="336"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="1425"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <defs
      id="defs4">
@@ -1388,7 +1388,7 @@
        sodipodi:open="true"
        sodipodi:end="6.2458454"
        sodipodi:start="0"
-       d="m 605.71426,295.21933 a 231.42856,84.285706 0 1 1 -0.16131,-3.14649"
+       d="m 605.71426,295.21933 c 0,46.54971 -103.61409,84.28571 -231.42855,84.28571 -127.81447,0 -231.42856,-37.736 -231.42856,-84.28571 0,-46.54971 103.61409,-84.28571 231.42856,-84.28571 124.45264,0 226.62127,35.84547 231.26724,81.13922"
        sodipodi:ry="84.285706"
        sodipodi:rx="231.42856"
        sodipodi:cy="295.21933"
@@ -1425,7 +1425,7 @@
        sodipodi:open="true"
        sodipodi:end="6.2458454"
        sodipodi:start="0"
-       d="m 605.71426,295.21933 a 231.42856,84.285706 0 1 1 -0.16131,-3.14649"
+       d="m 605.71426,295.21933 c 0,46.54971 -103.61409,84.28571 -231.42855,84.28571 -127.81447,0 -231.42856,-37.736 -231.42856,-84.28571 0,-46.54971 103.61409,-84.28571 231.42856,-84.28571 124.45264,0 226.62127,35.84547 231.26724,81.13922"
        sodipodi:ry="84.285706"
        sodipodi:rx="231.42856"
        sodipodi:cy="295.21933"
@@ -1496,7 +1496,7 @@
          y="623.86737"
          x="301.9469"
          sodipodi:role="line"
-         id="tspan5220"> Semi-formal  model</tspan></text>
+         id="tspan5220"> Semi-formal  modeling</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1610,7 +1610,7 @@
          y="713.51624"
          x="380.18127"
          sodipodi:role="line"
-         id="tspan5222"> Strictly formal  model</tspan></text>
+         id="tspan5222"> Strictly formal  modeling</tspan></text>
     <rect
        ry="11.235719"
        y="787.25867"
@@ -1635,7 +1635,7 @@
          y="826.21552"
          x="221.1304"
          sodipodi:role="line"
-         id="tspan5224"> Semi-formal  model</tspan><tspan
+         id="tspan5224"> Semi-formal  modeling</tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="846.21552"
          x="223.91165"
@@ -1645,7 +1645,7 @@
          y="866.21552"
          x="221.1304"
          sodipodi:role="line"
-         id="tspan5334">architecture description</tspan></text>
+         id="tspan5334">architecture design</tspan></text>
     <rect
        ry="10.000288"
        y="782.42047"
@@ -1670,7 +1670,7 @@
          y="816.79321"
          x="579.93164"
          sodipodi:role="line"
-         id="tspan5226"> Strictly formal  model</tspan><tspan
+         id="tspan5226"> Strictly formal  modeling</tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="836.79321"
          x="579.93164"
@@ -1680,7 +1680,7 @@
          y="856.79321"
          x="579.93164"
          sodipodi:role="line"
-         id="tspan5328">Software design description</tspan></text>
+         id="tspan5328">Software architecture design</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4545"
@@ -1762,7 +1762,7 @@
        sodipodi:open="true"
        sodipodi:end="6.2458454"
        sodipodi:start="0"
-       d="m 605.71426,295.21933 a 231.42856,84.285706 0 1 1 -0.16131,-3.14649"
+       d="m 605.71426,295.21933 c 0,46.54971 -103.61409,84.28571 -231.42855,84.28571 -127.81447,0 -231.42856,-37.736 -231.42856,-84.28571 0,-46.54971 103.61409,-84.28571 231.42856,-84.28571 124.45264,0 226.62127,35.84547 231.26724,81.13922"
        sodipodi:ry="84.285706"
        sodipodi:rx="231.42856"
        sodipodi:cy="295.21933"
@@ -1885,7 +1885,7 @@
        sodipodi:open="true"
        sodipodi:end="6.2458454"
        sodipodi:start="0"
-       d="m 605.71426,295.21933 a 231.42856,84.285706 0 1 1 -0.16131,-3.14649"
+       d="m 605.71426,295.21933 c 0,46.54971 -103.61409,84.28571 -231.42855,84.28571 -127.81447,0 -231.42856,-37.736 -231.42856,-84.28571 0,-46.54971 103.61409,-84.28571 231.42856,-84.28571 124.45264,0 226.62127,35.84547 231.26724,81.13922"
        sodipodi:ry="84.285706"
        sodipodi:rx="231.42856"
        sodipodi:cy="295.21933"
@@ -1996,7 +1996,7 @@
          x="-664.21509"
          y="1023.8185"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
-         id="tspan5288">formal design</tspan></text>
+         id="tspan5288">design formalisation</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
