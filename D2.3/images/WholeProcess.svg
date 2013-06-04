@@ -24,22 +24,27 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3355703"
-     inkscape:cx="420.78493"
-     inkscape:cy="351.22138"
+     inkscape:zoom="0.80473328"
+     inkscape:cx="647.55318"
+     inkscape:cy="336.31579"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-to-guides="true"
-     inkscape:window-width="1855"
-     inkscape:window-height="1056"
-     inkscape:window-x="1425"
-     inkscape:window-y="24"
+     inkscape:window-width="1295"
+     inkscape:window-height="744"
+     inkscape:window-x="65"
+     inkscape:window-y="336"
      inkscape:window-maximized="1" />
   <defs
      id="defs4">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Polkadots-small"
+       id="pattern3335"
+       patternTransform="matrix(10,0,0,10,12.426477,-1.3753135e-6)" />
     <pattern
        inkscape:stockid="Polka dots, small"
        id="Polkadots-small"
@@ -1279,26 +1284,27 @@
        x="535.65765"
        y="862.297" />
     <rect
-       style="fill:#d5f6ff;fill-opacity:1;stroke:#0000cb;stroke-width:1.05289793;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#d5f6ff;fill-opacity:1;stroke:#0000cb;stroke-width:1.101004;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3763"
-       width="235.71428"
+       width="257.74551"
        height="47.634895"
-       x="191.50343"
+       x="186.07101"
        y="453.70367" />
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
-       x="307.88605"
-       y="472.00128"
+       style="font-size:15.83703041px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="313.56839"
+       y="467.19366"
        id="text3793"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.9898144,1.0102904)"><tspan
          sodipodi:role="line"
          id="tspan3807"
-         x="307.88605"
-         y="472.00128">Sub-system Requirement</tspan><tspan
+         x="313.56839"
+         y="467.19366">a)Sub-system Requirement</tspan><tspan
          sodipodi:role="line"
-         x="307.88605"
-         y="492.00128"
+         x="313.56839"
+         y="486.98996"
          id="tspan3324">Specification (SSRS)</tspan></text>
     <path
        sodipodi:type="arc"
@@ -1323,7 +1329,7 @@
          sodipodi:role="line"
          id="tspan10636"
          x="652.19049"
-         y="971.24261">SIL 4 </tspan><tspan
+         y="971.24261">b) SIL 4 </tspan><tspan
          sodipodi:role="line"
          x="649.64362"
          y="991.24261"
@@ -1421,11 +1427,11 @@
          sodipodi:role="line"
          id="tspan3336">(FIS)</tspan></text>
     <path
-       transform="matrix(0.5601947,0,0,0.45999113,651.02525,238.50426)"
+       transform="matrix(0.5601947,0,0,0.45999113,637.35612,234.77632)"
        sodipodi:open="true"
        sodipodi:end="6.2458454"
        sodipodi:start="0"
-       d="m 605.71426,295.21933 c 0,46.54971 -103.61409,84.28571 -231.42855,84.28571 -127.81447,0 -231.42856,-37.736 -231.42856,-84.28571 0,-46.54971 103.61409,-84.28571 231.42856,-84.28571 124.45264,0 226.62127,35.84547 231.26724,81.13922"
+       d="m 605.71426,295.21933 a 231.42856,84.285706 0 1 1 -0.16131,-3.14649"
        sodipodi:ry="84.285706"
        sodipodi:rx="231.42856"
        sodipodi:cy="295.21933"
@@ -1437,20 +1443,20 @@
        transform="scale(1.0719247,0.93290135)"
        sodipodi:linespacing="125%"
        id="text3759-1"
-       y="385.43152"
-       x="807.16736"
+       y="380.10342"
+       x="793.25616"
        style="font-size:16px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold Italic"
        xml:space="preserve"><tspan
-         y="385.43152"
-         x="807.16736"
+         y="380.10342"
+         x="793.25616"
          id="tspan3791"
          sodipodi:role="line">Preliminary Hazard</tspan><tspan
-         y="405.43152"
-         x="807.16736"
+         y="400.10342"
+         x="793.25616"
          sodipodi:role="line"
          id="tspan3316">Analysis (PHA)</tspan><tspan
-         y="425.43152"
-         x="807.16736"
+         y="420.10342"
+         x="793.25616"
          sodipodi:role="line"
          id="tspan3394">(Subsets 088- 091)</tspan></text>
     <path
@@ -1491,7 +1497,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="603.86737"
          x="301.9469"
-         sodipodi:role="line">Sub-System</tspan><tspan
+         sodipodi:role="line">a) Sub-System</tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="623.86737"
          x="301.9469"
@@ -1521,7 +1527,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="533.70404"
          x="436.14975"
-         sodipodi:role="line">V&amp;V  SSRS</tspan></text>
+         sodipodi:role="line">c) V&amp;V  SSRS</tspan></text>
     <rect
        style="fill:#ffd5d5;fill-opacity:1;stroke:#ff0000;stroke-width:1.85102820000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3763-5-5"
@@ -1532,18 +1538,18 @@
     <text
        sodipodi:linespacing="125%"
        id="text3187-6-5"
-       y="659.70276"
-       x="490.58759"
+       y="658.46008"
+       x="493.07288"
        style="font-size:16px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
        xml:space="preserve"><tspan
          id="tspan3197-5-1"
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
-         y="659.70276"
-         x="493.36884"
-         sodipodi:role="line">V&amp;V on SubSystem models </tspan><tspan
+         y="658.46008"
+         x="495.85413"
+         sodipodi:role="line">c) V&amp;V on SubSystem models </tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
-         y="679.70276"
-         x="490.58759"
+         y="678.46008"
+         x="493.07288"
          sodipodi:role="line"
          id="tspan5320" /></text>
     <rect
@@ -1563,7 +1569,7 @@
          sodipodi:role="line"
          id="tspan3807-3"
          x="809.05615"
-         y="478.67599">Sub-System Hazard</tspan><tspan
+         y="478.67599">d) Sub-System Hazard</tspan><tspan
          sodipodi:role="line"
          x="809.05615"
          y="498.67599"
@@ -1585,7 +1591,7 @@
          sodipodi:role="line"
          id="tspan3807-3-6"
          x="798.04626"
-         y="621.67029">Safety verification</tspan></text>
+         y="621.67029">d) Safety verification</tspan></text>
     <rect
        ry="6.1599202"
        y="673.49286"
@@ -1605,7 +1611,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="693.51624"
          x="380.18127"
-         sodipodi:role="line">Sub-System</tspan><tspan
+         sodipodi:role="line">b) Sub-System</tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="713.51624"
          x="380.18127"
@@ -1630,7 +1636,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="806.21552"
          x="221.1304"
-         sodipodi:role="line">Software</tspan><tspan
+         sodipodi:role="line">a) Software</tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="826.21552"
          x="221.1304"
@@ -1665,7 +1671,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="796.79321"
          x="579.93164"
-         sodipodi:role="line">Software</tspan><tspan
+         sodipodi:role="line">b) Software</tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="816.79321"
          x="579.93164"
@@ -1723,7 +1729,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="895.5296"
          x="322.15048"
-         sodipodi:role="line">V&amp;V on </tspan><tspan
+         sodipodi:role="line">c) V&amp;V on </tspan><tspan
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="915.5296"
          x="322.15048"
@@ -1745,7 +1751,7 @@
          style="font-size:16px;font-weight:bold;text-align:center;text-anchor:middle;-inkscape-font-specification:Sans Bold"
          y="890.14655"
          x="674.80212"
-         sodipodi:role="line">V&amp;V on SSIL4 Software</tspan></text>
+         sodipodi:role="line">d) V&amp;V on SSIL4 Software</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4621"
@@ -1861,9 +1867,9 @@
          sodipodi:role="line"
          id="tspan3807-1-6"
          x="117.54484"
-         y="496.50986">Application</tspan><tspan
+         y="496.50986">b) Application</tspan><tspan
          sodipodi:role="line"
-         x="120.32608"
+         x="120.32609"
          y="516.50989"
          id="tspan3326">Programming </tspan><tspan
          sodipodi:role="line"
@@ -1950,11 +1956,11 @@
        id="path5189-8"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:url(#Polkadots-small);fill-opacity:1.0;stroke:#0000ff;stroke-width:1.38490558000000008;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.76981110000000008, 1.38490555000000004;stroke-dashoffset:0"
+       style="fill:url(#pattern3335);fill-opacity:1;stroke:#0000ff;stroke-width:1.38490558;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.7698111, 1.38490555;stroke-dashoffset:0"
        width="432.40042"
        height="119.73271"
-       x="475.5849"
-       y="923.07861"
+       x="488.01138"
+       y="923.07867"
        id="rect5857" />
     <path
        style="fill:#0000ff;stroke:#0000ff;stroke-width:1.46976459;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.4697646, 2.93952921;stroke-dashoffset:0"
@@ -1963,97 +1969,132 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans;text-anchor:middle;text-align:center"
-       x="-386.35147"
-       y="1014.3635"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-387.59412"
+       y="995.72382"
        id="text5228"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5230"
-         x="-427.43741"
-         y="1014.3635"
-         style="font-size:16px;writing-mode:lr-tb;fill:#0000ff;text-anchor:middle;text-align:center">OpenETCS</tspan><tspan
+         x="-385.04724"
+         y="995.72382"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"><tspan
+           style="font-style:italic;-inkscape-font-specification:Sans Italic"
+           id="tspan3339">Step 0 </tspan></tspan><tspan
          sodipodi:role="line"
-         x="-427.43741"
-         y="1034.3635"
-         style="font-size:16px;writing-mode:lr-tb;fill:#0000ff;text-anchor:middle;text-align:center"
+         x="-387.59412"
+         y="1015.7238"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
+         id="tspan3337">OpenETCS</tspan><tspan
+         sodipodi:role="line"
+         x="-387.59412"
+         y="1035.7238"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
          id="tspan5232"> inputs</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-664.21509"
-       y="1003.8185"
+       x="-662.97241"
+       y="991.39203"
        id="text5228-2"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
-         x="-664.21509"
-         y="1003.8185"
+         x="-660.42554"
+         y="991.39203"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
-         id="tspan5232-4">Sub-System</tspan><tspan
+         id="tspan5232-4"><tspan
+           style="font-style:italic;-inkscape-font-specification:Sans Italic"
+           id="tspan3347">Step 2 </tspan></tspan><tspan
          sodipodi:role="line"
-         x="-664.21509"
-         y="1023.8185"
+         x="-662.97241"
+         y="1011.392"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
+         id="tspan3329">Sub-System</tspan><tspan
+         sodipodi:role="line"
+         x="-662.97241"
+         y="1031.392"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
          id="tspan5288">design formalisation</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-986.07294"
-       y="993.39557"
+       x="-978.61707"
+       y="980.96912"
        id="text5228-3"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
-         x="-986.07294"
-         y="993.39557"
+         x="-976.07019"
+         y="980.96912"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
-         id="tspan5232-5">Software</tspan><tspan
+         id="tspan5232-5"><tspan
+           style="font-style:italic;-inkscape-font-specification:Sans Italic"
+           id="tspan3359">Step 4 </tspan></tspan><tspan
          sodipodi:role="line"
-         x="-983.52606"
-         y="1013.3956"
+         x="-978.61707"
+         y="1000.9691"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
+         id="tspan3333">Software</tspan><tspan
+         sodipodi:role="line"
+         x="-976.07019"
+         y="1020.9691"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
          id="tspan5292">code </tspan><tspan
          sodipodi:role="line"
-         x="-986.07294"
-         y="1033.3956"
+         x="-978.61707"
+         y="1040.969"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
          id="tspan5318">generation</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-505.02917"
-       y="1008.2855"
+       x="-501.30124"
+       y="993.37378"
        id="text5228-1"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
-         x="-502.4823"
-         y="1008.2855"
+         x="-498.75436"
+         y="993.37378"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
-         id="tspan5232-0">System </tspan><tspan
+         id="tspan5232-0"><tspan
+           style="font-style:italic;-inkscape-font-specification:Sans Italic"
+           id="tspan3341">Step 1 </tspan></tspan><tspan
          sodipodi:role="line"
-         x="-505.02917"
-         y="1028.2855"
+         x="-498.75436"
+         y="1013.3738"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
+         id="tspan3327">System </tspan><tspan
+         sodipodi:role="line"
+         x="-501.30124"
+         y="1033.3738"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
          id="tspan5284">analysis</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
-       x="-849.95911"
-       y="1005.4482"
+       x="-847.47382"
+       y="996.74963"
        id="text5228-3-8"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
-         x="-849.95911"
-         y="1005.4482"
+         x="-844.92694"
+         y="996.74963"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
-         id="tspan5232-5-9">Software</tspan><tspan
+         id="tspan5232-5-9"><tspan
+           style="font-style:italic;-inkscape-font-specification:Sans Italic"
+           id="tspan3357">Step 3 </tspan></tspan><tspan
          sodipodi:role="line"
-         x="-849.95911"
-         y="1025.4482"
+         x="-847.47382"
+         y="1016.7497"
+         style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
+         id="tspan3331">Software</tspan><tspan
+         sodipodi:role="line"
+         x="-847.47382"
+         y="1036.7498"
          style="font-size:16px;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff"
          id="tspan5292-9">design</tspan></text>
     <text
@@ -2067,7 +2108,7 @@
          y="973.18579"
          x="162.44191"
          sodipodi:role="line"
-         style="font-size:16px;font-style:italic;font-weight:normal;-inkscape-font-specification:Sans Italic">No SIL </tspan><tspan
+         style="font-size:16px;font-style:italic;font-weight:normal;-inkscape-font-specification:Sans Italic">a) No SIL </tspan><tspan
          y="993.18579"
          x="162.44191"
          sodipodi:role="line"
@@ -2082,10 +2123,10 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path10197-6-7-0-0-4"
-       d="M 499.75061,505.14041 C 509.12563,466.7046 453.53438,479.90589 432.14114,478.9213"
-       style="fill:none;stroke:#ff3c00;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Mendlw)"
-       inkscape:transform-center-x="52.115161"
-       inkscape:transform-center-y="-99.763309" />
+       d="M 499.75061,505.14041 C 507.7543,466.7046 460.29463,479.90589 442.03068,478.9213"
+       style="fill:none;stroke:#ff3c00;stroke-width:2.30993176;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Mendlw)"
+       inkscape:transform-center-x="44.557354"
+       inkscape:transform-center-y="-99.568068" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -2106,8 +2147,8 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path10197-0"
-       d="M 698.67218,471.59724 C 613.37419,455.29266 526.18193,446.56518 432.99342,461.82265"
-       style="fill:none;stroke:#008000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendl)" />
+       d="M 698.67218,471.59724 C 616.94053,455.29266 533.39381,446.56518 444.10154,461.82265"
+       style="fill:none;stroke:#008000;stroke-width:2.44717908;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendl)" />
     <rect
        style="fill:#d5ffd5;fill-opacity:1;stroke:#0000cb;stroke-width:1.07007371999999989;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3763-5-1-0-1"
@@ -2125,7 +2166,7 @@
          sodipodi:role="line"
          id="tspan3807-3-6-5"
          x="874.77271"
-         y="816.0448">Safety verification</tspan><tspan
+         y="816.0448">e) Safety verification</tspan><tspan
          sodipodi:role="line"
          x="874.77271"
          y="836.0448"
@@ -2178,5 +2219,15 @@
        id="path10197-1"
        d="m 795.99636,642.91153 c -51.73597,41.81501 -67.71127,35.54329 -160.89978,50.80076"
        style="fill:none;stroke:#008000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendl)" />
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3349"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion3351"><rect
+           id="rect3353"
+           width="2.4852955"
+           height="70.830925"
+           x="985.41968"
+           y="509.23407" /></flowRegion><flowPara
+         id="flowPara3355"></flowPara></flowRoot>  </g>
 </svg>

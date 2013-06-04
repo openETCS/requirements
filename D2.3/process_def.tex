@@ -8,6 +8,7 @@
 
 To pursue the goals given in the introduction, the development cycle for the project is presented in this document.
 
+The first objective of this process is to precisely defined, from the input documents, the \emph{sub-system} to design, ie. during this project the on-board unit of the ETCS system (see \ref{sec:casestudy}), and the needed elements to validate in safety this design.
 In order to minimise the number of different models and to propose items which can be reused by railway actors after the end of the project, the proposed process shall take into account the safety concepts from the early steps, i.e., the sub-system requirement specification (SSRS) and the semi-formal definition of the model instead of the SRS. Thus, these elements can be used in the safety process to deduce formal models as shown in figure \ref{fig:OETCSProcess}.
 
 The two most important elements of the System life-cycle of EN 50129 and the Software development life-cycle model of EN
@@ -31,18 +32,18 @@ Two main phases are defined :
 \item[System phase] to analyse the input documents and provide a model of the on
   board unit according to SUBSET-026 and the safety strategy:
 \begin{itemize}
-\item First, a system analysis shall provide a \textit{Sub-System Requirement Specification} (SSRS) to define the scope of the system to  design and its structure, completed with an abstract \textit{Application Programming Interface} (API) to  give the main interfaces of the system and interaction between software and hardware items. \textit{Sub-System Hazard Analyses} (SSHA) contains the safety analyses of the SSRS and  allows the definition of safety properties.
-\item Second, a model, at least semi-formal, is designed to describe sub-system
-  architecture, main functions and to allocate sub-system requirements. This
+\item First, a system analysis (Step 1) shall provide a \textit{Sub-System Requirement Specification} (SSRS) to define the scope of the system to  design and its structure (activity a), completed with an abstract \textit{Application Programming Interface} (API) to  give the main interfaces of the system and interaction between software and hardware items (activity b). \textit{Sub-System Hazard Analyses} (SSHA) contains the safety analyses of the SSRS and  allows the definition of safety properties (activity d).
+\item Second, a model (Step 2), at least semi-formal, is designed to describe sub-system
+  architecture, main functions and to allocate sub-system requirements (activity a). This
   model will be completed with a formal model to focus on a subset of the
-  functions or properties.
+  functions or properties (activity b).
 \end{itemize}
 \item[Software phase] to design the software and then generate applicative code
   of the sub-system. Two approaches are developed in parallel from the same
   sub-system model:
 \begin{itemize}
-\item on one part to complete the semi-formal model to obtain a functional code covering as much as possible of the SSRS
-\item on the other part to provide methods and tools to  obtain a SIL4 code and to apply this approach on a subset of the SSRS.
+\item on one part to complete the semi-formal model (Step 3, activity a) to obtain a functional code covering as much as possible of the SSRS
+\item on the other part to provide methods and tools to  obtain a SIL4 code and to apply this approach on a subset of the SSRS (Step 3 activity b).
 \end{itemize}
 \end{description} 
 
@@ -59,7 +60,7 @@ The proof that the process satisfies the requirements of the standard is out of 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{OpenETCS inputs}
+\subsection{Step 0: OpenETCS inputs}
 \label{sec:inputs}
 
 
@@ -74,7 +75,7 @@ know-how of the historical ERTMS manufacturers.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{System Analysis}
+\subsection{Step 1: System Analysis}
 \label{sec:sys-analysis}
 
 
@@ -113,7 +114,7 @@ as well as the location of the boundary between the two
 \subsubsection{Detailed Description}
 \label{sec:sys-ana-descr}
 
-The first part is the definition of the  \emph{Sub System Requirement Specification} (SSRS) which shall allow:
+\paragraph{Activity a):SSRS definition} The first part is the definition of the  \emph{Sub System Requirement Specification} (SSRS) which shall allow:
 \begin{itemize}
 \item to clearly define the scope of SUBSET-026 to take into account the design (only on-board functionalities are designed, track-side functionalities are out of the scope of the project) (see R-WP2/D2.6-02-045.02.04),
 \item to define the interfaces of the system: external interfaces and software/hardware interfaces (see WP2/D2.6-02-045.01, R-WP2/D2.6-02-045.02.05, R-WP2/D2.6-02-045.02.06),
@@ -128,9 +129,9 @@ It shall also facilitate safety, design, verification, validation and maintenanc
 
 Detection of inconsistencies or ambiguities in the input documents shall be discussed and tracked (see R-WP2/D2.6-02-045.06).
 
-These tasks need some interactions with safety activities, for example to define safety tags on functions, requirements,...
+These tasks need some interactions with safety activities, for example to define safety tags (ie; to precise if the artifacts are vital or not) on functions, requirements,...
 
-The second part is the definition of the \textit{Application Programming Interface} (API) : this document shall describe at an abstract level, how software and hardware parts of the sub-system are going to interact.
+\paragraph{Activity b): API definition} The second part is the definition of the \textit{Application Programming Interface} (API) : this document shall describe at an abstract level, how software and hardware parts of the sub-system are going to interact.
 In particular, it will define an abstract layer of the hardware architecture (see R-WP2/D2.6-02-043), and a set of requirements on how the software is going to be executed in real time.
 
 \subsubsection{Means and tools}
@@ -158,7 +159,7 @@ According to  CENELEC standards, no specific constraints are given on the tools 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Sub-System formal design}
+\subsection{Step 2: Sub-System formal design}
 \label{sec:subsyst-formal-design}
 
 
@@ -187,15 +188,16 @@ This semi-formal model can be extended with \textit{strictly formal models} to i
 \label{sec:sys-dev-deta-descr}
 
 
-To cover the OpenETCS project objective  of formal models, a semi-formal model of the system  specification is defined from  the SSRS (see R-WP2/D2.6-02-047). This model shall reflect the architecture defined in SSRS (see R-WP2/D2.6-02-045.02.02). Requirements of the sub-system can be refined in semi-formal means but the semi-formal model  shall be as consistent as possible with the SSRS level of abstraction (see R-WP2/D2.6-02-047.02), in particular choices concerning software architecture and design have not to be described at this level.
+\paragraph{Activity a): Sub-system semi-formal modeling} To cover the OpenETCS project objective  of formal models, a semi-formal model of the system  specification is defined from  the SSRS (see R-WP2/D2.6-02-047). This model shall reflect the architecture defined in SSRS (see R-WP2/D2.6-02-045.02.02). Requirements of the sub-system can be refined in semi-formal means but the semi-formal model  shall be as consistent as possible with the SSRS level of abstraction (see R-WP2/D2.6-02-047.02), in particular choices concerning software architecture and design have not to be described at this level.
 In practice, all the requirements of SSRS (see R-WP2/D2.6-02-047.02.01) and of the sub-system Hazard analysis (see R-WP2/D2.6-02-047.02.02) shall be covered by the semi-formal model.
 
 Traceability between semi-formal model and SSRS shall be provided (see R-WP2/D2.6-02-047.02.05): interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-02-047.02.03), as well as exported requirements  (see R-WP2/D2.6-02-047.02.06).
 
-This semi-formal model can be extended with strictly formal models to improve the understanding of some part of the sub-system (see R-WP2/D2.6-02-049) and to  provide elements for verification and validation activities especially concerning safety properties.
+\paragraph{Activity b): Sub-system strictly formal modeling} This semi-formal model can be extended with strictly formal models to improve the understanding of some part of the sub-system (see R-WP2/D2.6-02-049) and to  provide elements for verification and validation activities especially concerning safety properties.
 
 To facilitate safety activities, the safety relevant function should be as much as possible insulated from non safety relevant functions (see R-WP2/D2.6-02-052).
 
+Traceability between strictly formal model and semi-formal model shall be provided (see R-WP2/D2.6-02-049.03): interpretations, additions and omissions of requirements shall be tracked and justified (see R-WP2/D2.6-02-049.03.01), on the sub-parts to model only.
 
 \subsubsection{Means and tools}
 
@@ -231,7 +233,7 @@ According to  CENELEC standards, no specific constraints are given on the tools 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Software design}
+\subsection{Step  3: Software design}
 \label{sec:sw-design}
 
 \subsubsection{Objectives:}
@@ -255,7 +257,7 @@ Two branches are considered:
 \end{figure}
 
 
-\subsubsection{Functional branch}
+\subsubsection{Activity a): Functional branch}
 \label{sec:sw-func}
 
 For this branch, the semi-formal model  defined during the system phase, shall  be completed and detailed with software constraints in such a way that it is possible to produce executable code for a given target.
@@ -285,7 +287,7 @@ The semi-formal model defined during the system phase shall be completed, keepin
 
 The model  shall be at least semi-formal, however, strictly  formal  methods could be necessary for single activities.
 
-\subsubsection{Functional and safety branch}
+\subsubsection{Activity b): Functional and safety branch}
 
 For this branch, we shall provide methods and a toolchain to  obtain SIL4 executable code of the on-board software application. 
 
@@ -343,7 +345,7 @@ Selected tools for this activities shall  be of class T1 or T2  depending how th
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Software code generation}
+\subsection{Step 4: Software code generation}
 \label{sec:sw-code}
 
 
@@ -354,7 +356,7 @@ Selected tools for this activities shall  be of class T1 or T2  depending how th
 
 In this phase, software code is produced from the software models.
 
-\subsubsection{Demonstrator}
+\subsubsection{Activity a): Demonstrator}
 \label{sec:demo-phase}
 
 A first executable code is produced from the software functional model (see R-WP2/D2.6-02-086). This executable code shall be non vital (see R-WP2/D2.6-02-087). However it shall be able to run in real time (see R-WP2/D2.6-02-088) on a on-board computer (see R-WP2/D2.6-02-090).
@@ -364,7 +366,7 @@ There are no specific constraints on the means and tools to  produce this non SI
 
 %%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{SIL4 Code}
+\subsubsection{Activity b): SIL4 Code}
 \label{sec:code-phase}
 
 During this phase code should be produce in safety from the safety functional model.
