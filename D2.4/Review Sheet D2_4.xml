@@ -7,11 +7,11 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Baro Sylvain</Author>
-  <LastAuthor>Marc Behrens</LastAuthor>
+  <LastAuthor>Marielle Doche</LastAuthor>
   <Created>2013-02-25T10:47:19Z</Created>
-  <LastSaved>2013-03-05T15:01:36Z</LastSaved>
+  <LastSaved>2013-06-07T16:26:24Z</LastSaved>
   <Company>SNCF Master SEVEN</Company>
-  <Version>12.00</Version>
+  <Version>14.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
@@ -324,6 +324,17 @@
   <Style ss:ID="s104">
    <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="16" ss:Bold="1"/>
   </Style>
+  <Style ss:ID="s107">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFFF99" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
  </Styles>
  <Worksheet ss:Name="Review">
   <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="47" x:FullColumns="1"
@@ -411,9 +422,9 @@
     <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
    </Row>
    <Row>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Marc Behrens</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">DLR</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">MB</Data></Cell>
    </Row>
    <Row>
     <Cell ss:StyleID="s82"/>
@@ -567,7 +578,8 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>19</ActiveRow>
+     <ActiveRow>22</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -680,43 +692,47 @@
     <Cell ss:StyleID="s97"><Data ss:Type="String">9 / 5.2</Data></Cell>
     <Cell ss:StyleID="s98"><Data ss:Type="String">Min</Data></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">In practice, model checking is combined with other techniques, most prominently abstraction and decomposition. And it is applied also to programs.</Data></Cell>
+    <Cell><Data ss:Type="String">Added : To limit this problem  , model-checking approaches are often links with abstraction and decomposition techniques.</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:AutoFitHeight="0" ss:Height="69">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">8</Data></Cell>
     <Cell ss:StyleID="s98"><Data ss:Type="String">HH</Data></Cell>
     <Cell ss:StyleID="s97"><Data ss:Type="String">9 / 5.3</Data></Cell>
     <Cell ss:StyleID="s98"><Data ss:Type="String">Q</Data></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">I think soundness means that if no issues are found in the abstract domain, then there are no issues in the (concrete) program. </Data></Cell>
+    <Cell><Data ss:Type="String">No this is the completness notion: all the issues of concrete domains shall be detected by the abstract domain. Added a definition of completness</Data></Cell>
+    <Cell><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:AutoFitHeight="0" ss:Height="217.5">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">9</Data></Cell>
     <Cell ss:StyleID="s98"><Data ss:Type="String">HH</Data></Cell>
     <Cell ss:StyleID="s97"><Data ss:Type="String">10 / 6.2</Data></Cell>
     <Cell ss:StyleID="s98"><Data ss:Type="String">Min</Data></Cell>
     <Cell ss:StyleID="s99"><Data ss:Type="String">In my opinion, we should introduce precise definitions of &quot;verification&quot; and &quot;validation&quot;. My proposal, to be as consistent as possible with the wording of the standards, is to use &quot;verification&quot; for the activity which checks whether the output of a design step meets its objectives, usually that the output of the step implements/refines the input. &quot;validation&quot; checks whether the outcome of the whole process meets the initial requirements. It might be advisable to generalize this latter to checks which span more than one design step, e.g. check whether a formal model captures the initial requirements (in its design context, thus taking descriptions of neighboring components into account. Cf. the document on &quot;Evaluation Criteria for Verification and Validation Tools&quot;.</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="114.75">
+   <Row ss:AutoFitHeight="0" ss:Height="144.75">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">10</Data></Cell>
     <Cell><Data ss:Type="String">jw</Data></Cell>
     <Cell><Data ss:Type="Number">6</Data></Cell>
     <Cell><Data ss:Type="String">min</Data></Cell>
     <Cell><Data ss:Type="String">As I have presented in D2.1 (page 2f.) we have a slightly extended definition of formal, which names 3 parts: first we name (i) completely defined set of symbols, the other two are the same as yours (ii) rigorous (in our definition mathematically defined to be unambiguous, complete and consistent) syntax, (iii) rigorous (in our definition mathematically defined to be unambiguous, complete and consistent) semantics; since I see no conflict with your description, we should probably add the set ob symbols, too.</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:AutoFitHeight="0" ss:Height="55.5">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">11</Data></Cell>
     <Cell><Data ss:Type="String">jw</Data></Cell>
     <Cell><Data ss:Type="Number">7</Data></Cell>
     <Cell><Data ss:Type="String">Q</Data></Cell>
     <Cell><Data ss:Type="String">Since &quot;Correct by Construction&quot; is used as a concept name it should be shortly explained and at all point be writen in the same way (capital letter)</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:AutoFitHeight="0" ss:Height="56.25">
     <Cell ss:Formula="=R[-1]C+1"><Data ss:Type="Number">12</Data></Cell>
     <Cell><Data ss:Type="String">jw</Data></Cell>
     <Cell><Data ss:Type="Number">8</Data></Cell>
     <Cell><Data ss:Type="String">Q</Data></Cell>
     <Cell><Data ss:Type="String">For logical reasons the methods named in the itemization t the beginning of chapter 5 should be identical with the section headlines</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="102" ss:StyleID="s103">
+   <Row ss:AutoFitHeight="0" ss:Height="140.25" ss:StyleID="s103">
     <Cell ss:StyleID="s85" ss:Formula="=R[-1]C+1"><Data ss:Type="Number">13</Data></Cell>
     <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
     <Cell ss:StyleID="s86"><Data ss:Type="Number">9</Data></Cell>
@@ -725,23 +741,23 @@
     <Cell ss:StyleID="s86"/>
     <Cell ss:StyleID="s82"/>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="51" ss:StyleID="s103">
+   <Row ss:AutoFitHeight="0" ss:Height="69" ss:StyleID="s103">
     <Cell ss:StyleID="s85" ss:Formula="=R[-1]C+1"><Data ss:Type="Number">14</Data></Cell>
     <Cell ss:StyleID="s82"><Data ss:Type="String">jw</Data></Cell>
     <Cell ss:StyleID="s86"><Data ss:Type="String">All</Data></Cell>
     <Cell ss:StyleID="s82"><Data ss:Type="String">Min</Data></Cell>
     <Cell ss:StyleID="s86"><Data ss:Type="String">Definition what is a formal method and whats a formal approach is not clear in the document. Both terms get mixed. Using only the term fromal approach (as mainly down) and reffering to methods using formal means of description.</Data></Cell>
     <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">OK</Data></Cell>
    </Row>
-   <Row ss:StyleID="s103">
-    <Cell ss:StyleID="s85"/>
-    <Cell ss:StyleID="s82"/>
+   <Row ss:AutoFitHeight="0" ss:Height="87" ss:StyleID="s103">
+    <Cell ss:StyleID="s85"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">MB</Data></Cell>
+    <Cell ss:StyleID="s107"><Data ss:Type="String">5/ 2</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Min</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">The 'SUBSET-076-x 2.3.y' is the test specification for the SUBSET-026 2.3.y. The test specification for the SUBSET-026 3.3.0 will be released at the end of 2013. Maybe it would be good to note that the Version of the Subset-076 fits to the version of Subset-026.</Data></Cell>
     <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s86"/>
-    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">OK</Data></Cell>
    </Row>
    <Row ss:StyleID="s103">
     <Cell ss:StyleID="s85"/>
@@ -802,13 +818,14 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Zoom>70</Zoom>
    <Selected/>
-   <TopRowVisible>9</TopRowVisible>
+   <TopRowVisible>12</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>16</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
