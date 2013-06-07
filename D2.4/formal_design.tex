@@ -62,7 +62,7 @@ general systems represent an infinite state space and therefore a finite
 abstraction must be derived for model checking. However model checking
 suffers from state explosion problem: if the model is not properly
 designed, it can have too many states and make the exhaustive
-verification impossible.
+verification impossible. To limit this problem  , model-checking approaches are often links with abstraction and decomposition techniques.
 
 Example of such approaches and tools are Design Verifier (used in
 SCADE), Petri Nets, NuSMV, UPPAAL or SPIN.
@@ -82,7 +82,7 @@ the result of the analysis is sound: if an issue is found by the
 analysis in the abstract domain, it exists in the concrete domains of
 the variables, i.e., in the real program.
 
-On the contrary, completeness of the approach is difficult to ensure:
+On the contrary, completeness of the approach (ie. ensuring that any issue of the concrete domains are covered by an issue of the abstract domain) is difficult to ensure:
 due to abstraction, the analysis can make some approximation. In such
 cases the result of the analysis is meaningless: the analysis cannot
 tell if a verified property is valid or not.
