@@ -9,7 +9,7 @@
   <Author>Baro Sylvain</Author>
   <LastAuthor>Marielle Doche</LastAuthor>
   <Created>2013-02-25T10:47:19Z</Created>
-  <LastSaved>2013-06-04T13:55:19Z</LastSaved>
+  <LastSaved>2013-06-07T13:38:01Z</LastSaved>
   <Company>SNCF Master SEVEN</Company>
   <Version>14.00</Version>
  </DocumentProperties>
@@ -1010,7 +1010,7 @@
     <Cell><Data ss:Type="String">Maj</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">natural language is not sufficient. We need structure language to reach our target</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">The remark is not clear :  what means &quot;structure manguage&quot; ?&#10;In the document, &quot;natural language&quot; is associated only to requirement, which means that requirements, in the SSRS shall be at least in natural language. If we start to add a &quot;structure&quot; to  the requirement description, we start to  write a semi-formal  expression of the requirement which is a part of the next phase.</Data><NamedCell
+    <Cell><Data ss:Type="String">The remark is not clear :  what means &quot;structure language&quot; ?&#10;In the document, &quot;natural language&quot; is associated only to requirement, which means that requirements, in the SSRS shall be at least in natural language. If we start to add a &quot;structure&quot; to  the requirement description, we start to  write a semi-formal  expression of the requirement which is a part of the next phase.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
@@ -1288,7 +1288,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s100"><Data ss:Type="String">The API describes the interface of the hardware which is used by the software, not how the software uses it. I.e., the API is the interface of a system component and does not describe the interaction of the components (which are software and hardware in this case). </Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">Interactions between software components is a part of the system architecture( thus a part of SSRS). API describes as said in 4.3.3 interactions between software and hardware.  But I not agree to say the link between them are directed.</Data><NamedCell
+    <Cell><Data ss:Type="String">Interactions between software components is a part of the system architecture( thus a part of SSRS). API describes as said in 4.3.3 interactions between software and hardware.  But I do not agree to say the link between them are directed.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
@@ -1586,7 +1586,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+   <Row ss:AutoFitHeight="0" ss:Height="97.5">
     <Cell><Data ss:Type="Number">75</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">MB</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s113"><Data ss:Type="String">11/4.3.1</Data><NamedCell
@@ -1594,9 +1594,9 @@
     <Cell><Data ss:Type="String">Q</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Should, on the architecture level, functionalities which are not to be modelled within openETCS but to which an interface needs to be well defined be also identified?</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">Interface shall be well defined (ie; What is exchanged how and when), but I do not think it is necessary to define in details the functionnality.</Data><NamedCell
+    <Cell><Data ss:Type="String">I propose to transform as follow :&quot;However, the SSRS shall be compliant with the input documents of TSI (SUBSET-026, FIS, ...) (see R-WP2/D2.6-02-045, R-WP2/D2.6-02-045.02.06 and R-WP2/D2.6-02-045.04) and shall cover all the requirements and the function of the input documents. If a function or a requirement shall not been taken into account in the sequel of the of the process, a justification shall be clearly given.&quot;</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="51">
     <Cell><Data ss:Type="Number">76</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1625,13 +1625,14 @@
    </Print>
    <Zoom>70</Zoom>
    <Selected/>
+   <TopRowVisible>70</TopRowVisible>
    <SplitHorizontal>6525</SplitHorizontal>
    <TopRowBottomPane>79</TopRowBottomPane>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>7</ActiveRow>
-     <ActiveCol>5</ActiveCol>
+     <ActiveRow>77</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
     <Pane>
      <Number>2</Number>
