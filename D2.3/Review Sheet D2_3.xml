@@ -9,7 +9,7 @@
   <Author>Baro Sylvain</Author>
   <LastAuthor>Marielle Doche</LastAuthor>
   <Created>2013-02-25T10:47:19Z</Created>
-  <LastSaved>2013-06-07T13:38:01Z</LastSaved>
+  <LastSaved>2013-06-10T15:35:28Z</LastSaved>
   <Company>SNCF Master SEVEN</Company>
   <Version>14.00</Version>
  </DocumentProperties>
@@ -727,9 +727,8 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Maybe bibtex should be used to reference documents</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">It will be nice to have a common bib file for all the project (withmaintenance of the version). Not corrected for the moment.</Data><NamedCell
+    <Cell ss:Index="7"><Data ss:Type="String">OK</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="114.75">
     <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1264,7 +1263,7 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">OK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="51">
+   <Row ss:AutoFitHeight="0" ss:Height="96">
     <Cell><Data ss:Type="Number">48</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">HH</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1274,11 +1273,11 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s100"><Data ss:Type="String">Are all the extra-functional aspects in the scope of openETCS?</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">It depends  what means &quot;extra-functional&quot; , safety is in the scope of the project but not in the one of this document, performance is in the scope of the project but not specify in SRS (maybe his can be deduce from SSHA…) ..</Data><NamedCell
+    <Cell><Data ss:Type="String">It depends  what means &quot;extra-functional&quot; , safety is in the scope of the project but not in the one of this document, performance is in the scope of the project but not specify in SRS (maybe his can be deduce from SSHA…) ..&#10;&#10;Answer HH: A minor point that need not be discussed further.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="63.75">
+   <Row ss:AutoFitHeight="0" ss:Height="104.25">
     <Cell><Data ss:Type="Number">49</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s101"><Data ss:Type="String">HH</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1288,9 +1287,9 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s100"><Data ss:Type="String">The API describes the interface of the hardware which is used by the software, not how the software uses it. I.e., the API is the interface of a system component and does not describe the interaction of the components (which are software and hardware in this case). </Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">Interactions between software components is a part of the system architecture( thus a part of SSRS). API describes as said in 4.3.3 interactions between software and hardware.  But I do not agree to say the link between them are directed.</Data><NamedCell
+    <Cell><Data ss:Type="String">Interactions between software components is a part of the system architecture( thus a part of SSRS). API describes as said in 4.3.3 interactions between software and hardware.  But I do not agree to say the link between them are directed.&#10;&#10;&#10;Answer HH: A minor point that need not be discussed further.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">OPEN</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">NOK</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="89.25">
     <Cell><Data ss:Type="Number">50</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1625,14 +1624,13 @@
    </Print>
    <Zoom>70</Zoom>
    <Selected/>
-   <TopRowVisible>70</TopRowVisible>
    <SplitHorizontal>6525</SplitHorizontal>
    <TopRowBottomPane>79</TopRowBottomPane>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>77</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>7</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
     <Pane>
      <Number>2</Number>

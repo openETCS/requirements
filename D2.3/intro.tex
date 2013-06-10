@@ -2,15 +2,15 @@
 
 The purpose of this document is to describe the specification and design activities for the OpenETCS project. The activities for safety, verification and validation are not in the scope of this document and will be described in WP4's documents.
 
-To deal with a safety process, the specification and design activities shall follow the requirements of EN 50126, EN 50128 and EN 50129 and reflect usual activities for the development of railway critical systems (see D2.1  and D2.2).
-This description is linked to the set of requirements defined for the OpenETCS project in D2.6.
+To deal with a safety process, the specification and design activities shall follow the requirements of EN 50126 \citep{EN_50126}, EN 50128 \citep{EN_50128} and EN 50129 \citep{EN_50129} and reflect usual activities for the development of railway critical systems (see D2.1 \citep{D2_1}  and D2.2 \citep{D2_2}).
+This description is linked to the set of requirements defined for the OpenETCS project in D2.6 \citep{D2_6}.
 
 \subsection{Motivation}
 
 This document describes the process to  be applied  during the OpenETCS project to achieve the main goals of the OpenETCS project:
 
 \paragraph{A semi-formal reference specification for the ETCS requirements and architecture, completed by strictly formal  models of sub-parts}
-The first goal of the project is to propose a semi-formal specification of the ETCS on-board functionalities according to  UNISIG SUBSET-026, baseline 3.
+The first goal of the project is to propose a semi-formal specification of the ETCS on-board functionalities according to  UNISIG SUBSET-026 \cite{unisig_subset-026_2012}, baseline 3.
 
 The purpose of this model is:
 \begin{itemize}
@@ -55,10 +55,8 @@ An executable software of the specification shall be provided, as well as a non 
 
 \subsection{Contents of this Document}
 
-As the Quality Plan D1.3 focuses on means to apply during the OpenETCS project (for example open source approaches or Scrum organization) the aim of this document is to define the main steps which are necessary within the OpenETCS project to produce a certifiable system according to the CENELEC standards.
-Safety, verification and validation activities are described in the outputs of WP4.
-
-\todo{Give the references of WP4 deliverables}
+As the Quality Plan D1.3 \cite{QP} focuses on means to apply during the OpenETCS project (for example open source approaches or Scrum organization) the aim of this document is to define the main steps which are necessary within the OpenETCS project to produce a certifiable system according to the CENELEC standards.
+Safety, verification and validation activities are described in the outputs of WP4 \cite{D4_1, D4_5a}.
 
 The first part of this document focuses on the description of the mandatory steps of a life-cycle to design a critical system according to the CENELEC standards, as described in figure~\ref{fig:OETCSProcess}.
 
@@ -86,27 +84,15 @@ The second part of this document describes the system to design during the OpenE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Reference Documents}
-\begin{itemize}
-\item CENELEC EN 50126-1 --- 01/2000 --- \emph{Railways applications –- The specification and
-demonstration of Reliability, Availability, Maintainability and Safety (RAMS) –- Part 1:
-Basic requirements and generic process}
-\item CENELEC EN 50128 --- 10/2011 --- \emph{Railway applications -- Communication, signalling and
-processing systems -- Software for railway control and protection systems}
-\item CENELEC EN 50129 --- 05/2003 --- \emph{Railway applications –- Communication, signalling and
-processing systems –- Safety related electronic systems for signalling}
-\item FPP --- \emph{Project Outline Full Project Proposal Annex OpenETCS} -- v2.2
-\item SUBSET-026 3.3.0 --- \emph{System Requirement Specification}
-\item SUBSET-076-x 2.3.y --- \emph{Test related ERTMS documentation} (this version is related to version 2.3.y  of SUBSET-026)
-\item SUBSET-088 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
-\item SUBSET-091 3.2.0 --- \emph{Safety Requirements for the Technical Interoperability
-of ETCS in Levels 1 \& 2}
-\item SUBSET-034 3.0.0 --- \emph{Train interface FIS}
-\item CCS TSI --- \emph{ CCS TSI for HS and CR transeuropean rail has been adopted by a Commission Decision 2012/88/EU on the 25th January 2012}
-\item D1.3 -- Project Quality Assurance Plan
-\item D2.1 -- Report on existing methodologies 
-\item D2.2 -- Report on CENELEC standards
-\item D2.6 -- Requirements for OpenETCS
-\end{itemize}
+
+
+
+%% Bibliography
+\nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{wp2_bibliography}
+%\bibliography{process}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
