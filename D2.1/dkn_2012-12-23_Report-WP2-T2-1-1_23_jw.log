@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.9)  1 MAR 2013 13:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.9)  10 JUN 2013 11:31
 entering extended mode
 **dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.tex
 
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
 \dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
@@ -16,14 +16,14 @@ romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
 sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
 senglishmax, welsh, loaded.
 
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
 \template\openetcs_report.cls
 
 LaTeX Warning: You have requested document class `./template/openetcs_report',
-               but the document class provides `openetcs'.
+               but the document class provides `template/openetcs_report'.
 
-Document Class: openetcs 2012/08/03 v0.1 Typesetting Technical Information Repo
-rts of openETCS project based on ERDC class v1.1
+Document Class: template/openetcs_report 2012/08/03 v0.1 Typesetting Technical 
+Information Reports of openETCS project based on ERDC class v1.1
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
@@ -402,7 +402,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 Package rotfloat Info: float package v1.3 detected on input line 74.
 )
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
 \dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.aux)
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 17.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 17.
@@ -492,11 +492,11 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
 * h-part:(L,W,R)=(90.3375pt, 416.83289pt, 90.3375pt)
-* v-part:(T,H,B)=(72.26999pt, 722.18808pt, 50.58878pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=416.83289pt
-* \textheight=722.18808pt
+* \textheight=700.50687pt
 * \oddsidemargin=18.0675pt
 * \evensidemargin=18.0675pt
 * \topmargin=-37.0pt
@@ -595,27 +595,28 @@ LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 18.99994pt on input line 65.
 LaTeX Font Info:    Font shape `T1/txss/h/n' will be
 (Font)              scaled to size 10.40245pt on input line 65.
-<./template/chart.png, id=2, 401.5pt x 301.125pt>
-File: ./template/chart.png Graphic file (type png)
- <use ./template/chart.png>
-Package pdftex.def Info: ./template/chart.png used on input line 65.
-(pdftex.def)             Requested size: 350.0pt x 262.51881pt.
+<./template/openETCS_EUPL.png, id=2, 1228.59pt x 1129.21875pt>
+File: ./template/openETCS_EUPL.png Graphic file (type png)
+
+<use ./template/openETCS_EUPL.png>
+Package pdftex.def Info: ./template/openETCS_EUPL.png used on input line 65.
+(pdftex.def)             Requested size: 350.0pt x 321.69284pt.
 LaTeX Font Info:    Font shape `T1/txss/k/n' will be
 (Font)              scaled to size 8.54997pt on input line 65.
 
-<./template/ccbysabig.png, id=3, 97.0827pt x 33.9669pt>
-File: ./template/ccbysabig.png Graphic file (type png)
+<./template/oOLT.png, id=4, 590.95781pt x 292.84406pt>
+File: ./template/oOLT.png Graphic file (type png)
 
-<use ./template/ccbysabig.png>
-Package pdftex.def Info: ./template/ccbysabig.png used on input line 65.
-(pdftex.def)             Requested size: 40.0pt x 13.99492pt.
+<use ./template/oOLT.png>
+Package pdftex.def Info: ./template/oOLT.png used on input line 65.
+(pdftex.def)             Requested size: 30.0pt x 14.862pt.
  [1
 
-{C:/Users/Welte/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <O:/Projekto
-rdner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-report/template/it
-ea.jpg> <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodolog
-y-report/template/chart.png> <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repo
-sitory/WP2/methodology-report/template/ccbysabig.png>] [2]
+{C:/Users/Welte/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/We
+lte/Documents/Projekte/openETCS/GitHub-Repository/requirements/D2.1/template/it
+ea.jpg> <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requireme
+nts/D2.1/template/openETCS_EUPL.png> <C:/Users/Welte/Documents/Projekte/openETC
+S/GitHub-Repository/requirements/D2.1/template/oOLT.png>] [2]
 Overfull \hbox (113.16711pt too wide) in paragraph at lines 65--65
 [][][][] 
  []
@@ -634,10 +635,6 @@ Overfull \hbox (80.0pt too wide) in paragraph at lines 65--65
 []$[]$[] 
  []
 
-File: ./template/ccbysabig.png Graphic file (type png)
-<use ./template/ccbysabig.png>
-Package pdftex.def Info: ./template/ccbysabig.png used on input line 65.
-(pdftex.def)             Requested size: 40.0pt x 13.99492pt.
 
 Overfull \hbox (80.0pt too wide) in paragraph at lines 65--65
 []$[]$ 
@@ -653,68 +650,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<./template/ccbysa.png, id=17, 64.3203pt x 12.045pt>
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 65.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [1 <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-re
-port/template/ccbysa.png>]
+[1]
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 65.
-
-(C:\Users\Welte\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
+ (C:\Users\Welte\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 65.
-File: ./template/ccbysa.png Graphic file (type png)
 
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 65.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [2
+[2
 
 ]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 8.54997pt on input line 66.
 
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
-\dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.toc
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 45.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
-
-[3
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
+\dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.toc [3
 
 
 ])
 \tf@toc=\write3
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 67.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
  [4]
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
 \dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.lof)
 \tf@lof=\write4
 
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
 \dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.lot)
 \tf@lot=\write5
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 72.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
+ [5
 
-[5
-
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 72.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [6
+] [6
 
 ]
 Chapter 1.
@@ -725,7 +690,7 @@ File: omstxr.fd 2000/12/15 v3.1
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 81.
 
-<./images/Development-lifecycle-EN50128-own.png, id=42, 718.3638pt x 404.712pt>
+<./images/Development-lifecycle-EN50128-own.png, id=43, 718.3638pt x 404.712pt>
 File: ./images/Development-lifecycle-EN50128-own.png Graphic file (type png)
 <use ./images/Development-lifecycle-EN50128-own.png>
 Package pdftex.def Info: ./images/Development-lifecycle-EN50128-own.png used on
@@ -736,14 +701,10 @@ Overfull \hbox (14.18872pt too wide) in paragraph at lines 92--93
  [][] 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 107.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [1
+[1
 
- <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-repor
-t/images/Development-lifecycle-EN50128-own.png>]
+ <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/D2.
+1/images/Development-lifecycle-EN50128-own.png>]
 Overfull \vbox (127.2315pt too high) detected at line 148
  []
 
@@ -862,46 +823,20 @@ Overfull \hbox (30.6983pt too wide) in paragraph at lines 140--154
 [][] 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 164.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [2]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 165.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [3]
+[2] [3]
 Chapter 2.
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 215.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [4
+[4
 
 ]
 
 LaTeX Warning: Reference `chap: requirements' on page 5 undefined on input line
  218.
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 221.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [5]
+[5]
 Chapter 3.
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 261.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [6
+[6
 
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 261.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [7]
+] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 276--276
 []\T1/txr/m/n/10.95 (+20) Description of
  []
@@ -949,11 +884,7 @@ Underfull \hbox (badness 2035) in paragraph at lines 298--298
 
 LaTeX Warning: Float too large for page by 64.3592pt on input line 306.
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 309.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [8]
+[8]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 315.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
@@ -968,11 +899,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--340
 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 370.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [9
+[9
 
 
 ]
@@ -991,33 +918,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 413--416
 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 426.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [10]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 512.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [11]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 600.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [12]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 667.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [13]
+[10] [11] [12] [13] [14]
 Chapter 4.
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 698.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [14
+[15
 
 ]
 Overfull \hbox (1.0152pt too wide) in paragraph at lines 707--720
@@ -1025,28 +928,20 @@ Overfull \hbox (1.0152pt too wide) in paragraph at lines 707--720
  []
 
 
-LaTeX Warning: Reference `EN50128:2011' on page 15 undefined on input line 730.
+LaTeX Warning: Reference `EN50128:2011' on page 16 undefined on input line 730.
 
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 731.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [15]
-<./images/Model-based_Approach.png, id=96, 658.6206pt x 356.0502pt>
+[16] <./images/Model-based_Approach.png, id=98, 658.6206pt x 356.0502pt>
 File: ./images/Model-based_Approach.png Graphic file (type png)
 
 <use ./images/Model-based_Approach.png>
 Package pdftex.def Info: ./images/Model-based_Approach.png used on input line 7
 34.
 (pdftex.def)             Requested size: 395.1754pt x 213.63176pt.
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 752.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [16 <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-r
-eport/images/Model-based_Approach.png>]
-<./images/Lifecycle-Model-based-Approach-Formal-Proof.png, id=101, 704.3916pt x
+ [17 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements
+/D2.1/images/Model-based_Approach.png>]
+[18]
+<./images/Lifecycle-Model-based-Approach-Formal-Proof.png, id=107, 704.3916pt x
  396.5214pt>
 File: ./images/Lifecycle-Model-based-Approach-Formal-Proof.png Graphic file (ty
 pe png)
@@ -1059,18 +954,9 @@ Overfull \hbox (5.80534pt too wide) in paragraph at lines 788--789
  [][] 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 798.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [17]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 814.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [18 <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-r
-eport/images/Lifecycle-Model-based-Approach-Formal-Proof.png>]
-<./images/Lifecycle-Model-based-Approach-Testing.png, id=110, 704.3916pt x 396.
+[19 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/
+D2.1/images/Lifecycle-Model-based-Approach-Formal-Proof.png>]
+<./images/Lifecycle-Model-based-Approach-Testing.png, id=112, 704.3916pt x 396.
 5214pt>
 File: ./images/Lifecycle-Model-based-Approach-Testing.png Graphic file (type pn
 g)
@@ -1083,34 +969,17 @@ Overfull \hbox (5.80534pt too wide) in paragraph at lines 820--821
  [][] 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 839.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [19 <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-r
-eport/images/Lifecycle-Model-based-Approach-Testing.png>]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 857.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [20]
+[20 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/
+D2.1/images/Lifecycle-Model-based-Approach-Testing.png>] [21]
 
-LaTeX Warning: Reference `chap: Methodology' on page 21 undefined on input line
+LaTeX Warning: Reference `chap: Methodology' on page 22 undefined on input line
  861.
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 864.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [21]
+[22]
 Chapter 5.
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 913.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [22
+[23
 
-]
+] [24]
 Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []\T1/txr/m/n/10.95 (+20) Formalisation of
  []
@@ -1720,177 +1589,47 @@ Overfull \hbox (1.13445pt too wide) in paragraph at lines 961--961
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 963.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [23
+[25
 
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 963.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [24]
-File: ./template/ccbysa.png Graphic file (type png)
+] [26] [27] [28] [29
 
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 965.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [25]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 966.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [26]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1037.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [27
-
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1141.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [28]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1254.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [29]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1362.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [30]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1465.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [31]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1565.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [32]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1669.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [33]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1782.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [34]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1889.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [35]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1992.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [36]
+] [30] [31] [32] [33] [34] [35] [36] [37] [38]
 Underfull \hbox (badness 10000) in paragraph at lines 2042--2043
 
  []
 
-<./images/SCADE_Overview.png, id=169, 593.21625pt x 553.06625pt>
+[39] <./images/SCADE_Overview.png, id=177, 593.21625pt x 553.06625pt>
 File: ./images/SCADE_Overview.png Graphic file (type png)
 
 <use ./images/SCADE_Overview.png>
 Package pdftex.def Info: ./images/SCADE_Overview.png used on input line 2064.
 (pdftex.def)             Requested size: 355.9325pt x 331.8423pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2074.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [37]
+ [40 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements
+/D2.1/images/SCADE_Overview.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 2089--2091
 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2091.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [38 <O:/Projektordner/03_Arbeitsunterlagen/GitHub-Repository/WP2/methodology-r
-eport/images/SCADE_Overview.png>]
-File: ./template/ccbysa.png Graphic file (type png)
+[41] [42]
 
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2193.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [39]
+LaTeX Warning: Reference `List tools' on page 43 undefined on input line 2286.
 
-LaTeX Warning: Reference `List tools' on page 40 undefined on input line 2286.
-
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2287.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [40]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2361.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [41]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2440.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [42]
+[43] [44] [45]
 Chapter 6.
 
-LaTeX Warning: Reference `chapter: MoD' on page 43 undefined on input line 2442
+LaTeX Warning: Reference `chapter: MoD' on page 46 undefined on input line 2442
 .
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2455.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [43
+[46
 
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2456.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [44]
+] [47]
 Appendix A.
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2471.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [45
+[48
 
 
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2551.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [46]
+] [49] [50]
 Appendix B.
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2555.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [47
+[51
 
 ]
 Overfull \hbox (27.38654pt too wide) in paragraph at lines 2570--2570
@@ -2047,24 +1786,9 @@ Underfull \hbox (badness 2035) in paragraph at lines 2631--2631
 []|\T1/txr/m/n/10.95 (+20) UML 2.0 (Uni-fied Mod-elling Lan-
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2636.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [48
+[52
 
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2640.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [49]
-File: ./template/ccbysa.png Graphic file (type png)
-
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2651.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [50
+] [53] [54
 
 ]
 Appendix C.
@@ -2178,38 +1902,18 @@ Overfull \hbox (2.45772pt too wide) in alignment at lines 2711--2728
  [] [] [] [] [] [] [] [] [] 
  []
 
-File: ./template/ccbysa.png Graphic file (type png)
-<use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2728.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [51
+[55
 
-]
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2733.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [52]
+] [56]
 Appendix D.
 
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
-\dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.bbl
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 1.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
+\dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.bbl [57
 
-[53
-
-])
-File: ./template/ccbysa.png Graphic file (type png)
- <use ./template/ccbysa.png>
-Package pdftex.def Info: ./template/ccbysa.png used on input line 2745.
-(pdftex.def)             Requested size: 32.84999pt x 6.15186pt.
- [54
+]) [58
 
 ]
-(O:\Projektordner\03_Arbeitsunterlagen\GitHub-Repository\WP2\methodology-report
+(C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
 \dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2223,13 +1927,13 @@ LaTeX Warning: There were undefined references.
 ### simple group (level 1) entered at line 2474 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8152 strings out of 494045
- 122732 string characters out of 3145970
- 389337 words of memory out of 3000000
+ 8151 strings out of 494045
+ 122698 string characters out of 3145970
+ 389663 words of memory out of 3000000
  10885 multiletter control sequences out of 15000+200000
- 130285 words of font info for 422 fonts, out of 3000000 for 9000
+ 133639 words of font info for 424 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,15n,59p,1309b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,15n,59p,1309b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Users/Welte/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.
 pfb><C:/Users/Welte/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.
@@ -2244,10 +1948,10 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.pdf (62 pages, 592183 
-bytes).
+Output written on dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.pdf (66 pages, 1101059
+ bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
+ 282 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 81966 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 82985 words of extra memory for PDF output out of 89155 (max. 10000000)
 
