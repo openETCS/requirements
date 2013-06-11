@@ -321,9 +321,12 @@ From the means of description presented in  \citeauthor{EN50128:2011}  only UML,
 
 	\textbf{Typical applications}
 
+UML and SysML is dedicated on system engineering and suitable for a number of different kind of systems.
+UML has be first created to develope software systems, but represents a general approach, which have been adoped in many areas. SysML has be specified to provide a more suited subset of UML for general system development, therefore it is used for the development of all kinds of technical systems.
 
 	\textbf{Standards}
 
+UML is defined in ISO/IEC 19501 Information technology -- Open Distributed Processing -- Unified Modeling Language (UML) Version 1.4.2. It is further developed by OMG and standardised by their publications. OMG also defines the SysML standards.
 
 	\textbf{References}
 
@@ -334,30 +337,46 @@ Links:
 \url{http://www.omg.org/} \\[4pt]
 
 Bibliography:
-
-Weilkiens, Tim. \textit{Systems Engineering with SysML/UML: Modeling, Analysis, Design}. Morgan Kaufmann / The OMG Press, Boston,  2007.\\[4pt]
-Ambler, Scott William. \textit{The Object Primer: Agile Model Driven Development with UML 2}. Cambridge University Press, Cambridge, 2004.\\[4pt]
+\begin{itemize}
+\item Weilkiens, Tim. \textit{Systems Engineering with SysML/UML: Modeling, Analysis, Design}. Morgan Kaufmann / The OMG Press, Boston,  2007.\\[4pt]
+\item Ambler, Scott William. \textit{The Object Primer: Agile Model Driven Development with UML 2}. Cambridge University Press, Cambridge, 2004.\\[4pt]
+\end{itemize}
 
 \section{Petri Nets}
 
 
 	\textbf{Characteristics}
 
+Petri Nets were developed originally by Carl Adam Petri in 1962 as graphical way to model chemical reactions. The have evolved since then presenting a very powerful completely mathematical defined means of description to graphically model systems in a discrete way and analyse and simulated their behaviour. 
+In general Petri Nets are bipartite graphs  that consist of to kind of notes called places and transitions, which are connected by arcs. Thereby, arcs are only allowed to run from a place to a transition or vice versa and never between places or between transitions. Places represent a local discrete state of the modelled system, while every transition represents a change in these system states. The places from which an arc runs to a transition are input places of this transition and the places to which arcs from the transition run are output places of the transition. That a transition can fire the conditions represented by all input places have to be established. Through the transition firing the system changes from the input conditions to the output conditions by activating the related places. Tokens have been introduced to represent the activated states. Their movement allows to simulated the system behaviour. Over the time various extensions have be developed to extend the concept of petri nets to handle a larger amount of system properties and  behaviour. 
 
 	\textbf{Typical applications}
 
+Petri nets are used to describe a wide range of systems that show a discrete behaviour, as the overall concept of states and transitions can be found in most application fields. As the Petri Nets concept has been developed and extended over time, the nets have been applied in a number of different fields: Office automation, work-flows, flexible manufacturing, programming languages, protocols and networks, hardware structures, real-time systems, performance evaluation, operations research, embedded systems, defence systems, telecommunications, Internet, e-commerce and trading, railway networks, biological systems.
 
 	\textbf{Standards}
 
+ISO/IEC 15909-1 Software and Systems Engineering - High-level Petri Nets
+Part 1 covers Concepts, Definitions and Graphical Notation
+Part 2 covers the PNML language, a Transfer Format for Petri nets based on XML
+
+The use of petri nets for the system dependability analysis is standardised in IEC 62551 Analysis techniques for dependability - Petri net modeling.
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://www.informatik.uni-hamburg.de/TGI/PetriNets/}\\[4pt]
+\url{http://www.pnml.org}\\[4pt]
+\url{http://www.scholarpedia.org/article/Petri_net} \\[4pt]
 
 Bibliography:
-
+\begin{itemize}
+\item David, René; Alla, H.: Petri nets and Grafcet -- Tools for modelling discrete event systems. Prentice Hall, 1992.
+\item Girault, Claude; Valk, R.: Petri nets for systems engineering -- A guide to modeling, verification, and applications. Springer, 2003.
+\item Van der Aalst, W.M.P. and Stahl, C.: Modeling Business Processes -- A Petri Net-Oriented Approach. The MIT Press, 2011.
+\item K. Jensen and Kristensen, L.M.: Coloured Petri Nets -- Modeling and Validation of Concurrent Systems. Springer-Verlag Berlin, 2009.
+\end{itemize}
 
 
 
@@ -366,21 +385,37 @@ Bibliography:
 
 	\textbf{Characteristics}
 
+All three formal methods have mainly been developed by Jean-Raymond Abrial. The Z notation is the oldest of the three  and named after Zermelo–Fraenkel set theory. It has been developed as a specification language which used a model-based approach to describe computing systems. The Z language is based on the standard mathematical notation used in axiomatic set theory, lambda calculus, and first-order predicate logic. 
+
+ B has been developed as a associated method to Z which is more focused on the lower-level formal code development rather than just formal specification. Respectively the B method provides more than the pure means of description, as it additionally includes processes for refinement, proof and has a strong tool support. Normally the B method development of software first writes a concrete model which specifies the main data processes of the system and the fundamental properties of this data. Thereby the languages used set theory using invariants to describe the static properties and stating post-conditions for operations to define the dynamic behaviour. The B model is then refined to obtain a complete software model, which can be formally analysed to prove the correctness.
+ 
+ The newest formal method in this group is Event-B which has been developed as an evolution of B. Event-B has a simplified notation aiming at system-level modelling and analysis. 
 
 	\textbf{Typical applications}
 
+Z and B are used in a variety of applications to develop safety critical software since the models allow to prove the correctness. The main use is in the railway and aerospace industry. As Event-B is respectively new it has not yet be applied on major projects.
 
 	\textbf{Standards}
+The Z method is defined by the standard SO/IEC 13568: Information technology -- Z formal specification notation -- Syntax, type system and semantics.
 
+The B method and B Event are mainly based on the books published by Jean-Raymond Abrial. These  are the quasi standardisation of the means of description. 
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://www.methode-b.com/}\\[4pt]
+\url{http://www.event-b.org/}\\[4pt]
 
 Bibliography:
 
+\begin{itemize}
+\item Spivey, J. Michael: The Z Notation -- a reference manual, Prentice Hall International Series in Computer Science, 1992.
+\item  Abrial, Jean-Raymond: The B-Book -- Assigning Programs to Meanings, Cambridge University Press, 1996.
+\item  Schneider, S.: The B-Method -- An Introduction, Palgrave Macmillan, Cornerstones of Computing series, 2001.
+\item Abrial, Jean-Raymond: Modeling in Event-B -- System and Software Engineering,  Cambridge University Press, 2010.
+\end{itemize}
+ 
 \section{Lustre/ Textual and Graphical Scade}
 
 	\textbf{Characteristics}
@@ -403,6 +438,7 @@ Safety critical systems like
 
 	\textbf{Standards}
 
+The languages Lustre and SCADE are well documented, but note standardised.
 
 	\textbf{References}
 	
@@ -422,100 +458,120 @@ Bibliography:
 
 	\textbf{Characteristics}
 
+State machines and the for software development most relevant subset of finite-state machine represent the major mathematical concept to describe a system structure and the behaviour. Thereby states are defined which represent a certain status of the system, while inputs are information triggering certain actions leading to a state change. If the system actions are defined for every input in every state, the system is described completely.
+
+If the number of states and transitions is fined and countable, a start state defined and a set of final states given, the system is described by a finite-state machine. The limits of a finite-state machine all to graphically represent the system in a state transition diagram showing the overall behaviour and to check the finite-state machine for completeness, consistency and reachability.
 
 	\textbf{Typical applications}
 
+Most means of descriptions developed to describe a system behaviour incorporate the principle of state machines in their overall concept.
 
 	\textbf{Standards}
 
+As state machines are a pure mathematical concept, their is no standard. They are defined in basic automata theory.
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://foldoc.org/state+machine} \\[4pt]
 
 Bibliography:
+\begin{itemize}
+\item Carroll, J., Long, D.: Theory of Finite Automata with an Introduction to Formal Languages. Prentice Hall, Englewood Cliffs, 1989.
+\item Ginsburg, S.: An Introduction to Mathematical Machine Theory. Addison-Wesley, 1962...
+\end{itemize}
+
 
 \section{VDM (Vienna Development Method)}
 
 
 	\textbf{Characteristics}
 
-
+The Vienna Development Method has been developed in IBM's Vienna Laboratory in the 1970s as a formal specification language. It is a model-based approach which describes the system by its states using set-theoretic structures. Thereby, the pre and post conditions of a state are defined as invariants and operations. These can be proven, while the data structure of the system is set up during reification and the operations ae refined.
+ 
 	\textbf{Typical applications}
 
+VDM has been used in industry to develop proven software for critical systems, compilers and concurrent systems
 
 	\textbf{Standards}
-
-
+	
+	The VDM has be standardised in ISO/IEC 13817 Information technology — Programming languages, their environments and system software interfaces — Vienna Development Method — Specification Language — Part 1: Base language.
+	
 	\textbf{References}
 
 Links:
 
-
+\url{http://www.vdmportal.org} \\[4pt]
+\url{http://www.vdmbook.com} \\[4pt]
 
 Bibliography:
 
-\section{Process Calculi (CCS, CSP, LOTUS) }
+\begin{itemize}
+\item Bj\o{}rner, D. and Jones, C.B..: The Vienna Development Method -- The Meta-Language, Lecture Notes in Computer Science 61, Springer, 1978. 
+\item Bj\o{}rner, D. and Jones, C.B.: Formal Specification and Software Development, Prentice Hall International, 1982.
+\item Jones, C.B.: Software Development -- A Rigorous Approach, Prentice Hall International, 1980.
+\end{itemize}
 
+\section{Process Calculi (CCS, CSP, LOToS) }
 
 	\textbf{Characteristics}
 
+Process calculi (or also named process algebras) are a group of approaches to formally model concurrent systems to specify the processes and verify their implementation. The model the system by specifying the high level independent processes and their communication. Thereby, the process can be sequential or parallel. The modelling is done by using a pseudo-programming language. This allows to use algebraic lows for manipulation, analysing and formal reasoning.
 
 	\textbf{Typical applications}
 
+These means are mainly used to mathematically model and analyse communications in software systems.
 
 	\textbf{Standards}
 
+The different process calculi are documented in the respective manuals, but their is no overall standardisation.
 
 	\textbf{References}
 
 Links:
 
-
+\url{www.usingcsp.com} \\[4pt]
+\url{http://theory.stanford.edu/~rvg/process.html} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Hennessy, M.: Algebraic Theory of Processes, The MIT Press, 1988.
+\item Hoare, C. A. R.: Communicating Sequential Processes, Prentice Hall, 2004.
+\item Milner, R.: A Calculus of Communicating Systems, Springer, 1980.
+\end{itemize}
 
 \section{HOL (High Order Logic)}
 
 
 	\textbf{Characteristics}
 
+Higher-order logic is a predicate logic notation which distinguished from first-order logic like set theory by additional quantifiers and a stronger semantics. This allows a instead, more immediate and natural representation of system properties, which has to be been done be encoding in a first order logic.
 
 	\textbf{Typical applications}
 
 
+Higher-order logic is applied on software applications for tasks like natural language parsing and theorem proving. In addition computational higher-order logics have alsobeen used as meta input languages for the application of theorem provers. 
+
 	\textbf{Standards}
 
+Since High Order Logics are a purely mathematical concept, they a well documented and standardised with respect to the mathematical theory.
 
 	\textbf{References}
 
 Links:
 
-
-
-Bibliography:
-
-\section{DSL (Domain Specific Languages)}
-
-
-	\textbf{Characteristics}
-
-
-	\textbf{Typical applications}
-
-
-	\textbf{Standards}
-
-
-	\textbf{References}
-
-Links:
-
-
+\url{http://www.lix.polytechnique.fr/Labo/Dale.Miller/papers/AIencyclopedia/} \\[4pt]
+\url{http://plato.stanford.edu/entries/logic-higher-order/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Church, A.: A Formulation of the Simple Theory of Types, Journal of Symbolic Logic 5 56 – 68, 1940.
+\item Shapiro, S.: Foundations without Foundationalism -- A Case for Second-Order Logic, Oxford University Press, 1991.
+\item Andrews, P. B.: An Introduction to Mathematical Logic and Type Theory -- To Truth Through Proof, Kluwer Academic Publishers, 2002
+\end{itemize}
 
 \section{TL (Temporal Logic)}
 
@@ -523,99 +579,148 @@ Bibliography:
 	\textbf{Characteristics}
 
 
+Temporal logic extends the first order logic concept in this way, that modal relations can be expressed. This concept of temporal logics is based on the work of Arthur Prior. This can only express modal aspect between state like some state changes "always" or "eventually" not quantified time relations and constraints. Absolute time can be introduced by using specific time states for the system modelling.
+
+
+
 	\textbf{Typical applications}
 
+Temporal logic is used for the formal verification of hardware and software systems asthe state requirements can be specified in temporal logic. Thereby, temporal logic allows direct specification of safety and operational properties concerning the system behaviour, which can then be formally demonstrated for the following development steps.
 
 	\textbf{Standards}
+
+Since Temporal Logic is a purely mathematical concept, it is a well documented and standardised with respect to the mathematical theory.
 
 
 	\textbf{References}
 
 Links:
-
-
+\url{http://plato.stanford.edu/entries/logic-temporal/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Kamp, J. A. W.: Tense Logic and the Theory of Linear Order, Ph.D. thesis, University of California, Los Angeles, 1968.
+\item Prior, A. N.: Time and Modality, Clarendon Press, Oxford, 1957.
+\item Øhrstrøm, P. and Hasle, P.: Temporal Logic -- From Ancient Ideas to Artificial Intelligence, Dordrecht, Boston and London Kluwer Academic Publishers, 1995.
+\end{itemize}
+
+
+
 
 \section{OBJ}
 
 
 	\textbf{Characteristics}
 
+ OBJ is a group of algebraic programming and specification languages, which use requirements in terms of algebraic equations enriched with other logics to specify the system. The specification can be formally proven. OBJ languages can only be applied to sequential systems.
+ 
+ 	\textbf{Typical applications}
 
-	\textbf{Typical applications}
-
+OBJ languages can be used to precisely specify sequential systems and through the precise algebraic specification execute the specification to receive analysis and system validation prior to the actual implementation.
 
 	\textbf{Standards}
 
+The OBJ languages are defined by their manuals.
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://cseweb.ucsd.edu/~goguen/sys/obj.html} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Goguen,  J. A. : Higher-Order Functions Considered Unnecessary for Higher-Order Programming. In Research Topics in Functional Programming, 1976.
+\end{itemize}
+
 
 \section{CNL (Controlled Natural Language)}
 
 
 	\textbf{Characteristics}
 
+As the name implements the controlled natural languages (CNL) represent a  subsets of natural languages. These restrict the grammar and vocabulary of a natural language to to reduce and/or eliminate ambiguity and complexity existing in a natural language. In general two main categories of CNL exist. The one category has the aim to improve the readabilty through restriction to enable easier understanding or allow automatic analysis of the semantic. The second category limits the language to reach a formal logical basis, which can be conected to an existing formal means of description.
 
 	\textbf{Typical applications}
-
+The first category is often used to reach more consistent documents, which generates higher quality documents and automatic translation. The second category provide formal texts which can be handled automatically by software tools.
 
 	\textbf{Standards}
 
+No specific standard.
 
 	\textbf{References}
 
 Links:
-
-
+\url{https://sites.google.com/site/controllednaturallanguage/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item ^ O'Brien, S.: Controlling Controlled English -- An Analysis of Several Controlled Language Rule Sets, Proceedings of EAMT-CLAW, 2003.
+\item Tonetta, S.: Extending the Property Specification Language with a First Order Signature, Fondazione Bruno Kessler IRST, tech rep. number fbk161120071, 2007.
+\end{itemize}
 
 \section{Alloy}
 
 
 	\textbf{Characteristics}
 
+Alloy is a declarative specification language based on the notion of relations for expressing complex structural constraints and behaviour in a software system. Alloy models are micro-models which can be checked automatically for correctness. 
+Alloy models consist of different kinds of statements. Signatures are the basic sets like objects or lists. A fact is a constraint that has to be guaranteed. Predicates are parameterized constraints, while functions are expressions giving back a result. Assertions are logical expression which are used to check whether the model holds these properties.
 
 	\textbf{Typical applications}
 
+The alloy specification language is mainly used for tool development.
 
 	\textbf{Standards}
 
-
+The book by Daniel Jackson is the main standard for alloy.
 	\textbf{References}
 
 Links:
 
-
+\url{http://alloy.mit.edu/alloy/} \\[4pt]
+\url{http://www.doc.ic.ac.uk/project/examples/2007/271j/suprema_on_alloy/Web/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Jackson, D.: Software Abstractions -- Logic, Language, and Analysis, MIT Press, 2006. 
+\end{itemize}
 
 \section{Ada and Spark}
 
 
 	\textbf{Characteristics}
 
+Ada is programming language which uses a structured, statically typed, imperative and object oriented approach. The language was originally aimed embedded and real-time systems, but has been extended over time. Ada is specifically designed for the development of large software programs and has already a number of checks incorporated to detect bugs. 
+
+SPARK is a evolution of ADA, which has been develop to eliminate the ambiguities and insecurities in ADA to provide a formal programming language for safety-relevant software. 
 
 	\textbf{Typical applications}
 
+ADA and specifically SPARK is used to write safety critical software in various areas like nuclear, aerospace or railway applications.
 
 	\textbf{Standards}
 
+The Ada version 2012 is defined by the ISO/IEC 8652 Information technology -- Programming languages -- Ada.
 
 	\textbf{References}
 
 Links:
 
+\url{http://libre.adacore.com} \\[4pt]
+\url{http://www.adaic.org/} \\[4pt]
+\url{http://www.ada-auth.org} \\[4pt]
 
 
 Bibliography:
+
+\begin{itemize}
+\item Barnes, John: High Integrity Ada: The SPARK Approach, Addison-Wesley, 1997.
+\end{itemize} 
 
 \section{ACSL (ANSI/ISO C Specification Language) and C}
 
@@ -623,19 +728,44 @@ Bibliography:
 	\textbf{Characteristics}
 
 
+
+he ANSI/ISO C Specification Language (ACSL) is a specification language for C programs, using Hoare style pre- and postconditions and invariants, that follows the design by contract paradigm. Specifications are written as C annotation comments to the C program, which hence can be compiled with any C compiler.
+
+It aims at specifying behavioral properties of C source code.
+
 	\textbf{Typical applications}
+
+C is often used for "system programming", including implementing operating systems and embedded system applications, due to a combination of desirable characteristics such as code portability and efficiency, ability to access specific hardware addresses, ability to pun types to match externally imposed data access requirements, and low run-time demand on system resources. C can also be used for website programming using CGI as a "gateway" for information between the Web application, the server, and the browser.[29] Some reasons for choosing C over interpreted languages are its speed, stability, and near-universal availability.[30]
+
+One consequence of C's wide availability and efficiency is that compilers, libraries, and interpreters of other programming languages are often implemented in C. The primary implementations of Python (CPython), Perl 5, and PHP are all written in C.
+
+Due to its thin layer of abstraction and low overhead, C allows efficient implementations of algorithms and data structures, which is useful for programs that perform a lot of computations. For example, the GNU Multi-Precision Library, the GNU Scientific Library, Mathematica and MATLAB are completely or partially written in C.
+
+C is sometimes used as an intermediate language by implementations of other languages. This approach may be used for portability or convenience; by using C as an intermediate language, it is not necessary to develop machine-specific code generators. C has some features, such as line-number preprocessor directives and optional superfluous commas at the end of initializer lists, which support compilation of generated code. However, some of C's shortcomings have prompted the development of other C-based languages specifically designed for use as intermediate languages, such as C--.
+
+C has also been widely used to implement end-user applications, but much of that development has shifted to newer languages.
+
 
 
 	\textbf{Standards}
 
-
+The C language has been standardised in the ISO/IEC 9899 Information technology -- Programming languages -- C.
+Depending on the publication year the current version is called C11.
 	\textbf{References}
 
 Links:
 
+\url{http://frama-c.com/acsl.html} \\[4pt]
+\url{http://www.open-std.org/jtc1/sc22/wg14/} \\[4pt]
+\url{http://cm.bell-labs.com/cm/cs/who/dmr/chist.html} \\[4pt]
 
 
 Bibliography:
+
+\begin{itemize}
+\item Banahan, M.; Brady, D.; Doran, M.: The C Book, Addison-Wesley, 1991.
+\item Ritchie, Dennis M.: The Development of the C Language, The second ACM SIGPLAN History of Programming Languages Conference, p.201–208, 1993.
+\end{itemize}
 
 \section {RSL (RAISE Specification Language)}
 

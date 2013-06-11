@@ -3,69 +3,68 @@
 \contentsline {chapter}{\numberline {2}Expert interviews}{4}
 \contentsline {chapter}{\numberline {3}Means of Description}{6}
 \contentsline {section}{\numberline {3.1}UML 2.0 (Unified Modelling Language) and SysML (System Modelling Language)}{9}
-\contentsline {section}{\numberline {3.2}Petri Nets}{9}
-\contentsline {section}{\numberline {3.3}Z, B - Method and Event B}{10}
-\contentsline {section}{\numberline {3.4}Lustre/ Textual and Graphical Scade}{10}
-\contentsline {section}{\numberline {3.5}State Machines}{11}
-\contentsline {section}{\numberline {3.6}VDM (Vienna Development Method)}{11}
-\contentsline {section}{\numberline {3.7}Process Calculi (CCS, CSP, LOTUS) }{11}
-\contentsline {section}{\numberline {3.8}HOL (High Order Logic)}{11}
-\contentsline {section}{\numberline {3.9}DSL (Domain Specific Languages)}{11}
-\contentsline {section}{\numberline {3.10}TL (Temporal Logic)}{12}
-\contentsline {section}{\numberline {3.11}OBJ}{12}
-\contentsline {section}{\numberline {3.12}CNL (Controlled Natural Language)}{12}
-\contentsline {section}{\numberline {3.13}Alloy}{12}
-\contentsline {section}{\numberline {3.14}Ada and Spark}{13}
-\contentsline {section}{\numberline {3.15}ACSL (ANSI/ISO C Specification Language) and C}{13}
-\contentsline {section}{\numberline {3.16}RSL (RAISE Specification Language)}{13}
-\contentsline {section}{\numberline {3.17}Summary}{13}
-\contentsline {chapter}{\numberline {4}Methods}{15}
-\contentsline {section}{\numberline {4.1}Transformation of textual specifications in formal specifications}{15}
-\contentsline {section}{\numberline {4.2}Transformation of formal requirement specifications in formal software and software module design and architecture descriptions}{16}
-\contentsline {section}{\numberline {4.3}Source code generation}{17}
-\contentsline {section}{\numberline {4.4}Verification of models and source code}{18}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {4.4.1} Formal analysis and proof}{18}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {4.4.2}Testing}{20}
-\contentsline {section}{\numberline {4.5}Validation}{20}
-\contentsline {section}{\numberline {4.6}Creation of documentation}{21}
-\contentsline {section}{\numberline {4.7}Terminology management/Intelligent Glossary}{21}
-\contentsline {section}{\numberline {4.8}Summary}{22}
-\contentsline {chapter}{\numberline {5}Tools}{23}
-\contentsline {section}{\numberline {5.1}Alloy 4}{29}
-\contentsline {section}{\numberline {5.2}Artisan Studio}{29}
-\contentsline {section}{\numberline {5.3}Atelier B}{30}
-\contentsline {section}{\numberline {5.4}CompoSys}{30}
-\contentsline {section}{\numberline {5.5}Control Build}{31}
-\contentsline {section}{\numberline {5.6}CPN}{31}
-\contentsline {section}{\numberline {5.7}Enterprise Architect}{32}
-\contentsline {section}{\numberline {5.8}ERTMS FormalSpecs}{32}
-\contentsline {section}{\numberline {5.9}Frama-C}{33}
-\contentsline {section}{\numberline {5.10}iglos}{33}
-\contentsline {section}{\numberline {5.11}iLock/iCertifier}{34}
-\contentsline {section}{\numberline {5.12}KNOW Enterprise}{34}
-\contentsline {section}{\numberline {5.13}MagicDraw}{35}
-\contentsline {section}{\numberline {5.14}mCRL2}{35}
-\contentsline {section}{\numberline {5.15}Modelio}{35}
-\contentsline {section}{\numberline {5.16}NuSMV}{36}
-\contentsline {section}{\numberline {5.17}Papyrus}{36}
-\contentsline {section}{\numberline {5.18}Perfect Developer}{37}
-\contentsline {section}{\numberline {5.19}PRISM}{37}
-\contentsline {section}{\numberline {5.20}ProB}{38}
-\contentsline {section}{\numberline {5.21}ProR}{38}
-\contentsline {section}{\numberline {5.22}Rational Architect}{39}
-\contentsline {section}{\numberline {5.23}SCADE Suite / SCADE System / SCADE LifeCycle}{39}
-\contentsline {section}{\numberline {5.24}Simulink/ Design Verifier}{41}
-\contentsline {section}{\numberline {5.25}SPARK GPL/ GNATprove}{41}
-\contentsline {section}{\numberline {5.26}SPIN}{42}
-\contentsline {section}{\numberline {5.27}$\pi $-Tool}{42}
-\contentsline {section}{\numberline {5.28}Tool chains}{43}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.28.1}TopCased}{43}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.28.2}Rodin}{44}
-\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.28.3}Why3}{44}
-\contentsline {section}{\numberline {5.29}Summary}{45}
-\contentsline {chapter}{\numberline {6}Conclusions and Recommendations}{46}
-\contentsline {chapter}{Appendix A: Questionnaire for Interviews}{48}
-\contentsline {chapter}{Appendix B: List Means of description}{51}
-\contentsline {chapter}{Appendix C: Recommended methods}{55}
-\contentsline {chapter}{Appendix D: List Tools}{57}
-\contentsline {chapter}{Appendix: References\markboth {\MakeUppercase {References}}{\MakeUppercase {References}}}{58}
+\contentsline {section}{\numberline {3.2}Petri Nets}{10}
+\contentsline {section}{\numberline {3.3}Z, B - Method and Event B}{11}
+\contentsline {section}{\numberline {3.4}Lustre/ Textual and Graphical Scade}{12}
+\contentsline {section}{\numberline {3.5}State Machines}{13}
+\contentsline {section}{\numberline {3.6}VDM (Vienna Development Method)}{13}
+\contentsline {section}{\numberline {3.7}Process Calculi (CCS, CSP, LOToS) }{14}
+\contentsline {section}{\numberline {3.8}HOL (High Order Logic)}{15}
+\contentsline {section}{\numberline {3.9}TL (Temporal Logic)}{15}
+\contentsline {section}{\numberline {3.10}OBJ}{16}
+\contentsline {section}{\numberline {3.11}CNL (Controlled Natural Language)}{16}
+\contentsline {section}{\numberline {3.12}Alloy}{16}
+\contentsline {section}{\numberline {3.13}Ada and Spark}{16}
+\contentsline {section}{\numberline {3.14}ACSL (ANSI/ISO C Specification Language) and C}{16}
+\contentsline {section}{\numberline {3.15}RSL (RAISE Specification Language)}{17}
+\contentsline {section}{\numberline {3.16}Summary}{17}
+\contentsline {chapter}{\numberline {4}Methods}{18}
+\contentsline {section}{\numberline {4.1}Transformation of textual specifications in formal specifications}{18}
+\contentsline {section}{\numberline {4.2}Transformation of formal requirement specifications in formal software and software module design and architecture descriptions}{19}
+\contentsline {section}{\numberline {4.3}Source code generation}{20}
+\contentsline {section}{\numberline {4.4}Verification of models and source code}{21}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {4.4.1} Formal analysis and proof}{21}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {4.4.2}Testing}{23}
+\contentsline {section}{\numberline {4.5}Validation}{23}
+\contentsline {section}{\numberline {4.6}Creation of documentation}{24}
+\contentsline {section}{\numberline {4.7}Terminology management/Intelligent Glossary}{24}
+\contentsline {section}{\numberline {4.8}Summary}{25}
+\contentsline {chapter}{\numberline {5}Tools}{26}
+\contentsline {section}{\numberline {5.1}Alloy 4}{32}
+\contentsline {section}{\numberline {5.2}Artisan Studio}{32}
+\contentsline {section}{\numberline {5.3}Atelier B}{33}
+\contentsline {section}{\numberline {5.4}CompoSys}{33}
+\contentsline {section}{\numberline {5.5}Control Build}{34}
+\contentsline {section}{\numberline {5.6}CPN}{34}
+\contentsline {section}{\numberline {5.7}Enterprise Architect}{35}
+\contentsline {section}{\numberline {5.8}ERTMS FormalSpecs}{35}
+\contentsline {section}{\numberline {5.9}Frama-C}{36}
+\contentsline {section}{\numberline {5.10}iglos}{36}
+\contentsline {section}{\numberline {5.11}iLock/iCertifier}{37}
+\contentsline {section}{\numberline {5.12}KNOW Enterprise}{37}
+\contentsline {section}{\numberline {5.13}MagicDraw}{38}
+\contentsline {section}{\numberline {5.14}mCRL2}{38}
+\contentsline {section}{\numberline {5.15}Modelio}{38}
+\contentsline {section}{\numberline {5.16}NuSMV}{39}
+\contentsline {section}{\numberline {5.17}Papyrus}{39}
+\contentsline {section}{\numberline {5.18}Perfect Developer}{40}
+\contentsline {section}{\numberline {5.19}PRISM}{40}
+\contentsline {section}{\numberline {5.20}ProB}{41}
+\contentsline {section}{\numberline {5.21}ProR}{41}
+\contentsline {section}{\numberline {5.22}Rational Architect}{42}
+\contentsline {section}{\numberline {5.23}SCADE Suite / SCADE System / SCADE LifeCycle}{42}
+\contentsline {section}{\numberline {5.24}Simulink/ Design Verifier}{44}
+\contentsline {section}{\numberline {5.25}SPARK GPL/ GNATprove}{44}
+\contentsline {section}{\numberline {5.26}SPIN}{45}
+\contentsline {section}{\numberline {5.27}$\pi $-Tool}{45}
+\contentsline {section}{\numberline {5.28}Tool chains}{46}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.28.1}TopCased}{46}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.28.2}Rodin}{47}
+\contentsline {subsection}{\itshape \fontsize {9}{12}\selectfont \numberline {5.28.3}Why3}{47}
+\contentsline {section}{\numberline {5.29}Summary}{48}
+\contentsline {chapter}{\numberline {6}Conclusions and Recommendations}{49}
+\contentsline {chapter}{Appendix A: Questionnaire for Interviews}{51}
+\contentsline {chapter}{Appendix B: List Means of description}{54}
+\contentsline {chapter}{Appendix C: Recommended methods}{58}
+\contentsline {chapter}{Appendix D: List Tools}{60}
+\contentsline {chapter}{Appendix: References\markboth {\MakeUppercase {References}}{\MakeUppercase {References}}}{61}
