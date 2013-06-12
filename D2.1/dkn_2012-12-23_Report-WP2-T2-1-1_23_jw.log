@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.9)  11 JUN 2013 13:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.9)  12 JUN 2013 09:04
 entering extended mode
 **dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.tex
 
@@ -690,7 +690,7 @@ File: omstxr.fd 2000/12/15 v3.1
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 81.
 
-<./images/Development-lifecycle-EN50128-own.png, id=43, 718.3638pt x 404.712pt>
+<./images/Development-lifecycle-EN50128-own.png, id=42, 718.3638pt x 404.712pt>
 File: ./images/Development-lifecycle-EN50128-own.png Graphic file (type png)
 <use ./images/Development-lifecycle-EN50128-own.png>
 Package pdftex.def Info: ./images/Development-lifecycle-EN50128-own.png used on
@@ -958,999 +958,1017 @@ Underfull \hbox (badness 10000) in paragraph at lines 565--567
 
  []
 
-[15] [16] [17]
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 597--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 655--657
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 684--686
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--717
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 750--753
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
+
+ []
+
+[20]
 Chapter 4.
-[18
+[21
 
 ]
-Overfull \hbox (1.0152pt too wide) in paragraph at lines 763--776
+Overfull \hbox (1.0152pt too wide) in paragraph at lines 837--850
 [][] 
  []
 
 
-LaTeX Warning: Reference `EN50128:2011' on page 19 undefined on input line 786.
+LaTeX Warning: Reference `EN50128:2011' on page 22 undefined on input line 860.
 
 
-[19] <./images/Model-based_Approach.png, id=108, 658.6206pt x 356.0502pt>
+[22] <./images/Model-based_Approach.png, id=116, 658.6206pt x 356.0502pt>
 File: ./images/Model-based_Approach.png Graphic file (type png)
 
 <use ./images/Model-based_Approach.png>
-Package pdftex.def Info: ./images/Model-based_Approach.png used on input line 7
-90.
+Package pdftex.def Info: ./images/Model-based_Approach.png used on input line 8
+64.
 (pdftex.def)             Requested size: 395.1754pt x 213.63176pt.
- [20 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements
+ [23 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements
 /D2.1/images/Model-based_Approach.png>]
-[21]
-<./images/Lifecycle-Model-based-Approach-Formal-Proof.png, id=116, 704.3916pt x
+[24]
+<./images/Lifecycle-Model-based-Approach-Formal-Proof.png, id=125, 704.3916pt x
  396.5214pt>
 File: ./images/Lifecycle-Model-based-Approach-Formal-Proof.png Graphic file (ty
 pe png)
  <use ./images/Lifecycle-Model-based-Approach-Formal-Proof.png>
 Package pdftex.def Info: ./images/Lifecycle-Model-based-Approach-Formal-Proof.p
-ng used on input line 844.
+ng used on input line 918.
 (pdftex.def)             Requested size: 422.63823pt x 237.91466pt.
 
-Overfull \hbox (5.80534pt too wide) in paragraph at lines 844--845
+Overfull \hbox (5.80534pt too wide) in paragraph at lines 918--919
  [][] 
  []
 
-[22 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/
+[25 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/
 D2.1/images/Lifecycle-Model-based-Approach-Formal-Proof.png>]
-<./images/Lifecycle-Model-based-Approach-Testing.png, id=121, 704.3916pt x 396.
+<./images/Lifecycle-Model-based-Approach-Testing.png, id=130, 704.3916pt x 396.
 5214pt>
 File: ./images/Lifecycle-Model-based-Approach-Testing.png Graphic file (type pn
 g)
  <use ./images/Lifecycle-Model-based-Approach-Testing.png>
 Package pdftex.def Info: ./images/Lifecycle-Model-based-Approach-Testing.png us
-ed on input line 876.
+ed on input line 950.
 (pdftex.def)             Requested size: 422.63823pt x 237.91466pt.
 
-Overfull \hbox (5.80534pt too wide) in paragraph at lines 876--877
+Overfull \hbox (5.80534pt too wide) in paragraph at lines 950--951
  [][] 
  []
 
-[23 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/
-D2.1/images/Lifecycle-Model-based-Approach-Testing.png>] [24]
+[26 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements/
+D2.1/images/Lifecycle-Model-based-Approach-Testing.png>] [27]
 
-LaTeX Warning: Reference `chap: Methodology' on page 25 undefined on input line
- 917.
+LaTeX Warning: Reference `chap: Methodology' on page 28 undefined on input line
+ 991.
 
-[25]
+[28]
 Chapter 5.
-[26
+[29
 
-] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 977--977
+] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
 []\T1/txr/m/n/10.95 (+20) Formalisation of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 977--977
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
 \T1/txr/m/n/10.95 (+20) tex-tual re-quire-
  []
 
 
-Overfull \hbox (0.57942pt too wide) in paragraph at lines 977--977
+Overfull \hbox (0.57942pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (4.07144pt too wide) in paragraph at lines 977--977
+Overfull \hbox (4.07144pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 977--977
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 977--977
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 977--977
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
 []\T1/txr/m/n/10.95 (+20) Code gen-er-a-tion
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 977--977
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 977--977
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (1.2058pt too wide) in paragraph at lines 977--977
+Overfull \hbox (1.2058pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (4.07144pt too wide) in paragraph at lines 977--977
+Overfull \hbox (4.07144pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (6.29008pt too wide) in paragraph at lines 977--977
+Overfull \hbox (6.29008pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (0.57942pt too wide) in paragraph at lines 977--977
+Overfull \hbox (0.57942pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (4.07144pt too wide) in paragraph at lines 977--977
+Overfull \hbox (4.07144pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 977--977
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1051--1051
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--980
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
 []\T1/txr/m/n/10.95 (+20) Formalisation of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--980
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
 \T1/txr/m/n/10.95 (+20) tex-tual re-quire-
  []
 
 
-Overfull \hbox (0.57942pt too wide) in paragraph at lines 980--980
+Overfull \hbox (0.57942pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (4.07144pt too wide) in paragraph at lines 980--980
+Overfull \hbox (4.07144pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 980--980
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 980--980
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 980--980
+Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
 []\T1/txr/m/n/10.95 (+20) Code gen-er-a-tion
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 980--980
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 980--980
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (1.2058pt too wide) in paragraph at lines 980--980
+Overfull \hbox (1.2058pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (4.07144pt too wide) in paragraph at lines 980--980
+Overfull \hbox (4.07144pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (6.29008pt too wide) in paragraph at lines 980--980
+Overfull \hbox (6.29008pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (0.57942pt too wide) in paragraph at lines 980--980
+Overfull \hbox (0.57942pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (4.07144pt too wide) in paragraph at lines 980--980
+Overfull \hbox (4.07144pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Overfull \hbox (1.83217pt too wide) in paragraph at lines 980--980
+Overfull \hbox (1.83217pt too wide) in paragraph at lines 1054--1054
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 991--991
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1065
 []|\T1/txr/m/n/10.95 (+20) Software De-sign
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 991--991
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1065--1065
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 991--991
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1065--1065
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 991--991
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1065--1065
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 992--992
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1066--1066
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 992--992
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1066--1066
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 992--992
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1066--1066
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 993--993
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1067--1067
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 993--993
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1067--1067
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 993--993
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1067--1067
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 993--993
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1067--1067
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 994--994
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1068--1068
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 994--994
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1068--1068
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 994--994
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1068--1068
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 994--994
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1068--1068
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 995--995
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1069--1069
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 995--995
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1069--1069
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 996--996
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1070--1070
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 996--996
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1070--1070
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 996--996
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1070--1070
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 997--997
+Underfull \hbox (badness 10000) in paragraph at lines 1071--1071
 []|\T1/txr/m/n/10.95 (+20) Enterprise
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 997--997
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1071--1071
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 997--997
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1071--1071
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 997--997
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1071--1071
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 998--998
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1072--1072
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 998--998
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1072--1072
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 998--998
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1072--1072
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 999--999
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
 []|\T1/txr/m/n/10.95 (+20) CEA-LIST and
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 999--999
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1073--1073
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 7522) in paragraph at lines 1000--1000
+Underfull \hbox (badness 7522) in paragraph at lines 1074--1074
 []|\T1/txr/m/n/10.95 (+20) free/ com-
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1000--1000
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1074--1074
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1000--1000
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1074--1074
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1001--1001
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1075--1075
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1001--1001
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1075--1075
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1001--1001
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1075--1075
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1001--1001
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1075--1075
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1001--1001
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1075--1075
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1076
 []|\T1/txr/m/n/10.95 (+20) KNOW En-ter-
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1076--1076
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1076--1076
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1076--1076
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1002--1002
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1076--1076
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1003--1003
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1077--1077
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1003--1003
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1077--1077
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1004--1004
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1078--1078
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1004--1004
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1078--1078
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1004--1004
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1078--1078
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1005--1005
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1079--1079
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1006--1006
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1080--1080
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1007--1007
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1081--1081
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1007--1007
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1081--1081
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
 []|\T1/txr/m/n/10.95 (+20) Perfect De-vel-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
 []|\T1/txr/m/n/10.95 (+20) Escher Tech-nolo-
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1008--1008
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1082--1082
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1008--1008
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1082--1082
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1008--1008
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1082--1082
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 1009--1009
+Underfull \hbox (badness 1616) in paragraph at lines 1083--1083
 []|\T1/txr/m/n/10.95 (+20) University of Ox-
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1009--1009
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1083--1083
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1010--1010
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
 []|\T1/txr/m/n/10.95 (+20) Formal Mind
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1010--1010
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1084--1084
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1010--1010
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1084--1084
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1085
 []|\T1/txr/m/n/10.95 (+20) Formal Mind
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1011--1011
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1085--1085
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1012--1012
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1086--1086
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1012--1012
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1086--1086
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1012--1012
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1086--1086
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1012--1012
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1086--1086
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (+20) Esterel Tech-nolo-
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 1013--1013
+Underfull \hbox (badness 3679) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (+20) Lustre / Data Flow
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 1013--1013
+Underfull \hbox (badness 1939) in paragraph at lines 1087--1087
 \T1/txr/m/n/10.95 (+20) (Logic) + State ma-
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1087--1087
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1014--1014
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1088
 []|\T1/txr/m/n/10.95 (+20) Simulink/
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1014--1014
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1088--1088
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1014--1014
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1088--1088
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1014--1014
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1088--1088
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1014--1014
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1088--1088
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1015
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1089
 []|\T1/txr/m/n/10.95 (+20) SPARK GPL/
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1089--1089
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1089--1089
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1089--1089
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1016--1016
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1090--1090
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1016--1016
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1090--1090
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1091--1091
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1091--1091
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1091--1091
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1091--1091
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
 
-Overfull \hbox (1.13445pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (1.13445pt too wide) in paragraph at lines 1091--1091
 []|\T1/txr/m/n/10.95 (-20) +| 
  []
 
-[28
+[31
 
-] [29] [30] [31] [32
+] [32] [33] [34]
 
-] [33] [34] [35] [36] [37] [38] [39] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2098--2099
+LaTeX Warning: Reference `List tools' on page 35 undefined on input line 1106.
 
- []
+[35
 
-[42] <./images/SCADE_Overview.png, id=187, 593.21625pt x 553.06625pt>
-File: ./images/SCADE_Overview.png Graphic file (type png)
-
-<use ./images/SCADE_Overview.png>
-Package pdftex.def Info: ./images/SCADE_Overview.png used on input line 2120.
-(pdftex.def)             Requested size: 355.9325pt x 331.8423pt.
- [43 <C:/Users/Welte/Documents/Projekte/openETCS/GitHub-Repository/requirements
-/D2.1/images/SCADE_Overview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2145--2147
-
- []
-
-[44] [45]
-
-LaTeX Warning: Reference `List tools' on page 46 undefined on input line 2342.
-
-[46] [47] [48]
+] [36]
 Chapter 6.
 
-LaTeX Warning: Reference `chapter: MoD' on page 49 undefined on input line 2498
+LaTeX Warning: Reference `chapter: MoD' on page 37 undefined on input line 1121
 .
 
-[49
+[37
 
-] [50]
+] [38]
 Appendix A.
-[51
+[39
 
 
-] [52] [53]
+] [40] [41]
 Appendix B.
-[54
+[42
 
 ]
-Overfull \hbox (27.38654pt too wide) in paragraph at lines 2626--2626
+Overfull \hbox (27.38654pt too wide) in paragraph at lines 1249--1249
 []|\T1/txr/m/n/10.95 (-20) Representation| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2626--2626
+Underfull \hbox (badness 10000) in paragraph at lines 1249--1249
 []|\T1/txr/m/n/10.95 (+2) Description
  []
 
 
-Underfull \hbox (badness 7649) in paragraph at lines 2626--2626
+Underfull \hbox (badness 7649) in paragraph at lines 1249--1249
 []|\T1/txr/m/n/10.95 (+20) Description of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2630--2630
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1253
 []\T1/txr/m/n/10.95 (+20) Mathematical-
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 2630--2630
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1253--1253
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2631--2631
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1254--1254
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2633--2633
+Underfull \hbox (badness 10000) in paragraph at lines 1256--1256
 []\T1/txr/m/n/10.95 (+20) Composition/
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 2633--2633
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1256--1256
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2634--2634
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1257--1257
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2638--2638
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1261--1261
 []|[]| 
  []
 
 
-Overfull \hbox (1.2058pt too wide) in paragraph at lines 2639--2639
+Overfull \hbox (1.2058pt too wide) in paragraph at lines 1262--1262
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2640--2640
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1263
 []\T1/txr/m/n/10.95 (+20) No ex-per-tise
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 2640--2640
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1263--1263
 []|[]| 
  []
 
 
-Overfull \hbox (1.2058pt too wide) in paragraph at lines 2641--2641
+Overfull \hbox (1.2058pt too wide) in paragraph at lines 1264--1264
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2642--2642
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1265--1265
 []|[]| 
  []
 
 
-Overfull \hbox (27.38654pt too wide) in paragraph at lines 2647--2647
+Overfull \hbox (27.38654pt too wide) in paragraph at lines 1270--1270
 []|\T1/txr/m/n/10.95 (-20) Representation| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2647--2647
+Underfull \hbox (badness 10000) in paragraph at lines 1270--1270
 []|\T1/txr/m/n/10.95 (+2) Description
  []
 
 
-Underfull \hbox (badness 7649) in paragraph at lines 2647--2647
+Underfull \hbox (badness 7649) in paragraph at lines 1270--1270
 []|\T1/txr/m/n/10.95 (+20) Description of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2651--2651
+Underfull \hbox (badness 10000) in paragraph at lines 1274--1274
 []\T1/txr/m/n/10.95 (+20) Mathematical-
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 2651--2651
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1274--1274
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2652--2652
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1275--1275
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2654--2654
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1277
 []\T1/txr/m/n/10.95 (+20) Composition/
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 2654--2654
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1277--1277
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2655--2655
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1278--1278
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2659--2659
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1282--1282
 []|[]| 
  []
 
 
-Overfull \hbox (1.2058pt too wide) in paragraph at lines 2660--2660
+Overfull \hbox (1.2058pt too wide) in paragraph at lines 1283--1283
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2661--2661
+Underfull \hbox (badness 10000) in paragraph at lines 1284--1284
 []\T1/txr/m/n/10.95 (+20) No ex-per-tise
  []
 
 
-Overfull \hbox (3.44507pt too wide) in paragraph at lines 2661--2661
+Overfull \hbox (3.44507pt too wide) in paragraph at lines 1284--1284
 []|[]| 
  []
 
 
-Overfull \hbox (1.2058pt too wide) in paragraph at lines 2662--2662
+Overfull \hbox (1.2058pt too wide) in paragraph at lines 1285--1285
 []|[]| 
  []
 
 
-Overfull \hbox (1.226pt too wide) in paragraph at lines 2663--2663
+Overfull \hbox (1.226pt too wide) in paragraph at lines 1286--1286
 []|[]| 
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 2687--2687
+Underfull \hbox (badness 2035) in paragraph at lines 1310--1310
 []|\T1/txr/m/n/10.95 (+20) UML 2.0 (Uni-fied Mod-elling Lan-
  []
 
-[55
+[43
 
-] [56] [57
+] [44] [45
 
 ]
 Appendix C.
 
-Overfull \hbox (6.23534pt too wide) in paragraph at lines 2718--2719
+Overfull \hbox (6.23534pt too wide) in paragraph at lines 1341--1342
 []|[]| 
  []
 
 
-Overfull \hbox (6.23534pt too wide) in paragraph at lines 2719--2720
+Overfull \hbox (6.23534pt too wide) in paragraph at lines 1342--1343
 []|[]| 
  []
 
 
-Overfull \hbox (1.17125pt too wide) in paragraph at lines 2720--2721
+Overfull \hbox (1.17125pt too wide) in paragraph at lines 1343--1344
 []|[]| 
  []
 
 
-Underfull \hbox (badness 7256) in paragraph at lines 2721--2721
+Underfull \hbox (badness 7256) in paragraph at lines 1344--1344
 []\T1/txr/bx/n/10.95 Verification of mod-els and
  []
 
 
-Overfull \hbox (4.14389pt too wide) in paragraph at lines 2721--2722
+Overfull \hbox (4.14389pt too wide) in paragraph at lines 1344--1345
 []|[]| 
  []
 
 
-Overfull \hbox (6.23534pt too wide) in paragraph at lines 2724--2725
+Overfull \hbox (6.23534pt too wide) in paragraph at lines 1347--1348
 []|[]| 
  []
 
 
-Overfull \hbox (2.45772pt too wide) in alignment at lines 2712--2726
+Overfull \hbox (2.45772pt too wide) in alignment at lines 1335--1349
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (6.23534pt too wide) in paragraph at lines 2730--2731
+Overfull \hbox (6.23534pt too wide) in paragraph at lines 1353--1354
 []|[]| 
  []
 
 
-Overfull \hbox (6.23534pt too wide) in paragraph at lines 2731--2732
+Overfull \hbox (6.23534pt too wide) in paragraph at lines 1354--1355
 []|[]| 
  []
 
 
-Overfull \hbox (1.17125pt too wide) in paragraph at lines 2732--2733
+Overfull \hbox (1.17125pt too wide) in paragraph at lines 1355--1356
 []|[]| 
  []
 
 
-Underfull \hbox (badness 7256) in paragraph at lines 2733--2733
+Underfull \hbox (badness 7256) in paragraph at lines 1356--1356
 []\T1/txr/bx/n/10.95 Verification of mod-els and
  []
 
 
-Overfull \hbox (4.14389pt too wide) in paragraph at lines 2733--2734
+Overfull \hbox (4.14389pt too wide) in paragraph at lines 1356--1357
 []|[]| 
  []
 
 
-Overfull \hbox (6.23534pt too wide) in paragraph at lines 2736--2737
+Overfull \hbox (6.23534pt too wide) in paragraph at lines 1359--1360
 []|[]| 
  []
 
 
-Overfull \hbox (2.45772pt too wide) in alignment at lines 2726--2738
+Overfull \hbox (2.45772pt too wide) in alignment at lines 1349--1361
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (2.45772pt too wide) in alignment at lines 2738--2742
+Overfull \hbox (2.45772pt too wide) in alignment at lines 1361--1365
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (2.45772pt too wide) in alignment at lines 2742--2746
+Overfull \hbox (2.45772pt too wide) in alignment at lines 1365--1369
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2753--2753
+Underfull \hbox (badness 10000) in paragraph at lines 1376--1376
 []|\T1/txr/m/n/10.95 (+20) Configuration Man-age-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2762--2762
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1385
 []|\T1/txr/m/n/10.95 (+20) Prototyping/ An-i-ma-
  []
 
 
-Overfull \hbox (2.45772pt too wide) in alignment at lines 2746--2767
+Overfull \hbox (2.45772pt too wide) in alignment at lines 1369--1390
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 3735) in paragraph at lines 2770--2770
+Underfull \hbox (badness 3735) in paragraph at lines 1393--1393
 []|\T1/txr/m/n/10.95 (+20) Error De-tect-ing and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2777--2777
+Underfull \hbox (badness 10000) in paragraph at lines 1400--1400
 []|\T1/txr/m/n/10.95 (+20) Design Con-straint
  []
 
 
-Overfull \hbox (2.45772pt too wide) in alignment at lines 2767--2784
+Overfull \hbox (2.45772pt too wide) in alignment at lines 1390--1407
  [] [] [] [] [] [] [] [] [] 
  []
 
-[58
+[46
 
-] [59]
+] [47]
 Appendix D.
 
 (C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
-\dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.bbl [60
+\dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.bbl [48
 
-]) [61
+]) [49
 
 ]
 (C:\Users\Welte\Documents\Projekte\openETCS\GitHub-Repository\requirements\D2.1
@@ -1964,16 +1982,16 @@ LaTeX Warning: There were undefined references.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 2530 ({)
+### simple group (level 1) entered at line 1153 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 8900 strings out of 494045
- 130695 string characters out of 3145970
- 389663 words of memory out of 3000000
- 11624 multiletter control sequences out of 15000+200000
- 133902 words of font info for 427 fonts, out of 3000000 for 9000
+ 8861 strings out of 494045
+ 130053 string characters out of 3145970
+ 389654 words of memory out of 3000000
+ 11599 multiletter control sequences out of 15000+200000
+ 127511 words of font info for 409 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 43i,15n,59p,1309b,583s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,15n,59p,1311b,583s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Users/Welte/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxb.
 pfb><C:/Users/Welte/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.
@@ -1988,10 +2006,10 @@ m Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.pdf (69 pages, 1115097
+Output written on dkn_2012-12-23_Report-WP2-T2-1-1_23_jw.pdf (57 pages, 1078594
  bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
+ 253 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 82985 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 78884 words of extra memory for PDF output out of 89155 (max. 10000000)
 
