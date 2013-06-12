@@ -3,7 +3,7 @@
 \contentsline {chapter}{\numberline {2}Expert interviews}{4}
 \contentsline {chapter}{\numberline {3}Means of Description}{6}
 \contentsline {section}{\numberline {3.1}UML 2.0 (Unified Modelling Language) and SysML (System Modelling Language)}{9}
-\contentsline {section}{\numberline {3.2}Petri Nets}{10}
+\contentsline {section}{\numberline {3.2}Petri Nets}{9}
 \contentsline {section}{\numberline {3.3}Z, B - Method and Event B}{11}
 \contentsline {section}{\numberline {3.4}Lustre/ Textual and Graphical Scade}{12}
 \contentsline {section}{\numberline {3.5}State Machines}{13}
@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {3.11}CNL (Controlled Natural Language)}{17}
 \contentsline {section}{\numberline {3.12}Alloy}{17}
 \contentsline {section}{\numberline {3.13}Ada and Spark}{18}
-\contentsline {section}{\numberline {3.14}ACSL (ANSI/ISO C Specification Language) and C}{18}
+\contentsline {section}{\numberline {3.14}ACSL (ANSI/ISO C Specification Language) and C}{19}
 \contentsline {section}{\numberline {3.15}RSL (RAISE Specification Language)}{19}
 \contentsline {section}{\numberline {3.16}Summary}{20}
 \contentsline {chapter}{\numberline {4}Methods}{21}
@@ -30,11 +30,11 @@
 \contentsline {section}{\numberline {4.7}Terminology management/Intelligent Glossary}{27}
 \contentsline {section}{\numberline {4.8}Summary}{28}
 \contentsline {chapter}{\numberline {5}Tools}{29}
-\contentsline {section}{\numberline {5.1}Tool chains}{35}
-\contentsline {section}{\numberline {5.2}Summary}{35}
+\contentsline {section}{\numberline {5.1}Tool use}{29}
+\contentsline {section}{\numberline {5.2}Tool chains}{35}
+\contentsline {section}{\numberline {5.3}Summary}{35}
 \contentsline {chapter}{\numberline {6}Conclusions and Recommendations}{37}
 \contentsline {chapter}{Appendix A: Questionnaire for Interviews}{39}
 \contentsline {chapter}{Appendix B: List Means of description}{42}
 \contentsline {chapter}{Appendix C: Recommended methods}{46}
-\contentsline {chapter}{Appendix D: List Tools}{48}
-\contentsline {chapter}{Appendix: References\markboth {\MakeUppercase {References}}{\MakeUppercase {References}}}{49}
+\contentsline {chapter}{Appendix: References\markboth {\MakeUppercase {References}}{\MakeUppercase {References}}}{48}

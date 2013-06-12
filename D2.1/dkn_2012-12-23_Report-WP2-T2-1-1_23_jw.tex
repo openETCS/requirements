@@ -73,8 +73,7 @@
 
 \chapter{Introduction}
 
-The CENELEC standards requires a systematic approach for the development of systems and software for railway control and safeguarding systems. Therefore the following functional steps have to be conducted based on the overall System and Safety Requirements Specifications in the \citeauthor{EN50128:2011} :
-\FIXME{\em The reference to EN50128 ist shown in the pdf as an ? }
+The CENELEC standards requires a systematic approach for the development of systems and software for railway control and safeguarding systems. Therefore the following functional steps have to be conducted based on the overall System and Safety Requirements Specifications in the \citeauthor{EN50128:2011}.
 
 \vspace{-10pt}
 \begin{itemize} [topsep=2pt, partopsep=2pt,itemsep=2pt,parsep=2pt]
@@ -160,7 +159,7 @@ In the context of modern computer-based working processes tools are almost exclu
 
 In this way the integration of a suitable means of description (B),  the structured process of a methodology (M) and the support of an applicable tool (W) allows to distinguish three orthogonal means, which together provide the needed functionalities, but are independent from each other as far as they can be used separately and exchanged. In practice, a clear distinction between means of description and methodology is not always given, so that both are summarised under the term technique. To follow the structured system development approach of the CENELEC standards in an "open" way means of description, methods and tools have to be chosen, which can be used by everyone. 
 
-The CENELEC standards do not demand the use of certain means of description, methods or tools, but give recommendations for all process steps and Safety Integrity Levels (SIL). But the standard requires the use of semi-formal and formal means of descriptions. Functionality and Black-Box tests are mandatory for verification and validation of software with SIL 3 and SIL 4 and highly recommended for lower levels. To validate the final software also performance tests are needed. A traceability of all requirements and specifications over all steps of the development process has to be guarantied according to the \citeauthor{EN50128:2011}. 
+The CENELEC standards do not demand the use of certain means of description, methods or tools, but give recommendations for all process steps and Safety Integrity Levels (SIL). But the standard requires the use of semi-formal and formal means of descriptions. Functionality and Black-Box tests are mandatory for verification and validation of software with SIL 3 and SIL 4 and highly recommended for lower levels. To validate the final software also performance tests are needed. A traceability of all requirements and specifications over all steps of the development process has to be guaranteed according to the \citeauthor{EN50128:2011}. 
 
 \chapter{Expert interviews}
 
@@ -215,8 +214,7 @@ As most  experts are only involved in a small part of the system development pro
 
 An overview about all relevant means of description discussed during the interviews and their properties is given in Chapter \ref{chap: MoD}. The methods used for the development of safety relevant software systems and eventual constrains concerning their use in the openETCS project are presented in \ref{chap: methods}. Subsequently chapter \ref{chap: tools} introduces the tools used in practice to apply the means of description according to the methods.
 
-Although to not limit the answers to a certain aspect the last questions concerning the requirements for future methodology, means of description and tools where designed in an open way. Nevertheless, most interviewees focused on tool characteristics. This is comprehensible as in practice  methodology and means of description are implied by the use of tools. As these tool requirements are indirectly connected to more general requirements for the methodology and the means of description a list of common requirements for all components has been established based on the interviews. These are presented in chapter \ref{chap: requirements}.
-\FIXME{\em The reference to requirements ist shown in the pdf as ?? }
+Although to not limit the answers to a certain aspect the last questions concerning the requirements for future methodology, means of description and tools where designed in an open way. Nevertheless, most interviewees focused on tool characteristics. This is comprehensible as in practice  methodology and means of description are implied by the use of tools. As these tool requirements are indirectly connected to more general requirements for the methodology and the means of description a list of common requirements for all components has been established based on the interviews.
 
 \chapter{Means of Description}
 
@@ -338,8 +336,8 @@ Links:
 
 Bibliography:
 \begin{itemize}
-\item Weilkiens, Tim. \textit{Systems Engineering with SysML/UML: Modeling, Analysis, Design}. Morgan Kaufmann / The OMG Press, Boston,  2007.\\[4pt]
-\item Ambler, Scott William. \textit{The Object Primer: Agile Model Driven Development with UML 2}. Cambridge University Press, Cambridge, 2004.\\[4pt]
+\item Weilkiens, Tim: Systems Engineering with SysML/UML -- Modeling, Analysis, Design, Morgan Kaufmann and The OMG Press, Boston, 2007.
+\item Ambler, Scott William: The Object Primer -- Agile Model Driven Development with UML 2, Cambridge University Press, Cambridge, 2004.
 \end{itemize}
 
 \section{Petri Nets}
@@ -450,8 +448,11 @@ Links:
 \url{http://www.interested-ip.eu/}\\[4pt]
 \url{http://http://www.interested-ip.eu/final-report.html/} \\[4pt]
 
-
 Bibliography:
+
+\begin{itemize}
+\item Caspi, P. ; Pilaud, D.; Halbwachs,  N.; Plaice, J. A.: LUSTRE -- A declarative language for programming synchronous systems,1986.
+\end{itemize}
 
 \section{State Machines}
 
@@ -477,6 +478,7 @@ Links:
 \url{http://foldoc.org/state+machine} \\[4pt]
 
 Bibliography:
+
 \begin{itemize}
 \item Carroll, J., Long, D.: Theory of Finite Automata with an Introduction to Formal Languages. Prentice Hall, Englewood Cliffs, 1989.
 \item Ginsburg, S.: An Introduction to Mathematical Machine Theory. Addison-Wesley, 1962...
@@ -544,13 +546,11 @@ Bibliography:
 
 \section{HOL (High Order Logic)}
 
-
 	\textbf{Characteristics}
 
 Higher-order logic is a predicate logic notation which distinguished from first-order logic like set theory by additional quantifiers and a stronger semantics. This allows a instead, more immediate and natural representation of system properties, which has to be been done be encoding in a first order logic.
 
 	\textbf{Typical applications}
-
 
 Higher-order logic is applied on software applications for tasks like natural language parsing and theorem proving. In addition computational higher-order logics have alsobeen used as meta input languages for the application of theorem provers. 
 
@@ -581,8 +581,6 @@ Bibliography:
 
 Temporal logic extends the first order logic concept in this way, that modal relations can be expressed. This concept of temporal logics is based on the work of Arthur Prior. This can only express modal aspect between state like some state changes "always" or "eventually" not quantified time relations and constraints. Absolute time can be introduced by using specific time states for the system modelling.
 
-
-
 	\textbf{Typical applications}
 
 Temporal logic is used for the formal verification of hardware and software systems asthe state requirements can be specified in temporal logic. Thereby, temporal logic allows direct specification of safety and operational properties concerning the system behaviour, which can then be formally demonstrated for the following development steps.
@@ -595,6 +593,7 @@ Since Temporal Logic is a purely mathematical concept, it is a well documented a
 	\textbf{References}
 
 Links:
+
 \url{http://plato.stanford.edu/entries/logic-temporal/} \\[4pt]
 
 Bibliography:
@@ -653,6 +652,7 @@ No specific standard.
 	\textbf{References}
 
 Links:
+
 \url{https://sites.google.com/site/controllednaturallanguage/} \\[4pt]
 
 Bibliography:
@@ -996,6 +996,8 @@ Overall the interviews and the additional research have shown, that model-based 
 \label{chap: tools}
 
 As it has already been described the tools are closely connected to a means of description  and a methodology which they support. Therefore a large number of different tools from various backgrounds are available which mostly handle on means of description and allow to apply one or more methods for different steps in the development process.
+
+\section{Tool use}
 
 The interviews have shown that there are tools available and in use to support the following development steps and the connected methods depending on the general development process:
 
@@ -1405,11 +1407,6 @@ Formal Refinement&&&+&&&&&\\ \hline
  &Process Simulation&+&+&+&+&+&&\\ \hline
 
 \end{longtable}
-
-
-
-
-\chapter{List Tools}
 
 
 \bibliographystyle{plainnat}
