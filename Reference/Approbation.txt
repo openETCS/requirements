@@ -1,0 +1,37 @@
+De : DALMAS Gilles (S & D/SI2R) [mailto:gilles.dalmas@sncf.fr] 
+Envoyé : mercredi 12 juin 2013 15:55
+À : wp2@openetcs.org
+Cc : projectoffice@openETCS.org
+Objet : [openETCS-WP2:407] Deliverable approval
+ 
+ 
+Dear all,
+ 
+Our deliverables are currently being uploaded on the ITEA2 website.
+As WP2 task leader, I consider approved the following deliverable:
+ 
+D2.1 in its state at 3.30 pm on June the 12th
+D2.2 version 1.2
+D2.3 version 2.0
+D2.5 version 1.0
+D2.6 -9 version 2.0
+ 
+The D2.4 is in intermediate state waiting for the tool to be chosen for a final release.
+A directory will be created under the name: “requirements/Reference”.
+It will contain the pdf of the approved versions of the deliverable and their approval notifications.
+ 
+In case of a new release of one of these documents, the new approved version will replace the old one in the directory.
+ 
+Kind regards
+ 
+Gilles
+ 
+-------
+Ce message et toutes les pièces jointes sont établis à l'intention exclusive de ses destinataires et sont confidentiels. L'intégrité de ce message n'étant pas assurée sur Internet, la SNCF ne peut être tenue responsable des altérations qui pourraient se produire sur son contenu. Toute publication, utilisation, reproduction, ou diffusion, même partielle, non autorisée préalablement par la SNCF, est strictement interdite. Si vous n'êtes pas le destinataire de ce message, merci d'en avertir immédiatement l'expéditeur et de le détruire.
+-------
+This message and any attachments are intended solely for the addressees and are confidential. SNCF may not be held responsible for their contents whose accuracy and completeness cannot be guaranteed over the Internet. Unauthorized use, disclosure, distribution, copying, or any part thereof is strictly prohibited. If you are not the intended recipient of this message, please notify the sender immediately and delete it.
+
+-------
+Ce message et toutes les pièces jointes sont établis à l'intention exclusive de ses destinataires et sont confidentiels. L'intégrité de ce message n'étant pas assurée sur Internet, la SNCF ne peut être tenue responsable des altérations qui pourraient se produire sur son contenu. Toute publication, utilisation, reproduction, ou diffusion, même partielle, non autorisée préalablement par la SNCF, est strictement interdite. Si vous n'êtes pas le destinataire de ce message, merci d'en avertir immédiatement l'expéditeur et de le détruire.
+-------
+This message and any attachments are intended solely for the addressees and are confidential. SNCF may not be held responsible for their contents whose accuracy and completeness cannot be guaranteed over the Internet. Unauthorized use, disclosure, distribution, copying, or any part thereof is strictly prohibited. If you are not the intended recipient of this message, please notify the sender immediately and delete it.
