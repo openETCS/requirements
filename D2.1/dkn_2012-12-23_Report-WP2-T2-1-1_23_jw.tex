@@ -52,7 +52,7 @@
 \coverart[width=350pt]{openETCS_EUPL}
 
 %define the type of report
-\reporttype{Preliminary Report}
+\reporttype{Final Report}
 
 
 \begin{abstract}
@@ -73,8 +73,7 @@
 
 \chapter{Introduction}
 
-The CENELEC standards requires a systematic approach for the development of systems and software for railway control and safeguarding systems. Therefore the following functional steps have to be conducted based on the overall System and Safety Requirements Specifications in the \citeauthor{EN50128:2011} :
-\FIXME{\em The reference to EN50128 ist shown in the pdf as an ? }
+The CENELEC standards requires a systematic approach for the development of systems and software for railway control and safeguarding systems. Therefore the following functional steps have to be conducted based on the overall System and Safety Requirements Specifications in the \citeauthor{EN50128:2011}.
 
 \vspace{-10pt}
 \begin{itemize} [topsep=2pt, partopsep=2pt,itemsep=2pt,parsep=2pt]
@@ -160,7 +159,7 @@ In the context of modern computer-based working processes tools are almost exclu
 
 In this way the integration of a suitable means of description (B),  the structured process of a methodology (M) and the support of an applicable tool (W) allows to distinguish three orthogonal means, which together provide the needed functionalities, but are independent from each other as far as they can be used separately and exchanged. In practice, a clear distinction between means of description and methodology is not always given, so that both are summarised under the term technique. To follow the structured system development approach of the CENELEC standards in an "open" way means of description, methods and tools have to be chosen, which can be used by everyone. 
 
-The CENELEC standards do not demand the use of certain means of description, methods or tools, but give recommendations for all process steps and Safety Integrity Levels (SIL). But the standard requires the use of semi-formal and formal means of descriptions. Functionality and Black-Box tests are mandatory for verification and validation of software with SIL 3 and SIL 4 and highly recommended for lower levels. To validate the final software also performance tests are needed. A traceability of all requirements and specifications over all steps of the development process has to be guarantied according to the \citeauthor{EN50128:2011}. 
+The CENELEC standards do not demand the use of certain means of description, methods or tools, but give recommendations for all process steps and Safety Integrity Levels (SIL). But the standard requires the use of semi-formal and formal means of descriptions. Functionality and Black-Box tests are mandatory for verification and validation of software with SIL 3 and SIL 4 and highly recommended for lower levels. To validate the final software also performance tests are needed. A traceability of all requirements and specifications over all steps of the development process has to be guaranteed according to the \citeauthor{EN50128:2011}. 
 
 \chapter{Expert interviews}
 
@@ -215,8 +214,7 @@ As most  experts are only involved in a small part of the system development pro
 
 An overview about all relevant means of description discussed during the interviews and their properties is given in Chapter \ref{chap: MoD}. The methods used for the development of safety relevant software systems and eventual constrains concerning their use in the openETCS project are presented in \ref{chap: methods}. Subsequently chapter \ref{chap: tools} introduces the tools used in practice to apply the means of description according to the methods.
 
-Although to not limit the answers to a certain aspect the last questions concerning the requirements for future methodology, means of description and tools where designed in an open way. Nevertheless, most interviewees focused on tool characteristics. This is comprehensible as in practice  methodology and means of description are implied by the use of tools. As these tool requirements are indirectly connected to more general requirements for the methodology and the means of description a list of common requirements for all components has been established based on the interviews. These are presented in chapter \ref{chap: requirements}.
-\FIXME{\em The reference to requirements ist shown in the pdf as ?? }
+Although to not limit the answers to a certain aspect the last questions concerning the requirements for future methodology, means of description and tools where designed in an open way. Nevertheless, most interviewees focused on tool characteristics. This is comprehensible as in practice  methodology and means of description are implied by the use of tools. As these tool requirements are indirectly connected to more general requirements for the methodology and the means of description a list of common requirements for all components has been established based on the interviews.
 
 \chapter{Means of Description}
 
@@ -310,7 +308,7 @@ Z, B - Method and Event B&Tech&+&M, G&+&+&o&-&+&+&o&+&+& \\ \hline
 \end{center}
 
 
-From the means of description presented in  \citeauthor{EN50128:2011}  only UML, B-Method and Petri Nets were named during the interviews as actually used means of description for modeling the requirement specifications and developing the software architecture and design. In addition State machines and Lustre/ Textual Scade are commonly used for software development. C and ADA and their related languages are primary used as programming languages to write the source code. Therefore these set of means of description can be seen as proven in use for the current software development. The following subsections present further information for every means of description. A more detailed version of the characterisation table is given in Appendix \ref{chap: TabMoD}.
+From the means of description presented in  \citeauthor{EN50128:2011}  only UML, B-Method and Petri Nets were named during the interviews as actually used means of description for modelling the requirement specifications and developing the software architecture and design. In addition State machines and Lustre/ Textual Scade are commonly used for software development. C and ADA and their related languages are primary used as programming languages to write the source code. Therefore these set of means of description can be seen as proven in use for the current software development. The following subsections present further information for every means of description. A more detailed version of the characterisation table is given in Appendix \ref{chap: TabMoD}.
 
 \section{UML 2.0 (Unified Modelling Language) and SysML (System Modelling Language)}
 
@@ -321,9 +319,12 @@ From the means of description presented in  \citeauthor{EN50128:2011}  only UML,
 
 	\textbf{Typical applications}
 
+UML and SysML is dedicated on system engineering and suitable for a number of different kind of systems.
+UML has be first created to develope software systems, but represents a general approach, which have been adoped in many areas. SysML has be specified to provide a more suited subset of UML for general system development, therefore it is used for the development of all kinds of technical systems.
 
 	\textbf{Standards}
 
+UML is defined in ISO/IEC 19501 Information technology -- Open Distributed Processing -- Unified Modeling Language (UML) Version 1.4.2. It is further developed by OMG and standardised by their publications. OMG also defines the SysML standards.
 
 	\textbf{References}
 
@@ -334,30 +335,46 @@ Links:
 \url{http://www.omg.org/} \\[4pt]
 
 Bibliography:
-
-Weilkiens, Tim. \textit{Systems Engineering with SysML/UML: Modeling, Analysis, Design}. Morgan Kaufmann / The OMG Press, Boston,  2007.\\[4pt]
-Ambler, Scott William. \textit{The Object Primer: Agile Model Driven Development with UML 2}. Cambridge University Press, Cambridge, 2004.\\[4pt]
+\begin{itemize}
+\item Weilkiens, Tim: Systems Engineering with SysML/UML -- Modeling, Analysis, Design, Morgan Kaufmann and The OMG Press, Boston, 2007.
+\item Ambler, Scott William: The Object Primer -- Agile Model Driven Development with UML 2, Cambridge University Press, Cambridge, 2004.
+\end{itemize}
 
 \section{Petri Nets}
 
 
 	\textbf{Characteristics}
 
+Petri Nets were developed originally by Carl Adam Petri in 1962 as graphical way to model chemical reactions. The have evolved since then presenting a very powerful completely mathematical defined means of description to graphically model systems in a discrete way and analyse and simulated their behaviour. 
+In general Petri Nets are bipartite graphs  that consist of to kind of notes called places and transitions, which are connected by arcs. Thereby, arcs are only allowed to run from a place to a transition or vice versa and never between places or between transitions. Places represent a local discrete state of the modelled system, while every transition represents a change in these system states. The places from which an arc runs to a transition are input places of this transition and the places to which arcs from the transition run are output places of the transition. That a transition can fire the conditions represented by all input places have to be established. Through the transition firing the system changes from the input conditions to the output conditions by activating the related places. Tokens have been introduced to represent the activated states. Their movement allows to simulated the system behaviour. Over the time various extensions have be developed to extend the concept of Petri ets to handle a larger amount of system properties and  behaviour. 
 
 	\textbf{Typical applications}
 
+Petri nets are used to describe a wide range of systems that show a discrete behaviour, as the overall concept of states and transitions can be found in most application fields. As the Petri Nets concept has been developed and extended over time, the nets have been applied in a number of different fields: Office automation, work-flows, flexible manufacturing, programming languages, protocols and networks, hardware structures, real-time systems, performance evaluation, operations research, embedded systems, defence systems, telecommunications, Internet, e-commerce and trading, railway networks, biological systems.
 
 	\textbf{Standards}
 
+ISO/IEC 15909-1 Software and Systems Engineering - High-level Petri Nets
+Part 1 covers Concepts, Definitions and Graphical Notation
+Part 2 covers the PNML language, a Transfer Format for Petri nets based on XML
+
+The use of petri nets for the system dependability analysis is standardised in IEC 62551 Analysis techniques for dependability - Petri net modelling.
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://www.informatik.uni-hamburg.de/TGI/PetriNets/}\\[4pt]
+\url{http://www.pnml.org}\\[4pt]
+\url{http://www.scholarpedia.org/article/Petri_net} \\[4pt]
 
 Bibliography:
-
+\begin{itemize}
+\item David, René; Alla, H.: Petri nets and Grafcet -- Tools for modelling discrete event systems. Prentice Hall, 1992.
+\item Girault, Claude; Valk, R.: Petri nets for systems engineering -- A guide to modelling, verification, and applications. Springer, 2003.
+\item Van der Aalst, W.M.P. and Stahl, C.: Modeling Business Processes -- A Petri Net-Oriented Approach. The MIT Press, 2011.
+\item K. Jensen and Kristensen, L.M.: Coloured Petri Nets -- Modeling and Validation of Concurrent Systems. Springer-Verlag Berlin, 2009.
+\end{itemize}
 
 
 
@@ -366,21 +383,37 @@ Bibliography:
 
 	\textbf{Characteristics}
 
+All three formal methods have mainly been developed by Jean-Raymond Abrial. The Z notation is the oldest of the three  and named after Zermelo–Fraenkel set theory. It has been developed as a specification language which used a model-based approach to describe computing systems. The Z language is based on the standard mathematical notation used in axiomatic set theory, lambda calculus, and first-order predicate logic. 
+
+ B has been developed as a associated method to Z which is more focused on the lower-level formal code development rather than just formal specification. Respectively the B method provides more than the pure means of description, as it additionally includes processes for refinement, proof and has a strong tool support. Normally the B method development of software first writes a concrete model which specifies the main data processes of the system and the fundamental properties of this data. Thereby the languages used set theory using invariants to describe the static properties and stating post-conditions for operations to define the dynamic behaviour. The B model is then refined to obtain a complete software model, which can be formally analysed to prove the correctness.
+ 
+ The newest formal method in this group is Event-B which has been developed as an evolution of B. Event-B has a simplified notation aiming at system-level modelling and analysis. 
 
 	\textbf{Typical applications}
 
+Z and B are used in a variety of applications to develop safety critical software since the models allow to prove the correctness. The main use is in the railway and aerospace industry. As Event-B is respectively new it has not yet be applied on major projects.
 
 	\textbf{Standards}
+The Z method is defined by the standard SO/IEC 13568: Information technology -- Z formal specification notation -- Syntax, type system and semantics.
 
+The B method and B Event are mainly based on the books published by Jean-Raymond Abrial. These  are the quasi standardisation of the means of description. 
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://www.methode-b.com/}\\[4pt]
+\url{http://www.event-b.org/}\\[4pt]
 
 Bibliography:
 
+\begin{itemize}
+\item Spivey, J. Michael: The Z Notation -- a reference manual, Prentice Hall International Series in Computer Science, 1992.
+\item  Abrial, Jean-Raymond: The B-Book -- Assigning Programs to Meanings, Cambridge University Press, 1996.
+\item  Schneider, S.: The B-Method -- An Introduction, Palgrave Macmillan, Cornerstones of Computing series, 2001.
+\item Abrial, Jean-Raymond: Modeling in Event-B -- System and Software Engineering,  Cambridge University Press, 2010.
+\end{itemize}
+ 
 \section{Lustre/ Textual and Graphical Scade}
 
 	\textbf{Characteristics}
@@ -403,6 +436,7 @@ Safety critical systems like
 
 	\textbf{Standards}
 
+The languages Lustre and SCADE are well documented, but note standardised.
 
 	\textbf{References}
 	
@@ -414,108 +448,130 @@ Links:
 \url{http://www.interested-ip.eu/}\\[4pt]
 \url{http://http://www.interested-ip.eu/final-report.html/} \\[4pt]
 
-
 Bibliography:
+
+\begin{itemize}
+\item Caspi, P. ; Pilaud, D.; Halbwachs,  N.; Plaice, J. A.: LUSTRE -- A declarative language for programming synchronous systems,1986.
+\end{itemize}
 
 \section{State Machines}
 
 
 	\textbf{Characteristics}
 
+State machines and the for software development most relevant subset of finite-state machine represent the major mathematical concept to describe a system structure and the behaviour. Thereby states are defined which represent a certain status of the system, while inputs are information triggering certain actions leading to a state change. If the system actions are defined for every input in every state, the system is described completely.
+
+If the number of states and transitions is fined and countable, a start state defined and a set of final states given, the system is described by a finite-state machine. The limits of a finite-state machine all to graphically represent the system in a state transition diagram showing the overall behaviour and to check the finite-state machine for completeness, consistency and reachability.
 
 	\textbf{Typical applications}
 
+Most means of descriptions developed to describe a system behaviour incorporate the principle of state machines in their overall concept.
 
 	\textbf{Standards}
 
+As state machines are a pure mathematical concept, their is no standard. They are defined in basic automata theory.
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://foldoc.org/state+machine} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Carroll, J., Long, D.: Theory of Finite Automata with an Introduction to Formal Languages. Prentice Hall, Englewood Cliffs, 1989.
+\item Ginsburg, S.: An Introduction to Mathematical Machine Theory. Addison-Wesley, 1962...
+\end{itemize}
+
 
 \section{VDM (Vienna Development Method)}
 
 
 	\textbf{Characteristics}
 
-
+The Vienna Development Method has been developed in IBM's Vienna Laboratory in the 1970s as a formal specification language. It is a model-based approach which describes the system by its states using set-theoretic structures. Thereby, the pre and post conditions of a state are defined as invariants and operations. These can be proven, while the data structure of the system is set up during reification and the operations ae refined.
+ 
 	\textbf{Typical applications}
 
+VDM has been used in industry to develop proven software for critical systems, compilers and concurrent systems
 
 	\textbf{Standards}
-
-
+	
+	The VDM has be standardised in ISO/IEC 13817 Information technology — Programming languages, their environments and system software interfaces — Vienna Development Method — Specification Language — Part 1: Base language.
+	
 	\textbf{References}
 
 Links:
 
-
+\url{http://www.vdmportal.org} \\[4pt]
+\url{http://www.vdmbook.com} \\[4pt]
 
 Bibliography:
 
-\section{Process Calculi (CCS, CSP, LOTUS) }
+\begin{itemize}
+\item Bj\o{}rner, D. and Jones, C.B..: The Vienna Development Method -- The Meta-Language, Lecture Notes in Computer Science 61, Springer, 1978. 
+\item Bj\o{}rner, D. and Jones, C.B.: Formal Specification and Software Development, Prentice Hall International, 1982.
+\item Jones, C.B.: Software Development -- A Rigorous Approach, Prentice Hall International, 1980.
+\end{itemize}
 
+\section{Process Calculi (CCS, CSP, LOToS) }
 
 	\textbf{Characteristics}
 
+Process calculi (or also named process algebras) are a group of approaches to formally model concurrent systems to specify the processes and verify their implementation. The model the system by specifying the high level independent processes and their communication. Thereby, the process can be sequential or parallel. The modelling is done by using a pseudo-programming language. This allows to use algebraic lows for manipulation, analysing and formal reasoning.
 
 	\textbf{Typical applications}
 
+These means are mainly used to mathematically model and analyse communications in software systems.
 
 	\textbf{Standards}
 
+The different process calculi are documented in the respective manuals, but their is no overall standardisation.
 
 	\textbf{References}
 
 Links:
 
-
+\url{www.usingcsp.com} \\[4pt]
+\url{http://theory.stanford.edu/~rvg/process.html} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Hennessy, M.: Algebraic Theory of Processes, The MIT Press, 1988.
+\item Hoare, C. A. R.: Communicating Sequential Processes, Prentice Hall, 2004.
+\item Milner, R.: A Calculus of Communicating Systems, Springer, 1980.
+\end{itemize}
 
 \section{HOL (High Order Logic)}
 
-
 	\textbf{Characteristics}
 
+Higher-order logic is a predicate logic notation which distinguished from first-order logic like set theory by additional quantifiers and a stronger semantics. This allows a instead, more immediate and natural representation of system properties, which has to be been done be encoding in a first order logic.
 
 	\textbf{Typical applications}
 
+Higher-order logic is applied on software applications for tasks like natural language parsing and theorem proving. In addition computational higher-order logics have alsobeen used as meta input languages for the application of theorem provers. 
 
 	\textbf{Standards}
 
+Since High Order Logics are a purely mathematical concept, they a well documented and standardised with respect to the mathematical theory.
 
 	\textbf{References}
 
 Links:
 
-
-
-Bibliography:
-
-\section{DSL (Domain Specific Languages)}
-
-
-	\textbf{Characteristics}
-
-
-	\textbf{Typical applications}
-
-
-	\textbf{Standards}
-
-
-	\textbf{References}
-
-Links:
-
-
+\url{http://www.lix.polytechnique.fr/Labo/Dale.Miller/papers/AIencyclopedia/} \\[4pt]
+\url{http://plato.stanford.edu/entries/logic-higher-order/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Church, A.: A Formulation of the Simple Theory of Types, Journal of Symbolic Logic 5 56 – 68, 1940.
+\item Shapiro, S.: Foundations without Foundationalism -- A Case for Second-Order Logic, Oxford University Press, 1991.
+\item Andrews, P. B.: An Introduction to Mathematical Logic and Type Theory -- To Truth Through Proof, Kluwer Academic Publishers, 2002
+\end{itemize}
 
 \section{TL (Temporal Logic)}
 
@@ -523,140 +579,214 @@ Bibliography:
 	\textbf{Characteristics}
 
 
+Temporal logic extends the first order logic concept in this way, that modal relations can be expressed. This concept of temporal logics is based on the work of Arthur Prior. This can only express modal aspect between state like some state changes "always" or "eventually" not quantified time relations and constraints. Absolute time can be introduced by using specific time states for the system modelling.
+
 	\textbf{Typical applications}
 
+Temporal logic is used for the formal verification of hardware and software systems asthe state requirements can be specified in temporal logic. Thereby, temporal logic allows direct specification of safety and operational properties concerning the system behaviour, which can then be formally demonstrated for the following development steps.
 
 	\textbf{Standards}
+
+Since Temporal Logic is a purely mathematical concept, it is a well documented and standardised with respect to the mathematical theory.
 
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://plato.stanford.edu/entries/logic-temporal/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Kamp, J. A. W.: Tense Logic and the Theory of Linear Order, Ph.D. thesis, University of California, Los Angeles, 1968.
+\item Prior, A. N.: Time and Modality, Clarendon Press, Oxford, 1957.
+\item Øhrstrøm, P. and Hasle, P.: Temporal Logic -- From Ancient Ideas to Artificial Intelligence, Dordrecht, Boston and London Kluwer Academic Publishers, 1995.
+\end{itemize}
+
+
+
 
 \section{OBJ}
 
 
 	\textbf{Characteristics}
 
+ OBJ is a group of algebraic programming and specification languages, which use requirements in terms of algebraic equations enriched with other logics to specify the system. The specification can be formally proven. OBJ languages can only be applied to sequential systems.
+ 
+ 	\textbf{Typical applications}
 
-	\textbf{Typical applications}
-
+OBJ languages can be used to precisely specify sequential systems and through the precise algebraic specification execute the specification to receive analysis and system validation prior to the actual implementation.
 
 	\textbf{Standards}
 
+The OBJ languages are defined by their manuals.
 
 	\textbf{References}
 
 Links:
 
-
+\url{http://cseweb.ucsd.edu/~goguen/sys/obj.html} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Goguen,  J. A. : Higher-Order Functions Considered Unnecessary for Higher-Order Programming. In Research Topics in Functional Programming, 1976.
+\end{itemize}
+
 
 \section{CNL (Controlled Natural Language)}
 
 
 	\textbf{Characteristics}
 
+As the name implements the controlled natural languages (CNL) represent a  subsets of natural languages. These restrict the grammar and vocabulary of a natural language to to reduce and/or eliminate ambiguity and complexity existing in a natural language. In general two main categories of CNL exist. The one category has the aim to improve the readabilty through restriction to enable easier understanding or allow automatic analysis of the semantic. The second category limits the language to reach a formal logical basis, which can be conected to an existing formal means of description.
 
 	\textbf{Typical applications}
-
+The first category is often used to reach more consistent documents, which generates higher quality documents and automatic translation. The second category provide formal texts which can be handled automatically by software tools.
 
 	\textbf{Standards}
 
+No specific standard.
 
 	\textbf{References}
 
 Links:
 
-
+\url{https://sites.google.com/site/controllednaturallanguage/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item O'Brien, S.: Controlling Controlled English -- An Analysis of Several Controlled Language Rule Sets, Proceedings of EAMT-CLAW, 2003.
+\item Tonetta, S.: Extending the Property Specification Language with a First Order Signature, Fondazione Bruno Kessler IRST, tech rep. number fbk161120071, 2007.
+\end{itemize}
 
 \section{Alloy}
 
 
 	\textbf{Characteristics}
 
+Alloy is a declarative specification language based on the notion of relations for expressing complex structural constraints and behaviour in a software system. Alloy models are micro-models which can be checked automatically for correctness. 
+Alloy models consist of different kinds of statements. Signatures are the basic sets like objects or lists. A fact is a constraint that has to be guaranteed. Predicates are parameterized constraints, while functions are expressions giving back a result. Assertions are logical expression which are used to check whether the model holds these properties.
 
 	\textbf{Typical applications}
 
+The alloy specification language is mainly used for tool development.
 
 	\textbf{Standards}
 
-
+The book by Daniel Jackson is the main standard for alloy.
 	\textbf{References}
 
 Links:
 
-
+\url{http://alloy.mit.edu/alloy/} \\[4pt]
+\url{http://www.doc.ic.ac.uk/project/examples/2007/271j/suprema_on_alloy/Web/} \\[4pt]
 
 Bibliography:
+
+\begin{itemize}
+\item Jackson, D.: Software Abstractions -- Logic, Language, and Analysis, MIT Press, 2006. 
+\end{itemize}
 
 \section{Ada and Spark}
 
 
 	\textbf{Characteristics}
 
+Ada is programming language which uses a structured, statically typed, imperative and object oriented approach. The language was originally aimed embedded and real-time systems, but has been extended over time. Ada is specifically designed for the development of large software programs and has already a number of checks incorporated to detect bugs. 
+
+SPARK is a evolution of ADA, which has been develop to eliminate the ambiguities and insecurities in ADA to provide a formal programming language for safety-relevant software. 
 
 	\textbf{Typical applications}
 
+ADA and specifically SPARK is used to write safety critical software in various areas like nuclear, aerospace or railway applications.
 
 	\textbf{Standards}
 
+The Ada version 2012 is defined by the ISO/IEC 8652 Information technology -- Programming languages -- Ada.
 
 	\textbf{References}
 
 Links:
 
+\url{http://libre.adacore.com} \\[4pt]
+\url{http://www.adaic.org/} \\[4pt]
+\url{http://www.ada-auth.org} \\[4pt]
 
 
 Bibliography:
+
+\begin{itemize}
+\item Barnes, John: High Integrity Ada: The SPARK Approach, Addison-Wesley, 1997.
+\end{itemize} 
 
 \section{ACSL (ANSI/ISO C Specification Language) and C}
 
 
 	\textbf{Characteristics}
 
+The C language is a imperative programming language, using structured programming and a static type system. As the C language structure can be efficiently translated to machine instructions, it is commonly used for software like operation systems. Overall the C language is the most used programming language, therefore it has been used with most hardware architectures and operating systems.
+
+The ANSI/ISO C Specification Language (ACSL) is a language developed to write specifications using pre- and postconditions and invariants to develop C programs respecting these contracts. The specifications are written as annotation comments inside the C code, which is then compiled.
 
 	\textbf{Typical applications}
 
+The C language is used for all kind of programs and is specifically efficient for software close to the hardware architecture. Respectively the C language is used for C is often used for implementing operating systems and embedded system applications. 
+In some cases C is used as an intermediate language for other language implementations for convenience or portability.
+
+ACSL is used to specify certain behavioral properties of a C code, which can then be verified a tool through deductive reasoning.
 
 	\textbf{Standards}
 
+The C language has been standardised in the ISO/IEC 9899 Information technology -- Programming languages -- C.
+Depending on the publication year the current version is called C11.
 
 	\textbf{References}
 
 Links:
 
+\url{http://frama-c.com/acsl.html} \\[4pt]
+\url{http://www.open-std.org/jtc1/sc22/wg14/} \\[4pt]
+\url{http://cm.bell-labs.com/cm/cs/who/dmr/chist.html} \\[4pt]
 
 
 Bibliography:
+
+\begin{itemize}
+\item Banahan, M.; Brady, D.; Doran, M.: The C Book, Addison-Wesley, 1991.
+\item Ritchie, Dennis M.: The Development of the C Language, The second ACM SIGPLAN History of Programming Languages Conference, p.201–208, 1993.
+\end{itemize}
 
 \section {RSL (RAISE Specification Language)}
 
 
 	\textbf{Characteristics}
 
+The RSL is the specification language, which is developed as main component of the RAISE (Rigorous Approach to Industrial Software Engineering) method developed in the 1990s by the ESPRIT II LaCoS project, led by Dines Bjørner. As a specification language the RSL provides a rich, mathematically based notation to formulated and reasoned about requirements, specifications and to some extend steps of the software design. To allow such a wide-spectrum of formulations the RSL uses abstract, axiomatic styles of description as well as concrete, operational styles. Overall the language can be used from initial domain and requirements analysis through design to a level of abstraction from which source code is generated. 
 
 	\textbf{Typical applications}
 
+RAISE has been used for different kind of engineering software project e.g. to handle civil engineering project or to model a railway interlocking.
 
 	\textbf{Standards}
 
+The RSL and the RAISE method are mainly standardised through the books published by the The RAISE Language/ method Group.
 
 	\textbf{References}
 
 Links:
 
+\url{http://www2.imm.dtu.dk/~dibj/raise/} \\[4pt]
 
 
 Bibliography:
 
+\begin{itemize}
+\item The RAISE Language Group: The RAISE Specification Language, BCS Practitioner Series, Prentice Hall, 1992.
+\item The RAISE Method Group: The RAISE Development Method, BCS Practitioner Series, Prentice Hall, 1995. 
+\end{itemize}
 
 \section{Summary}
 
@@ -727,7 +857,7 @@ Independent of the concrete methodology and the used means of description the in
 
 \section{Transformation of formal requirement specifications in formal software and software module design and architecture descriptions}
 
-To write their formal software requirement specifications and to define the software architecture and design based on these most organisations presented a model-based development process using different formal models to describe the software on different abstraction levels. In doing so the railway operators mostly focus on the high-level description of system and software functionality, while the actual software developers concentrate on modeling the more concrete software architecture and design. By using formal methods and formal refinement certain steps of the top-down modeling can be automated. Since every organisation used a modular approach as it is mandated by \ref{EN50128:2011} for all SIL Levels the refinement is also used to separate the functionalities of different modules. Thereby the detailed software model can than be used for an automatic or semi-automatic source code generation. To model the interactions with adjacent systems including human operators a model representing the environment is needed. Overall our interviews have confirmed that a variation the top-down model-based software development shown in figure \ref{fig: MBD} is common practice at least for the development of safety related software. 
+To write their formal software requirement specifications and to define the software architecture and design based on these most organisations presented a model-based development process using different formal models to describe the software on different abstraction levels. In doing so the railway operators mostly focus on the high-level description of system and software functionality, while the actual software developers concentrate on modelling the more concrete software architecture and design. By using formal methods and formal refinement certain steps of the top-down modelling can be automated. Since every organisation used a modular approach as it is mandated by \ref{EN50128:2011} for all SIL Levels the refinement is also used to separate the functionalities of different modules. Thereby the detailed software model can than be used for an automatic or semi-automatic source code generation. To model the interactions with adjacent systems including human operators a model representing the environment is needed. Overall our interviews have confirmed that a variation the top-down model-based software development shown in figure \ref{fig: MBD} is common practice at least for the development of safety related software. 
 
 \begin{figure}[h]
 \centering
@@ -736,13 +866,13 @@ To write their formal software requirement specifications and to define the soft
 \label{fig: MBD}
 \end{figure}
 
-To guarantee certain modeling standards all organisations had defined training processes for their experts which introduced them to certain modeling standards building the mutual basis for all models.  Additionally most organisations use models that can be analysed and/or simulated during the modeling process to receive feedback from these methods about certain properties of the model during their model-based development process.
+To guarantee certain modelling standards all organisations had defined training processes for their experts which introduced them to certain modelling standards building the mutual basis for all models.  Additionally most organisations use models that can be analysed and/or simulated during the modelling process to receive feedback from these methods about certain properties of the model during their model-based development process.
 
 It has already been shown in chapter \ref{chap: MoD} usually different means of descriptions are used to build functionality models than design and architecture models. As most organisations are focus either on high-level functional models or on design and architecture models they use only one means of description for all models in their internal model-based development process. But usually functionality models which are handed done in the development process for example from an operator or train manufacturer to the software developer have to be translated. Therefore a dependable translation methodology is needed to ensure that all functionalities are incorporated in the software models and to guarantee traceability over all levels of abstraction. In practical applications this is mostly handled by validated translation tools and though corresponding test cases.
 
 \section{Source code generation}
 
-Using the model-based development approach most interviewed organisations generated source code based on their software design and architecture models. As the  methodology for source code generation depends explicitly on used means of description and programming language the interviews have not been able to cover them in detail. Especially as most commercial modeling tools for UML, B-Method, SCADE and Simulink already provide an incorporated methodology for automatic code generation. 
+Using the model-based development approach most interviewed organisations generated source code based on their software design and architecture models. As the  methodology for source code generation depends explicitly on used means of description and programming language the interviews have not been able to cover them in detail. Especially as most commercial modelling tools for UML, B-Method, SCADE and Simulink already provide an incorporated methodology for automatic code generation. 
 
 In most cases ADA and C and their related programming languages are used for source code generation. The source code is then compiled into executable software, in doing so the compiler has to be validated to guarantee that the software behaviour is according to the source code definition.
 
@@ -813,7 +943,7 @@ Test methods range from simple checklists to highly complicated Test scenarios. 
 
 Tests can be a static analysis which just ensures that certain aspects are covered by the model or source code or it can be a dynamic test which sets some starting conditions and expects that the model or code  responds in a certain way. The simplest kind of dynamic tests are Funtional/Black-Box Tests which just specify inputs and expected outputs without any information about the  actual system structure. These are mandatory for the verification of SIL 3 and SIL 4 software, but can be enhanced trough a more precise test case specification as more are available.
 
-These test cases can be modeled by an expert based on the modeled or textual requirements that should be verified or they could be generated in a automatic way based on a formal requirement model. As most organisations we have interviewed use a model-based development for their software development those how used testing for verification applied model-based testing by simulation of their models and creation of test cases based on these models. Figure \ref{fig: MBD-Testing} shows the process structure for a model-based development process with testing for verification and validation.
+These test cases can be modelled by an expert based on the modelled or textual requirements that should be verified or they could be generated in a automatic way based on a formal requirement model. As most organisations we have interviewed use a model-based development for their software development those how used testing for verification applied model-based testing by simulation of their models and creation of test cases based on these models. Figure \ref{fig: MBD-Testing} shows the process structure for a model-based development process with testing for verification and validation.
 
 \begin{figure}[h]
 \centering
@@ -837,22 +967,22 @@ Asked for the validation methodology the interviewed organisations explained tha
 
 As verification and validation are closely related in product development most organisations which used formal proof for verification also this methodology for tasks in their validation process. But as validation has to refer back to the original textual system requirements as every organisation we interviewed argued it can not be done entirely by formal proof. Accordingly a combination of tests and formal analysis and proof is used by these organisation to validate their software as it shown in figure \ref{fig: MBD-Formal-Proof}. 
 
-Overall the model-based development process itself already provides an important methodology validate the software against it requirements. The core of every validation process presented during the interviews has been modeling combined with traceability of all requirements from the original textual system specifications and a suitable catalogues of test cases created based on this textual specifications and their formal models.
+Overall the model-based development process itself already provides an important methodology validate the software against it requirements. The core of every validation process presented during the interviews has been modelling combined with traceability of all requirements from the original textual system specifications and a suitable catalogues of test cases created based on this textual specifications and their formal models.
 
 \section{Creation of documentation}
 
 Since the software development requires supporting documentation for operation, maintenance as well as for all safety related activities it is important to use a methodology the way all these documents are created. This involves not only a structure when and how documents are created and used which is mainly specified by CENELEC standards but also a methodology how the formal/semi-formal software descriptions are included into the documentation. As natural language documents a methodology is needed which that formal/semi-formal documents and textual documents are consistent.
 
-Most organisations we interviewed already use tools which can automatically create documents based on their formal/semi-formal models. Usually these documents list the processes modeled including their input and outputs and some important modeling characteristics. If possible graphical representations of those models are added to illustrated the modeling work and provide additional information.
+Most organisations we interviewed already use tools which can automatically create documents based on their formal/semi-formal models. Usually these documents list the processes modelled including their input and outputs and some important modelling characteristics. If possible graphical representations of those models are added to illustrated the modelling work and provide additional information.
 
 As the kind of information, which have to be extracted from specific models for a proper documentation can at least to a certain degree be universally determined it is common practice to 
 create some parts of the textual documents automatically. Especially UML diagrams allow to incorporate specific variables from a diagram into a text by using predefined textual building blocks. This guarantees that the documentation is consistent with the model-based development activities and helps to reduce the needed amount of work to create the documentation as human editing is only needed to check the comprehensibility and to add parts in natural language that cannot be created from the models.
 
 \section{Terminology management/Intelligent Glossary}
 
-The used terminology has a central role in a development process to ensure that all participants understand the requirements in the same way and that these requirements a threated consistently during the whole development process \citep{Schnieder.2010}. To provide an overview about the specific terminology used to describe a system it is common practice to establish a glossary and a collection of abbreviations which provide definitions for most of the specific terms. Usually this glossary is just an additional documents for the textual system requirement specifications, which just provides a short explanation for every key term regarding to the concept that term is used in the requirement specifications. 
+The used terminology has a central role in a development process to ensure that all participants understand the requirements in the same way and that these requirements are treated consistently during the whole development process \citep{Schnieder.2010}. To provide an overview about the specific terminology used to describe a system it is common practice to establish a glossary and a collection of abbreviations which provide definitions for most of the specific terms. Usually this glossary is just an additional documents for the textual system requirement specifications, which just provides a short explanation for every key term regarding to the concept that term is used in the requirement specifications. 
 
-Some interviews emphasized to ensure a consistent terminology over all models and all process participants the relations between different terms have to be modeled, too, and these model has to be link to all models and documents to provide the right terminology to every process step, to allow additions and to provide a traceability over all abstraction levels. Some tools, especially those using UML or SysML, provide some a way to model the terminology and to connect it to other kind of models but no organisation we interviewed used a methodology providing all features of an intelligent glossary for the whole development process. The \textit{iglos} methodology which has been developed in an academic context can be used to clearly separate the meaning of terms in different domains and to allocated them so certain applications. Different kinds of relations can be modeled and the terms can be linked to sources and applications in the textual documents or the modeled system descriptions.
+Some interviews emphasized to ensure a consistent terminology over all models and all process participants the relations between different terms have to be modelled, too, and these model has to be link to all models and documents to provide the right terminology to every process step, to allow additions and to provide a traceability over all abstraction levels. Some tools, especially those using UML or SysML, provide some a way to model the terminology and to connect it to other kind of models but no organisation we interviewed used a methodology providing all features of an intelligent glossary for the whole development process. The \textit{iglos} methodology which has been developed in an academic context can be used to clearly separate the meaning of terms in different domains and to allocated them so certain applications. Different kinds of relations can be modelled and the terms can be linked to sources and applications in the textual documents or the modelled system descriptions.
 
 Overall the model-based development process requires an terminology managements methodology which provides the functionality of an advanced glossary gathering, handling and providing a systematic structure for the terminology to all parts of the development process. Therefore the used methodology has to be aligned with all means of descriptions, methods and tools used during the development process. 
 
@@ -866,6 +996,8 @@ Overall the interviews and the additional research have shown, that model-based 
 \label{chap: tools}
 
 As it has already been described the tools are closely connected to a means of description  and a methodology which they support. Therefore a large number of different tools from various backgrounds are available which mostly handle on means of description and allow to apply one or more methods for different steps in the development process.
+
+\section{Tool use}
 
 The interviews have shown that there are tools available and in use to support the following development steps and the connected methods depending on the general development process:
 
@@ -906,7 +1038,7 @@ The interviews have shown that there are tools available and in use to support t
 \item Documentation
 \end{itemize}
 
-Since the functionalities tools support can be used in different methods and for different development steps the use of a tool can be necessary at different times during the product lifecycle. Additionally some tools are able to provide a range of functionalities so they can be used to combine different methods. Accordingly it is  often difficult in practical applications to clear distinguish between tool functionality and supported methodology. Therefore most of the interviewees have focused on the main tools there are using for their model-based development and directly linked the tool to a step of their development process. An overview about the tools discussed during the interviews or presented in related publications is given in table \ref{tab: Tools}. The table also shows the development task which are supported by these tools . This table only covers the main tools named as relevant for the open ETCs project. Most tool developers provide a number of additional tools which interact with the main tool to provide a range of functionalities. These tools are not listed separately to keep the table focused on main tools.
+Since the functionalities tools support can be used in different methods and for different development steps the use of a tool can be necessary at different times during the product lifecycle. Additionally some tools are able to provide a range of functionalities so they can be used to combine different methods. Accordingly it is  often difficult in practical applications to clear distinguish between tool functionality and supported methodology. Therefore most of the interviewees have focused on the main tools there are using for their model-based development and directly linked the tool to a step of their development process. An overview about the tools discussed during the interviews or presented in related publications is given in table \ref{tab: Tools}. The table also shows the development task which are supported by these tools . This table only covers the main tools named as relevant for the open ETCS project. Most tool developers provide a number of additional tools which interact with the main tool to provide a range of functionalities. These tools are not listed separately to keep the table focused on main tools.
 
 %\begin{sidewaystable}
 
@@ -966,1492 +1098,41 @@ $\pi$-Tool&IQST&commercial&Petri Nets&&+&+&+&&+&&+&&+&&o \\ \hline
 \end{landscape}
 %\end{sidewaystable}
 
-The focus of the tool discussion during the interviews has been on modeling tools as the collection of tools in table \ref{tab: Tools} shows. Most companies use commercial tools like Artisan Studio, Atelier B,  Rational Architect,  SCADE or Simulink to build their software models by using the implemented means of description and the implemented methods to generate reliable source code in C or ADA languages. 
+The focus of the tool discussion during the interviews has been on modelling tools as the collection of tools in table \ref{tab: Tools} shows. Most companies use commercial tools like Artisan Studio, Atelier B,  Rational Architect,  SCADE or Simulink to build their software models by using the implemented means of description and the implemented methods to generate reliable source code in C or ADA languages. 
 
-To use formal proof for these models usually on of the available commercial tools which fits to the modeling tool is chosen and than customised to a degree that it provides all needed functionalities. Usually this is handled in cooperation with the tool developer. Some companies have a lot of experience with tools for modeling and model proofing and therefore mainly handle the customisation in house.
+To use formal proof for these models usually on of the available commercial tools which fits to the modelling tool is chosen and than customised to a degree that it provides all needed functionalities. Usually this is handled in cooperation with the tool developer. Some companies have a lot of experience with tools for modelling and model proofing and therefore mainly handle the customisation in house.
 
-But especially for proofing and source code analysis a large number of open source tools exist which usually have an academic background. Therefore most of them are not certified. But as some of these tools have been around for quite some time, they could be suitable to fulfill all requirements according to the CENELEC standards. As most interviewees confirmed open source software combined with support through a external partner could provide the needed level of customisation and service support required from most companies. Nevertheless most interviewees raised issues that it could be difficult to get broadly accepted and qualified tools for formal proof and code generation as open source products. Since there is a number of open source tools available for all task in the development process an in deeps evaluation is needed. 
-
-The following sections will give a short introduction of every main tool presented as relevant during the interviews and the additional research. 
-
-\section{Alloy 4}
-
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-
-
-
-\section{Artisan Studio}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Atelier B}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{CompoSys}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Control Build}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{CPN}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Enterprise Architect}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{ERTMS FormalSpecs}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Frama-C}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{iglos}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{iLock/iCertifier}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{KNOW Enterprise}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{MagicDraw}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{mCRL2}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Modelio}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{NuSMV}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Papyrus}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Perfect Developer}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{PRISM}
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{ProB}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{ProR}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{Rational Architect}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{SCADE Suite / SCADE System / SCADE LifeCycle}
-
-	\textbf{Developer}
-
-	Company: Esterel Technologies S.A.
-
-	Webside: \url{http://esterel-technologies.com/} \\[2pt]
-
-	Contact address: Parc Euclide, 8 rue Blaise Pasc, 78990 Elancourt, France
-
-	Other  Participators:
-
-	\textbf{Typical applications}
-
-	Field of usage:
-	Safety critical systems like
-\vspace{-10pt}
-\begin{itemize}[topsep=2pt, partopsep=2pt,itemsep=2pt,parsep=2pt]
-  \item Rail interlocking systems
-  \item Rail track vacancy detection systems
-  \item Rail train control systems
-  \item Rail Level-crossing protection systems
-  \item Avionic flight controller
-\end{itemize}
-
-	%Brief introduction to what the tool does
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.6]{SCADE_Overview.png}
-\caption{SCADE Suite Overview}
-\label{fig:SCADE_Suite_Overview}
-\end{figure}
-
-	%Applicability
-	
-SCADE is a formal modelling language targeted for safety-critical embedded control applications in the avionics, rail, automotive and industrial automation domain. SCADE source code can be written as text (for anyone who likes writing plain text) or (more usual) as schematic diagrams. SCADE models are synchronously clocked data flow and state machines, that can be nested and intermixed with each other without limitations. 
-SCADE provides DO-178B- and EN50128-certified code generators producing C or ADA code as output. SCADE models are therefore concrete, deterministic, executable and verifiable; it allows the production of rapid prototype as well as of safety related target system software. 
-
-SCADE comes with an integrated development environment (SCADE Suite IDE) including code generator, graphical simulator, model checker/prover, model test coverage analyzer, report generators, version and requirements management gateway with interfaces to various other tools like static code and timing analyzers, System/SysML modelling tools etc.. The IDE provides automatization interfaces to be controlled from external tools, and all SCADE tools itself can also be used in batch mode. In addition, plugins for Eclipse integration are available. 
-
-The SCADE paradigm of synchronously clocked data flow and state machines works perfect for embedded control or industry automation software. It is less suitable for tasks like text processing or computer graphic applications. SCADE models do not only describe the structure of software; instead, they are the software implementation itself too. System architectures typically require a higher abstraction means of description at top level like SysML. While SysML modelling can be achieved with any SysML tools, SCADE System provides an automatic transformation from SysML to SCADE. 
-
-For a start with SCADE a learning phase of one week should be planned.   
-
-	\textbf{License}
-	
-	Commercial licenses + academic license program
-
-
-	\textbf{References}
-
-	Bibliography:
-	
-	\url{http://www.interested-ip.eu/}\\[4pt]
-	\url{http://http://www.interested-ip.eu/final-report.html/} \\[4pt]
-
-
-\section{Simulink/ Design Verifier}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{SPARK GPL/ GNATprove}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{SPIN}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-
-\section{$\pi$-Tool}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
+But especially for proofing and source code analysis a large number of open source tools exist which usually have an academic background. Therefore most of them are not certified. But as some of these tools have been around for quite some time, they could be suitable to fulfil all requirements according to the CENELEC standards. As most interviewees confirmed open source software combined with support through a external partner could provide the needed level of customisation and service support required from most companies. Nevertheless most interviewees raised issues that it could be difficult to get broadly accepted and qualified tools for formal proof and code generation as open source products. Since there is a number of open source tools available for all task in the development process an in deeps evaluation is needed. 
 
 \section{Tool chains}
 As this overview only covers the most relevant tools covered during the interviews a longer list of all tools mentioned during the interviews is presented in appendix \ref{List tools}. Especially for formal proofs there is a number of tools which have been developed in academically research to check one or a group of specific properties of a certain kind of models. Most of these tools are open source. If a specific methodology has been choose it is necessary to analyse which of these tools fits the needed verification and validation activities.
 
 Since certain methods like model-based testing include an number of different activities which are supported through different tools it is important for the development process to allow interactions between the tools. This can be the case by allowing data exchange between different tools of specified interfaces or by incorporation certain tools functionalities into a common software  environment like Eclipse. Overall all tools interaction with each other build the tool chain to support the development process. 
 
-With TopCased and Rodin there already exist two toolchain which cover the whole software development process by using some of the tools described before. As they use the Eclipse environment other tools can be added to this toolchains. The Why3 toolchain provides a software verification platform for different theorem proofs. The following sections present an introduction for all three toolchains.
-
-\subsection{TopCased}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-\subsection{Rodin}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
-
-\subsection{Why3}
-
-	\textbf{Developer}
-
-	Company: 
-
-	Webside:
-
-	Contact address:
-
-	Other  Participators:
-
-
-
-	\textbf{Typical applications}
-
-	Field of usage:
-
-	%Brief introduction to what the tool does
-
-	%Applicability
-	%Key capabilities
-	Input:
-
-	Output:
-
-	% Main restrictions e.g. only a subset of the target language is covered
-
-	% Manual or automated use of the tool e.g. which steps are manual and automatic in the use of the tool.
-
-	% Expertise level e.g. which prerequisite is needed to use the tool
-
-
-	Integration in a tool chain
-	%Currently distributed: Yes/No
-	%Underlying technologies E.g. Framework, .NET vs. Java, etc.
-
-	%Describe equirement to install/run the tool (all that is necessary to make the tool work fine: OS, Java version, dependencies with other tools, Eclipse version, ...)
-
-
-	\textbf{License}
-
-
-	\textbf{References}
-
-	Bibliography:
+With TopCased and Rodin there already exist two toolchain which cover the whole software development process by using some of the tools described before. As they use the Eclipse environment other tools can be added to this toolchains. The Why3 toolchain provides a software verification platform for different theorem proofs. 
 
 
 \section{Summary}
 
 Overall a large number of tools is available for different tasks in the software development process. Currently most companies use commercial software, but a growing number of open source software is available.  Correspondingly most interviewees reckon that open source software which is proven in use and for which a strong service support can be provided is suitable for  safety relevant software development. 
 
-The interviews have mainly been focus on modeling tools as for verification and validation usually a combination of specified tools and tool additions is used. Artisan Studio, Atelier B, iLock, SCADE and Simulink have been the tools used by most companies for their software development. Usually these tools are  costumised to fit the needs of the individual development process and further tools are added to provide additional functionalities.
+The interviews have mainly been focus on modelling tools as for verification and validation usually a combination of specified tools and tool additions is used. Artisan Studio, Atelier B, iLock, SCADE and Simulink have been the tools used by most companies for their software development. Usually these tools are  customised to fit the needs of the individual development process and further tools are added to provide additional functionalities.
 
 \chapter{Conclusions and Recommendations}
 
-The existing technologies for software development in railway signaling already provide a wide range of different means of descriptions, methods and tools which can be used to handle the different steps of the software development process as it is required by the \citeauthor{EN50128:2011}. As shown in chapter \ref{chapter: MoD} usually more than one means of description is needed to capture the different levels of abstraction during the various phases of the development process. To provide the proofabilty which builds the basis for the open proof approach a formal description of all specifications is needed at one point against which the requirements can be verified and validated. 
+The existing technologies for software development in railway signalling already provide a wide range of different means of descriptions, methods and tools which can be used to handle the different steps of the software development process as it is required by the \citeauthor{EN50128:2011}. As shown in chapter \ref{chapter: MoD} usually more than one means of description is needed to capture the different levels of abstraction during the various phases of the development process. To provide the provability which builds the basis for the open proof approach a formal description of all specifications is needed at one point against which the requirements can be verified and validated. 
 
-The interviews have shown that formal, model-based development methods are already common practice for the lower abstraction levels of software architecture and design. On the high abstraction levels of  software specifications usually semi-formal means of descriptions are used, which do not allow the use of formal proof. Therefore it has to be evaluated to which extend the common formal means of description can be used to modell the textual system specifications and whether it is possible to derive the software specifications based on this description. 
+The interviews have shown that formal, model-based development methods are already common practice for the lower abstraction levels of software architecture and design. On the high abstraction levels of  software specifications usually semi-formal means of descriptions are used, which do not allow the use of formal proof. Therefore it has to be evaluated to which extend the common formal means of description can be used to model the textual system specifications and whether it is possible to derive the software specifications based on this description. 
 
-As it has been shown different methods can be used to get from textual system specifications to source code. As the openETCS concept already intends to use a formal software specifications as a basis for the software generation, methods to handle these development steps have to be chosen. Thereby a method has to be picked how the textual system specifications have to be formalised. This can be done via semi-formal modells or by a direct translation. 
+As it has been shown different methods can be used to get from textual system specifications to source code. As the openETCS concept already intends to use a formal software specifications as a basis for the software generation, methods to handle these development steps have to be chosen. Thereby a method has to be picked how the textual system specifications have to be formalised. This can be done via semi-formal models or by a direct translation. 
 
 Corresponding with the primary development methods for the formalisation of system and software specifications, the definition of software design and architecture and source code generation, the methods for verification and validation have to be chosen. According to the open proof concept this should be able to verify certain properties on the different abstraction levels during the software development. Thereby the abstraction level on which a certain verification can be done and the method that can be used depends directly on the kind of property and the degree of formalisation on the abstraction level. Overall a consistent coordination between provided details and for verification needed information has to be established. Correspondingly it has to be defined which formal proofs or test cases can be used to validated all kind of requirements.
 
-As most of the tools currently in use for software development are commerical products, it has to be evaluated closely which open source tools provide the needed functionality and  robustness to be incorporated in the software development. As most interviews confirmed that open source tools should be able to handle the needed development functionalities, acceptance of open source tools should not be a general barrier. 
+As most of the tools currently in use for software development are commercial products, it has to be evaluated closely which open source tools provide the needed functionality and  robustness to be incorporated in the software development. As most interviews confirmed that open source tools should be able to handle the needed development functionalities, acceptance of open source tools should not be a general barrier. 
 
 Since a wide range of different functionalities has to be supported by tools it is necessary to find a fitting combination of tools which provide which support the selected development methods. As it can be seen at the already existing toolchains Topcased and Rodin the Eclipse framework provides a suitable basis for the tool combination. Correspondingly the interfaces between the different tools and their supported development steps have to be clearly defined to guarantee a safe data exchange.
 
-Overall it can be seen that various means of decription, methods and tools are currently used in the signaling industry for software development, but the open proof concept of openETCS needs a more formalised development process as it exists today. Therefore it is necessary to select a more formalised  development process has to be defined which builds on the existing model-based approaches. Based on the development methods probably a combination of suitable means of description for the different abstraction levels have to be chosen from the various means of description used currently. Afterwards suitable tools which support the resulting development process and the needed means of description have to be evaluated and combined to for the integrated toolchain for the software development.
+Overall it can be seen that various means of description, methods and tools are currently used in the signaling industry for software development, but the open proof concept of openETCS needs a more formalised development process as it exists today. Therefore it is necessary to select a more formalised  development process has to be defined which builds on the existing model-based approaches. Based on the development methods probably a combination of suitable means of description for the different abstraction levels have to be chosen from the various means of description used currently. Afterwards suitable tools which support the resulting development process and the needed means of description have to be evaluated and combined to for the integrated toolchain for the software development.
 
 \appendix
 
@@ -2726,11 +1407,6 @@ Formal Refinement&&&+&&&&&\\ \hline
  &Process Simulation&+&+&+&+&+&&\\ \hline
 
 \end{longtable}
-
-
-
-
-\chapter{List Tools}
 
 
 \bibliographystyle{plainnat}

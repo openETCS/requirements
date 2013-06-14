@@ -5,13 +5,18 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[3681(2005)]{VDIVDE3681}
+VDI/VDE 3681.
+\newblock Classification and evaluation of description methods in automation
+  and control technology, 2005.
+
 \bibitem[Cimatti et~al.(2008)Cimatti, Roveri, and Susi]{Cimatti.2008c}
 Alessandro Cimatti, Marco Roveri, and Angelo Susi.
 \newblock Etcs requirements specification and validation: the methodology,
   2008.
 
-\bibitem[EN50128:(2011)]{EN50128:2011}
-EN50128:.
+\bibitem[EN50128(2011)]{EN50128:2011}
+EN50128.
 \newblock Railway applications - communications, signalling and processing
   systems - software for railway control and protection systems, 2011.
 
@@ -37,11 +42,5 @@ Lars Schnieder.
   Zuverl{\"a}ssigkeit}.
 \newblock PhD thesis, {Technische Universit{\"a}t Braunschweig}, Braunschweig,
   2010.
-\newblock URL \url{http://www.digibib.tu-bs.de/?docid=00033170}.
-
-\bibitem[{VDI/VDE 3681}(2005)]{VDIVDE3681}
-{VDI/VDE 3681}.
-\newblock Classification and evaluation of description methods in automation
-  and control technology, 2005.
 
 \end{thebibliography}
