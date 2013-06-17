@@ -84,8 +84,8 @@ openETCS project ]
 \rhead{\textsf{\textbf{\footnotesize\thepage}}}
 \chead{}
 \lfoot{}
-%\cfoot{\scriptsize \textit{This work is licensed under the "openETCS Open License Terms" (oOLT).}}
-\cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black}\IsLicensedUnderCC{ - \includegraphics[width=3em]{ccbysa.png}}}
+\cfoot{\scriptsize \textit{This work is licensed under the "openETCS Open License Terms" (oOLT).}}
+%\cfoot{\color{blue}\textsf{\textbf{\textit{openETCS}}}\color{black}\IsLicensedUnderCC{ - \includegraphics[width=3em]{ccbysa.png}}}
 \rfoot{}
 \newif\if@frontmatter
 \@frontmatterfalse
@@ -178,8 +178,7 @@ openETCS project ]
 \def\reporttype#1{\gdef\@reporttype{#1}}
 \reporttype{}
 \def\distribution#1{\gdef\@distribution{#1}}
-\distribution{This work is licensed under a Creative Commons
-  Attribution-ShareAlike 3.0 Unported License.\\ \includegraphics[width=40pt]{ccbysabig.png}}
+\distribution{This work is licensed under the "openETCS Open License Terms" (oOLT) dual Licensing:  \includegraphics[width=30pt]{oOLT.png}}
 \def\preparedfor#1{\gdef\@preparedfor{#1}}
 \preparedfor{openETCS@ITEA2 Project}
 \def\contractnum#1{\gdef\@contractnum{#1}}
@@ -203,13 +202,16 @@ openETCS project ]
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
-\textbf{This work is licensed under a Creative Commons
+\textbf{This work is licensed under the "openETCS Open License Terms" (oOLT) dual Licensing: European Union Public Licence (EUPL v.1.1+) AND Creative Commons
   Attribution-ShareAlike 3.0 -- (cc by-sa 3.0)}
 
-THE WORK IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC
-LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT
-AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
-AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+THE WORK IS PROVIDED UNDER openETCS OPEN LICENSE TERMS (oOLT) WHICH IS A DUAL 
+LICENSE AGREEMENT INCLUDING THE TERMS OF THE EUROPEAN UNION
+PUBLIC LICENSE (VERSION 1.1 OR ANY LATER VERSION) AND THE TERMS OF
+THE CREATIVE COMMONS PUBLIC LICENSE ("CCPL"). THE WORK 
+IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF
+THE WORK OTHER THAN AS AUTHORIZED UNDER THIS OLT LICENSE OR COPYRIGHT
+LAW IS PROHIBITED.
 
 BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND
 AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS
@@ -217,10 +219,9 @@ LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU
 THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH
 TERMS AND CONDITIONS.
 
-\url{http://creativecommons.org/licenses/by-sa/3.0/}
+\url{http://creativecommons.org/licenses/by-sa/3.0/}\\
+\url{http://joinup.ec.europa.eu/software/page/eupl/licence-eupl}
 }
-	  
-	  
 \newenvironment{@coverlist}{\begin{list}{}{%
       \leftmargin40\p@\rightmargin-85\p@%
       \topsep\z@\partopsep\z@\labelwidth\z@\labelsep\z@}\item{}}{%
