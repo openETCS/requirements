@@ -66,6 +66,14 @@ The following other SysML diagrams \emph{cannot} be used:
 \item \emph{Use Case Diagram}
 \end{itemize}
 
+\subsubsection{Remarks for all diagrams}
+
+Following elements are allowed on all kinds of diagrams:
+\begin{itemize}
+\item Comment Note
+\end{itemize}
+
+
 \subsection{Restrictions on Package Diagram}
 
 Note: The naming of the nodes and paths of this section and the
@@ -79,15 +87,15 @@ modelling:
 \item Comment Note
 \item Package Node
 \item Packageable Element Node
+\item Import Path
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Model Node
 \item View Node
 \item Viewpoint Node
 \item Containenement Path
-\item Import Path
 \item Dependency Path
 \item Conform Path
 \item Metamodel Node
@@ -109,12 +117,13 @@ modelling:
 \begin{itemize}
 \item Block Node
 \item Enumeration Node
+\item Block Node with ``datatype'' Stereotype
 \item Composite Association Path
 \item Flow Specification Node
 \item Atomic Flow Port Node
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Quantity Kind and Unit Nodes
 \item Value Type Node
@@ -149,7 +158,7 @@ modelling:
 \item Connector Path
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Actor Part Node
 \item Reference Node
@@ -168,20 +177,21 @@ modelling:
 \item Atomic State Node
 \item Composite State with Entry- and Exit-Point Pseudostate Nodes
 \item Composite State Node with Multiple Region
-\item Terminate Pseudostate Node
 \item Initial Pseudostate Node
 \item Final State Node
-\item Action Node
 \item Time Event Transition Path
 \item Change Event Transition Path
+\item Constraint Node (for transition guard)
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Sub-State Machine Node with Connection Points
+\item Terminate Pseudostate Node
 \item Choice Pseudostate Node
 \item Junction Pseudostate Node
 \item Trigger Node
+\item Action Node
 \item Send Signal Node
 \item Join Pseudostate Node
 \item Frok Pseudostate Node
@@ -205,7 +215,7 @@ modelling:
 \item Problem Callout
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Requirement Related-Type Node
 \item Trace Compartment
