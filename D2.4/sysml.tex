@@ -54,6 +54,8 @@ SysML diagrams that can be used for modeling are:
 \item \emph{Package Diagram}: Structure description
 \item \emph{Block Definition Diagram} (BDD): Structure description
 \item \emph{Internal Block Diagram} (IBD): Structure description
+\item \emph{Sequence Diagram}: Test case, execution trace, counter
+  example, etc.
 \item \emph{State Machine Diagram}: Behaviour description
 \item \emph{Requirement Diagram}: Requirements description
 \end{itemize}
@@ -62,7 +64,6 @@ The following other SysML diagrams \emph{cannot} be used:
 \begin{itemize}
 \item \emph{Parametric Diagram}
 \item \emph{Activity Diagram}
-\item \emph{Sequence Diagram}
 \item \emph{Use Case Diagram}
 \end{itemize}
 
@@ -166,6 +167,36 @@ The following items \emph{cannot} be used:
 \item Value Property Node
 \item Connector Property Path and Node
 \item Item Flow Node
+\end{itemize}
+
+\subsection{Restrictions on Sequence Diagram}
+
+The following Sequence Diagram nodes and paths can be used for
+modelling:
+\begin{itemize}
+\item Lifeline Node
+\item Synchronous Message
+\item Asynchronous Message
+\item Reply Message
+\end{itemize}
+
+The following items \emph{cannot} be used:
+\begin{itemize}
+\item Single-compartment Fragment Node
+\item Multi-compartment Fragment Node
+\item Filtering Fragment Node
+\item State Invariant Symbol
+\item Interaction Use Node
+\item Lost Message Path
+\item Found Message Path
+\item Activation Node
+\item Create Message Path
+\item Destroy Event Node
+\item Coregion Symbol
+\item Duration Observation Symbol
+\item Duration Constraint Symbol
+\item Time Observation Symbol
+\item Time Constraint Symbol
 \end{itemize}
 
 \subsection{Restrictions on State Machine Diagram}
