@@ -54,6 +54,8 @@ SysML diagrams that can be used for modeling are:
 \item \emph{Package Diagram}: Structure description
 \item \emph{Block Definition Diagram} (BDD): Structure description
 \item \emph{Internal Block Diagram} (IBD): Structure description
+\item \emph{Sequence Diagram}: Test case, execution trace, counter
+  example, etc.
 \item \emph{State Machine Diagram}: Behaviour description
 \item \emph{Requirement Diagram}: Requirements description
 \end{itemize}
@@ -62,9 +64,27 @@ The following other SysML diagrams \emph{cannot} be used:
 \begin{itemize}
 \item \emph{Parametric Diagram}
 \item \emph{Activity Diagram}
-\item \emph{Sequence Diagram}
 \item \emph{Use Case Diagram}
 \end{itemize}
+
+\subsubsection{Remarks for all diagrams}
+
+Following elements are allowed on all kinds of diagrams:
+\begin{itemize}
+\item Comment Note
+\end{itemize}
+
+\subsubsection{Notes on selected diagrams}
+
+The diagrams and diagram elements of SysML have been chosen because
+(1) they are supported by Papyrus v0.10.0 used in Eclipse Kepler
+release and because (2) they are the minimal subset of SysML needed
+for a proper system description and V\&V activities.
+
+In the future, we can decide to augment the chosen SysML subset
+because Papyrus offers new capabilities and because new elements are
+needed. This can been done at project level following a procedure
+which is not yet decided.
 
 \subsection{Restrictions on Package Diagram}
 
@@ -79,15 +99,15 @@ modelling:
 \item Comment Note
 \item Package Node
 \item Packageable Element Node
+\item Import Path
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Model Node
 \item View Node
 \item Viewpoint Node
 \item Containenement Path
-\item Import Path
 \item Dependency Path
 \item Conform Path
 \item Metamodel Node
@@ -109,12 +129,13 @@ modelling:
 \begin{itemize}
 \item Block Node
 \item Enumeration Node
+\item Block Node with ``datatype'' Stereotype
 \item Composite Association Path
 \item Flow Specification Node
 \item Atomic Flow Port Node
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Quantity Kind and Unit Nodes
 \item Value Type Node
@@ -149,7 +170,7 @@ modelling:
 \item Connector Path
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Actor Part Node
 \item Reference Node
@@ -157,6 +178,36 @@ The following items are \emph{cannot} be used:
 \item Value Property Node
 \item Connector Property Path and Node
 \item Item Flow Node
+\end{itemize}
+
+\subsection{Restrictions on Sequence Diagram}
+
+The following Sequence Diagram nodes and paths can be used for
+modelling:
+\begin{itemize}
+\item Lifeline Node
+\item Synchronous Message
+\item Asynchronous Message
+\item Reply Message
+\end{itemize}
+
+The following items \emph{cannot} be used:
+\begin{itemize}
+\item Single-compartment Fragment Node
+\item Multi-compartment Fragment Node
+\item Filtering Fragment Node
+\item State Invariant Symbol
+\item Interaction Use Node
+\item Lost Message Path
+\item Found Message Path
+\item Activation Node
+\item Create Message Path
+\item Destroy Event Node
+\item Coregion Symbol
+\item Duration Observation Symbol
+\item Duration Constraint Symbol
+\item Time Observation Symbol
+\item Time Constraint Symbol
 \end{itemize}
 
 \subsection{Restrictions on State Machine Diagram}
@@ -168,20 +219,21 @@ modelling:
 \item Atomic State Node
 \item Composite State with Entry- and Exit-Point Pseudostate Nodes
 \item Composite State Node with Multiple Region
-\item Terminate Pseudostate Node
 \item Initial Pseudostate Node
 \item Final State Node
-\item Action Node
 \item Time Event Transition Path
 \item Change Event Transition Path
+\item Constraint Node (for transition guard)
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Sub-State Machine Node with Connection Points
+\item Terminate Pseudostate Node
 \item Choice Pseudostate Node
 \item Junction Pseudostate Node
 \item Trigger Node
+\item Action Node
 \item Send Signal Node
 \item Join Pseudostate Node
 \item Frok Pseudostate Node
@@ -205,7 +257,7 @@ modelling:
 \item Problem Callout
 \end{itemize}
 
-The following items are \emph{cannot} be used:
+The following items \emph{cannot} be used:
 \begin{itemize}
 \item Requirement Related-Type Node
 \item Trace Compartment
@@ -225,10 +277,29 @@ The following items are \emph{cannot} be used:
 
 \subsection{Model patterns}
 
+For \emph{Modelling} activity, the modeler shall only use:
+\begin{itemize}
+\item \emph{Package Diagram}
+\item \emph{Block Definition Diagram} (BDD)
+\item \emph{Internal Block Diagram} (IBD)
+\item \emph{State Machine Diagram}
+\item \emph{Requirement Diagram}
+\end{itemize}
+
+For \emph{V\&V} activities, one shall only use:
+\begin{itemize}
+\item \emph{Package Diagram}
+\item \emph{Block Definition Diagram} (BDD)
+\item \emph{Internal Block Diagram} (IBD)
+\item \emph{Sequence Diagram}
+\item \emph{Requirement Diagram}
+\end{itemize}
 
 
 \begin{comment}
-Example of patterns to use.
+FIXME: Example of patterns to use.
 
 \end{comment}
 
+
+% LocalWords:  SysML
