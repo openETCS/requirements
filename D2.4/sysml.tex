@@ -9,43 +9,27 @@ short introduction to sysML language with references to  OMg specification and m
 
 \subsection{SysML in the project}
 
-\begin{comment}
-for high level modelling to complete.
+The proposal is to use SysML for the highest level of modelling:
+\begin{description}
+\item[Conception and design] Aim of the SysML model is to manage the gap  between prose system analysis and formal model dedicated to the design of on board unit. Thus the SysML model will provide a high level model associated to the system analysis, the SSRS and the API:
+\begin{itemize}
+\item Structure of the system, with physical and functional architecture will be described with \textit{Block Definition Diagrams} and \textit{Package Diagrams}
+\item Logical interfaces between subsystems and between functions will be described with \textit{Internal Block Diagrams}
+\item Data definition will be defined with \textit{Block Definition Diagrams}
+\item Requirements will be defined and allocated with \textit{Requirements Diagrams}
+\item High level Behaviour description will be described with \textit{State Machine Diagrams}
+\end{itemize}
+\item[Safety analysis]
+\begin{itemize}
+\item Functional Breakdown Structure will be defined with \textit{Block Definition Diagrams} and \textit{Internal Block Diagrams}
+\end{itemize}
+\item[Verification and Validation]
+\begin{itemize}
+\item Test Cases and execution traces will be defined with \textit{Sequence Diagrams}
+\end{itemize}
+\end{description}
 
-First ideas 
-
-  \begin{itemize}
-  	\item SSRS:  
-  	\begin{itemize}
-  		\item functional architecture (organic architecture)
-  		\item logical interfaces 
-  		\item requirements: Todo but may be completed with other tools as ProR)
-  		\item data dictionary (how to access a common data repository)
-  		\item sequence of functions ?
-  		\item need to declare specific domain objects (switch, signals,...) ?
-	\end{itemize} 
-	\item API: 
-  	\begin{itemize}
-  		\item logical interface 
-  		\item sequence of functions ?
-  		\item implementation requirements
-	\end{itemize}  	
-	\item Sub-system semi-formal definition
-	  	\begin{itemize}
-  		\item sequence of functions 
-  		\item activities
-  		\item state machine
-	\end{itemize}  	
-    \item Safety: 
-  	\begin{itemize}
-  		\item Functional Breakdown Structure (common with SSRS)
-  		\item profile for safety
-	\end{itemize}  	
-    \item VnV : test case
-
-  \end{itemize}
-
-\end{comment}
+This list can be completed, after the results of benchmark  of secondary tools, either by defining use of some diagrams for other activities (for example for safety or VnV) or by defining methods and tools to use to complete SysML (for example for requirements management or database definition).
 
 \subsection{Selection of used diagrams}
 
