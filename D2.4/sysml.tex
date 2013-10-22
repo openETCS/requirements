@@ -138,6 +138,8 @@ modelling:
   Flow Properties
 \item Primitive Type Node
 \item Property Node
+\item Constraint Node
+\item Requirement Node
 \end{itemize}
 
 The following items \emph{cannot} be used:
@@ -262,6 +264,22 @@ modelling:
 \item Time Event Transition Path
 \item Change Event Transition Path
 \item Constraint Node (for transition guard)
+\item Constraint Path between state and constraint
+\item Constraint Path between transition and constraint
+\item Requirement Node (to link some diagram parts to a requirement)
+\item Realize Path between state and requirement
+\item Realize Path between constraint and requirement
+\end{itemize}
+
+Simple and composite states may contain internal activities
+compartments:
+\begin{itemize}
+\item Entry actions may contain simple C-Assignments, timer resets or
+  operation calls;
+\item Exit actions may contain simple C-Assignments, timer resets or
+  operation calls;
+\item Do actions may contain simple C-Assignments, timer resets or
+  operation calls.
 \end{itemize}
 
 The following items \emph{cannot} be used:
@@ -341,6 +359,17 @@ For \emph{V\&V} activities, one shall only use:
 \item \emph{Requirement Diagram}
 \end{itemize}
 
+The following guidelines should be followed:
+\begin{itemize}
+\item Each block must either have an associated state machine diagram
+  (with the same name).
+\item Guard conditions contain Boolean conditions over variables and
+  timer;
+\item Actions are sequences of C assignments, timer resets or
+  operation calls;
+\item Initial state of a State Machine has only one out transition
+  without guard condition or action.
+\end{itemize}
 
 \begin{comment}
 FIXME: Example of patterns to use.
