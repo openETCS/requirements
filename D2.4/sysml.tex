@@ -3,9 +3,15 @@
 
 \subsection{Introduction to SysML with Papyrus}
 
-\begin{comment}
-short introduction to sysML language with references to  OMg specification and major document which describe it + short description of main concepts of SysML +  short description of particularities of SysML on papyrus. (parts of 07.1.3\_O7.1.7 may be reused). 
-\end{comment}
+SysML is a graphical modeling language based on UML2 with extensions to:
+\begin{itemize}
+	\item Supports the specification, analysis, design, verification, and validation of systems that include hardware, software, data, personnel, procedures, and facilities.
+	\item Supports model and data interchange via XMI.
+\end{itemize}
+OMG specification\footnote{\href{http://www.omg.org/spec/UML/}{UML Specification website: http://www.omg.org/spec/UML/},\newline \href{http://www.omg.org/spec/SysML/} {SysML Specification website: http://www.omg.org/spec/SysML/}} describe a visual modeling language that provides both Semantics and Notation but \emph{do not describe neither a tool nor a method}.
+SysML is based on \emph{BLocks} representing concepts -e.g. pieces types, functions- and how these are related (links, compositions), internally arranged (using Parts typed by other blocks), or acting (describing internal behaviors). The aim is to describe a system -possibly build by composing subsystems- and also it surrounding, requirements, behaviors and so on\footnote{\href{https://github.com/openETCS/toolchain/blob/master/ToolDescription/Papyrus/Tuto_SysML_basic_short_2013_10_8_Braunschweig.pdf}{Open ECTS Braunschweig workshop tutorial on SysML:\newline https://github.com/openETCS/toolchain/blob/master/ToolDescription/Papyrus/Tuto\_SysML\_basic\_short\_2013\_10\_8\_Braunschweig.pdf}}.
+
+Papyrus is an Eclipse Open source project\footnote{\href{http://www.eclipse.org/papyrus/}{Eclipse Papyrus project website}} held by CEA List the propose a modeler and toolkit for UML and SysML model creation and use\footnote{\href{https://github.com/openETCS/toolchain/blob/master/ToolDescription/Papyrus/Tuto_Papyrus_basic_short_2013_10_8_Braunschweig.pdf}{Open ECTS Braunschweig workshop tutorial on Papyrus: \newline https://github.com/openETCS/toolchain/blob/master/ToolDescription/Papyrus/Tuto\_Papyrus\_basic\_short\_2013\_10\_8\_Braunschweig.pdf}}. Development team focus on bringing the tool uncolored by any methodology in order to respect the ideal of OMG specification and leave to users the widest choice of usage.
 
 \subsection{SysML in the project}
 
@@ -142,8 +148,7 @@ modelling:
 \item Enumeration Node \sysmlicon{Enumeration.png} and enumeration litteral
 \item Block Node with ``datatype'' Stereotype \sysmlicon{DataType.png}
 \item Composite Association Path \sysmlicon{Association_composite.png}
-\item Flow Specification Node \sysmlicon{FlowSpecification.png} and
-  Flow Properties
+\item Flow Specification Node \sysmlicon{FlowSpecification.png} and Flow Properties
 \item Primitive Type Node
 \item Property Node
 \item Constraint Node
