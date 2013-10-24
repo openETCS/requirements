@@ -1,0 +1,35 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Reference documents}{}% 2
+\BOOKMARK [1][-]{section.3}{Glossary}{}% 3
+\BOOKMARK [1][-]{section.4}{Short introduction on formal approaches to design and validate critical systems}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{What is a formal approach?}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{When are formal approaches recommended according to CENELEC standard?}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Which constraints are required on the use of formal approaches?}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Which are the benefits to use formal approaches?}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{How to use formal approaches?}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Formal approaches for the design and development of a system}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Contract based approach}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Model checking of concurrent and synchronous languages}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.3}{Static analysis of software code}{section.5}% 13
+\BOOKMARK [1][-]{section.6}{Formal approaches for V\046V of a critical system}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Formal approaches for verification}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Validation of formal approaches}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.3}{Formal approaches for safety}{section.6}% 17
+\BOOKMARK [1][-]{section.7}{Guidelines on the approaches used for OpenETCS}{}% 18
+\BOOKMARK [2][-]{subsection.7.1}{Sum up of chosen approaches}{section.7}% 19
+\BOOKMARK [2][-]{subsection.7.2}{Artifacts and common items}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.3}{Requirement naming convention}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.4}{Name convention}{section.7}% 22
+\BOOKMARK [1][-]{section.8}{SysML approach with Papyrus}{}% 23
+\BOOKMARK [2][-]{subsection.8.1}{Introduction to SysML with Papyrus}{section.8}% 24
+\BOOKMARK [2][-]{subsection.8.2}{SysML in the project}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.3}{Selection of used diagrams}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.4}{Restrictions on Package Diagram}{section.8}% 27
+\BOOKMARK [2][-]{subsection.8.5}{Restrictions on Block Definition Diagram}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.6}{Restrictions on Internal Block Diagram}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.7}{Restrictions on Sequence Diagram}{section.8}% 30
+\BOOKMARK [2][-]{subsection.8.8}{Restrictions on State Machine Diagram}{section.8}% 31
+\BOOKMARK [2][-]{subsection.8.9}{Restrictions on Requirement Diagram}{section.8}% 32
+\BOOKMARK [2][-]{subsection.8.10}{Model patterns}{section.8}% 33
+\BOOKMARK [1][-]{section.9}{Approaches for low level design}{}% 34
+\BOOKMARK [1][-]{section.9}{References}{}% 35
