@@ -2,39 +2,120 @@
 \section{Guidelines on the approaches used for OpenETCS}
 
 
-\begin{comment}
-This section will be written for the final version of the document, after the approach and tools tio  use during the project will be selected.
-\end{comment}
-
 According to  the WP7 decision meeting, the 4th of July, in Paris, SysML, supported by the Papyrus tool,  has been chosen to  cover the highest level of modelling.
 
 The choice of the approaches for the lower levels of modelling is not yet fixed.
 
-This section gives a proposal on how to use the selected approaches to produce from the input documents (ERA documentation and complements)  to a SIL4 code.
+This section gives a proposal on how to use the selected approaches to produce from the input documents (ERA documentation and complements)  to a SIL4 code. this section provides also the common structure and convention for modelling, verification and validation activities whatever was the approaches used: definition of the useful data and naming convention.
 
-\subsection{Sum up of chosen approaches}
-\begin{comment}
-list of chosen approaches, and for which activities they are used
-\end{comment}
+\subsection{Sum up of chosen approaches and artifacts}
+
+\subsubsection{System analysis}
+
+\subsubsection{Architectural modelling}
+
+\subsubsection{Functional and behavioural modelling}
+
+\subsubsection{Executable software}
+
+\subsection{Data Model}
+
+This section describes all the data shared by the different activities during the project.
+These data shall be managed in a common repository which shall be the reference for specification, modelling and VnV activities.
+
+Thanks to the choice of Eclipse platform, use of technologies available on Eclipse and XML files are the best candidates to stores these items.
+
+In the following, we give the specification of these items and the links between them. The specification of this data-model is based on an Ecore model.
+
+3 groups of data are defined: \emph{Variable}, \emph{Function} and \emph{Requirement}; for each group, a set of \emph{attributes} are defined to specify the group. These attributes are specified by a name, a cardinality and a type which can be a well  know type  (as boolean, string, integer,...) or a type defined explicitly for this model.
+Finally the links between the group are specified.
+
+\subsubsection{Types}
+
+First of all we have to define the types used to specify the attributes of the data.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Type.png}
+  \caption{Type definition}
+  \label{fig:Type}
+\end{figure}
+
+In order of possible, we shall use simple and well defined, as boolean, string, integer,... (see the Iso standard for C language \url{http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf}). 5in the Ecore model these types appeared with the prefix "E").
+
+Besides some new types can be define to define a complex or structured type or an enumeration.
+
+For the project the following types have to be defined:
+
+\begin{tabular}{|l | l | l | }
+\hline
+Name & Category & Description \\
+\hline
+T\_SourceDocument & Enumeration & Set of source document for defining a data, this can be an \\
+& & input document (SRS, a subset,...) or a document provided \\
+& & during the process (system analysis, model description,...) \\
+\hline
+T\_Variable & Complex & All the possible types to define a variable: \\
+& & simple types (as boolean, String,...)  \\
+& & enumerative types (as ETCS modes or level) \\
+& & structured types (as a position of a Train,..) \\
+\hline
+T\_Definition & Structured & A definition contains at least a textual description (string)  \\
+but can also contains a table, a picture, a graphic \\
+\hline
+T\_RequirementNature & Enumeration & what describe the requirement ? \\
+& & Structural, Functional or Definition\\
+\hline
+T\_System & Enumeration & On what subsystem is allocated the data ? \\
+& & Kernel, DMI, BIU,...\\
+\hline
+\end{tabular}
 
 
-\subsection{Artifacts and common items}
-
-\begin{comment}
-list of artifacts used and provided by each approach; common items (data model); types
-\end{comment}
+\subsubsection{Variables}
 
 
-\subsection{Requirement naming convention}
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Variable.png}
+  \caption{Variable definition}
+  \label{fig:variable}
+\end{figure}
+
+\subsubsection{Functions}
 
 
-\begin{comment}
-TODO: Marc Behrens
-\end{comment}
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Function.png}
+  \caption{Function definition}
+  \label{fig:function}
+\end{figure}
 
+\subsubsection{Requirements}
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Requirement.png}
+  \caption{Requirement definition}
+  \label{fig:requirement}
+\end{figure}
+
+\subsubsection{Links}
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{DataModel/DataModel.png}
+  \caption{Link between items}
+  \label{fig:links}
+\end{figure}
 
 \subsection{Name convention}
 
+
+\subsubsection{Variable naming convention}
 
 \begin{comment}
 How to name object ? base : subset 26 §7.3.2:
@@ -62,5 +143,20 @@ How to name object ? base : subset 26 §7.3.2:
 Case sensitive language, keywords of target language (SysML, B, C, Scade 5?),...), UPPER case for names issued form official document (SRS, API,...), lower case for others. length of the name
 
 QA plan to check.
+\end{comment}
+
+
+\subsubsection{Function naming convention}
+
+
+\begin{comment}
+TODO: Marc Behrens
+\end{comment}
+
+\subsubsection{Requirement naming convention}
+
+
+\begin{comment}
+TODO: Marc Behrens
 \end{comment}
 
