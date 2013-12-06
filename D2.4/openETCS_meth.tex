@@ -12,13 +12,84 @@ This section gives a proposal on how to use the selected approaches to produce f
 
 \subsubsection{System analysis}
 
+\paragraph{Aim}
+The objectives of this step is to clarify the scope of the study and to provide a detailed description of the chosen solution to cover the requirements of the main input document of the project  [SRS-Subset 26 v3.3.0].
+
+Thus the task of this step  is:
+\begin{itemize}
+\item to define the scope of the model (more or less the OBU kernel);
+\item to provide an architecture for this model (functional and SW);
+\item to lift ambiguities;
+\item to detect errors and inconsistencies.
+\end{itemize}
+
+
+\paragraph{Input artifacts}
+
+The input documents and elements of this activities are also inputs of the project as this is the first activities.
+\begin{itemize}
+\item SRS Subset 26 v3.3.0 is the reference document and can be view as a user need document.
+\item All the documents provided by ERA according to the directive [CCS TSI ] available \url{http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Set-of-specifications-2.aspx}.
+\item Experience of the railway operators partners
+\item Experience of the railway manufacturers partners
+\item National and Operation Rules of the Operator
+\end{itemize}
+
+\paragraph{Output artifacts}
+
+The output shall provide a clear view of the system to design and will be composed of:
+
+\begin{itemize}
+\item a set of informal descriptions (scope of the process, description of the functions, behaviour of the system, ...)
+\item  an API to  describe the environment of the system to design, its interfaces and its dynamic implementation
+\item a functional architecture which identifies the functions to design and the interaction between these functions and with the environment
+\item a data dictionary with description of the input and output variables of the system and all the internal variables needed to  describe the system and the interactions between the functions
+\item all the requirements, allocated to function or data description, in natural language. The requirements from the SRS can be possibly split and rewritten in order to restrict their scope to the functions or to match the objects of the data dictionary. New requirements can be defined to describe specification choices or to clarify the behaviour of a function (for example according to the experience from a partner). Traceability issue is mandatory and shall be taken into account early.
+
+\end{itemize}
+
+\paragraph{Means}
+
+The first element needed is a way to manage and organize informal descriptions (including text, pictures, tables,...). 
+
+Functional architecture can be easily defined with BDD and IBD diagrams (see \ref{section:sysml}).
+Data dictionary  and requirement set shall be tool supported in order to link they contents to the functional architecture and to  be reused during the modelling, verification, validation and safety activities.
+
+As functional architecture, data dictionary and set of requirement shall be linked together, and shall be defined to be used during all the project. Thus section \ref{sec:datamodel} give some specification of the items to defeine and some naming convention.
+
 \subsubsection{Architectural modelling}
+
+
+\begin{comment}
+First decision proposed to use the SCADE approach for this activity.
+
+Description to provide.
+\end{comment}
+
 
 \subsubsection{Functional and behavioural modelling}
 
+
+\begin{comment}
+First decision proposed to use the SCADE approach for this activity.
+
+Description to provide.
+\end{comment}
+
+
 \subsubsection{Executable software}
 
+
+\begin{comment}
+First decision proposed to use the C language for this activity.
+
+Description to provide.
+\end{comment}
+
+
+
 \subsection{Data Model}
+\label{sec:datamodel}
 
 This section describes all the data shared by the different activities during the project.
 These data shall be managed in a common repository which shall be the reference for specification, modelling and VnV activities.
@@ -30,13 +101,26 @@ In the following, we give the specification of these items and the links between
 3 groups of data are defined: \emph{Variable}, \emph{Function} and \emph{Requirement}; for each group, a set of \emph{attributes} are defined to specify the group. These attributes are specified by a name, a cardinality and a type which can be a well  know type  (as boolean, string, integer,...) or a type defined explicitly for this model.
 Finally the links between the group are specified.
 
+
+\subsubsection{Common attributes}
+
+All the items have common attributes
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Common1.png}
+  \caption{Common attributes for all items}
+  \label{fig:Common}
+\end{figure}
+
 \subsubsection{Types}
 
 First of all we have to define the types used to specify the attributes of the data.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{DataModel/Type.png}
+  \includegraphics{DataModel/Type1.png}
   \caption{Type definition}
   \label{fig:Type}
 \end{figure}
@@ -77,7 +161,7 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{DataModel/Variable.png}
+  \includegraphics{DataModel/Variable1.png}
   \caption{Variable definition}
   \label{fig:variable}
 \end{figure}
@@ -87,7 +171,7 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{DataModel/Function.png}
+  \includegraphics{DataModel/Function1.png}
   \caption{Function definition}
   \label{fig:function}
 \end{figure}
@@ -97,9 +181,20 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{DataModel/Requirement.png}
+  \includegraphics{DataModel/Requirement1.png}
   \caption{Requirement definition}
   \label{fig:requirement}
+\end{figure}
+
+
+\subsubsection{Feature}
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Feature1.png}
+  \caption{Feature definition}
+  \label{fig:feature}
 \end{figure}
 
 \subsubsection{Links}
@@ -107,8 +202,8 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=\textwidth]{DataModel/DataModel.png}
-  \caption{Link between items}
+  \includegraphics[width=\textwidth]{DataModel/datadictionary.png}
+  \caption{General Ecore model of the data dictionnary}
   \label{fig:links}
 \end{figure}
 
