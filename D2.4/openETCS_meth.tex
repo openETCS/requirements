@@ -61,7 +61,7 @@ As functional architecture, data dictionary and set of requirement shall be link
 
 
 \begin{comment}
-First decision proposed to use the SCADE approach for this activity.
+First decision proposed to use the SysML and Scade approaches for this activity.
 
 Description to provide.
 \end{comment}
@@ -99,75 +99,103 @@ Thanks to the choice of Eclipse platform, use of technologies available on Eclip
 In the following, we give the specification of these items and the links between them. The specification of this data-model is based on an Ecore model.
 
 3 groups of data are defined: \emph{Variable}, \emph{Function} and \emph{Requirement}; for each group, a set of \emph{attributes} are defined to specify the group. These attributes are specified by a name, a cardinality and a type which can be a well  know type  (as boolean, string, integer,...) or a type defined explicitly for this model.
-Finally the links between the group are specified.
+
+All these items share common attributes described in the following section. The Features are defined to organize the items in group.
+Finally the links between the groups are specified in the last section.
 
 
 \subsubsection{Common attributes}
 
-All the items have common attributes
+All the items are \textit{named} and have mandatory common attributes:
+\begin{description}
+\item [name] defined as a string and unique, naming convention are defined in \ref{sec:naming};
+\item[safety], a boolean tag to qualified the information as safety or not ;
+\item[definition], to describe in a clear way the items, at list by a textual description. links to picture or table can be added.
+\end{description}
 
+Some \textit{issues} can be associated to  each items. These issues are characterized by:
+\begin{description}
+\item[description], textual explanation;
+\item[closed], a boolean tag to qualified the state of the issue.
+\end{description}
+
+\begin{comment}
+TODO: do we need more information on issue , as author, owner,... ?
+
+Do we need to link to github issue tracker ?
+\end{comment}
+
+The figure \ref{fig:Common} gives the Ecore model of these elements.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{DataModel/Common1.png}
+  \includegraphics{DataModel/Common2.png}
   \caption{Common attributes for all items}
   \label{fig:Common}
 \end{figure}
 
-\subsubsection{Types}
 
-First of all we have to define the types used to specify the attributes of the data.
+\subsubsection{Variables}
+\label{sec:var}
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics{DataModel/Type1.png}
-  \caption{Type definition}
-  \label{fig:Type}
-\end{figure}
+
+First of all we have to define the types used to specify the variables.
 
 In order of possible, we shall use simple and well defined, as boolean, string, integer,... (see the Iso standard for C language \url{http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf}). 5in the Ecore model these types appeared with the prefix "E").
 
 Besides some new types can be define to define a complex or structured type or an enumeration.
 
-For the project the following types have to be defined:
+These types are defined as \textit{VariableType} with the following attributes:
+\begin{description}
+\item[parentType], optional, in the case the type is a subtype of a  already defined type (for example "Distance" can be considered as subtype of "Integer");
+\item[minimalValue], optional, in the case the type is a range of integer, the minimal value;
+\item[maximalValue], optional, in the case the type is a range of integer, the maximal value;
+\item[resolution], optional, in the case the type is a range of integer, resolution to take into account;
+\end{description}
 
-\begin{tabular}{|l | l | l | }
-\hline
-Name & Category & Description \\
-\hline
-T\_SourceDocument & Enumeration & Set of source document for defining a data, this can be an \\
-& & input document (SRS, a subset,...) or a document provided \\
-& & during the process (system analysis, model description,...) \\
-\hline
-T\_Variable & Complex & All the possible types to define a variable: \\
-& & simple types (as boolean, String,...)  \\
-& & enumerative types (as ETCS modes or level) \\
-& & structured types (as a position of a Train,..) \\
-\hline
-T\_Definition & Structured & A definition contains at least a textual description (string)  \\
-but can also contains a table, a picture, a graphic \\
-\hline
-T\_RequirementNature & Enumeration & what describe the requirement ? \\
-& & Structural, Functional or Definition\\
-\hline
-T\_System & Enumeration & On what subsystem is allocated the data ? \\
-& & Kernel, DMI, BIU,...\\
-\hline
-\end{tabular}
+The figure \ref{fig:Type} gives the Ecore model of these elements.
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics{DataModel/Type3.png}
+  \caption{Type definition}
+  \label{fig:Type}
+\end{figure}
 
-\subsubsection{Variables}
+The \textit{Variable} is then defined with the following attributes:
+\begin{description}
+\item[type], the variableType associated, unique;
+\item[definitionRequirements], at least one requirement to  define the variable;
+\item[constant], a boolean tag to qualified constants;
+\item[specialValue], optional, several special value can be defined;
+\item[store], optional, a variable can be an element of a more complex or structure variable.
+\end{description}
+
+The figure \ref{fig:variable} gives the Ecore model of these elements.
 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{DataModel/Variable1.png}
+  \includegraphics{DataModel/Variable3.png}
   \caption{Variable definition}
   \label{fig:variable}
 \end{figure}
 
+
+
 \subsubsection{Functions}
 
+A Function is defined with the following characteristics:
+\begin{description}
+\item[allocation], the subsystem  on which is allocated the function (i.e. Kernel, DMI, Odometry,..);
+\item[requirement], at least one requirement to describe the function;
+\item[input], optional, the input variables of the function;
+\item[output], optional, the output variables of the function;
+\item[internal], optional, the internal variables of the function;
+\item[subFunction], optional, the sub-functions which allow to structure and  detailled the function.
+\end{description}
+
+The figure \ref{fig:function} gives the Ecore model of these elements.
 
 \begin{figure}[ht]
   \centering
@@ -177,7 +205,26 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 \end{figure}
 
 \subsubsection{Requirements}
+\label{sec:req}
 
+A \textit{requirement} is defined by the following attributes:
+\begin{description}
+\item[nature], class of property defined by the requirement: Structural, functional, definition,...
+\item[source], the document or the artifact where the requirement is defined for the first time (i.e. SRS, SystemAnalysis,...);
+\item[allocation], the subsystem  on which is allocated the function (i.e. Kernel, DMI, Odometry,..);
+\item[exported], a boolean tag to defined if the requirement shall be exported to another sub-system or function;
+\item[subRequirement], optional, the sub-requirements in which the requirements is divided.
+\end{description}
+
+Thus the following enumerate sets shall be defined:
+\begin{description}
+
+\item[T\_SourceDocument], set of source document for defining a data, this can be an input document (SRS, a subset,...) or a document provided during the process (system analysis, model description,...) 
+\item[T\_RequirementNature], what describe the requirement ? Structural, Functional or Definition
+\item[T\_System], on what subsystem is allocated the data ? Kernel, DMI, BIU,...
+\end{description}
+
+The figure \ref{fig:requirement} gives the Ecore model of these elements.
 
 \begin{figure}[ht]
   \centering
@@ -189,6 +236,13 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 
 \subsubsection{Feature}
 
+A \textit{feature} is a mean to structure the analyse of the system, it is the starting element of an analysis, and contents informal information:
+\begin{description}
+\item[description] an informal and textual description of the functionality to analyse, which can contain some links to pictures or tables;
+\item[subFunctions] the functions which are defined to describe the functionality.
+\end{description}
+
+The figure \ref{fig:feature} gives the Ecore model of these elements.
 
 \begin{figure}[ht]
   \centering
@@ -200,6 +254,8 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 \subsubsection{Links}
 
 
+The figure \ref{fig:links} gives the Ecore model of all the data model as describe above and can be read as an UML diagram.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{DataModel/datadictionary.png}
@@ -208,6 +264,7 @@ T\_System & Enumeration & On what subsystem is allocated the data ? \\
 \end{figure}
 
 \subsection{Name convention}
+\label{sec:naming}
 
 
 \subsubsection{Variable naming convention}
