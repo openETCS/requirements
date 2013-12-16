@@ -1,5 +1,6 @@
 
 \section{Guidelines on the approaches used for OpenETCS}
+\label{sec:guideline}
 
 
 According to  the WP7 decision meeting, the 4th of July, in Paris, SysML, supported by the Papyrus tool,  has been chosen to  cover the highest level of modelling.
@@ -15,10 +16,10 @@ This section gives a proposal on how to use the selected approaches to produce f
 \paragraph{Aim}
 The objectives of this step is to clarify the scope of the study and to provide a detailed description of the chosen solution to cover the requirements of the main input document of the project  [SRS-Subset 26 v3.3.0].
 
-Thus the task of this step  is:
+Thus the tasks of this step  are:
 \begin{itemize}
 \item to define the scope of the model (more or less the OBU kernel);
-\item to provide an architecture for this model (functional and SW);
+\item to provide an architecture for this model (functional and software);
 \item to lift ambiguities;
 \item to detect errors and inconsistencies.
 \end{itemize}
@@ -26,13 +27,13 @@ Thus the task of this step  is:
 
 \paragraph{Input artifacts}
 
-The input documents and elements of this activities are also inputs of the project as this is the first activities.
+The input documents and elements of this activity are also inputs of the project as it is its first activity.
 \begin{itemize}
-\item SRS Subset 26 v3.3.0 is the reference document and can be view as a user need document.
+\item SRS Subset 26 v3.3.0 is the reference document and can be viewed as an user need document.
 \item All the documents provided by ERA according to the directive [CCS TSI ] available \url{http://www.era.europa.eu/Core-Activities/ERTMS/Pages/Set-of-specifications-2.aspx}.
 \item Experience of the railway operators partners
 \item Experience of the railway manufacturers partners
-\item National and Operation Rules of the Operator
+\item National and Operation Rules of the operators
 \end{itemize}
 
 \paragraph{Output artifacts}
@@ -53,9 +54,9 @@ The output shall provide a clear view of the system to design and will be compos
 The first element needed is a way to manage and organize informal descriptions (including text, pictures, tables,...). 
 
 Functional architecture can be easily defined with BDD and IBD diagrams (see \ref{section:sysml}).
-Data dictionary  and requirement set shall be tool supported in order to link they contents to the functional architecture and to  be reused during the modelling, verification, validation and safety activities.
+Data dictionary  and requirement sets shall be tool supported in order to link their contents to the functional architecture and to  be reused during the modelling, verification, validation and safety activities.
 
-As functional architecture, data dictionary and set of requirement shall be linked together, and shall be defined to be used during all the project. Thus section \ref{sec:datamodel} give some specification of the items to defeine and some naming convention.
+As functional architecture, data dictionary and set of requirements shall be linked together, and shall be defined to be used during all the project. Thus section \ref{sec:datamodel} give some specification of the items to define and some naming conventions.
 
 \subsubsection{Architectural modelling}
 
@@ -94,13 +95,13 @@ Description to provide.
 This section describes all the data shared by the different activities during the project.
 These data shall be managed in a common repository which shall be the reference for specification, modelling and VnV activities.
 
-Thanks to the choice of Eclipse platform, use of technologies available on Eclipse and XML files are the best candidates to stores these items.
+Thanks to the choice of Eclipse platform, use of technologies available on Eclipse and XML files are the best candidates to store these items.
 
-In the following, we give the specification of these items and the links between them. The specification of this data-model is based on an Ecore model.
+In the following, we give the specification of these items and the links between them. The specification of this data-model is based on an Ecore model. However it can be implemented with any means or tools, depending the decision of the project partners.
 
 3 groups of data are defined: \emph{Variable}, \emph{Function} and \emph{Requirement}; for each group, a set of \emph{attributes} are defined to specify the group. These attributes are specified by a name, a cardinality and a type which can be a well  know type  (as boolean, string, integer,...) or a type defined explicitly for this model.
 
-All these items share common attributes described in the following section. The Features are defined to organize the items in group.
+All these items share common attributes described in the following section. The \emph{Features} are defined to organize the items in group.
 Finally the links between the groups are specified in the last section.
 
 
@@ -108,19 +109,20 @@ Finally the links between the groups are specified in the last section.
 
 All the items are \textit{named} and have mandatory common attributes:
 \begin{description}
-\item [name] defined as a string and unique, naming convention are defined in \ref{sec:naming};
-\item[safety], a boolean tag to qualified the information as safety or not ;
-\item[definition], to describe in a clear way the items, at list by a textual description. links to picture or table can be added.
+\item [name] defined as a string and unique for each item, naming convention are defined in \ref{sec:naming};
+\item[safety] a boolean tag to qualified the information as safety or not ;
+\item[definition] to describe in a clear way the items, at least by a textual description. Links to picture or table can be added.
 \end{description}
 
 Some \textit{issues} can be associated to  each items. These issues are characterized by:
 \begin{description}
-\item[description], textual explanation;
-\item[closed], a boolean tag to qualified the state of the issue.
+\item[description] a textual explanation;
+\item[closed] a boolean tag to qualified the state of the issue;
+\item[owner] the person in charge of the issue.
 \end{description}
 
 \begin{comment}
-TODO: do we need more information on issue , as author, owner,... ?
+TODO: do we need more information on issue , as author, ... ?
 
 Do we need to link to github issue tracker ?
 \end{comment}
@@ -141,16 +143,16 @@ The figure \ref{fig:Common} gives the Ecore model of these elements.
 
 First of all we have to define the types used to specify the variables.
 
-In order of possible, we shall use simple and well defined, as boolean, string, integer,... (see the Iso standard for C language \url{http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf}). 5in the Ecore model these types appeared with the prefix "E").
+In order of possible, we shall use simple and well defined, as boolean, string, integer,... (see the Iso standard for C language \url{http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf}). In the Ecore model these types appeared with the prefix "E".
 
-Besides some new types can be define to define a complex or structured type or an enumeration.
+Besides some new types can be added to define a complex or structured type or an enumeration.
 
 These types are defined as \textit{VariableType} with the following attributes:
 \begin{description}
-\item[parentType], optional, in the case the type is a subtype of a  already defined type (for example "Distance" can be considered as subtype of "Integer");
-\item[minimalValue], optional, in the case the type is a range of integer, the minimal value;
-\item[maximalValue], optional, in the case the type is a range of integer, the maximal value;
-\item[resolution], optional, in the case the type is a range of integer, resolution to take into account;
+\item[parentType] optional, in the case the type is a subtype of a  already defined type (for example "Distance" can be considered as subtype of "Integer");
+\item[minimalValue] optional, in the case the type is a range of integer, the minimal value;
+\item[maximalValue] optional, in the case the type is a range of integer, the maximal value;
+\item[resolution] optional, in the case the type is a range of integer, resolution to take into account;
 \end{description}
 
 The figure \ref{fig:Type} gives the Ecore model of these elements.
@@ -164,11 +166,11 @@ The figure \ref{fig:Type} gives the Ecore model of these elements.
 
 The \textit{Variable} is then defined with the following attributes:
 \begin{description}
-\item[type], the variableType associated, unique;
-\item[definitionRequirements], at least one requirement to  define the variable;
-\item[constant], a boolean tag to qualified constants;
-\item[specialValue], optional, several special value can be defined;
-\item[store], optional, a variable can be an element of a more complex or structure variable.
+\item[type] the variableType associated, unique;
+\item[definitionRequirements] at least one requirement to  define the variable;
+\item[constant] a boolean tag to qualified constants;
+\item[specialValue] optional, several special value can be defined;
+\item[store] optional, a variable can be an element of a more complex or structured variable.
 \end{description}
 
 The figure \ref{fig:variable} gives the Ecore model of these elements.
@@ -185,14 +187,14 @@ The figure \ref{fig:variable} gives the Ecore model of these elements.
 
 \subsubsection{Functions}
 
-A Function is defined with the following characteristics:
+A \textit{Function} is defined with the following characteristics:
 \begin{description}
-\item[allocation], the subsystem  on which is allocated the function (i.e. Kernel, DMI, Odometry,..);
-\item[requirement], at least one requirement to describe the function;
-\item[input], optional, the input variables of the function;
-\item[output], optional, the output variables of the function;
-\item[internal], optional, the internal variables of the function;
-\item[subFunction], optional, the sub-functions which allow to structure and  detailled the function.
+\item[allocation] the subsystem  on which is allocated the function (i.e. Kernel, DMI, Odometry,..);
+\item[requirement] at least one requirement to describe the function;
+\item[input] optional, the input variables of the function;
+\item[output] optional, the output variables of the function;
+\item[internal] optional, the internal variables of the function;
+\item[subFunction] optional, the sub-functions which allow to structure and  detailed the function.
 \end{description}
 
 The figure \ref{fig:function} gives the Ecore model of these elements.
@@ -209,19 +211,19 @@ The figure \ref{fig:function} gives the Ecore model of these elements.
 
 A \textit{requirement} is defined by the following attributes:
 \begin{description}
-\item[nature], class of property defined by the requirement: Structural, functional, definition,...
-\item[source], the document or the artifact where the requirement is defined for the first time (i.e. SRS, SystemAnalysis,...);
-\item[allocation], the subsystem  on which is allocated the function (i.e. Kernel, DMI, Odometry,..);
-\item[exported], a boolean tag to defined if the requirement shall be exported to another sub-system or function;
-\item[subRequirement], optional, the sub-requirements in which the requirements is divided.
+\item[nature] class of property defined by the requirement: Structural, functional, definition,...
+\item[source] the document or the artifact where the requirement is defined for the first time (i.e. SRS, SystemAnalysis,...);
+\item[allocation] the subsystem  on which is allocated the function (i.e. Kernel, DMI, Odometry,..);
+\item[exported] a boolean tag to defined if the requirement shall be exported to another sub-system or function;
+\item[subRequirement] optional, the sub-requirements in which the requirements is divided.
 \end{description}
 
-Thus the following enumerate sets shall be defined:
+Thus the following enumerate sets shall be defined (their contents are not given in an exhaustive way here):
 \begin{description}
 
-\item[T\_SourceDocument], set of source document for defining a data, this can be an input document (SRS, a subset,...) or a document provided during the process (system analysis, model description,...) 
-\item[T\_RequirementNature], what describe the requirement ? Structural, Functional or Definition
-\item[T\_System], on what subsystem is allocated the data ? Kernel, DMI, BIU,...
+\item[T\_SourceDocument] set of source document for defining a data, this can be an input document (SRS, a subset,...) or a document provided during the process (system analysis, model description,...) 
+\item[T\_RequirementNature] what describe the requirement ? Structural, Functional or Definition
+\item[T\_System] on what subsystem is allocated the data ? Kernel, DMI, BIU,...
 \end{description}
 
 The figure \ref{fig:requirement} gives the Ecore model of these elements.
@@ -267,34 +269,30 @@ The figure \ref{fig:links} gives the Ecore model of all the data model as descri
 \label{sec:naming}
 
 
-All the items described in the last section shall be named in a unique way. 
-This section give some naming convention to easy modelling and VnV.
+All the items described in section \ref{sec:datamodel} shall be named in a unique way. 
+This section gives some naming conventions to facilitate modelling and VnV.
 
-In a general way, the name shall be clear, concise to facilitate the understanding of the models.
+In a general way, the name shall be clear, concise to facilitate the understanding of the models. UPPER case will be used for names issued form official documents as SRS, mixed of lower and UPPER case for others.
+
+To avoid trouble during translation of models or code generation, we assume some languages can be not case sensitive: a same word can not be used twice with different cases. By the same way, classical keywords of programming language shall be avoid (for example for C language "if", "then", "void",...).
 
 
-
-\begin{comment}
-Case sensitive language, keywords of target language (SysML, B, C, Scade 5?),...), UPPER case for names issued form official document (SRS, API,...), lower case for others. length of the name
-
-QA plan to check.
-\end{comment}
 
 
 \subsubsection{VariableTypes naming convention}
 
 The naming of the type should consist at least on an object.
 
-The name shall be prefixed by "TYP\_".
+The name shall be prefixed by "typ\_".
 
 \subsubsection{Variable naming convention}
 
 The naming of the variables should consist of at least a combination of a verb and an object using the passive form (for examples:   orderReceivedFromTrackside for a structure,     endOfMissionIsExecuted for a boolean)
 
-For the internal variables, i.e. those defined during the design activities to describe the state of the system and the exchanges between functions, the name shall be prefixed by "INT\_".
+For the internal variables, i.e. those defined during the design activities to describe the state of the system and the exchanges between functions, the name shall be prefixed by "int\_".
 
 For the external variables, name shall be as close as possible to those already defined in the documentation.
-Typically, the naming convention of SRS §7 and 8 shall be follow for the interface with trackside (see § 7.3.2.11):
+Typically, the naming convention of SRS §7 and 8 shall be followed for the interface with trackside (see § 7.3.2.11):
 
 \begin{itemize}
 \item A\_ Acceleration
@@ -325,12 +323,24 @@ For the other external  variables, the name will be prefixed by the short name o
 
 Features and  functions are named using an active form consisting of at least a combination of a verb and an object (for example:   initiateTerminatingASession).
 
-A short name, formed from first letters of each word, is defined to  facilitate the naming of sub-functions or requirements (for Example MORC for ManageOfRadioCommunication). 
+A short name, formed from first letters of each word, is defined for each feature to  facilitate the naming of sub-functions or requirements (for Example MORC for ManageOfRadioCommunication). 
 
 \subsubsection{Requirement naming convention}
 
+A requirement shall be identified in a unique way by is name and the  source document with it version.
 
-\begin{comment}
-TODO: Marc Behrens
-\end{comment}
+The naming convention of requirement depends on the source document or activity as described in the following table:
 
+\begin{tabular}{|p{2cm} | p{4cm} | p{8cm}|}
+\hline 
+Source & Name & Description \\
+\hline 
+Subset 26 v3.3.0 & SRS\_$number$\_$letter$ & where $number$ is the number of the section as it appears in the SRS, and $letter$, optional, is used in the case the requirement is divided in sub-requirements  (for example : 3.5.3.1, 3.5.3.4\_a) \\
+\hline 
+Subset X v Y & SubsetX\_Y\_$number$\_$letter$ &  where X is the number of the subset, Y its version, $number$ is the number of the section as it appears in the SRS, and $letter$, optional, is used in the case the requirement is divided in sub-requirements (for example : Subset\_34\_3.0.0\_ 2.2.2.1 \\
+\hline 
+System Analysis & SA\_$short$\_$number$ & where $short$ is the shortname of the feature or the allocated subsystem, $number$ is a unique number for this short name (for example SA\_MORC\_4 or SA\_DIM\_18) \\
+\hline 
+Software Modeling & SW\_$short$\_$number$ & where $short$ is the shortname of the feature or the allocated subsystem, $number$ is a unique number for this short name \\
+\hline
+\end{tabular}
