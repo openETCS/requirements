@@ -344,3 +344,104 @@ System Analysis & SA\_$short$\_$number$ & where $short$ is the shortname of the 
 Software Modeling & SW\_$short$\_$number$ & where $short$ is the shortname of the feature or the allocated subsystem, $number$ is a unique number for this short name \\
 \hline
 \end{tabular}
+
+\subsection{Use of the ETCS Language}
+\label{sec:ETCSLanguage}
+
+The ETCS Language, i. e. the definition of ETCS data types, packets and messages is specified in Subset 026, chapter 7 and 8. 
+
+These definitions reflect the data formats at external interfaces, especially at the air gap between track and train. The data formats have been defined to save bits during their transmission between balises, loop, RBC and train. The various different bit lengths lead to field borders on bit boundaries in data structures and are very unhandy to be used in modelling and implementation languages. 
+
+In addition, the ETCS language terminology talks about “variables” instead of “types”. For clarification: all “variable”, “packet” and “message” types are in fact data type definitions and should not be misunderstood as global variables. 
+To unburden the OBU software modelling and implementation from the inconvenience of arbitrary bit lengths and bit boundaries, the following provisions should be made.
+
+\subsubsection{Transformations between native ETCS language and OBU internal data types}
+
+The ETCS language data types as specified in  Subset 026, chapter 7 and 8, require an OBU software internal equivalent supported by the openETCS modeling and implementation languages.  
+
+Native ETCS language data types must be converted into OBU internal data types at the external interfaces of the OBU software.
+This enables the internal OBU functions to deal with internal data types only. 
+
+\subsubsection{Mapping of basic data types: Native ETCS language - OBU internal data types}
+
+The transformations between ETCS data types and the corresponding OBU internal data types are
+
+		\begin{tabular}{|p{7cm} | p{7cm} |}
+			\hline 
+				Native ETCS language types & OBU internal data types \\
+			\hline 
+			integer 2 – 31 bit & integer32  \\
+			\hline 
+			enumeration & enumeration \\
+			\hline 
+			integer 1 bit & boolean (if character is boolean) \\
+			\hline 
+			integer 1 bit & enumeration (if character is enum) \\
+			\hline 
+			physical dimensions w. int resolution & integer or fixed point \\
+			\hline 
+			structures & structures with fields on at least byte boundaries \\
+			\hline 
+			dynamic iterations of structures & Iterations unrolled and transformed into static arrays of structures of constant maximum size (constant defined in a central place, minimum = 0) \\
+			\hline 
+			
+		\end{tabular}
+
+\subsubsection{Mapping of type names}
+
+To avoid confusion by different names for internal and external data types and preserve the relationship between both, types defined in the ETCS language shall preserve their names when transformed into their corresponding OBU internal data type. The distinction between both shall be made via different name spaces and prefixes only. 
+
+\subsubsection{Use of ETCS language type definitions whenever possible}
+
+In principle, data type used internally within the ETCS OBU software can be defined freely. 
+On the other hand, the distributed development in the openETCS team could be improved by common understanding and agreement to artefacts defined by the ETCS language.
+
+Therefore, self defined data types shall be based upon ETCS language elements (transformed to the internal equivalent) whenever possible.
+Type definitions in parallel to existing ETCS language terms shall be avoided. 
+
+\subsubsection{Uniform scaled (physical) dimensions}
+
+Several elements of the ETCS language use combinations of scaling factors (example: Q\_SCALE) and values (example: D\_LINK) to quantify (physical) dimensions. 
+Self-defined OBU internal types shall be based upon a unique scaling factor instead (example: all lengths and distances in cm).
+
+\subsubsection{Replacing dynamic data structures with static type definitions}
+
+Several structured types of the ETCS language use iterations of substructure loops of arbitrary lengths; an actual iterator value then indicates the actual length of the loop. 
+Since such dynamic allocations are not suited for dependable and safety-related software, the dynamic structures shall be replaced by static structure arrays of a constant maximum length. 
+“dataValid”-Flags (see next sectionh) then shall designate array elements filled with data.
+
+Default values should be assigned to “empty” variables additionally.
+
+
+\subsection{Basic Concepts}
+\label{sec:BasicConcepts}
+
+\subsubsection{"`dataValid"'-Flags and "`eventValid"'-Strobes}
+
+Since resource allocations like memory space for variables must not be performed dynamically, all resources must be allocated statically and variables like structures and arrays must be of fixed size. This requires a method to differentiate the array elements or structures filled with valuable data from "`empty"' ones. This shall be achieved by adding a boolean “dataValid” flag to the structures and array elements. 
+Data flows with event character (example: a just received balise datagram) shall in the same way make use of such “valid” strobes within the data flow type definitions: a “eventValid” strobe set to true then designates the presence of an event, set to false designates the absence of an event. 
+
+Default values should be assigned to “empty” variables additionally.
+
+\subsubsection{Time Stamps}
+
+All data received via an external or internal interface (like sensors, balise antennas, ...) shall be marked with the actual system time at the earliest moment of reception.
+
+This allows to eliminate the impact of system internal propagation delays and can be used consistency checks or for diagnosis purposes, if neccessary.
+
+\subsubsection{Execution on a Synchronously Clocked Platform}
+
+The openETCS software has to be modeled and implemented to be executed on a synchronously clocked platform or runtime system with the following characteristics.
+
+A clock cycle is divided into exactly 3 phases: 
+
+\begin{enumerate}
+	\item Sample and hold of all inputs (input phase)
+	\item Calculate all outputs (execution phase)
+	\item Emit all outputs (output phase)
+\end{enumerate}
+
+The execution order of subfunctions results from the input-output relationships between the subfunctions. There are no racing conditions between subfunctions.
+
+Whithin one clock cycle, the system time (as all other inputs to the OBU software) is kept unchanged for the OBU software. The processing time for all 3 phases is thought to be 0 (practically, it will be > 0, but this is irrelevant as long as the processing time does not exceed the clock period).
+
