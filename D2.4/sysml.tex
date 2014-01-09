@@ -24,7 +24,7 @@ The proposal is to use SysML for the highest level of modelling:
 \item Logical interfaces between subsystems and between functions will be described with \textit{Internal Block Diagrams}
 \item Data definition will be defined with \textit{Block Definition Diagrams}
 \item Requirements will be defined and allocated with \textit{Requirements Diagrams}
-\item High level Behaviour description will be described with \textit{State Machine Diagrams}
+\item High level Behaviour description will be described with \textit{State Machine Diagrams} and \textit{Sequence Diagrams}
 \end{itemize}
 \item[Safety analysis] SysML model will provide an organic and a functional architecture of the system
 \begin{itemize}
@@ -53,7 +53,7 @@ SysML diagrams that can be used for modeling are:
 \item \emph{Package Diagram}  \sysmlicon{PackageDiagram.png} : Organization description
 \item \emph{Block Definition Diagram} \sysmlicon{BlockDefinitionDiagram.png} (BDD): Structure description
 \item \emph{Internal Block Diagram} \sysmlicon{InternalBlockDiagram.png} (IBD): Structure description
-\item \emph{Sequence Diagram} \sysmlicon{SequenceDiagram.png} : Test case, execution trace, counter
+\item \emph{Sequence Diagram} \sysmlicon{SequenceDiagram.png} : Specification on sequence of functions, timing constraints, Test case, execution trace, counter
   example, etc.
 \item \emph{State Machine Diagram} \sysmlicon{StatemachineDiagram.png} : Behaviour description
 \item \emph{Requirement Diagram} \sysmlicon{RequirementDiagram.png} : Requirements description
@@ -233,14 +233,18 @@ modelling:
 \item Synchronous Message \sysmlicon{Message_synchCall.png}
 \item Asynchronous Message \sysmlicon{Message_asynchCall.png}
 \item Reply Message \sysmlicon{Message_reply.png}
+\item Duration Observation Symbol   \sysmlicon{DurationObservation.png}
+\item Duration Constraint Symbol  \sysmlicon{DurationConstraint.png}
+\item Time Observation Symbol  \sysmlicon{TimeObservation.png}
+\item Time Constraint Symbol  \sysmlicon{TimeConstraint.png}
 \end{itemize}
 
 The following items \emph{cannot} be used:
 \begin{itemize}
+\item State Invariant Symbol
 \item Single-compartment Fragment Node
 \item Multi-compartment Fragment Node
 \item Filtering Fragment Node
-\item State Invariant Symbol
 \item Interaction Use Node
 \item Lost Message Path
 \item Found Message Path
@@ -248,10 +252,7 @@ The following items \emph{cannot} be used:
 \item Create Message Path
 \item Destroy Event Node
 \item Coregion Symbol
-\item Duration Observation Symbol
-\item Duration Constraint Symbol
-\item Time Observation Symbol
-\item Time Constraint Symbol
+
 \end{itemize}
 
 \subsection{Restrictions on State Machine Diagram}

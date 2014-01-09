@@ -11,6 +11,16 @@ This section gives a proposal on how to use the selected approaches to produce f
 
 \subsection{Sum up of chosen approaches and artifacts}
 
+The figure \ref{fig:Steps} gives the main step of the design approach and main used and produced artifacts. All is detailed in the following sections.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{images/Step.png}
+  \caption{Main steps of the design approach}
+  \label{fig:Steps}
+\end{figure}
+
+
 \subsubsection{System analysis}
 
 \paragraph{Aim}
@@ -61,31 +71,105 @@ As functional architecture, data dictionary and set of requirements shall be lin
 \subsubsection{Architectural modelling}
 
 
-\begin{comment}
-First decision proposed to use the SysML and Scade approaches for this activity.
+\paragraph{Aim}
+The objectives of this step is to design the software organisation of the function to implement and to clarify the interaction with the hardware and the environment of the software.
 
-Description to provide.
-\end{comment}
 
+\paragraph{Input artifacts}
+
+The input documents and elements of this activity are:
+\begin{itemize}
+\item a set of informal descriptions (scope of the process, description of the functions, behaviour of the system, ...)
+\item the API
+\item the functional architecture 
+\item the data dictionary 
+\item the requirements, allocated to function or data description, in natural language. 
+\end{itemize}
+
+\paragraph{Output artifacts}
+
+The output shall provide :
+
+\begin{itemize}
+\item the input API updated and completed
+\item the input functional architecture updated and completed
+\item the input data dictionary updated and completed
+\item a set of new requirement which described the design choices made during this step
+\item traceability  with system analysis output
+\end{itemize}
+
+\paragraph{Means}
+
+The software architecture shall be derived from the functional architecture provided during system analysis step. By the way the existing SysMl model can be completed here to describe the software architecture, then derived to a SCADE model (for exemple by using Scade system), as SCADE is the method firstly proposed to  design the software.
 
 \subsubsection{Functional and behavioural modelling}
 
 
-\begin{comment}
-First decision proposed to use the SCADE approach for this activity.
+\paragraph{Aim}
+The objectives of this step is 
 
-Description to provide.
-\end{comment}
+
+\paragraph{Input artifacts}
+
+The input documents and elements of this activity are:
+\begin{itemize}
+\item a set of informal descriptions (scope of the process, description of the functions, behaviour of the system, ...)
+\item the updated API
+\item the updated functional architecture 
+\item the updated data dictionary 
+\item the updated set of requirements, allocated to function or data description, in natural language. 
+\end{itemize}
+
+
+\paragraph{Output artifacts}
+
+The output shall provide:
+\begin{itemize}
+\item a formal model of on-board unit
+\item the updated data dictionary 
+\item the updated set of requirements, formalized or justified
+\item traceability  with system analysis and architecture modelling output
+\end{itemize}
+
+\paragraph{Means}
+
+One of the objectives of the project is to provide a formal model of the on-board unit functionalities. The task consist to give a formal model of the functions and the requirements.
+First decision proposed to use the SCADE approach for this activity.
+Thus the task  consist, from the SCADE architectural model, to complete the behaviour of the functions in each node of the model. 
 
 
 \subsubsection{Executable software}
 
 
-\begin{comment}
-First decision proposed to use the C language for this activity.
+\paragraph{Aim}
+The objectives of this step is to provide a C code which implements the applicative part of the On-board Unit as defined during the system analysis. Target of the executable code is not identify to  allow its reuse in different environment.
+However, constraints specify in the API document shall be covered.
 
-Description to provide.
-\end{comment}
+
+\paragraph{Input artifacts}
+
+The input documents and elements of this activity are :
+\begin{itemize}
+\item Scade Model
+\item Software Specification Document
+\item API
+\end{itemize}
+
+\paragraph{Output artifacts}
+
+The output shall provide an executive software:
+
+\begin{itemize}
+\item C code of the applicative part of the on-board unit
+\item Supporting documentation: at least Software Deployement Manual and Release Notes
+
+\end{itemize}
+
+\paragraph{Means}
+
+The C code can be generated from the Scade model for most of the parts. For interfaces components or for components which the code can be optimized c code shall be automatically written.
+
+In both cases, the production of C code shall follow the constraints defined in EN50128 for SIL4 software design.
 
 
 

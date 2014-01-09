@@ -33,4 +33,7 @@
 \BOOKMARK [2][-]{subsection.8.9}{Restrictions on Requirement Diagram}{section.8}% 33
 \BOOKMARK [2][-]{subsection.8.10}{Model patterns}{section.8}% 34
 \BOOKMARK [1][-]{section.9}{Approaches for low level design}{}% 35
-\BOOKMARK [1][-]{section.9}{References}{}% 36
+\BOOKMARK [2][-]{subsection.9.1}{SCADE}{section.9}% 36
+\BOOKMARK [2][-]{subsection.9.2}{C Code}{section.9}% 37
+\BOOKMARK [2][-]{subsection.9.3}{Alternative open-source approaches}{section.9}% 38
+\BOOKMARK [1][-]{subsection.9.3}{References}{}% 39
