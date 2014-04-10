@@ -52,4 +52,11 @@ WP4: Page 134 - technical question on filter
 Siemens: on Github + Slides (e.g., Order of messages according to time, open)
 Niklas slides. Software technology - more general ways requested. Should be less concrete and more general. Details then are for implementation level. Option: use a buffer concept or dynamic I/O system.
 
+Proposal for continuation (Siemens): Define System Archtiecture and Provide more generic API definition interface for interface.
+
+Decision not possible because of commitment of resources are not available.
+Plan: wait until resource commitment is available.
+
+WP3 will continue with modelling. In addition, the basis for the architecture in SysML will be put more focus on.
+A later decision on differences in the API have to be later considered in the modelling work.
 
