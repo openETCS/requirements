@@ -51,6 +51,7 @@ Proposal for continuation (Siemens): Define System Archtiecture and Provide more
 Decision not possible immediatly because of commitment of resources are not available (see AI 4).
 Plan: wait until resource commitment is available. Answer by organisations expected by April 18th.  
 Even after the work on the API redefinition is completed it can take some time until an updated version of the API is available.  
+3. Conclusion  
 WP3 will continue with modelling. In addition, the basis for the architecture in SysML will be put more focus on.
 A later decision on differences in the API have to be later considered in the modelling work.
 We agreed on a follow-up meeting at about Mai 14th. The meeting will be aligned with a WP3 kick-off meeting for the new WP3 lead.  
