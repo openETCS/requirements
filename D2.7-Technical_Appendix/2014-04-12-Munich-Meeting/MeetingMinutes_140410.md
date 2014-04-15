@@ -25,7 +25,7 @@ Please, refer to the [slides](https://github.com/openETCS/requirements/blob/mast
 Alstom openETCS API is starting point for openETCS Developement.
 The API has to be designed in a way that it is generic to work with other Hardware. 
 The API has to be future-proof.
-The openETCS API proposal is actually in use in Alstom's Baseline 3 developement of ETCS. It is stable. It is under evolution since about 10 years. There are no major technical issues known with the chosen API solution. However, the design is close to the architecture chosen by Alstom.  
+The openETCS API proposal is actually in use in Alstom's Baseline 3 developement of ETCS. It is stable. It is under evolution since about 15 years. There are no major technical issues known with the chosen API solution. However, the design is close to the architecture chosen by Alstom.  
 GE started a SysML model on the API as a part of WP5 activities. Exchange of the information will be organised in a meeting (Bernd to organise)  
 WP3 started to provide a service view of the API in SysML (bottom-up). This work will be continued and extended with the analysis of the top-down approach.  
 Conditions: to be discussed with new WP3 lead
@@ -33,7 +33,7 @@ WP3 will model the API in SysML (accepted under condition of confirmation by the
 Commercial Requirements: openETCS API is planned to be used in future tenders in the railway sector.
 Discussion on "Stability of the interfaces".
 Target: the API  has to upward compatible and future-proof for at least 10 years to come.  
-Example: odometry information is part of the Balise interface in the current implementation. The example shows dependency on the chosen solution.  
+Example: odometry information is part of the Balise interface in the current implementation. The example shows dependency on the chosen solution. It is not the full odometry and balise data that are provided together.“The balise telegram is provided with the location of the balise center and the time-stamping of the balise center”
 Additional Requirements: the openETCS API has to be open for other products, e.g., National Legecy systems.  
 Hardware and Communication Channels slide:  
 Alstom has reasons to have both types of interfaces (telegrams with e.g., JRU and DMI, Variables in Odometry).  
@@ -46,6 +46,16 @@ Alstom: had a look at comments on Github. Outstanding statements on technical is
 ERSA: Findings are on Github  
 GE: on Github. In addition split between Application SW and Basic SW  is to be defined more precisely. 
 Siemens: on Github + [Slides](https://github.com/openETCS/requirements/tree/master/D2.7-Technical_Appendix/2014-04-12-Munich-Meeting) (e.g., Order of messages according to time, open)  
+We agreed on the following principle :  
+* to provide all inputs
+* to execute the application
+* to collect all outputs  
+Additionally, the implications for the ETCS application using the API have to specified clearly:  
+* Is the ETCS application in charge of sorting the input events to determine the correct input sequence? The need for sorting should be kept away from the application. As far as necessary, the basic software below the API should perform sorting.  
+* The hardware subsystems are sampling the inputs like odometry, radio, btm, ... with  a higher frequency than 300 ms. De facto are these inputs then sampled with the 300ms++ period of the API execution cycle. Not all input making up a consistent input are sampled within the same 300ms cycle, its evaluation has to be delayed/continued in the next 300 ms cycle by the application. The impact of this proceeding (max. delays, ...) must be clearly specified.  
+The question being more “how to do at sw coding level”:  
+* EITHER creation of a specific service for each input (with no constraint and no assumption on the order of calling of the services) and creation of a specific service for each output (with no constraint and no assumption on the order of calling of the services)=Alstom solution
+* OR: for example : providing a single buffer containing all inputs together; getting at the end of the cycle a single buffer containing all outputs together.  
 Software technology - more general ways requested. Should be less concrete and more general. Details then are for implementation level. Option: use a buffer concept or dynamic I/O system.  
 Proposal for continuation (Siemens): Define System Archtiecture and Provide more generic API definition interface for interface.  
 Decision not possible immediatly because of commitment of resources are not available (see AI 4).
