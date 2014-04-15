@@ -1,5 +1,5 @@
 Status: Draft for review  
-Location DB-Netz, Völckerstrasse 5
+Location DB-Netz, Völckerstrasse 5  
 Date: 10.04.2014, 09:00 - 16:00  
 Notes taken by: Bernd Hekele
 
