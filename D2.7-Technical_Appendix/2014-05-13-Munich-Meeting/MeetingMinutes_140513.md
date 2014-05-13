@@ -1,4 +1,4 @@
-Status: Draft for review  
+Status: Draft  
 Location DB-Netz, Völckerstrasse 5  
 Date: 13.05.2014, 09:00 - 16:00  
 Called By: Baseliyos Jacob, DB
@@ -47,6 +47,9 @@ No comment
 
 ### API Requirement Document
 Form not sufficient. E.g., requirements need to be identifiable. Document shall be continued on Github in Repository Requirements. Prposal: Update the document D2.5 section 7. 
+Will be put to Github for review. 
+
+
 
 ### Application Layer Proposal
 * Presentation Bernd
@@ -77,4 +80,26 @@ Conclusion on API Layer after presentation.
  - Alstom: Important is the definition of the structures. No statement on Behalf of Alstom. 
  - WP3 workshop: put it on the agenda.
  - Siemens: agrees to the target to define the API.
+
+### Walk thru review comments
+
+More relaxed view because of generic API to be taken as working base. This API document is to be seen as a paper for the Alstom specific solution - only a guidance in openETCS. 
+
+Proposal in Discussion - use a parameter to exchange the cycle-time via the init interface to make the application aware of the average range of cycle-time (latency).
+
+Agreed proceeding: biliteral offline + escalation + Github schliessen wo klar.
+
+WP4 presentation on Verification of the common API.
+
+Issue: who will be responsible to provide the API. Alstom to answer.
+
+All4Tec proposal for model-based testing.
+
+ * tool is not open source
+ * 
+
+Proposal on Safety Architect.
+
+ * tool is planned to be open source
+ 
 
