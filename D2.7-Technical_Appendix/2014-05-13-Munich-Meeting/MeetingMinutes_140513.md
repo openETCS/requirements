@@ -48,7 +48,7 @@ There is a need for a follow-up Meeting in roughly 4 weeks. Details to be clarif
 Form is not sufficient, e.g., requirements need to be identifiable. The [actual document](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/Bullit%20point%20openETCS%20requirements_20140511.pdf) is available on Github for revision.  
 We will make a proposal on how the document will be aligned with the existing requirement documents. 
 
-### Abstraction Layer Proposal
+### Abstraction Layer Proposal (Bernd, Uwe)
 * Presentation [Bernd](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/openETCS-GenericAPI.pdf)
 * Presentation [Uwe Steinke](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/WP3_API_AbstractionLayer.pdf)
 
@@ -57,7 +57,7 @@ The proposal has been discussed. The proposed structure (adaptation layer betwee
 WP3-leader will be contacted to be asked to  the issue on the agenda of the WP3 meeting.
 
 The understanding of "generic" is not unique. Proposals like being real generic and "data-driven" have been discussed. For example, ASN.1 or xml could be used to define the data-model.  
-Currently, Unisig does not deliver such descriptive files. openETCS could support them with this approach.
+Today, Unisig does not deliver such descriptive files. openETCS could support the Standardization in defining interfaces also in a formal approach.  
 The API could be abstract regarding the functions they are interfacing to. Anyway, we need to get a future proof implementation.  
 It is recommended to use the expertise from ERSA for the new concept.  
 The poposal to support some sort of Stream of structures - not stream of bits in the interface has been supported.  
@@ -79,12 +79,11 @@ Conclusion on API Layer after presentation.
 ### Walk thru review comments (Nicolas)
 
 Nicolas presented the summary of the review comments collected in the [xls-file](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/OETCS_API_review_2014_05_12.xlsx).  
-Having had the agreement on the new architecture we now can have a little bit more relaxed view on the review . Design choices can be accepted if they can be reolved with the new architecture with the generic API to be taken as working base. This API document is to be seen as a paper for the Alstom specific solution - only a guidance in openETCS. 
-
+Design choices can be accepted if they can be rseolved with the new architecture with the generic API to be taken as working base. This API document is to be seen as a paper for the Alstom specific solution - it is a guidance in openETCS.  
 Next steps with the comments are as follows:
 The “normal” review process will go on.  
 First, the reviewer has to react on the “answered” comments.  
-If needed, there will be a discussion between me and each reviewer until we are sure to understand each-other.  
+If needed, there will be a discussion between the author and each reviewer until we are sure to understand each-other.  
 When the analysis is finished,  
 - either there is an agreement -> modify or not the document.  
 - or there is no agreement: then we bring the point to higher level  of decision.  
@@ -92,12 +91,12 @@ For the “Rejected” - “design choice” points :
 The owner (Nicolas) will ask to each reviewer to bring explicit evidences that the Alstom choice is an error and to bring explicit alternative solutions.  
 Then we will see if we have to change the status to “accepted” or not.  
 
-But it is true that, at the end of the review process between the auther and the reviewer, the outcome for “Rejected” - “design choice” is likely to be “no action”.
+But it is true that, at the end of the review process between the author and the reviewer, the outcome for “Rejected” - “design choice” is possible to be “no action”.
 
 ### WP4 presentation on Verification of the common API. (Marc)
 Slides to be provided.
 
-Issue: who will be responsible to provide the API. Alstom to answer.
+Issue: who will be responsible to provide the API. This topic will be resolved in the WP3 workshop in Brussels.
 
 ### Tools for Verification (Frederique)
 
