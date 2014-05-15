@@ -5,15 +5,18 @@ Called By: Baseliyos Jacob, DB
 Notes taken by: Bernd Hekele
 
 * Participants 
+ - Nicolas Boverie, Alstom
+ - Frederique Vallee, All4Tec
  - Klaus-Ruediger Hase, DB
  - Baseliyos Jacob, DB
  - Bernd Hekele, DB
  - Peter Mahlmann, DB
- - Nicolas Boverie, Alstom
- - Uwe Steinke, Siemens
- - Vincent Hache, GE
- - Jan Welvaarts LLRE
+ - Francisco Lozano, GE
+ - Pierre-Yves Le Morvan, GE
+ - Jan Welvaarts, LLRE
  - Marc Behrens, DLR
+ - Uwe Eckelmann-Wendt, Siemens
+ - Uwe Steinke, Siemens
  
 You can find the slides used in the meeting in this location:
 https://github.com/openETCS/requirements/tree/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting  
@@ -35,40 +38,31 @@ Goals: Conclusion on the User Requirements (End-User = Organisation who operates
 
 
 ### Meeting Minutes last Meeting
-Action Items:
-1. Document delivered.
-2.  
-3. 
-4. 
-5. 
+Action Items:  
+You find the updated action items in the following location [Action Items](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/20140513_mom_2ndAPI_strategy%26review_Workshop.pdf).
 
-No comment
-
+The weekly follow-up meeting (Friday session) had to be cancelled (we need the slot for preparing the ITEA review). Instead we are now covering the API issues in the 10:45 - 11:00 slot (part of WP3).  
 
 ### API Requirement Document
-Form not sufficient. E.g., requirements need to be identifiable. Document shall be continued on Github in Repository Requirements. Prposal: Update the document D2.5 section 7. 
-Will be put to Github for review. 
-
-
+Form not sufficient. E.g., requirements need to be identifiable. Document shall be continued on Github in Repository Requirements. The current version is to be sent out to revision.
 
 ### Application Layer Proposal
-* Presentation Bernd
-* Presentation Uwe Steinke
+* Presentation [Bernd](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/openETCS-GenericAPI.pdf)
+* Presentation [Uwe Steinke]()
 
-What means Platform Independend?
-Can we have an abstract and language independent implementation of the API? Example ASN.1 or xml?
-Currently, Unisig does not deliver such descriptive files. But might do in future.
-API could be abstract regarding the functions they are interfacing to.
-<> Get expertise from ERSA for the concept <>
+The proposal has been discussed. The proposed structure (adaptation layer between a vender specific API and the Genric API of openETCS has been supported by most partners. The statement from Alstom is open (management level needed). 
 
-How can we get a future proof implementation?
-Generic can mean data driven interfaces. 
+WP3-leader will be contacted to be asked to  the issue on the agenda of the WP3 meeting.
 
-Stream of structures - not stream of bits.
+The understanding of "generic" is not unique. Proposals like having a real generic and data-driven" have been discussed. Example ASN.1 or xml could be used define the data-model.  
+Currently, Unisig does not deliver such descriptive files. openETCS could support them with this approach.
+API could be abstract regarding the functions they are interfacing to.  
+It is recommended to use the expertise from ERSA for the concept.  
+Another point of discussion: How can we get a future proof implementation?
+The poposal to support some sort of Stream of structures - not stream of bits in the interface has been supported.  
+For the abstraction layer no standard will be provided but an example implementation  (either with ERSA as vendor or with Alstom as a vendor), Both functions are required in openETCS.
 
-Also abstraction layer needs to be standardized. Platform independent part is something like providing Interface definitions. Responsibility lies with the vendor for the complete layer. platfrom indepenent and dependent blocks to be merged.
-
-Principles of openETCS API form shall be agreed on in the project.
+Principles of openETCS API form shall be agreed on in the project in a technical meeting.
 
 Conclusion on API Layer after presentation.
  - Abstraction Layer  page 6
