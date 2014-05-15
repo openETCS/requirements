@@ -8,7 +8,8 @@ Hot Topics:
 * 2 review sessions have been conducted. You find the results here:
  * [12.04.2014](https://github.com/openETCS/requirements/tree/master/D2.7-Technical_Appendix/2014-04-12-Munich-Meeting)
  * [13.05.2014](https://github.com/openETCS/requirements/tree/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting)
-* A new document has been started to concentrate on the API Requirements. Idea is to have a document which is useable for contract negotiations.
+* A new document has been started to concentrate on the [API Requirements](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/openETCS-API.pdf) from a user point of view. Idea is to have a document which is useable for contract negotiations.
+ The revision of the document is started.
 * There is still an open issue to make the location of the Alstom API Document clear.
 
 Folder Organization Proposal for WP2
