@@ -32,7 +32,7 @@ https://github.com/openETCS/requirements/tree/master/D2.7-Technical_Appendix/201
  * 15:30 - 16:00 Summary on Key decision / Action Items
  
 ## Minutes
-### Welcome
+### Welcome (Klaus-Rüdiger)
 Message: Start now to get a better structure, completion of the proposal might be in the context of next project.   
 Goals: Conclusion on the User Requirements (End-User = Organisation who operates the ETCS)  
 
@@ -42,12 +42,13 @@ You find the updated action items in the following location [Action Items](https
 
 The weekly follow-up meeting (Friday session) had to be cancelled (we need the slot for preparing the ITEA review). Instead we are now covering the API issues in the 10:45 - 11:00 slot (part of WP3).  
 
-There is a need for a follow-up Meeting in roughly 4 weeks. Details to be clarified.
+There is a need for a follow-up Meeting in roughly 4 weeks. Details to be clarified. A doodle will be sent to clarify the options.
 
 ### API Requirement Document (Baseliyos)
-Form not sufficient. E.g., requirements need to be identifiable. Document shall be continued on Github in Repository Requirements. The current version is to be sent out to revision.
+Form is not sufficient, e.g., requirements need to be identifiable. The [actual document](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/Bullit%20point%20openETCS%20requirements_20140511.pdf) is available on Github for revision.  
+We will make a proposal on how the document will be aligned with the existing requirement documents. 
 
-### Application Layer Proposal
+### Abstraction Layer Proposal
 * Presentation [Bernd](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/openETCS-GenericAPI.pdf)
 * Presentation [Uwe Steinke](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/WP3_API_AbstractionLayer.pdf)
 
@@ -55,24 +56,23 @@ The proposal has been discussed. The proposed structure (adaptation layer betwee
 
 WP3-leader will be contacted to be asked to  the issue on the agenda of the WP3 meeting.
 
-The understanding of "generic" is not unique. Proposals like having a real generic and data-driven" have been discussed. Example ASN.1 or xml could be used define the data-model.  
+The understanding of "generic" is not unique. Proposals like being real generic and "data-driven" have been discussed. For example, ASN.1 or xml could be used to define the data-model.  
 Currently, Unisig does not deliver such descriptive files. openETCS could support them with this approach.
-API could be abstract regarding the functions they are interfacing to.  
-It is recommended to use the expertise from ERSA for the concept.  
-Another point of discussion: How can we get a future proof implementation?
+The API could be abstract regarding the functions they are interfacing to. Anyway, we need to get a future proof implementation.  
+It is recommended to use the expertise from ERSA for the new concept.  
 The poposal to support some sort of Stream of structures - not stream of bits in the interface has been supported.  
-For the abstraction layer no standard will be provided but an example implementation  (either with ERSA as vendor or with Alstom as a vendor), Both functions are required in openETCS.
+For the abstraction layer no standard will be provided but an example implementation  (either with ERSA as vendor or with Alstom as a vendor), both applications are part of the openETCS ITEA project.
 
 Principles of openETCS API form shall be agreed on in the project in a technical meeting.
 
 Conclusion on API Layer after presentation.
- - Abstraction Layer  page 6
+ - Basic was the Uwe's slide set, Abstraction Layer, page 6
  - openETCS API comes out of the modelling work, support from suppliers needed
- - ERSA should be involved to generate the openETCS API
+ - ERSA should be involved to generate the openETCS API (AI Bernd)
  - GE - Alstom API alone cannot be the basis. GE supports common API approach.
  - Question: confirmation for the proposal given?
  - GE: Yes, red-line. Support depends on availability of resources
- - Alstom: Important is the definition of the structures. No statement on Behalf of Alstom. 
+ - Alstom: Important is the definition of the structures. No statement on behalf of Alstom. Confirmation needed by WP3 leader. 
  - WP3 workshop: put it on the agenda.
  - Siemens: agrees to the target to define the API.
 
