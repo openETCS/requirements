@@ -97,8 +97,8 @@ But it is true that, at the end of the review process between the author and the
 
 * Presentation [Verification of the API](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/AU_TS_openETCS_Verification_of_the_API_document_140512_03.pdf?raw=true)
 
-Issue: Who will be responsible to provide the API. This topic will be resolved in the WP3 workshop in Brussels.
-Issue: How are the rejected designer's choice change requests to the API handeled. This topic will be resolved in the WP3 workshop in Brussels.
+- Issue: Who will be responsible to provide the API. This topic will be resolved in the WP3 workshop in Brussels.
+- Issue: How are the rejected designer's choice change requests to the API handeled. This topic will be resolved in the WP3 workshop in Brussels.
 
 ### Tools for Verification (Frederique)
 
