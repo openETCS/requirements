@@ -6,7 +6,7 @@ Notes taken by: Bernd Hekele
 
 * Participants 
  - Nicolas Boverie, Alstom
- - Frederique Vallee, All4Tec
+ - Frédérique Vallée, All4Tec
  - Klaus-Ruediger Hase, DB
  - Baseliyos Jacob, DB
  - Bernd Hekele, DB
