@@ -1,4 +1,4 @@
-Status: Draft for Review  
+Status: Comments answered after Review  
 Location DB-Netz, Völckerstrasse 5  
 Date: 13.05.2014, 09:00 - 16:00  
 Called By: Baseliyos Jacob, DB
@@ -72,14 +72,15 @@ Conclusion on API Layer after presentation.
  - GE - Alstom API alone cannot be the basis. GE supports common API approach.
  - Question: confirmation for the proposal given?
  - GE: Yes, red-line. Support depends on availability of resources
- - Alstom: Important is the definition of the structures. No statement on behalf of Alstom. Confirmation needed by WP3 leader. 
+ - Alstom: If the “platform dynamic behaviour principles” and the “system architecture” remain as presented in the API document of Alstom; then the adaptation layer is easy to do and it is not an issue. If those aspects “platform dynamic behaviour principles” and the “system architecture” are re-defined in the “new Generic API”; this could represent a major issue and maybe could lead to something impossible to implement. 
+   No final statement on behalf of Alstom. Confirmation on how to manage the Generic API is needed (by WP3 leader).  
  - WP3 workshop: put it on the agenda.
  - Siemens: agrees to the target to define the API.
 
 ### Walk thru review comments (Nicolas)
 
 Nicolas presented the summary of the review comments collected in the [xls-file](https://github.com/openETCS/requirements/blob/master/D2.7-Technical_Appendix/2014-05-13-Munich-Meeting/OETCS_API_review_2014_05_12.xlsx).  
-Design choices can be accepted if they can be rseolved with the new architecture with the generic API to be taken as working base. This API document is to be seen as a paper for the Alstom specific solution - it is a guidance in openETCS.  
+Remarks when writing the minutes (Bernd): Design choices can be accepted if they can be rseolved with the new architecture with the generic API to be taken as working base. This API document is to be seen as a paper for the Alstom specific solution - it is a guidance in openETCS.  
 Next steps with the comments are as follows:
 The “normal” review process will go on.  
 First, the reviewer has to react on the “answered” comments.  
