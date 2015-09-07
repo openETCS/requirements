@@ -1,0 +1,1621 @@
+\documentclass{template/openetcs_article}
+% Use the option "nocc" if the document is not licensed under Creative Commons
+%\documentclass[nocc]{template/openetcs_article}
+\usepackage{lipsum,url}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{color, colortbl}
+\definecolor{gray}{rgb}{0.8,0.8,0.8}
+\usepackage[modulo]{lineno}
+\graphicspath{{./template/}{.}{./images/}}
+\begin{document}
+\frontmatter
+\project{openETCS}
+
+%Please do not change anything above this line
+%============================
+
+%%%%%555 Macro Definitions %%%%%%%%%
+
+%Starts a new line almost anywhere
+\newcommand{\nl}{\mbox{}\\}
+
+%to remove text from the final document while keeping it in the source
+\newcommand{\nthng}[1]{}
+
+%To mark old text parts 
+\newcommand{\oldtext}[1]{\textbf{OLD:} {\em #1} \textbf{DLO}}
+%uncomment the follwing line for a final version
+%\renewcommand{\oldtext}[1]{}
+
+%in-line (short) comment
+\newcommand{\cmmnt}[1]{\fbox{#1}}
+%uncomment the following line for a final version
+%\renewcommand{\cmmnt}[1]{}
+
+%Long comment
+\newcommand{\bgcmmnt}[1]{\nl\framebox{\parbox{.95\textwidth}{#1}}\nl[2mm]}
+%uncomment the follwing line for a final version
+%\renewcommand{\bgcmmnt}[1]{}
+
+%Uncertain items
+\newcommand{\qq}[1]{?`#1?}
+%uncomment the follwing line for a final version
+%\renewcommand{\qq}[1]{}
+
+%Things left (temporarily) open
+\newcommand{\tbd}{\cmmnt{tbd}}
+
+%Background color of boxes in process graphic
+\definecolor{light-gray}{gray}{0.95}
+
+%%%%%%%%% End of Macro Definitions %%%%%%%%%
+
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{OETCS/WP2/D2.3a}
+
+%define your workpackage here
+\wp{Work-Package 2: ``Requirements''}
+
+%set a title here
+\title{Definition of the openETCS Development Process}
+
+%set a subtitle here
+\subtitle{A Standard-Compliant Process for the EVC Software Development}
+
+%set the date of the report here
+\date{June 2015\\
+Revised September 2015}
+
+
+%document approval
+%define the name and affiliation of the people involved in the documents approbation here
+\creatorname{Hardi Hungar}
+\creatoraffil{German Aerospace Center}
+
+\techassessorname{Jan Welte}
+\techassessoraffil{TU Brunswick}
+
+\qualityassessorname{Peter Mahlmann}
+\qualityassessoraffil{DB netz}
+
+\approvalname{Klaus-R\"udiger Hase}
+\approvalaffil{DB Netz}
+
+
+%define a list of authors and their affiliation here
+
+
+\author{Hardi Hungar}
+
+\affiliation{German Aerospace Center\\
+  Lilienthalplatz 7\\
+  38108 Brunswick, Germany}
+
+% \author{Marielle Petit-Doche}
+% \affiliation{Systerel}
+
+% \author{Matthias G\"udemann}
+% \affiliation{Systerel}
+  
+
+
+% define the coverart
+\coverart[width=350pt]{openETCS_EUPL}
+
+%define the type of report
+\reporttype{Technical Report}
+
+
+\begin{abstract}
+%define an abstract here
+%  \lipsum[12-13]
+  This documents describes a standard-compliant process suitable for
+  the development of the software of the EVC (European Vital Computer)
+  in the openETCS approach. It instantiates an illustrative life cycle
+  from the EN~50128:2011 for the specific goal of openETCS. The
+  EN~50128:2011 is the standard relevant for software development of
+  safety-critical rail systems. The instantiation is complemented by
+  additions concerning system aspects, i.e., issues beyond software
+  development. These additions are in line with the EN~50126-1:1999,
+  the standard addressing the development of safety-critical rail
+  systems. 
+
+  The main concretions and modifications to the software development
+  as described in the EN~50128:2011 are:
+  \begin{itemize}
+  \item The definition of a  system phase which generates the input
+    necessary for the development of an EVC as a sub-system of the
+    ETCS system from available background material.
+  \item A sub-system (EVC) phase defining an interface of the HW to
+    enable a SW development without considering the HW in detail.
+  \item A high-level definition of the choice of implementation
+    language, techniques and measures for the SW development and its
+    verification.
+  \item A validation concept for the SW without prior SW/HW
+    integration based on simulation.
+  \item A sketch of an iterative implementation of the process phases
+    (in contrast to a sequential implementation where each phase is
+    completed before the next begins).
+  \end{itemize}
+
+\end{abstract}
+
+%=============================
+\maketitle
+
+%Modification history
+%if you do not need a modification history table for your document simply comment out the eight lines below
+%=============================
+
+
+\section*{Modification History}
+\tablefirsthead{
+\hline 
+\rowcolor{gray} 
+Version / Date & Section & Modification / Description & Author \\\hline}
+\begin{supertabular}{| m{3.2cm} | m{1.2cm} | m{4.6cm} | m{4cm} |}
+ 01 / June 23, 2015 & all & initial & Hungar \\\hline
+02 / September 02, 2015 & all & incorporated comments by Jan Welte and
+completed the coverage of D2.3 according to the analysis by Hardi
+Hungar. 
+
+\textbf{Additionally:} Changed responsibilities for component test. & Hungar\\\hline   
+\end{supertabular}
+
+
+\tableofcontents
+\listoffiguresandtables
+\newpage
+%=============================
+
+%Uncomment the next line if you need line numbers for tracebility when the document is in review
+%\linenumbers
+%=============================
+
+
+% The actual document starts below this line
+%=============================
+
+%Start here
+
+
+\section{Introduction}
+\label{sec:introduction}
+
+\subsection{Document Context} 
+\label{sec:documemnt-context}
+
+\subsubsection{openETCS Project and openETCS Activity}
+\label{sec:project-activity}
+
+This document is a contribution to the ITEA~2 project within the
+context of the openETCS activity.
+
+Here, it is distinguished between the current \emph{openETCS project}, funded as
+part of the EUREKA cluster programme ITEA~2, and the \emph{openETCS activity}
+as a whole, which encompasses the project.
+
+The openETCS activity pursues the vision of a full CENELEC compliant
+development of open-source software for the \emph{European Vital
+  Computer} (EVC). It is intended to produce a software kernel which
+can be used in commercial EVCs. Also, a development method with
+suitable tool support shall be defined. The project is a major first
+step in realizing the goals of the activity. Though the project cannot
+realize all of the vision, it shall produce partial results which can
+subsequently be taken up to achieve that goal.
+
+\subsubsection{Scope of the openETCS Development}
+\label{sec:scope-development}
+
+The starting point is the ETCS specification, mainly Subset~026
+\cite{subset-026:3.3.0}. From that, and a hardware interface
+description, the SW requirements are to be derived in a (logically)
+first development phase. The result shall be a generic SW covering the
+full functionality described in \cite{subset-026:3.3.0}, but without
+additional features which are usually required for a product. Such
+additional features include functions addressing national specifics or
+customer extensions. Since there are no plans yet to deploy the SW to
+a dedicated HW, the SW cannot be validated on the target HW as
+foreseen by the CENELEC standards. Instead, the development ends with
+a SW validation via simulation.
+
+\subsubsection{Role of the Document}
+\label{sec:role-document}
+
+This document provides a high-level view of a suitable process for the
+openETCS activity. The project, which does only part of the
+development, shall follow the description given here. The results of
+the project shall be artifacts of this process or parts of such
+artifacts, and they shall be labeled accordingly. What is not done
+completely shall be delineated. All of this shall result in a set of
+artifacts which forms a useful basis for subsequent activities. These
+activities shall be able, by addressing the missing points, to
+complete a documented software development suitable for integration in
+a system which can be certified.
+
+This document updates and extends the definition of the openETCS
+process given in \cite{openETCS:D2.3}. That specification dates from
+June 2013 and does not cover completely the current views. D2.3 is
+extended in providing more detail on how to structure the development
+compliant to the CENELEC standards, and on the process steps
+themselves. 
+
+Some development aspects described in D2.3 are not covered here. They
+concern mainly: 
+\begin{itemize}
+\item A semi-formal model of the ETCS system. This is not done in the
+  project and not necessary for developing the EVC software.
+\item Formal sub-models of the ETCS system, in particular of the EVC
+  software functions. Some such activities are pursued in the project,
+  but this is considered to be merely a specific kind of implementing
+  process steps and thus need not be included in an overall process
+  definition. 
+\item Applications of formal methods, in particular for safety-related
+  parts. Again, this is not done on a large scale and merely one of
+  several approaches pursued. Thus, it is not necessary to be detailed
+  here.
+\end{itemize}
+%
+These items may be covered in a supplementary document describing
+ambitious activities of openETCS following the current project.
+
+\subsubsection{Reference Material}
+\label{sec:reference-material}
+
+The main reference for the openETCS process is the standard for
+developing software for railway control and protection systems, the
+EN~50128:2011 \cite{EN50128:2011}. For the system context, the
+EN~50126-1:1999 \cite{EN50126:1999} is taken into account, which
+regulates the specification and demonstration of reliability,
+availability, maintainability and safety of railway applications in
+general (of which SW is a part). In particular, this standard is
+relevant for the phases before the SW development. The standard
+EN~50129:2010 \cite{EN50129:2010}, which concerns the safety case, is
+not relevant for this description. It has to be considered for the
+implementation of all safety-related activities listed here.
+
+
+From within the project, the definition of the openETCS requirements
+from D2.6 \citep{openETCS:D2.6} are relevant for an elaboration of
+Sec.~\ref{sec:proc-impl}, which sketches the implementation of the
+openETCS process.
+
+\subsection{Scope of the Document}
+\label{sec:scope-document}
+
+\subsubsection{Items Covered}
+\label{sec:items-covered}
+
+This document defines the structure of the SW development process of
+openETCS and its stages. It references and summarizes the main
+requirements originating from the standards. It lists artifacts to be
+produced and activities to be performed. It includes an instantiation
+of the system phases necessary to derive the software
+requirements. This instantiation is done in a form tailored to
+openETCS where several specifications are already available (mainly
+the UNISIG documents). 
+
+
+\subsubsection{Items not Covered}
+\label{sec:items-not-covered}
+
+
+The document does not include full detail on the means (methods and
+tools) to be employed. This is described (at least for the concerns of
+the ITEA~2 project) elsewhere:
+\begin{enumerate}
+\item The \emph{primary openETCS toolchain} for software design given
+  by \cite{openETCS:D7.1} 
+\item the \emph{secondary openETCS toolchain} for verification and
+  validation described in \cite{openETCS:D4.1.1.2}
+\end{enumerate}
+%
+It also does not address organizational issues of the SW development,
+i.e.\ how roles like Designer, Verifier etc.\ are to be filled, as
+defined in the EN~50128.  These organizational issues will have to be
+addressed during activities following the ITEA~2 project. This will be
+necessary for integrating the resulting SW into an actual product and
+having the result approved.
+
+The description of activities and requirements on artifact content
+given here does not provide full detail. In planning and performing
+any of the process steps defined here, it is recommended to consider
+the respectively relevant standard(s) to ensure full standard
+compliance. References to the standards are provided.
+
+The document does not specify in which way the results of the current
+openETCS project will not cover the full functionality of the EVC, and
+how it is planned to deal with this incompleteness. Each design
+artifact produced shall define its scope, including a statement of
+what is missing for a full development.
+
+\subsection{General Description of the openETCS Development Process}
+\label{sec:general-description}
+
+The openETCS SW development process follows the Illustrative
+Development Lifecycle~2 \cite[Fig.~4]{EN50128:2011} of the EN~50128
+and the detailed description for ``Generic software development'' in
+Sec.~7 of that standard. It deviates mainly in start and end phases
+from that lifecycle. These phases are adapted to the specifics of the
+openETCS goals, as not a full system will be developed (no hardware)
+and a substantial body of background material concerning the EVC and
+its environment is available. Additionally, as s a minor deviation,
+the SW component design phase has been made part of the SW
+architecture and design phase. This deviation reflects the form of the
+development within the openETCS project, but it is of not much
+significance and could easily be undone.
+
+\subsubsection{Terminology}
+
+\emph{System} refers to the ETCS system as described in Subset~026
+\cite{subset-026:3.3.0}. This includes the onboard unit, the European
+Vital Computer (EVC). The term \emph{sub-system} means this onboard
+unit. This terminology has been introduced in the first description of
+the openETCS process \cite{openETCS:D2.3}. A list of abbreviations and
+terms is given in Sec.~\ref{sec:glossary}.
+
+\subsubsection{Presentation of the Process}
+\label{sec:presentation-process}
+
+The presentation starts with an overview of the process. 
+For each of the phases of the process, the following aspects are
+described. These same aspects are defined in the standard.
+\begin{description}
+\item[Objectives] The goals of the phase
+\item[Activities] Description of what has to be done
+\item[Input] Lists artifacts and external source material
+\item[Output] Process artifacts which are either produced or
+  substantially altered by the activities
+\item[Requirements] Short recapture of the
+  requirements of the EN~50126 or EN~50128 for that phase, and how
+  they are to be met by the deliverables.\footnote{Usually, the recapture does
+    not provide full detail. Thus, one has to refer to the standards
+    when planning the activities of a phase.}
+\end{description}
+%
+The process is described as a top-down, waterfall procedure. The
+implementation within the openETCS project deviates from that, as the
+phases of the process are performed in an overlapping, iterative
+style. How that is done is indicated in a separate section
+(Sec.~\ref{sec:proc-impl}). The documentation of the development which
+is to be produced shall not reflect the iterative implementation of
+the process, but describe its results as if they had been achieved in
+the top-down, waterfall way of the description in
+Sec.~\ref{sec:devel-lifecycle} (as foreseen in
+\cite[7.1.2.2]{EN50128:2011}). Then, a completed set of artifacts
+would be in accordance with the main requirements of the CENELEC on
+the documentation.\footnote{Additionally, it will be necessary to
+  address organizational requirements adequately.}
+
+
+
+
+\section{List of Artifacts and Phases}
+\label{sec:list-artifacts}
+This section lists all main artifacts which are to be produced to
+document the development and provide the basis for a safety case of a
+product using the openETCS project results. Further detail on the
+content and role of these artifacts is given in the text describing
+the phases where these artifacts are to be produced or updated.
+
+The artifacts in the list are numbered in the format
+``\textit{m}-\textit{n}'', where ``\textit{m}'' is the number of the
+phase where the first version of the artifact is produced, and
+``\textit{n}'' is a unique number (roughly the sequence number the
+artifact would get in a linear implementation of the process). For
+each artifact, the role mainly responsible for its creation is defined
+in accordance with \cite[Tab.~C.1]{EN50128:2011}. The roles are taken
+from \cite[Sec.~5.1 / Fig.~2]{EN50128:2011} and listed below. These
+roles have also been assigned to the artifacts related to the system phases,
+i.e.\ the scope of the \cite{EN50126:1999} which does not mention
+roles. If two roles are given for one artifact, they are responsible
+for different parts.
+%
+\begin{description}
+\item[PM] Project Manager
+\item[RQM] Requirements Manager
+\item[DES] Designer
+\item[IMP] Implementer
+\item[INT] Integrator
+\item[TST] Tester
+\item[VER] Verifier
+\item[VAL] Validator
+\item[CM] Configuration Manager 
+\end{description}
+%
+% This list contains short definitions of the document content. More
+% detail is given in the pases where these documents are produced.
+%
+Note that implementing independence requirements according to
+\cite[5.1.2.10]{EN50128:2011} is necessary for a SIL-4 development. As
+this is not done in the project, subsequent activities with the goal
+of producing code usable in a SIL-4 system will have to
+care for that.
+
+Generally, the Validator checks the results of the Verifier, and vice
+versa. This is made explicit for the planning phase, where the
+Validator has to check, besides the verification report, the
+``Verification Plan'' written by the Verifier.
+%
+\begin{description}
+\item[Phase 0: Planning]
+\item[0-00 Project Plan (PM)] A management structure for the development,
+  including a documentation of the assignment of roles and personnel to activities.
+\item[0-01 Quality Assurance Plan (PM)] Definition of all activities to
+  ensure the quality of the openETCS development (RAMS, functionality
+  etc.). This document, which defines the lifecycle, is a part of the Quality
+  Assurance Plan.
+\item[0-02 Configuration Management Plan (CM)] A document which details how to handle
+  versions (documents, software, tools) in the development.
+\item[0-03 Verification Plan (VER)] Definition of all verification
+  activities and how they are to be documented, and the methods and
+  tools for verification.
+\item[0-04 Validation Plan (VAL)] Definition of how to demonstrate that the end result (EVC
+  software) serves its purpose within the context of the ETCS system.
+\item[0-05 Planning Verification Report (VER, VAL)]
+  Documentation of the verification of the planning documents.
+\item[Phase 1: System Design] 
+\item[1-06 Documentation of Coverage by Background Material (PM,RQM)] A
+  listing of relevant available background material and a
+  documentation of what is used for which purpose in openETCS. The RQM is
+  concerned with the requirements, the PM handles all else. 
+\item[1-07 Elaborated System Requirements (RQM)] Corrections and additions to
+  background requirement definitions, including
+  \begin{itemize}
+  \item System and sub-system functionality
+  \item System RAMS policy
+  \end{itemize}
+  Together with requirements from the background material, this shall
+  define all system requirements which are necessary to derive
+  the sub-system software requirements. 
+\item[1-08 Risk Assessment (PM)] Documentation of the results of the
+  analysis and evaluation of risks, including a hazard log for safety management.
+\item[1-09 Safety Plan (PM)] Definition of activities to ensure safety of
+  the openETCS development result (in the context of the ETCS system). 
+\item[1-10 Sub-System Requirement Specification (RQM)] The
+  requirements on the EVC.
+\item[1-11 Sub-System Safety Specification (RQM)] The safety
+  requirements on the EVC.
+\item[1-12 System Design Verification Report (VER)] Documentation of the verification
+  of all activities and results of the first openETCS process phase.
+\item[Phase 2: Sub-System Architecture Design] 
+\item[2-13 Sub-System Architecture Design (DES)] The SW/HW
+  architecture of the EVC is described. The requirements and safety requirements are
+  attributed to the components of the architecture.
+\item[2-14 SW Acceptance Plan (VAL)] Definition of acceptance criteria and
+  acceptance procedure for the EVC SW.  
+\item[2-15 Sub-System Architecture and Design Verification Report (VER)]
+  Report on the verification of the results of Phase~2.
+\item[Phase 3: SW Specification] 
+\item[3-16 SW Requirements Specification (REQ)]  A complete and consistent
+  specification of the SW requirements, including the safety
+  requirements in a specific section. 
+\item[3-17 Overall SW Test Specification (TST)] Specification of tests
+  checking the conformity of the sub-system software to its specification. 
+\item[3-18 SW Specification Verification Report (VER)] Report on the
+  verification of the results of Phase~3.
+\item[Phase 4: SW Design] 
+\item[4-19 SW Architecture and Design Specification (DES)]  This
+  document combines SW architecture and a detailed SW design. It contains a
+  definition of the coding principles and rules.
+\item[4-20 SW Interface Specification (DES)] A detailed specification
+  of the interfaces of the overall SW and of the SW components. This
+  complements the ``SW Architecture and Design Specification''.
+\item[4-21 SW Integration Test Specification (INT)] Specification of
+  tests and test procedure to check that the SW components interact
+  correctly.
+\item[4-22 SW Component Test Specification (TST)] Specification of
+  white-box tests on module level and black-box tests on component level.
+\item[4-23 SW Design Verification Report (VER)] Report on the
+  verification of the results of Phase~4.
+\item[Phase 5: SW Component Implementation and Test] 
+\item[5-24 SW Components (IMP)] The SW components, provided as SCADE models
+  with code generated from them, and documented white-box tests.
+\item[5-25 SW Component Test Report (TST)] Documentation of the component tests. 
+\item[5-26 SW Component Verification Report (VER)] Report on the
+  verification of the results of Phase~5.
+\item[Phase 6: SW Integration] 
+\item[6-27 SW Integration Test Report (INT)] Documentation of the
+  integration test. 
+\item[6-28 SW Integration Verification Report (VER)] Report on the
+  verification of the results of Phase~6.
+\item[Phase 7: SW Validation] 
+\item[7-29 Overall SW Test Report (TST)] Report on the conformity test of
+  the SW.
+\item[7-30 SW Validation Report (VAL)] Report on the validation of the
+  SW, including the validation of the tools used in the process.
+\end{description}
+
+
+
+
+\section{The openETCS Development Lifecycle}
+\label{sec:devel-lifecycle}
+
+% \begin{figure}[hbt]
+%   \centering
+%   \includegraphics[width=.9\textwidth]{Lifecycle-50128.png}
+%   \caption{openETCS Development Lifecycle (to be replaced by graphic of the lifecycle tailored to openETCS)}
+%   \label{fig:lifecycle}
+% \end{figure}
+
+% Fig.~\ref{fig:lifecycle} gives an overview of the openETCS development
+% lifecycle. The phases are detailed below.
+
+\begin{figure}[hbt]
+  \centering
+  \def\svgwidth{.9\textwidth}
+  {\tiny
+  \input{Prcss2_3a-02.pdf_tex}}
+  \caption{openETCS Development Lifecycle}
+  \label{fig:lifecycle2}
+\end{figure}
+
+Fig.~\ref{fig:lifecycle2} gives an overview of the openETCS
+development lifecycle. It has been derived from Fig.~1 from
+\cite{EN50128:2011}. The main differences to that standard consist in:
+\begin{itemize}
+\item A system phase has been added which covers the activities preceding
+  the sub-system development (starting from the sub-system requirements)
+\item The ``SW architecture and design phase'' and the ``SW component
+  design phase'' have been combined into one phase. This is purely
+  organizational. All information of the standard approach still have
+  to be generated.
+\item The ``SW component implementation phase'' and ``SW component
+  testing phase'' have been combined into one. This is motivated by
+  changing the responsibility for performing component tests to the
+  Implementer and letting the Tester only check the results. This
+  decision is in accordance with \cite[6.1.4.1 to
+  6.1.4.5]{EN50128:2011} (see below). But nevertheless it might be
+  reconsidered in the process implementation.
+\item According to the standard, SW validation should happen
+  \emph{after} SW/HW integration. Since it would contradict the goals
+  of openETCS to fix the hardware, the SW cannot be deployed to the
+  target HW and thus not be validated on it. To validate the SW within
+  openETCS, the best option seems to be to do validation within
+  simulated hardware.
+\item Phases after SW validation are outside the current scope of
+  openETCS, though a process for SW maintenance should be installed in
+  the long run.
+\end{itemize}
+
+The phases are detailed below. For each phase, its objectives and the
+activities to reach these objectives are given. Inputs and outputs are
+listed, the latter usually with some more detail than in the table
+above. Finally, all requirements of the relevant standard on the
+respective phase are summarized together with a reference to the full
+text. If the phase selects a particular alternative, a rationale is
+given.
+
+%%%%%% Phase 00 %%%%%%%%%
+\addtocounter{subsection}{-1}
+\subsection{Planning}
+\label{sec:planningPhase}
+
+\subsubsection{Objectives}
+\label{sec:0-objectives}
+Generate first versions of the planning documents.
+
+\subsubsection{Activities}
+\label{sec:0-activities}
+
+Review the ideas and concepts of the openETCS approach in view of the
+standard requirements (EN~50126 and EN~50128). Design a lifecycle for
+the realization of the EVC software and define the activities (design,
+verification, validation). Make preliminary choices for methods and
+tools. The resulting documents are verified (VER), the verification
+itself is checked (VAL).
+
+\subsubsection{Input}
+\label{sec:0-input}
+The CENELEC standards, UNISIG specifications and the ITEA~2 project
+application documents \cite{openETCS:FPP_4.0}.
+
+\subsubsection{Output}
+\label{sec:0-output}
+First versions of the following documents.
+\begin{enumerate}
+\item \textbf{Project Plan (PM)} A management structure for the
+  development, including a documentation of the assignment of roles
+  and personnel to activities. For details, it refers to other
+  planning documents. Deviating from the standard requirements, in the
+  openETCS project there is no fixed assignment of personnel to
+  roles. The project outcome is not intended to be taken directly to
+  SIL 4, so this is not strictly necessary. It will have to be
+  considered in ensuing activities.
+\item \textbf{Quality Assurance Plan (PM)} Definition of all
+  activities to ensure the quality of the openETCS development (RAMS,
+  functionality etc.). This plan has supplements providing details on
+  the lifecycle (this document), the tools and methods for design, modeling and
+  implementation, as well as the necessary tool qualification.
+\item \textbf{openETCS Process (PM)} (this document) This is a
+  supplement to the ``Quality Assurance Plan'' and provides a consistent,
+  high-level view on a standard-compliant development process,
+  taylored to the goals and approach of the openETCS activity. 
+\item \textbf{Definition of the tools and methods for software
+    development (PM)}: This is a supplement to the ``Quality Assurance
+  Plan''. It defines the openETCS ``Primary Tool Chain'': Methods,
+  languages and tools for SW design and implementation, and their
+  qualifications.
+\item \textbf{Configuration Management Plan (CM)} A document which
+  details how to handle versions (documents, software, tools) in the
+  development.
+\item \textbf{Verification Plan (VER)} Definition of all verification
+  activities (checks to establish the adequacy, completeness and
+  correctness of each phase) and how they are to be documented. It
+  also addresses methods and tools.
+\item \textbf{Validation Plan (VAL)} Definition of how to demonstrate
+  that the end result (EVC software) serves its purpose within the
+  context of the ETCS system. The plan includes a description the
+  means to perform the validation and the techniques employed.
+\item \textbf{Planning Verification Report (VER,VAL)}
+  Documentation of the verification of the planning documents. This is
+  done by the Verifier except for the ``Verification Report'', which is
+  checked by the validator.
+\end{enumerate}
+%
+All of these documents are to be updated in later phases of the
+development to include additions and concretions and to reflect any
+changes which are made in the plans. All changes shall be made in the
+plans before the respective activities are performed. Concretions will
+concern in particular, but not exclusively, tools and methods for
+development, verification and validation.
+
+
+\subsubsection{Requirements}
+\label{sec:0-requirements}
+
+The requirements to be met are defined mainly in \cite[Sec.~5,
+7.1]{EN50128:2011}, with additional detail on SW quality assurance in
+Sec.~6.
+
+ \begin{description}
+\item[Req 0.1, {\cite[Sec.~5.1]{EN50128:2011}}:] Organisation, roles and
+  responsibilities are described in the ``Project Plan'' and ``Quality
+  Assurance Plan''.
+\item[Req 0.2, {\cite[Sec.~5.2]{EN50128:2011}}:] Personnel competence is
+  to be addressed in development activities taking up the results of
+  the openETCS project. 
+\item[Req 0.3, {\cite[Sec.~5.3]{EN50128:2011}}:] The lifecycle is defined
+  in this document.
+\item[Req 0.4, {\cite[Sec.~7.1, 5.3.2.5]{EN50128:2011}}:] The phases are
+  implemented in an iterative, overlapping fashion (see
+  Sec.~\ref{sec:proc-impl}. All activities which are performed in the
+  development are planned beforehand.
+\item[Req 0.5, {\cite[Sec.~6]{EN50128:2011}}:] The quality assurance
+  requirements shall be regarded in writing the plans for quality
+  assurance, verification and validation.
+ \end{description}
+
+%%%%%% Phase 01 %%%%%%%%%
+\subsection{System Design}
+\label{sec:systemPhase}
+
+\subsubsection{Objectives}
+\label{sec:1-objectives}
+
+The main goal of this phase is to generate everything that is
+necessary to start the development of the sub-system, i.e.\ the EVC,
+from the available input (Subset~026 and further material). This phase
+shall cover the first five phases of the RAMS lifecycle of the ETCS
+system as defined according to the EN~50126:
+\begin{enumerate}
+\item Concept
+\item System definition and application conditions
+\item Risk analysis
+\item System requirements
+\item Apportionment of system requirements
+\end{enumerate}
+The combination of five phases of the EN~50126 life cycle into only
+one is motivated by the fact that not a full development needs to be
+performed for openETCS. First, much is already available in background
+documents. Further, only what is relevant to the EVC software has to
+be provided for the subsequent development. Thus, it suffices to
+complete the items which are inherited (at least partly) by the
+requirements on the EVC SW, and those items which are related to the
+integration of the SW into the ETCS system (e.g., interfaces and
+assumption that are made about the rest of the system).
+
+
+\subsubsection{Activities}
+\label{sec:1-activities}
+
+\paragraph{Identification of Coverage by Background Material}
+\label{sec:1-a-0}
+
+The available background material to cover requirements of the
+EN~50126 is identified. ``Documentation of Coverage by Background
+Material'' provides a detailed description of how this material covers
+requirements. Sec.~\ref{sec:1-requirements} below lists what is
+expected to be covered. For each instance where this expectations
+turns out to be wrong, the respective requirement has to be met by
+some dedicated activity. The outcome shall be referenced in the
+``Documentation of Coverage by Background Material''.
+
+\paragraph{System Requirement Elaboration}
+\label{sec:1-a-1}
+
+The available requirement specification of the ETCS system (mainly
+given by Subset~026) relevant to the EVC is identified, analyzed and
+extended by corrections and formalizations. This activity shall
+produce the ``Elaborated System Requirements''. The analysis may use
+semi-formal or formal modeling and analyses of the models.
+
+\paragraph{Sub-System Requirement Specification}
+\label{sec:1-a-2}
+
+A definition of the sub-system boundaries and interfaces is derived,
+and those of the system requirements that are to be allocated at least
+partially to the sub-system are identified. From that, a sub-system
+requirement specification is developed. This specification may be
+text-based, or involve formalizations (e.g., models) as available. A
+Sub-System Safety Specification shall be a separate document or a
+separate section. The safety specification is based on risk analysis
+activities. Output of this activity are ``Sub-System Requirement
+Specification'' and ``Sub-System Safety Specification''. 
+
+\paragraph{System Risk Analysis and Sub-System Risk Identification}
+\label{sec:1-a-3}
+
+Hazards and risks of the ETCS system are identified. This must cover
+at least those which involve the EVC, and the way these are related to
+hazards and risks in the full ETCS system. Existing sources for such
+analyses may be used. The results shall be documented as part of the
+Risk Analysis and Hazard Log.
+
+\paragraph{Sub-System Safety, Acceptance and Quality Assurance Planning}
+\label{sec:1-a-4}
+
+This planning shall take into account that openETCS is concerned with
+the software of the sub-system. It is therefore sufficient to
+delineate the plans on the sub-system level. These delineations shall
+be parts of the respective plans of openETCS, i.e., the Safety Plan,
+Acceptance Plan and Quality Assurance Plan.
+
+\paragraph{Verification}
+
+The results of this phase shall be verified w.r.t.:
+\begin{itemize}
+\item selection of the right input information
+\item adequacy of the methods and tools used in the derivation
+\item correctness
+\item adequacy and completeness for the respective purpose
+\end{itemize}
+ 
+
+\subsubsection{Input}
+\label{sec:1-input}
+
+The relevant input includes the UNISIG specification documents
+\cite{subset-026:3.3.0, subset-034:3.0.0, subset-076:2.3,
+  subset-088:2.3.0, subset-091:3.2.0}, which are based on the
+Commission Decision 2012/88/EU on the technical specification for
+interoperability relating to the control-command and signalling
+subsystems of the trans-European rail system
+\cite{unisig_CCS}. Additional sources may come from national
+instantiations of ETCS track side equipment (e.g., Deutsche Bahn,
+SNCF, ProRail) and operating rules.
+
+\subsubsection{Output}
+\label{sec:1-output}
+
+\begin{enumerate}
+\item \textbf{Documentation of Coverage by Background Material (RQM)}
+  A listing of relevant available background material and a
+  documentation of what is used for which purpose in openETCS. These
+  purposes include:
+  \begin{enumerate}
+  \item  System scope, context, purpose and environment
+  \item System RAMS targets, policy
+  \item System hazards and risks
+  \end{enumerate}
+\item \textbf{Elaborated System Requirement Specification (RQM)}
+  Corrections and additions to background requirement definitions,
+  including
+  \begin{enumerate}
+  \item System and sub-system functionality
+  \item System RAMS policy
+  \end{enumerate}
+\item \textbf{Sub-System Requirement Specification (RQM)}  The
+  requirements on the EVC. This artifact defines the
+  interface and the data flow over the interface, functionality of the
+  EVC, and extra-functional requirements. It may refer to external
+  documents for parts of this definition.  
+\item \textbf{Risk Assessment} (PM)  Documentation of the results of the
+  analysis and evaluation of risks, including a hazard log for safety
+  management. The project manager has to organize the risk analysis
+  and evaluation leading to the creation of the ``Risk Assessment''
+  document, engaging all necessary parties. The ``Risk Assessment''
+  shall include:
+  \begin{enumerate}
+  \item A documentation of the system risk analysis and evaluation performed
+  \item An identification of risks relevant for the sub-system
+  \item A hazard log for the sub-system
+  \end{enumerate}
+\item \textbf{Sub-System Safety Specification (RQM)} The safety
+  requirements on the EVC.
+\item Sub-System Safety Plan (part of the ``Safety Plan)''
+\item Sub-System Acceptance Plan (part of the ``Acceptance Plan'')
+\item Sub-System Quality Assurance Plan (part of the ``Quality Assurance Plan'')
+\item Sub-System Hazard Log (part of the ``Sub-System Safety Specification'')
+\item \textbf{System Design Verification Report (VER)} Documentation
+  of the verification of all activities and results of the first
+  openETCS process phase.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:1-requirements}
+
+The following text lists the requirements as defined in the EN~50126
+for those 50126 phases included in this openETCS phase. For each
+requirement it is said whether it is (expected to be) covered by
+background material, or the designated outputs and the activities
+described above. Requirements of the EN~50126 are referenced by their
+identifying numbers. ``\textbf{Req~6.1.3.4}'' refers to the item
+\textbf{6.1.3.4} in the EN~50126. This is ``Requirement~\textbf{4}''
+of the phase ``Concept'', described in Sec.~\textbf{6.1} of the
+EN~50126, whose requirements are listed in Sec.~\textbf{6.1.3}.
+
+
+% In the EN~50126, requirements are numbered consecutively, restarting
+% with ``1'' in each phase. In this document, they are grouped according
+% to their 50126 phase and the requirement number is given. To resolve a
+% reference of the form ``Req~\textit{n}'', one has to look up the phase
+% in the EN~50126 first and then look for ``\textit{n}'' in the ``Requirement
+
+The coverage by background material shall be detailed in
+``Documentation of Coverage by Background Material'', if necessary
+with adequate justifications. A general requirement is that full
+bidirectional traceability between the requirements in the UNISIG
+specifications (those which refer to the sub-system) and the
+``Sub-System Requirements Specification'' and ``Sub-System Safety
+Specification'' shall be realized.
+
+\paragraph{Phase ``50126~6-1~Concept''}
+
+As the ETCS system has already been implemented in numerous instances,
+most items of the Concept Phase are expected to be covered by
+background material. 
+%
+\begin{description}
+\item[Req 1.1, {\cite[6.1.3.1]{EN50126:1999}}] System scope, context,
+  purpose and environment: Background
+\item[Req 1.2, {\cite[6.1.3.2]{EN50126:1999}}] RAMS implications of
+  financial aspects and feasibility studies: Background
+\item[Req 1.3, {\cite[6.1.3.3]{EN50126:1999}}] Hazard sources:
+  Background
+\item[Req 1.4, {\cite[6.1.3.4]{EN50126:1999}}] Information about RAMS
+  performance, regulations and safety targets: Background
+\item[Req 1.5, {\cite[6.1.3.5]{EN50126:1999}}] Definition of the
+  management requirements: ``Quality Assurance Plan''
+\end{description}
+
+
+\paragraph{Phase "50126~6.2~System definition and application conditions"}
+
+
+\begin{description}
+\item[Req 1.6, {\cite[6.2.3.1]{EN50126:1999}}] Mission profile,
+  boundary, application conditions and hazards of the system:
+  Background
+\item[Req 1.7, {\cite[6.2.3.2]{EN50126:1999}}] Preliminary RAM
+  analysis and hazard identification: Background
+\item[Req 1.8, {\cite[6.2.3.3]{EN50126:1999}}] RAMS policy for the
+  system: Background
+\item[Req 1.9, {\cite[6.2.3.4]{EN50126:1999}}] System Safety Plan: To
+  be included in the ``Safety Plan'' (to the extent which is
+  necessary)
+\end{description}
+
+\paragraph{Phase ``50126~6.3~Risk analysis''}
+
+A risk analysis is performed for all items which concern the EVC SW
+and how they relate to risks and hazards of the full system. A hazard
+log with all relevant items enters the Sub-System Safety
+Specification. The risk analysis may be based on background material.
+
+\paragraph{Phase ``50126~6.4~System requirements''}
+
+\begin{description}
+\item[Req 1.10, {\cite[6.4.3.1]{EN50126:1999}}] Specification of RAMS
+  requirements: Covered by ``Elaborated System Requirements''
+\item[Req 1.11, {\cite[6.4.3.2]{EN50126:1999}}] Specification how to
+  achieve compliance with the RAMS requirements: ``Safety Plan'',
+  ``Validation Plan'' and ``SW Acceptance Plan''
+\item[Req 1.12, {\cite[6.4.3.3]{EN50126:1999}}] Detailed RAM
+  Programme: ``Verification Plan'', ``Quality Assurance Plan''
+\item[Req 1.13, {\cite[6.4.3.4]{EN50126:1999}}] Updated Safety Plan:
+  ``Safety Plan''
+\end{description}
+
+\paragraph{Phase ``50126~6.5~Apportionment of system requirements''}
+
+\begin{description}
+\item[Req 1.14 {\cite[6.5.3.1]{EN50126:1999}}] Allocate system
+  requirements to sub-systems: The ``Sub-System Requirement
+  Specification'' and the ``Sub-System Safety Specification'' address
+  the parts relevant to openETCS, the rest should be covered by
+  background material
+\item[Req 1.15 {\cite[6.5.3.2]{EN50126:1999}}] Acceptance criteria for
+  all sub-systems: the openETCS-relevant part is to be spelled out in
+  the ``Acceptance Plan''
+\item[Req 1.16 {\cite[6.5.3.3]{EN50126:1999}}] Updated Safety and
+  Validation Plan: ``Safety Plan'' and ``Validation Plan''
+\end{description}
+
+
+%%%removed - relation to D2.3 shall be handled externally
+% \subsubsection{Relation to Previous Descriptions}
+% \label{sec:3-relations}
+
+% This phase comprises to Steps 0 to 2 of, \cite{openETCS:D2.3}. The
+% \emph{External System Requirement Identification} is the output of
+% Step~0 (openETCS Inputs). 
+
+% \tbd
+
+
+
+%%%%%% Phase 02 %%%%%%%%%
+\subsection{Sub-System Architecture Design}
+\label{sec:sub-system-AD}
+
+\subsubsection{Objectives}
+\label{sec:2-objectives}
+This phase shall complete the preparations for the main focus of
+openETCS, the development of the EVC software. It shall define the
+SW/HW architecture, the SW/HW interface and interaction, and 
+allocate the system and system safety requirements to the
+architecture components.
+
+The last sub-phase of ``System Design'', the ``Apportionment of system
+requirements'', allocated requirements to the sub-system. Here, these
+are further refined to the SW/HW architecture of the sub-system. The
+subsequent phase ``SW Specification'' completes the derivation of SW
+requirements (of the EVC) from the system requirements (of ETCS). 
+
+\subsubsection{Activities}
+\label{sec:2-activities}
+The hardware architecture of the system is described, and the SW/HW
+interface is defined.  The hardware is described at least generically,
+so that the it can be shown that the EVC functionality can be realized
+on that architecture. The requirements and safety requirements which
+concern the software are identified. Risk analysis and planning
+documents are revised as necessary.
+
+\subsubsection{Input}
+\label{sec:2-input}
+
+The main phase-specific inputs are:
+\begin{enumerate}
+\item ``Sub-System Requirement Specification''
+\item ``Sub-System Safety Specification''
+\item UNISIG specifications of the architecture of the EVC
+\end{enumerate}
+
+\subsubsection{Output}
+\label{sec:2-output}
+
+\begin{enumerate}
+\item \textbf{Sub-System Architecture Design Specification (DES)}: The
+  SW/HW architecture of the EVC is described. The requirements and
+  safety requirements are attributed to the components of the
+  architecture. The HW architecture is described on a high level. Its
+  interface to the SW is given by a detailed HW API, describing in
+  detail the cooperation and data flow between SW and HW.
+\item \textbf{SW Acceptance Plan (VAL)} Definition of acceptance criteria and
+  acceptance procedure for the EVC SW.  
+\item \textbf{Sub-System Architecture Design Verification Report (VER)}: The
+  verification shall check that the specification describes a
+  realizable design, that the requirement allocation is complete
+  and consistent with the architecture details, and that all aspects,
+  in particular safety, have been adequately taken care of.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:2-requirements}
+
+The requirements to be covered come from the EN~50126, Phase~5,
+``Apportionment of system requirements''. 
+\begin{description}
+\item[Req 2.1, {\cite[6.5.3.1]{EN50126:1999}}] Allocation of
+  requirements (also safety) to sub-systems and specification of the
+  sub-systems: The allocation is done in the ``Sub-System Architecture
+  Design Specification''. The HW is described in its structure, and
+  its interface to the SW is specified in detail. This enables a
+  specification of the SW (including the safety aspect) in the
+  subsequent phase. As the hardware is not in the focus of openETCS,
+  the interface description is sufficient for the further openETCS
+  development.
+\item[Req 2.2, {\cite[6.5.3.2]{EN50126:1999}}] Specification of
+  acceptance criteria for the architecture components. For the SW,
+  this is done in the subsequent phase. The HW must provide the
+  specified interface (API) to the SW. Besides that, detailed
+  compliance criteria for the HW are to be provided by entities
+  developing it. This is sufficient for the purposes of openETCS, as
+  the rest of the system is outside the scope of openETCS.
+\item[Req 2.3, {\cite[6.5.3.3]{EN50126:1999}}] Reviews and updates to
+  the ``Safety Plan'' and ``Validation Plan''. These are done to the
+  extent necessary (see ``Activities'' above).
+  \end{description}
+
+%%%%%% Phase 03 %%%%%%%%%
+\subsection{SW Specification}
+\label{sec:software-requirements}
+
+As mentioned above in Sec.~\ref{sec:2-objectives}, this phase
+completes what is to be done in Phase~5 of the EN~50126. In the
+EN~50128, the SW requirement are defined in a separate phase. We
+adopt this structuring, here. It goes well with the general idea of
+the openETCS project, which focuses the SW development.  
+
+\subsubsection{Objectives}
+\label{sec:3-objectives}
+A complete and consistent set of requirements, with specifically
+designated safety requirements, for the SW shall be defined. This is
+to be complemented by a definition of acceptance criteria for the SW. 
+
+
+\subsubsection{Activities}
+\label{sec:3-activities}
+
+An analysis of the requirements which have been allocated completely
+or partially to the SW in the ``Sub-System Architecture Design
+Specification'' is done. The goal of the analysis is to extract the SW
+requirements. In addition to the requirement documents produced in
+previous process steps, the background material referenced in
+``Documentation of Coverage by Background Material'' is a source for
+requirements on the SW. 
+
+Test cases are collected which cover functionality and performance of
+each function, and in operational scenarios the interplay of the
+functions.
+
+\subsubsection{Input}
+\label{sec:3-input}
+
+\begin{enumerate}
+\item ``Documentation of Coverage by Background Material''
+\item Background material: UNISIG specifications
+  \cite{subset-026:3.3.0, subset-034:3.0.0, subset-076:2.3, subset-088:2.3.0,
+    subset-091:3.2.0} and further material as listed in
+  the documentation of coverage by background material.
+\item ``Elaborated System Requirement Specification''
+\item ``Sub-System Requirement Specification''
+\item ``Sub-System Safety Specification''
+\item ``Sub-System Architecture Design Specification''
+\end{enumerate}
+
+\subsubsection{Output}
+\label{sec:3-output}
+
+\begin{enumerate}
+\item \textbf{SW Requirements Specification (DES)} A complete and consistent
+  specification of the SW requirements, including the safety
+  requirements in a specific section. 
+\item \textbf{Overall SW Test Specification (TST)} Specification of tests
+  checking the conformity of the sub-system software to its specification. 
+\item \textbf{SW Specification Verification Report (VER)} Report on the
+  verification of the results of SW Requirements Phase.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:3-requirements}
+
+
+The requirements are derived from \cite[Sec.~7.2.4]{EN50128:2011}
+and adapted to the EVC SW.
+\begin{description}
+\item[Req 3.1] The ``SW Requirements Specification'' shall 
+  \begin{description}
+  \item[a] address functionality, robustness, maintainability, safety,
+    efficiency, portability, self checking, testing in operation, 
+  \item[b] be complete, clear, precise, unequivocal, verifiable,
+    testable, maintainable, feasible, back traceable, understandable
+  \item[c] list all interfaces, all HW-related issues and modes of
+    operation 
+  \item[d] distinguish safety-related from other functions
+  \item[e] use formalizations for complex logical and numerical
+    functionalities and semi-formal modeling for structural representations  
+  \end{description}
+\item[Req 3.2] The ``Overall SW Test Specification'' shall
+  \begin{description}
+  \item[a] include functional black-box tests based on a boundary value
+    analysis and apply input partitioning according to equivalence
+    classes of inputs according to the specification
+  \item[b] include performance tests for response times
+  \item[c] be specified in more detail in the ``Verification Plan''
+    with rationales for the adequacy of the chosen measures
+  \end{description}
+\item[Req 3.3] The ``SW Specification Verification Report'' shall be
+  specified in the ``Verification Plan''.
+\end{description}
+
+
+%%%%%% Phase 04 %%%%%%%%%
+\subsection{SW Design}
+\label{sec:softw-arch-desi-phase}
+
+\subsubsection{Objectives}
+\label{sec:4-objectives}
+
+A structure of the SW is defined, with components whose combination
+will realize the SW requirements. The interplay of the components is
+specified, in a form that it can be checked on the
+implementation. Safety requirements are treated with adequate care so
+that the contribution of each component to the safety function of the
+SW is unambiguously clear and safety is verifiable. The description
+must enable implementors to independently develop components and
+provide them with references to all means to do so.
+
+\subsubsection{Activities}
+\label{sec:4-activities}
+
+The SW requirements are analyzed to generate a suitable decomposition
+into components realizing subfunctions. An execution paradigm for the
+whole SW and the interplay of components (timing, execution order,
+communication paradigm) is defined. The SW interfaces are specified
+precisely. Languages, coding rules and tools for the implementation
+are chosen. A test strategy for integration testing is chosen and the
+integration and component tests are specified. The adequacy and
+correctness of the results is verified.
+
+
+\subsubsection{Input}
+\label{sec:4-input}
+
+The main phase-specific inputs are:
+\begin{enumerate}
+\item \textbf{SW Requirements Specification}
+\item \textbf{Sub-System Architecture Design} provides the external
+  interface of the SW via the HW API definition.
+\end{enumerate}
+
+\subsubsection{Output}
+\label{sec:4-output}
+
+\begin{enumerate}
+\item \textbf{SW Architecture and Design Specification (DES)} This
+  artifact covers SW architecture, overall SW design and detailed
+  component design in the form of detailed specifications. All
+  functionality is described in its realization by independent
+  functions. The coding principles and rules for implementing the
+  components are defined. In particular, this shall address the use of
+  the SCADE Suite.  The artifact may be split over several documents.
+\item \textbf{SW Interface Specification (DES)} This complements the
+  ``SW Architecture and Design Specification'' by providing detailed
+  interface specifications of the overall SW and of the SW components. 
+\item \textbf{SW Integration Test Specification (INT)} Specification
+  of the procedure for integrating the SW, testing that the integrated
+  SW components interact correctly, and that the SW can run on the
+  specified HW. The SW integration test may reuse tests from the
+  component tests. The integration with HW is tested via a HW
+  simulation.
+\item \textbf{SW Component Test Specification (TST)} On the level of
+  modules, the specification defines a general procedure for white-box
+  testing which is to be instantiated with adequate tests for each
+  module. The procedure includes a coverage criterion for SCADE models
+  which is to be achieved by the tests. On the level of components,
+  black-box tests checking the correct implementation of the
+  functionality of the components are specified.
+\item \textbf{SW Design Verification Report (VER, VAL)}
+  Report on the verification of the results of this phase.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:4-requirements}
+
+\begin{description}
+\item[Req 4.1 {\cite[7.3.4.2 to 7.4.3.17]{EN50128:2011}}] The ``SW
+  Architecture and Design Specification'' defines the structure of the
+  SW addressing feasibility, HW/SW interaction, components,
+  scheduling, the paradigm for component communication and
+  interaction, safety, fault handling, the use of prototype models,
+  development strategy, techniques and measures. No pre-existing SW
+  will be used. The architecture measures to be taken according to
+  \cite[A.3]{EN50128:2011} are Defensive Programming, Diverse
+  Programming, Fully Defined Interfaces, Modeling and Structured
+  Methodology. \emph{Rationale: This is one of the approved
+  combination (``1) a)'' with ``Modeling'') of techniques. To use
+  ``Error Detecting Codes'' as in combination ``1) b)'' would not make
+  sense, so ``1) a)'' is chosen. ``Modeling'' is a technique which is
+  applied in the openETCS approach, so it is taken as the
+  complementary technique for ``1) a)''.}
+\item[Req 4.2 {\cite[7.3.4.18 to 7.4.3.20]{EN50128:2011}}:] The ``SW
+  Interface Specification'' addresses input and output invariants
+  (including bounds) and measures in case of invariant violation. The
+  communication mechanism are detailed in the SW architecture and design.
+\item[Req 4.3 {\cite[7.3.4.21 to 7.4.3.24, 7.4.4.1 to
+    7.4.4.6]{EN50128:2011}}:] The overall SW and component design
+  uses, from \cite[A.4]{EN50128:2011}, Modeling, a modular approach,
+  design and coding standards and a strongly typed
+  language. \emph{Rationale: This is one of the approved combination
+    of techniques, with ``Modeling'' chosen instead of the alternative
+    ``Formal Methods''.}  Components shall have fully defined
+  interfaces with a general strategy of explicitly specified ways of
+  data access. \emph{Rationale: This is in accordance with the
+    requirements of \cite[A.20]{EN50128:2011}.}  The SCADE Suite
+  Advanced Modeler is used for implementation. Its language is
+  strongly-typed.  The style of modeling for the software and
+  component design is to be defined in accordance with
+  \cite[A.17]{EN50128:2011}. The component design shall relate SW
+  requirements to those components which contribute to the
+  requirement's implementation (with precise detailing of the safety
+  aspect) so that both the component requirements are defined clearly
+  and requirements can be traced, verified and tested. The way the
+  components are implemented shall be sketched (main internal data
+  representations and, where applicable, algorithms). Each component
+  specification shall be detailed so that it can be independently
+  implemented, i.e., not requiring knowledge of the implementation of other
+  components. This entails a definition of the overall and specific
+  cooperation principles between components and their interfaces. 
+\item[Req 4.4 {\cite[7.3.4.25 to 7.4.3.28]{EN50128:2011}}:] A modeling
+  guideline for SCADE models shall be defined which transfers accepted
+  criteria for SIL-4 coding \cite[A.12]{EN50128:2011} to the level of
+  SCADE models with their LUSTRE semantics. A style for documentation
+  shall be defined.
+\item[Req 4.5 {\cite[7.3.4.29 to 7.4.3.32]{EN50128:2011}}:] The ``SW
+  Integration Test Specification'' shall employ Dynamic Analysis and
+  Testing, Functional/Black-box Testing and Performance Testing
+  \cite[A.5,A.6]{EN50128:2011}. \emph{Rationale: This combination is
+    approved for SIL~4. Performance testing, which is highly
+    recommended, is included as it seems necessary.} A precise
+  description of form and content of the test specification shall be
+  given in the ``Verification Plan''.
+\item[Req 4.6 {\cite[7.3.4.33 to 7.3.4.39]{EN50128:2011}}:] These
+  requirements concern the SW/HW integration. Since no
+  hardware is being developed, the SW/HW integration will be replaced
+  by simulating the SW in an adequate environment, e.g., with
+  simulated HW. This shall be
+  done in the SW Validation Phase and addressed in the ``Validation Plan''.
+\item[Req 4.7 {\cite[7.4.4.7 to 7.4.4.10]{EN50128:2011}}:]
+  For each component, the ``SW Component Test Specifications'' shall
+  employ Dynamic Analysis and Testing, Test Coverage for Code,
+  Functional/Black-box Testing and Performance Testing
+  \cite[A.5]{EN50128:2011}.  A precise description of form and content
+  of the test specifications shall be given in the ``Verification
+  Plan''.
+\item[Req 4.8 {\cite[7.3.4.40 to 7.3.4.43, Sec.~6.1.4]{EN50128:2011}}:]
+  The verification of the architecture and design shall check that all
+  SW requirements are allocated, all SW/HW interaction aspects are
+  considered, that the architecture and design describe an adequate
+  decomposition into subfunctions. It shall be verified that the
+  aptness of the SCADE Suite in its use according to the coding
+  principles and rules is sufficiently justified, and that the
+  measures as a whole are in accordance with the EN~50128. It shall
+  employ Static Analysis and Tracing to verify the suitability and
+  completeness of the test specifications.
+\end{description}
+
+%%%%%% Phase 05 %%%%%%%%%
+\subsection{SW Component Implementation and Test}
+\label{sec:sw-component-implementation}
+
+\subsubsection{Objectives}
+\label{sec:5-objectives}
+
+This phase shall provide verified implementations of the components
+via modeling and code generation in the SCADE tool suite. 
+
+There may be additional code components developed by other
+means. The following text (Sec.~\ref{sec:5-activities} to
+\ref{sec:5-requirements}) does not explicitly address these, but shall
+apply analogously to them.  
+
+
+
+\subsubsection{Activities}
+\label{sec:5-activities}
+
+The components are modeled in the SCADE Suite. Code is generated from
+the models with the SCADE Suite code generator. The code is verified
+as described in the component test specification. This includes the
+generation and execution of white-box tests according to the procedure
+defined in ``SW Component Test Specification'' to reach the required
+coverage. Black-box test cases are to be derived from ``SW
+Component Test Specification'' (addressing functionality and
+performance) and executed. The component design, implementation and
+test shall be independently verified. 
+
+\subsubsection{Input}
+\label{sec:5-input}
+
+The main phase-specific inputs are:
+\begin{enumerate}
+\item ``SW Architecture and Design Specification''
+\item ``SW Interface Specification''
+\item ``SW Component Test Specification''
+\end{enumerate}
+
+\subsubsection{Output}
+\label{sec:5-output}
+
+\begin{enumerate}
+\item \textbf{SW Components (IMP)} The software components in the form
+  of SCADE models and C-code generated from them with the SCADE
+  KCG. The modules are tested for basic functionality and
+  compatibility with interface requirements 
+\item \textbf{SW Component Test Report (TST)} Documentation of white-box and black-box
+  tests according to the ``SW Component Test Specification'', as
+  performed by the Tester. Test environment and test cases are
+  to be provided so that the tests can be rerun. 
+\item \textbf{SW Component Verification Report (VER)} Report on the
+  verification of the results of this phase.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:5-requirements}
+
+\begin{description}
+\item[Req 5.1 {\cite[7.5.4.1 to 7.5.4.4]{EN50128:2011}}:] The SCADE
+  models shall have balanced size and complexity and be readable,
+  understandable and testable. Details on how to achieve this are to
+  be given in specific modeling guidelines. By testing, the
+  Implementer shall assert that a component produced is mature enough
+  for SW integration. \emph{Rationale: It is more efficient to let the
+  programmer perform basic tests than to involve a third party. This
+  also offers the possibility to improve code quality by testing
+  partially integrated SW, prior to rigorous verification.}
+  the code to a maturity level 
+\item[Req 5.2 {\cite[6.1.4.5, 7.5.4.7]{EN50128:2011}}:] The test report
+  shall document all essential information about the test object,
+  tester, results, coverage and evaluation. This report addresses the
+  verification activities performed by the Tester. Details shall be defined
+  in the verification plan. 
+% The Tester shall review the white-box
+%   tests performed by the Implementer, and shall perform the black-box
+%   component tests. \emph{Rationale: It is usually more efficient to
+%     let the Implementer perform the white-box tests. Note that tests
+%     performed by the Implementer are acceptable if they are fully
+%     documented (specification and report) and have been performed with
+%     suitable equipment, see \cite[6.1.4.1 to 6.1.4.5]{EN50128:2011}}.
+\item[Req 5.3 {\cite[7.5.4.8 to 7.5.4.10]{EN50128:2011}}:] The
+  verification of the results (documented in the ``SW Component
+  Verification Report'') shall address the usage of the coding rules in
+  the actual models, check structure, shape and documentation of the
+  models and control that all required tests are documented.
+\end{description}
+
+
+%%%%%% Phase 06 %%%%%%%%%
+\subsection{SW Integration}
+\label{sec:sw-integration-test}
+
+
+\subsubsection{Objectives}
+\label{sec:6-objectives}
+
+The integration shall result in a functional, integrated SW with
+correctly interacting components.  
+
+\subsubsection{Activities}
+\label{sec:6-activities}
+
+The SW components are integrated according to the integration
+strategy. Concrete test cases for integration tests are constructed as
+specified in the ``SW Integration Test Specification'' and applied to
+check the correct interplay of the components.
+
+\subsubsection{Input}
+\label{sec:6-input}
+
+\begin{enumerate}
+\item ``SW  Integration Test Specification''
+\item ``SW Components'': the objects to be integrated.
+\item ``SW Component Test Specification'', ``SW Component Test
+  Report'': For use in constructing test cases for the integration tests
+  and evaluating the results (reuse  of unit tests).
+\end{enumerate}
+
+\subsubsection{Output}
+\label{sec:6-output}
+
+\begin{enumerate}
+\item \textbf{SW Integration Test Report (INT)} Documentation of the
+  integration test.
+\item \textbf{SW Integration Verification Report (VER)} Report on the
+  verification of the SW integration and test.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:6-requirements}
+
+\begin{description}
+\item[Req 6.1 {\cite[7.6.4.1, 7.4.6.6]{EN50128:2011}}:] Necessary
+  changes identified in the integration process have to be analyzed
+  for their impact and trigger also re-verification. The tests shall
+  be fully documented and be repeatable, and it shall be justified that an appropriate set of
+  techniques and measures have been applied.\footnote{Inconsistently, the EN~50128:2011
+    requires in 7.3.4.32 the ``SW Integration Test Specification'' to
+    adhere to the requirements of Table~A.5, and in 7.6.4.6 to check
+    that the techniques and measures from Table~A.6 have been
+    correctly used. The procedure here follows Table~A.5 which subsumes Table~A.6.} 
+\item[Req 6.2 {\cite[7.6.4.7 to 7.4.6.10]{EN50128:2011}}:] These address
+  the SW/HW integration which is not done in openETCS. Substitute
+  activities via HW simulation are done in the subsequent phase.
+\item[Req 6.3 {\cite[7.6.4.11 to 7.4.6.13]{EN50128:2011}}:] The
+  verification shall check that all test according to the ``SW
+  Integration Test Specification'' have been documented in the test
+  report, and that the report meets the general requirements on a test
+  report and the specific ones (\cite[7.6.4.1,
+  7.4.6.6]{EN50128:2011}).
+\end{description}
+
+
+%%%%%% Phase 07 %%%%%%%%%
+\subsection{SW Validation}
+\label{sec:sw-validation}
+
+
+\subsubsection{Objectives}
+\label{sec:7-objectives}
+
+Validation of the functionality, safety and performance of the SW and
+its fitness for integration on a suitable HW.
+
+\subsubsection{Activities}
+\label{sec:7-activities}
+
+The SW is tested against its requirements according to the
+``Overall SW Test Specification'' and additional validation scenarios
+provided by the Validator. HW compatibility is checked via simulation, for which an
+environment is set up. The validation results are documented.
+
+\subsubsection{Input}
+\label{sec:7-input}
+
+\begin{enumerate}
+\item ``Overall SW Test Specification''
+\item ``SW Components'' (integrated)
+\item ``Validation Plan''
+\item ``SW Acceptance Plan''
+\end{enumerate}
+
+\subsubsection{Output}
+\label{sec:7-output}
+
+\begin{enumerate}
+\item \textbf{Overall SW Test Report (TST)}: Report on the conformity
+  test of the SW.
+\item \textbf{SW Validation Report (VAL)}: Report on the validation of
+  the SW, including the validation of the tools used in the process.
+\end{enumerate}
+
+\subsubsection{Requirements}
+\label{sec:7-requirements}
+
+\begin{description}
+\item[Req 7.1 {\cite[7.7.4.1 to 7.7.4.4]{EN50128:2011}}:] The
+  ``Overall SW Test Report'' shall document
+  \begin{itemize}
+  \item the tests performed according to the ``Overall SW Test
+    Specification'',
+  \item additional tests defined by the Validator, which may in
+    particular address operational aspects or potentially occurring
+    stress situations, and
+  \item how the HW compatibility has been checked via simulation.
+  \end{itemize}
+%
+\item[Req 7.2 {\cite[7.7.4.6 to 7.7.4.11]{EN50128:2011}}:] The ``SW
+  Validation Report'' shall state that the development has been done
+  in accordance with the ``Validation Plan'', and that all
+  verification activities have followed the ``Verification Plan'' and
+  meet the requirements of the EN~50126-1:1999, resp., the
+  EN~50128:2011. It shall also contain a substantiated statement that
+  the overall combination of techniques and measures is adequate and
+  in accordance with the standards, and that all tools are qualified
+  to their purpose. Any discrepancies and deviations are to be
+  documented and why they are acceptable. It shall contain a
+  conclusion of the fitness of the SW for its purpose under a
+  specified set of assumptions on the HW.
+\end{description}
+
+\section{Process Implementation}
+\label{sec:proc-impl}
+
+The process will not be implemented in a top-down, sequential style,
+where, e.g., specifications are completed and verified before the
+software is designed. Instead, the phases may overlap in time. This
+means, even software components may be designed before the SW
+specification is finalized. However, the final documentation of the
+development shall present a consistent, top-down view of the
+result. To ensure that this goal is achieved, specific considerations
+have to be given to the iterative aspect in the ``Project Plan'',
+``QA-Plan'' and in particular the ``Configuration Management Plan'' .
+
+
+Ideally, a plan should be made which sets the goals to be achieved
+in the openETCS project. This consists in defining  
+\begin{itemize}
+\item the functionality to be realized, and
+\item the completeness and maturity levels of the artifacts. 
+\end{itemize}
+The maturity could, for instance, be defined in classes like
+``Draft'', ``Revised'', ``Final''. Completeness refers to
+functionality and other, artifact specific issues. 
+
+The plan should define a timeline which states which grade shall be
+achieved at which stage, and add corresponding activities.
+
+Besides this general process flow, also the means, i.e., languages and
+tools, and their impact on the process should be addressed in a
+detailed description of the process implementation. In particular, the
+ramifications of the use of the SCADE tool suite deserve specific attention.
+
+\section{Glossary}
+\label{sec:glossary}
+\begin{description}
+\item[API] Application Programming Interface
+\item[EVC] European Vital Computer
+\item[FME(C)A] Failure Mode Effect (and Criticity) Analysis
+\item[FIS] Functional Interface Specification
+\item[HW] Hardware
+\item[I/O] Input/Output
+\item[OBU] On-Board Unit
+\item[openETCS activities] the openETCS project and ensuing activities 
+\item[openETCS project] the current project (ITEA~2)
+\item[openETCS] refers to the project and initiative, without a
+  particular focus on either
+\item[PHA] Preliminary Hazard Analysis
+\item[QA] Quality Analysis
+\item[RBC] Radio Block Center
+\item[RTM] RunTime Model
+\item[Semi-formal language] Language with a formal syntax (and a
+  semantics which need not be strictly formal)
+  necessarily 
+\item[SIL] Safety Integrity Level
+\item[SRS] System Requirement Specification
+\item[SSHA] Sub-System Hazard Analysis
+\item[SSRS] Sub-System Requirement Specification
+\item[strictly-formal language] Language with a formal syntax and a
+  formal, mathematical semantics
+\item[Sub System] This term denotes the EVC, whose software is the main focus of openETCS
+\item[SW] Software
+\item[System] This term denotes the ETCS system as described in Subset~026 \cite{subset-026:3.3.0}
+\item[Test Case] Precise description of input/output to/from a test
+  object, including a success criterion. Ready for execution but not
+  necessarily already in machine readable form.
+\item[Test Specification] A description of a set of test
+  cases. Not all parameters need to be specified precisely.
+\item[THR] Tolerable Hazard Rate
+\item[V\&V] Verification \& Validation
+\item[Vital] attribute of safety related items, e.g.\ artifacts
+\end{description}
+
+%% Bibliography
+% \nocite{*}
+\bibliographystyle{unsrt}
+\bibliography{Lbrr2_3a}
+
+
+
+%Examples are below
+
+
+%\lipsum[11]
+
+%\nocite{*}
+
+%\bibliographystyle{unsrt}
+%\bibliography{Lbrr}
+
+
+
+% \begin{thebibliography}{9}
+
+% \bibitem{lamport94}
+%   Leslie Lamport,
+%   \emph{\LaTeX: A Document Preparation System}.
+%   Addison Wesley, Massachusetts,
+%   2nd Edition,
+%   1994.
+
+% \end{thebibliography}
+
+%===================================================
+%Do NOT change anything below this line
+
+\end{document}
