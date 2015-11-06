@@ -1,3 +1,5 @@
+%\begin{flushright}
+%\end{flushright}
 \documentclass{template/openetcs_report}
 % Use the option "nocc" if the document is not licensed under Creative Commons
 %\documentclass[nocc]{template/openetcs_article}
@@ -5,9 +7,32 @@
 \usepackage{supertabular}
 \usepackage{multirow}
 \usepackage{color, colortbl}
+\usepackage{float}
 \definecolor{gray}{rgb}{0.8,0.8,0.8}
 \usepackage[modulo]{lineno}
 \graphicspath{{./template/}{.}{./images/}}
+
+
+%=======================================================================
+%%%%% comments %%%%%
+% To allow MS Word style comments at the document margin we use the todonotes package. A comment is made as follows:
+
+%\mycomment[IN]{text}
+
+% The text in brackets should be your initials and the text in curly braces is your actual comment. Comments are numbered automatically. 
+\usepackage[textwidth=2.7cm,textsize=scriptsize,linecolor=green!40,backgroundcolor=green!40]{todonotes}
+
+\newcounter{mycommentcounter}
+\newcommand{\mycomment}[2][]
+{
+\refstepcounter{mycommentcounter}%
+\todo[color={red!100!green!33}]{
+\textbf{[\uppercase{#1} \themycommentcounter]:} #2}
+}
+\setlength{\marginparwidth}{2.5cm}
+%\reversemarginpar
+%=======================================================================
+
 
 \begin{document}
 \frontmatter
@@ -24,7 +49,7 @@
 \wp{Work-Package 2}
 
 %set a title here
-\title{Scrum Prozess ETCS}
+\title{Scrum Process in openETCS Project}
 
 %set a subtitle here
 \subtitle{}
@@ -126,13 +151,15 @@ Approved by & -- & -- & \\
 \hline
 \end{tabular}
 
-\begin{tabular}{|p{2.2cm}|p{2cm}|p{3cm}|p{5cm}|}
+\begin{tabular}{|p{2.2cm}|p{2cm}|p{4cm}|p{4cm}|}
 \hline
 \multicolumn{4}{|c|}{Document evolution} \\
 \hline
 Version &  Date & Author(s) & Justification  \\
 \hline
 0.1 & 18/08/2015 & Jan Welte &  Document creation \\
+\hline 
+0.2 & 19/10/2015 & Abdelnasir Mohamed & Chapter 1.1 \\
 \hline  
 00.1 & 28/01/2014 &  &   \\
 
@@ -140,6 +167,9 @@ Version &  Date & Author(s) & Justification  \\
 \end{tabular}
 \newpage
 
+%=========ToDo List===========
+\listoftodos[ToDo List]
+\newpage
 % The actual document starts below this line
 %=============================
 
@@ -147,26 +177,24 @@ Version &  Date & Author(s) & Justification  \\
 
 \chapter{Introduction}
 \label{sec:introduction}
-
+ 
 Nasir
 
 Short introduction to this document.
-
+\mycomment[AM]{Introduction: finish section writing}
 \begin{itemize}
 \item extension to QA-Plan and Process Description
 \end{itemize}
 
+
+
 \section{Purpose}
 \label{sec:purpose}
 
-Nasir
+The purpose of this document is to define and describe the agile work-flow of the software development process in the openETCS project. As the outcomes of the project, the openETCS software and the openETCS development Tool chain, are precisely defined, the process of how these two artifacts at the beginning of the development process are being produced in detail is not clear. In the conventional software development  process, e.g. with a V-Model, the life cycle of the development is implemented in closed non re-definable phases, which they shall be processed consecutively. 
 
-purpose of this document
+Due to the complex nature of the openETCS as a  Research and Development (R\&D) Project an agile methodology is needed, which it's framework facilitates continuous refinements and improvements throughout the whole openETCS software development process. In this agile way of development complex Tasks are broken down into smaller Tasks (increments), which shall be executed in short time frames called Sprints. This document will be describing the agile framework in openETCS development process applying SCRUM.
 
-\begin{itemize}
-\item showing principals of the iterative work in openETCS development life cycle 
-\item explaining agile principles to coordinate work and complete artifacts
-\end{itemize}
 
 %\section{Document Structure}
 %\label{sec:document-structure}
@@ -202,6 +230,7 @@ of ETCS in Levels 1 \& 2}
 \item \textbf{OpenETCS D2.2} -- Report on CENELEC standard
 \item \textbf{OpenETCS D2.3} -- Definition of the overall process for the formal description of ETCS and the rail system it works in 
 \item \textbf{OpenETCS D2.4} -- Definition of the methods used to perform the formal description
+\item \textbf{The Scrum Guide} -- The Definitive Guide to Scrum: The Rules of the Game, July 2013
 \end{itemize}
 
 
@@ -237,25 +266,43 @@ of ETCS in Levels 1 \& 2}
 Jan
 
 really short introduction to the concept of agile development overall
+\mycomment[AM]{Agile Development: finish section writing}
 
-\subsection{Scrum}
+\subsection{SCRUM Definition And Roles}
 
-Nasir
+This section should be considered as an introduction for the following chapters to fit the content of this document. For more detailed information about SCRUM the \textit{Scrum Guide} is advisable to read. In the SCRUM Guide developed by Ken Schwaber and Jeff Sutherland, Scrum is defined as "\textit{A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value}". It is "\textit{simple to understand}" but "\textit{difficult to master}".
 
-introduction to Scrum 
+SCRUM defines three roles; the Product Owner (PO); the SCRUM Master (ScM) and the Development Team. All three roles together make the SCRUM Team.
 
-based on text in QA-Plan as it fits
+\subsection{General SCRUM Framework}
+
+Scrum process starts with a Product Backlog (PB), this Product Backlog contains an ordered list of requirements that is maintained for a product. The Product Backlog Items (PBIs) are ordered by the Product Owner based on considerations like risk, business value, date needed, etc. The Product Owner is the responsible of the product backlog and the prioritization of PBIs.
+
+After the defining of the Product Backlog the next task is to create the Sprint planning meeting. This meeting is organized at the beginning of the Sprint cycle. The objective of this meeting is to define the PBIs to be done in following Sprint. The Sprint is the time period in which development occurs on a set of backlog items that the team has committed to (also commonly referred to as iteration). 
+
+The result of PBIs selected for implementation in one Sprint is called the Sprint Backlog. The Sprint Backlog is the list of work the Development Team must address during the next Sprint. This list is derived by selecting product backlog items from the top of the product backlog until the Development Team fills it's capacity and make sure it has enough work to during the CompSprint.
+
+Each day during the Sprint, a project team communication meeting occurs. This is called a daily Scrum Meeting and has specific guidelines. The Scrum Meeting is organized by the Scrum Master and the participants respond to three questions:
+\begin{enumerate}
+\item  What have you done since yesterday?
+\item What are you planning to do today? 
+\item And Any impediments/stumbling blocks?.
+\end{enumerate}
+At the end of the Sprint, the result of the PBIs implemented is called the increment (potentially shippable increment), this is the sum of all the Product Backlog items completed during a Sprint and all previous Sprints. The increment must be in a usable condition regardless of whether the Product Owner decides to actually release it.
+
+At the end of Sprint cycle or iteration, two meetings are held; the Sprint review meeting and Sprint retrospective. The approximate duration of the spring review meeting will be no more than 4 hours and it will be moderated by the Scrum Master (ScM). In this meeting two main activities will take place. One is to review the the planned work that has been completed from the one that wasn't. And the second activity is to present to the Product owner the work done. The other meeting after iteration is the spring retrospective. This meeting will be moderated by the scrum master and it's main objective is the continuous process improvements. Two main questions are asked to all participants in this meeting:
 \begin{itemize}
-\item Concept of Scrum
-\item Roles
-\item Scrum Process
+\item   what went well during the Sprint? 
+\item What could be improved in the next Sprint?? 
 \end{itemize}
 
 
-\chapter{Agile Development in OpenETCS}
+\chapter{Agile Development in openETCS}
 \label{sec:agile}
 
 Jan
+\reversemarginpar
+\mycomment[AM]{Agile Dev oETCS: finish section writing}
 
 Basic concept of agile development in openETCS.
 Allocation of agile work principles to 
@@ -266,8 +313,75 @@ Allocation of agile work principles to
 \end{itemize}
 
 
-\chapter{Scrum of Scrum}
-\label{sec:Scrumofscrum}
+
+\chapter{openETCS SCRUM Process}
+\label{sec:ScrumProzess}
+
+In openETCS there are three levels of processes that apply SCRUM:
+\begin{itemize}
+	\item The first level is the openETCS Project level, where Project Coordinator is the Product Owner. In this level the SCRUM meetings are organized every Friday.
+	\item The second level is the Work Package level, where Work Package Leader is the Product Owner. In this level SCRUM meeting depends on WP, but at least two SCRUM meetings are organized every week.
+	\item The last level is the Task level, where the Task Leader is the Product Owner. In this level SCRUM meeting period is variable and depends on the task.
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{./images/openetcs__scrum.png}
+	\caption{openETCS Project Structure}
+\end{figure}
+
+\mycomment[AM]{finish section writing} \\
+
+\section{SCRUM Process in Work Packages}
+
+- As defined in FPP there are 7 WPs\\
+- WP Roles and it's conventions to conform the EN 50128 Roles\\
+- Grafik of Roles for SW dev. in EN 50128 
+- Every WP has its own PO\\
+- Webbased CM (GitHub)\\
+-----------------------------------------
+
+
+\textbf{Product backlog of the Modeling Team (WP3)}
+
+The product backlog is implemented via the issue tracker.
+The product backlog consists ofUse Cases, marked with the label "US-Operational Scenarios on Utrecht Amsterdam".
+Each Use Cases has an unique User Story label identifing this Use Case in the backlog.
+(Sub-) User Stories identified as necessary for the implementation of a Use Cases are marked with the user story label,
+
+The actual work at the user stories is broken down in smaller technical tasks. These tasks are organised in the sprint backlog. Use the label sprint backlog for defining a task.
+Remark: We will use specific sprint labels when we better start to organise the work in individual sprints.
+
+The sprint backlog consists of prioritized tasks. Priorities are integers in the interval [1...1000], with 1000 representing the highest priority. Note that the absolute value is of minor interest, priorization is only needed to classify backlog items by importance.
+
+Priorities are captured in the title of each task respectively issue. Example: US-SpeedMonitoring: Dynamic ASave Calculation Prio: 500 represents a user story with priority 500. The reason to capture the priority in the title is to make priority changes traceable, as the text of github issues may be changed without leaving any trace.
+
+The labels Ready, In Progress, and Deferred are used to capture the state of user stories. Note that closing an issue is equivalent to the state Done.
+
+A user story may only be moved to the state Ready when:
+	A priority has been assigned.
+	The scope is clearly defined and distinguished from other user stories in the states Ready or in Progress.
+	The criteria for reaching the state Done are clear.
+	When setting a user story to "done" a comment is mandatory for documenting the result.
+	Every project member is eligible to propose user stories.
+
+New user stories shall remain in the state (respectively column) Inbox until they have been reviewed by the team in a grooming session. 
+
+
+
+
+
+\missingfigure{SCRUM in WPs} \\ \\
+
+
+%mycomment{} have been wrongly placed on the left margin
+
+Here!
+\reversemarginpar
+\mycomment[AM]{SCRUM in WPs GitHub: finish section writing}
+
+\section{Scrum of Scrums}
+
 
 Nasir
 
@@ -276,7 +390,7 @@ Short introduction to principle of splitting work between different teams, as re
 Principles of grooming work and filling backlogs for distributed Scrum Teams by dynamic work allocation.
 
 Text based on wiki page by Marc Behrens
-
+\mycomment[AM]{SCRUM of SCRUMS Wiki in WP3 GitHub: finish section writing}
 \textit{Objective:} Ongoing verification and validation of openETCS development artifacts are performed within the framework of openETCS scrum process. This page describes the interface of agile verification and validation to the top level customer as well as the scrum process within the verification and validation itself.
 
 \begin{figure}[h]
@@ -313,8 +427,8 @@ During regular grooming sessions the scrum team extracts the items with highest 
 On these issues Project Poker is performed on and by this Story Points are assigned. The decision on which items enter the Sprint Backlog is based on the maximum benefit analysis taking into account the priority as well as the story points.
 
 \textbf{Sprint Backlog}
-The \textit{Sprint Backlog} consists of issues which are processed during the sprint.
-During the sprint the success is tracked against the Sprint Backlog.
+The \textit{Sprint Backlog} consists of issues which are processed during the Sprint.
+During the Sprint the success is tracked against the Sprint Backlog.
 The Story Points are earned once the complete result of what has been groomed is uploaded to the github.
 
 \chapter{Release Principals}
