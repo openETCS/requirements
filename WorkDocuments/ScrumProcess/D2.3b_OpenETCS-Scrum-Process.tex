@@ -10,7 +10,6 @@
 \usepackage{float}
 \definecolor{gray}{rgb}{0.8,0.8,0.8}
 \usepackage[modulo]{lineno}
-\usepackage{comment}
 \graphicspath{{./template/}{.}{./images/}}
 
 
@@ -108,6 +107,7 @@
 
 \begin{abstract}
 
+
 \end{abstract}
 
 %=============================
@@ -128,7 +128,7 @@ Work Package &    \\
 Deliverable ID & \\
 \hline
 Document title & openETCS \\
-Document version & 0.3 \\
+Document version & 01.1 \\
 Document authors (org.)  & Jan Welte (TU-BS) and Abdelnasir Mohamed (AEbt)\\
 \hline
 \end{tabular}
@@ -149,7 +149,7 @@ Main reviewers (org.) & \\
 \hline
   &  Name & Role & Date   \\
 \hline  
-Written by    &  Jan Welte & WP4-T4.4 Task Leader  &  November 2015\\
+Written by    &  Jan Welte & WP4-T4.4 Task Leader  &  March 2015\\
 \hline
 Approved by & -- & -- & \\
 \hline
@@ -166,8 +166,9 @@ Version &  Date & Author(s) & Justification  \\
 0.2 & 19/10/2015 & Abdelnasir Mohamed & Chapter 1.1 \\
 \hline  
 0.3 & 28/01/2014 & Jan Welte & Editing of Chapter 1.2, 3 and 4  \\
-
 \hline  
+0.4 & 28/11/2015 & Abdelnasir Mohamed & Editing of Chapter 1.2, 1.3, 1.4.2, 1.4.3 and 3\\
+\hline
 \end{tabular}
 \newpage
 
@@ -181,18 +182,7 @@ Version &  Date & Author(s) & Justification  \\
 
 \chapter{Introduction}
 \label{sec:introduction}
-
-\begin{comment} 
-Nasir
-
-Short introduction to this document.
-\mycomment[AM]{Introduction: finish section writing}
-\begin{itemize}
-\item extension to QA-Plan and Process Description
-\end{itemize}
-\end{comment}
-
-
+ 
 \section{Purpose}
 \label{sec:purpose}
 
@@ -232,10 +222,14 @@ processing systems –- Safety related electronic systems for signalling}
 of ETCS in Levels 1 \& 2}
 \item \textbf{SUBSET-088} 2.3.0 --- \emph{ETCS Application Levels 1 \& 2 - Safety Analysis}
 \item \textbf{OpenETCS FPP} --- \emph{Project Outline Full Project Proposal Annex OpenETCS} -- v2.2
+\item \textbf{OpenETCS D1.3.1} -- Project Quality Assurance Plan
 \item \textbf{OpenETCS D2.2} -- Report on CENELEC standard
-\item \textbf{OpenETCS D2.3} -- Definition of the overall process for the formal description of ETCS and the rail system it works in 
+\item \textbf{OpenETCS D2.3} -- Definition of the overall process for the formal description of ETCS and the rail system 
 \item \textbf{OpenETCS D2.4} -- Definition of the methods used to perform the formal description
+\item \textbf{GitHub: WP3 Wiki } -- WP3 Scrum Process
+\item \textbf{GitHub: WP4 Wiki } -- Scrum of Scrums
 \item \textbf{The Scrum Guide} -- The Definitive Guide to Scrum: The Rules of the Game, July 2013
+
 \end{itemize}
 
 
@@ -262,6 +256,8 @@ of ETCS in Levels 1 \& 2}
 \textbf{SRS} & System Requirement Specification \\ 
 %\textbf{THR} & Tolerable Hazard Rate \\ 
 \textbf{V\&V} & Verification \& Validation \\ 
+\textbf{PB} & Product Backlog \\ 
+\textbf{SoS} & Scrum of Scrums \\ 
 \end{tabular} 
 
 
@@ -282,9 +278,7 @@ Each agile method applies in their own way steps to allow learning and to adopte
 
 \subsection{SCRUM Definition And Roles}
 
-This section should be considered as an introduction for the following chapters to fit the content of this document. For more detailed information about SCRUM the \textit{Scrum Guide} is advisable to read. In the SCRUM Guide developed by Ken Schwaber and Jeff Sutherland, Scrum is defined as "\textit{A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value}". It is "\textit{simple to understand}" but "\textit{difficult to master}".
-
-SCRUM defines three roles; the Product Owner (PO); the SCRUM Master (ScM) and the Development Team. All three roles together make the SCRUM Team.
+This section should be considered as an introduction for the following chapters to fit the content of this document. For more detailed information about SCRUM the \textit{Scrum Guide} is advisable to read. The SCRUM Guide defines SCRUM as "\textit{A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value}". It is "\textit{simple to understand}" but "\textit{difficult to master}". For this framework three roles are defined: the Product Owner (PO); the SCRUM Master (ScM) and the Development Team. All three roles together make the SCRUM Team.
 
 \subsection{General SCRUM Framework}
 
@@ -305,23 +299,23 @@ At the end of the Sprint, the result of the PBIs implemented is called the incre
 At the end of Sprint cycle or iteration, two meetings are held; the Sprint review meeting and Sprint retrospective. The approximate duration of the spring review meeting will be no more than 4 hours and it will be moderated by the Scrum Master (ScM). In this meeting two main activities will take place. One is to review the the planned work that has been completed from the one that wasn't. And the second activity is to present to the Product owner the work done. The other meeting after iteration is the spring retrospective. This meeting will be moderated by the scrum master and it's main objective is the continuous process improvements. Two main questions are asked to all participants in this meeting:
 \begin{itemize}
 \item   what went well during the Sprint? 
-\item What could be improved in the next Sprint?
+\item What could be improved in the next Sprint?? 
 \end{itemize}
 
 
 \chapter{Agile Development in openETCS}
 \label{sec:agile}
 
-The openETCS Project is concerned with the development for the kernel software of an ETCS on-board unit (OBU). The European Vital Computer (EVC) as the central part ot the OBU contains the core control functionality fore the train movement and therefore has a SIL 4 classification according to the applicable CENELEC standards. Respectively, it software development has to satisfy the SIL 4 process requirements of the EN 50128 standard. 
+The openETCS Project is concerned with the development for the kernel software of an ETCS on-board unit (OBU). The European Vital Computer (EVC) as the central part ot the OBU contains the core control functionality for the train movement and therefore has a SIL 4 classification according to the applicable CENELEC standards. Respectively, its software development has to satisfy the SIL 4 process requirements of the EN 50128:2011 standard. 
 
-Although the openETCS project itself only aims to provide a non vital functional reference implementations, which itself does not require SIL 4 methods, the project has the goal to provide a development methodology applicable for SIL 4 development. This process makes use of model-based development and agile development principals, while following the QA principals which are emphasized by the EN 50128 lifecycle. 
+Although the openETCS project itself only aims to provide a non vital functional reference implementations, which itself does not require SIL 4 methods, the project has the goal to provide a development methodology applicable for SIL 4 development. This process makes use of model-based development and agile development principals, while following the QA principals which are emphasized by the EN 50128. 
 
 As the CENELEC standards have been defined based on a traditional V-Model development process, agile SCRUM principles are integrated in the openETCS development process by addressing tasks of several phases at the same time and thereby creating artifacts in an iterative steps. In addition the required organizational structures for SIL 4 development mainly ensuring independence between design, testing and V\&V have to be established in the agile work organization.
 
 \section{Roles and Responsibilities}
 
-Although the CENELEC standards and the SCRUM development process both define specific roles these have a different focus. The CENELEC roles are specified to establish responsibilities which are going along with specific tasks. The clear separation of certain roles between different personal which can also be under different organizational structures shall ensure Independence as the basis for QA. SCRUM roles are purely defined from a process view. They shall ensure that the costumer needs are always the focus point of all activities and that the agile principals of learning and adopting are always applied in a consistent way. Consequently, these roles for the most part are not separating working tasks performed during the development.
-Therefore the QA aspect of the CENELEC roles can be fulfilled in a SCRUM working process by ensuring the required personal and organizational independence during the SCRUM work allocation. As the SCRUM process is focused on small communicating teams, it is reasonable to further strengthen the personal independence by addressing larger work portions like validation in separate SCRUM teams. By having several SCRUM Teams working a means has to be established to continuously allocate and groom the task between those teams and to incorporate the lessons learned. The openETCS project uses a so called SCRUM of SCRUM in which a representative of each SCRUM Team and the overall product owner pre-groom task and allocate them between the SCRUM Teams e.g. modling and V\&V. Afterwards each SCRUM teams grooms all tasks further and addresses them in their Sprint planning. Feedback from the Sprint review is channeled back tot the SCRUM of SCRUM if necessary. Only in the SCRUM Team specific people are assigned to as tasked in accordance with their qualification, which can provide the same separation and qualification assurance as required in a SIL 4 development.   
+Although the CENELEC standards and the SCRUM development process both define specific roles these have a different focus. The CENELEC roles are specified to establish responsibilities which are going along with specific tasks. The clear separation of certain roles between different personnel which can also be under different organizational structures shall ensure Independence as the basis for QA. SCRUM roles are purely defined from a process view. They shall ensure that the costumer needs are always the focus point of all activities and that the agile principals of learning and adopting are always applied in a consistent way. Consequently, these roles for the most part are not separating working tasks performed during the development.
+Therefore the QA aspect of the CENELEC roles can be fulfilled in a SCRUM working process by ensuring the required personnel and organizational independence during the SCRUM work allocation. As the SCRUM process is focused on small communicating teams, it is reasonable to further strengthen the personnel independence by addressing larger work portions like validation in separate SCRUM teams. By having several SCRUM Teams working means has to be established to continuously allocate and groom the task between those teams and to incorporate the lessons learned. The openETCS project uses a so called SCRUM of SCRUM in which a representative of each SCRUM Team and the overall product owner pre-groom task and allocate them between the SCRUM Teams, e.g. modling and V\&V. Afterwards each SCRUM team grooms all tasks further and addresses them in their Sprint planning. Feedback from the Sprint review is channeled back to the SCRUM of SCRUM if necessary. Only in the SCRUM Team specific people are assigned to as tasked in accordance with their qualification, which can provide the same separation and qualification assurance as required in a SIL 4 development.   
  
 \section{Lifecycle}
 The SCRUM process corresponding to the agile development principals does not explicitly defines artifacts which have to be delivered during the software lifecycle. The SCRUM process only provides a process framework in which all needed artifacts to satisfy costumer needs shall be developed and maintained. In contrast is the CENELEC lifecycle explicitly stating number of artifacts which shall be provided during the lifecycle. Respectively, these artifacts are provided during the openETCS development as it is presented in D2.3a and figure~\ref{fig:lifecycle2}. 
@@ -338,7 +332,7 @@ The SCRUM process corresponding to the agile development principals does not exp
 
 The agile development is applied as these artifacts are not produced one by one and without exchanges. In fact the artifact are more or less a result of tasks essential to reach the final goal of a functional ETCS OBU kernel software. All artifacts defined in D2.3 are either an intermediate product like the SysML Architecture Model or the SCADE Software Specification Model, or they are needed documentation and results for QA measures like plans and reports.
 
-As the agile development is based on continues development, which repeatedly taken feedback and changes into account, the artifacts are completed over time with the ongoing work. Thereby, the system is developed in iterations, which has the consequence that also the corresponding artifacts are produced over time. Thereby, each iteration strongly requires V\&V steps for every artifact and simulation to allow costumer feedback. These QA measures are consistent with the CENELEC lifecycle principal which require verification and testing reports for every artifact and validation for the overall system. The critical step for the agile development is to ensure consistency between all related artifacts and to establish a capable configuration management to ensure that all findings and the resulted changes are taken into account properly in all following iterations. To allow fast feedback and be able to repeated these activities with every iteration a efficient tool support and test automation is needed in agile development. Figure~\ref{fig:openETCSSCRUMSprint} demonstrates the general SCRUM concept in openETCS.
+As the agile development is based on continues development, which repeatedly taken feedback and changes into account, the artifacts are completed over time with the ongoing work. Thereby, the system is developed in iterations, which has the consequence that also the corresponding artifacts are produced over time. Thereby, each iteration strongly requires V\&V steps for every artifact and simulation to allow costumer feedback. These QA measures are consistent with the CENELEC standards lifecycle principal which require verification and testing reports for every artifact and validation for the overall system. The critical step for the agile development is to ensure consistency between all related artifacts and to establish a capable configuration management to ensure that all findings and the resulted changes are taken into account properly in all following iterations. To allow fast feedback and be able to repeat these activities with every iteration an efficient tool support and test automation is needed in agile development. Figure~\ref{fig:openETCSSCRUMSprint} demonstrates the general SCRUM concept in openETCS.
 
 \begin{figure}[hbt]
 \centering
@@ -368,120 +362,109 @@ In openETCS there are three levels of processes that apply SCRUM:
 	\caption{openETCS Project Structure}
 \end{figure}
 
-\begin{comment}
-\mycomment[AM]{finish section writing} \\
-\end{comment}
+Compliance to SCRUM Requirements is achieved by means of
+\begin{itemize}
+	\item Each Work Package/Top-Project Leader is the SCRUM Product Owner of the corresponding WP/Top-Project results and maintains the corresponding backlog
+	\item Each Project/Task Leader is the SCRUM  Product Owner of the corresponding Tasks results  and maintains the corresponding backlog
+	\item The Project Coordinator is the SCRUM Product Owner of the project results and maintains the project results backlog.
+	\item Weekly meetings are maintained to find and report on impediments, assess progress, promote cross-collaboration, plan next steps and therefore, maintain the corresponding backlog.
+	\begin{itemize}
+		\item Weekly Scrum meetings are per definition open meetings, e.g., everybody from the teams can participate and contribute to the meeting.
+		\item The weekly meetings are strictly time-boxed.
+		\item At WP/Project level, the registered committers, contributors, users and adopters are invited to participate
+		\item At Open ETCS project level, the components of the PMB( Project Management Board) are invited.
+	\end{itemize} 
+	\item The work-packages resp. tasks need to organize there scrum teams according to practical needs.
+	\item Teams are typically distributed in geography and in organisation (i.e., participating companies).
+	\item Scrum teams typically have to provide several development roles (according to CENELEC and according to Eclipse). Guidance on the possible mixtrues of CENELEC roles into a Scrum team is documented in the appendices section of this guideline.
+	\item To be able to be successful in Agile Development we need to set special focus to the role of the "User" of a product.
+	\begin{itemize}
+		\item In general, the user of a product in openETCS should representratives of the project openETCS consuming the result of a scrum team. 
+		\item The workpackage leader of the WP using an outcome of the team is the first candidate.
+		\item Representatives of partners making use of the openETCS result in long term are also natural users of a team result.
+		\item Partners in the openETCS project need to agree on the Users before the task when planning the interfaces. 
+	\end{itemize}  
+	\item Each team has to select a scrum master. Scrum training is mandatory.
+	\item A SCRUM master (WP1) is responsible for supporting the teams.
+	\item openETCS project dissemination and exploitation results are managed by WP6
+	\item Software development tasks will be accomplished within the WP2, WP3, WP4, WP5 and WP7  
+\end{itemize}
+
+ 
+
 
 \section{SCRUM Process in Work Packages}
 
-\begin{comment}
-- As defined in FPP there are 7 WPs\\
-- WP Roles and it's conventions to conform the EN 50128 Roles\\
-- Grafik of Roles for SW dev. in EN 50128 
-- Every WP has its own PO\\
-- Webbased CM (GitHub)\\
------------------------------------------
-\end{comment}
+- assigning the Roles in the Scrum process as for SW dev. in EN 50128
 
-\textbf{Product backlog of the Modeling Team (WP3)}
+Every work package has its own product backlog. Due to the fact that the openETCS stakeholders are based in different European countries the PB is implemented via the issue tracker on the web based tool on GitHub for arbitrary access . It consists of Use Cases, marked with the label "\textit{US-Operational Scenarios on Utrecht Amsterdam}". Each Use Case has a unique User Story label identifying this Use Case in the backlog. (Sub-) User Stories identified as necessary for the implementation of a Use Case are marked with the user story label.
 
-The product backlog is implemented via the issue tracker.
-The product backlog consists ofUse Cases, marked with the label "US-Operational Scenarios on Utrecht Amsterdam".
-Each Use Cases has an unique User Story label identifing this Use Case in the backlog.
-(Sub-) User Stories identified as necessary for the implementation of a Use Cases are marked with the user story label,
+The actual work at the user stories is broken down in smaller technical tasks. These tasks are organized in the sprint backlog and will be as such labeled. The sprint backlog consists of prioritized tasks and their priorities are integers in the interval [1 \dots 1000], with 1000 representing the highest priority. This priority absolute value is of minor interest. prioritization is only needed to classify backlog items by importance and they are captured in the title of each task respectively issue. Example: US-SpeedMonitoring: Dynamic ASave Calculation Prio: 500 represents a user story with priority 500. The reason to capture the priority in the title is to make priority changes traceable, as the text of GitHub issues may be changed without leaving any trace.
 
-The actual work at the user stories is broken down in smaller technical tasks. These tasks are organised in the sprint backlog. Use the label sprint backlog for defining a task.
-Remark: We will use specific sprint labels when we better start to organise the work in individual sprints.
-
-The sprint backlog consists of prioritized tasks. Priorities are integers in the interval [1...1000], with 1000 representing the highest priority. Note that the absolute value is of minor interest, priorization is only needed to classify backlog items by importance.
-
-Priorities are captured in the title of each task respectively issue. Example: US-SpeedMonitoring: Dynamic ASave Calculation Prio: 500 represents a user story with priority 500. The reason to capture the priority in the title is to make priority changes traceable, as the text of github issues may be changed without leaving any trace.
-
-The labels Ready, In Progress, and Deferred are used to capture the state of user stories. Note that closing an issue is equivalent to the state Done.
-
-A user story may only be moved to the state Ready when:
-	A priority has been assigned.
-	The scope is clearly defined and distinguished from other user stories in the states Ready or in Progress.
-	The criteria for reaching the state Done are clear.
-	When setting a user story to "done" a comment is mandatory for documenting the result.
-	Every project member is eligible to propose user stories.
-
-New user stories shall remain in the state (respectively column) Inbox until they have been reviewed by the team in a grooming session. 
+The labels \textit{Ready}, \textit{In Progress}, and \textit{Done} are used to capture the state of the user stories. While closing of an issue is equivalent to the state \textit{Done} a user story may only be moved to the state \textit{Ready} when:
+\begin{itemize}
+\item a priority has been assigned,
+\item the scope is clearly defined and distinguished from other user stories in the states \textit{Ready} or \textit{In Progress},
+\item and the criteria for reaching the state \textit{Done} are clear.
+\end{itemize}
+When setting a user story to \textit{Done} a comment is mandatory for documenting the result. Every project member is eligible to propose user stories. New user stories shall remain in the state  \textit{Inbox} until they have been reviewed by the team in a grooming session. 
 
 
-\begin{comment}
-
-\missingfigure{SCRUM in WPs} \\ \\
-
-
-%mycomment{} have been wrongly placed on the left margin
-
-Here!
-\reversemarginpar
-\mycomment[AM]{SCRUM in WPs GitHub: finish section writing}
-
-\end{comment}
+The backlog can be visualized as a scrum board with the help of the free web based tool waffle. The use of waffle is completely optional, as it does not provide any additional information. However, waffle provides a more user friendly and intuitive way to display the information in the backlog. When using waffle the backlog items of the same category (e.g. Ready) should be ordered by priority with the highest priority item on top. These priorities have to be captured manually in the title of the issue, i.e. user story, to make it traceable and allow to see priorities without using waffle. By moving backlog items between columns the assignment of the corresponding state tables will automatically take place. 
 
 \section{Scrum of Scrums}
 
-\begin{comment}
-Nasir
+As the openETCS organization consists of seven work packages, seven different Scrum teams will need to work together causing interdependencies. Scrum of Scrums is a way to scale and handle  these kind of dependency management in big organizations. By applying SoS all WPs can align their interactions and coordinate flow of information between them\ref{fig:openETCSWPinSprint}.
 
-Short introduction to principle of splitting work between different teams, as required by the EN 50128
-
-Principles of grooming work and filling backlogs for distributed Scrum Teams by dynamic work allocation.
-
-\end{comment}
-
-%Text based on wiki page by Marc Behrens
-%\mycomment[AM]{SCRUM of SCRUMS Wiki in WP3 GitHub: finish section writing}
-%\textit{Objective:} 
-Ongoing verification and validation of openETCS development artifacts are performed within the framework of openETCS scrum process. This page describes the interface of agile verification and validation to the top level customer as well as the scrum process within the verification and validation itself.
-
+\newpage
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.7\linewidth]{./images/openETCSVnVScrumOfScrum_02}
-\caption{openETCS scrum of scrums}
-\label{fig:openETCSVnVScrumOfScrum}
+	\centering
+	\includegraphics[width=0.95\linewidth]{images/openETCS_WPs_in_SCRUMsprint}
+	\caption{openETCS Scrum of Scrums}
+	\label{fig:openETCSWPinSprint}
 \end{figure}
-
-Within the agile scrum process of openETCS different backlogs are used to synchronise the top level project goals with the tasks performed within the project: 
-
-\begin{itemize}
-\item Each backlog itself consists of items which are represented within the github issue tracker. 
-\item For each backlog a Product Owner is assigned to coordinate and prioritize the items.
-\item Each Story Point (SP) is estimated to be worth one person day.
-\end{itemize}
+	
 
 
-\textbf{The Product Backlog (Product Owner: Klaus-Rüdiger Hase)}
+
+
+
+\textbf{openETCS Product Owner (WP1)}
+
 The Product Backlog consists of top level \textit{Features} by which the product is described.
 \begin{itemize}
 \item  Each Feature itself is estimated by the product owner on how many Story Points this Feature is worth.
-\item  A Feature itself is divided into **Feature Parts**.
-\item  A Feature Part is related directly to a working package and the repository the work is documented in.
+\item  A Feature itself is divided into \textit{Feature Parts}.
+\item  A Feature Part is related directly to a working package and the repository in which the work is documented.
 \item  Each Feature Part itself is estimated and prioritized by the product owner on how many Story Points this Feature Part is worth.
 \end{itemize}
 
 
-By estimating the feature the feature becomes accepted on product Level.
+By estimating the feature, the feature becomes accepted on product Level.
 The Product Backlog is maintained during a regular meeting.
 
-\textbf{Transferring the Features from the \textit{Product Backlog} to the Verification and Validation Sprint Backlog}
+\textbf{Transferring the Features from the \textit{Product Backlog} to the WP Sprint Backlog}
 During regular grooming sessions the scrum team extracts the items with highest priority out of the Product Backlog and refines them to issues within the repository mentioned within the Feature Part.
 On these issues Project Poker is performed on and by this Story Points are assigned. The decision on which items enter the Sprint Backlog is based on the maximum benefit analysis taking into account the priority as well as the story points.
 
 \textbf{Sprint Backlog}
 The \textit{Sprint Backlog} consists of issues which are processed during the Sprint.
 During the Sprint the success is tracked against the Sprint Backlog.
-The Story Points are earned once the complete result of what has been groomed is uploaded to the github.
+The Story Points are earned once the complete result of what has been groomed is uploaded to the GitHub.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{./images/openETCSVnVScrumOfScrum_02}
+	\caption{openETCS SoS dependency management}
+	\label{fig:openETCSVnVScrumOfScrum}
+\end{figure}
 
 \chapter{Release Principals}
 \label{sec:Releases}
 
 The agile SCRUM development has an incremental approach dividing the system into smaller functional parts, which are gradually developed and implemented. The model-based development approach using SCADE makes it possible to incorporate all developed parts as soon as possible and thereby making it possible at an early stage to simulate the provided functionality. This continuous development results in releases with reduced functionality, which are in itself consistent and can be used by other SCRUM Design Teams and the V\&V Team to synchronize there functionality or tests.
 
-In this agile development, the incremental delivery quickly allow feedback from the customers, which in the case of openETCS are the project management and other railway stockholders. As an ETCS OBU is a highly safety-relevant system and openETCS is only developing the software kernel the releases cannot be tested in a productive implementation. But the use of simulations and demonstrators allows to address the main functional aspects. In addition the agile development can combine an external delivery of large components of the overall system with frequent and internal deliveries for simulations. Thereby, the internal releases are not following a concrete pre-planed system, but are triggered by the speed of development and the need of other Scrum Teams to access certain functionalities. The SCRUM Teams select the entries from the backlog which are entered in a sprint and define the criteria when a task is done from their perspective. For example in openETCS a model including a defined set of functions is handed over from the design to the V\&V SCRUM Team for independent evaluation and validation of these functions. The V\&V team documents it's findings for all artifacts in their respective reports and gives them as feedback via github issues back at the Design Team.  
+In this agile development, the incremental delivery quickly allow feedback from the customers, which in the case of openETCS are the project management and other railway stockholders. As an ETCS OBU is a highly safety-relevant system and openETCS is only developing the software kernel the releases cannot be tested in a productive implementation. But the use of simulations and demonstrators allows to address the main functional aspects. In addition the agile development can combine an external delivery of large components of the overall system with frequent and internal deliveries for simulations. Thereby, the internal releases are not following a concrete pre-planed system, but are triggered by the speed of development and the need of other Scrum Teams to access certain functionalities. The SCRUM Teams select the entries from the backlog which are entered in a sprint and define the criteria when a task is done from their perspective. For example in openETCS a model including a defined set of functions is handed over from the design to the V\&V SCRUM Team for independent evaluation and validation of these functions. The V\&V team documents it's findings for all artifacts in their respective reports and gives them as feedback via GitHub issues back at the Design Team.  
 
 Nevertheless, for the overall planning and the interaction with external partners broad milestones are defined in openETCS which are used as a basis for activities which are not performed will modeling the system such as not automatic generated documentation or assessment. This openETCS release interaction between the design and V\&V SCRUM sprints is schematically shown in figure \ref{fig:openETCSReleases}.
 
@@ -493,15 +476,8 @@ Nevertheless, for the overall planning and the interaction with external partner
 \end{figure}
 
 As in a SIL 4 development in the end the assessment of all artifacts for the final release have to be reviewed by an authorized independent assessor this phase can not be integrated in the continuous agile process. But ideally the assessor is already involved in the main development and thereby already reaches  preliminary results for long time stable parts of the system. However, the release provided for assessment and afterwards for use has to be a self-sufficient collection which can be reviewed independent of all pre-releases. Since the openETCS project only develops the a functional ETCS OBU it is not providing a release ready for a complete safety assessment. 
+ 
 
-\begin{comment}
-\chapter{Conclusion}
-\label{sec:conclusion}
-
-can be left open for now
-
-final conclusion of content 
-\end{comment}
 
 %\bibliographystyle{unsrt} %
 %\bibliography{./ref/ref-HaRA}
